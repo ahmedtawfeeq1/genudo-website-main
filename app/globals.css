@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ── The Quiet Engine — GenuDo marketing tokens ──
+   Palette mirrors DESIGN.md + GENU character DNA (shell #6468f0, deep #4548c4,
+   light #a9abff, spark #ffe14d). Indigo is the accent, spent sparingly. */
+@theme {
+  --color-indigo: #6468f0;
+  --color-indigo-deep: #4548c4;
+  --color-indigo-light: #a9abff;
+  --color-indigo-tint: #e1e7fd;
+  --color-spark: #ffe14d;
+
+  --color-ink: #1d293d;
+  --color-ink-muted: #6c727e;
+  --color-canvas: #f8f8f8;
+  --color-card: #ffffff;
+  --color-line: #d1d4db;
+  --color-line-soft: #e4e8ef;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-jb), ui-monospace, "SF Mono", monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+
+  --shadow-ambient: 0 4px 8px -1px oklch(0 0 0 / 0.05);
+  --shadow-overlay: 0 8px 10px -2px oklch(0 0 0 / 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Numbers align in columns — the Tabular Layout Rule from DESIGN.md. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Eyebrow labels read like a system status line — the operational vernacular. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ── GENU ambient motion (centralized here, not per-icon) ── */
+@keyframes genu-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes genu-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes genu-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.15);
+  }
+}
