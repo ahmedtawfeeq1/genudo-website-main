@@ -1,7 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
 import homeHtml from '@/legacy-html/home';
+import homeArEG from '@/legacy-html/home.ar-EG';
 import LegacyScripts from '@/components/LegacyScripts';
 import { pageMetadata } from '@/i18n/seo';
+
+// Translated body twins per locale. When a locale has one, the body renders
+// RTL-Arabic (marketing translated; app-UI mockups inside stay dir="ltr" English).
+// Otherwise the original English body renders (LTR fallback).
+const TWINS: Record<string, string> = { 'ar-EG': homeArEG };
 
 /**
  * HOME — reference conversion.
@@ -18,9 +24,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const twin = TWINS[locale];
   return (
     <>
-      <div className="legacy-page" dangerouslySetInnerHTML={{ __html: homeHtml }} />
+      <div
+        className={`legacy-page${twin ? ' legacy-rtl' : ''}`}
+        dangerouslySetInnerHTML={{ __html: twin ?? homeHtml }}
+      />
       <LegacyScripts scripts={['/genu/genu-robot.js', '/js/site2.js', '/js/concept.js', '/js/hero.js']} />
     </>
   );

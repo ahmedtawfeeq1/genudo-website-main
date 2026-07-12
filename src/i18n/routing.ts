@@ -2,15 +2,21 @@ import { defineRouting } from 'next-intl/routing';
 
 /**
  * Locale routing for the GenuDo site.
- * - `en` — English (default), left-to-right
- * - `ar` — Modern Standard Arabic, right-to-left (Egypt + Gulf audience)
+ * - `en`    — English (default), left-to-right
+ * - `ar-EG` — Egyptian Arabic (professional, friendly), right-to-left
+ * - `ar-SA` — Gulf/Saudi Arabic (Khaleeji), right-to-left
  *
- * `localePrefix: 'always'` gives clean, shareable URLs: /en/... and /ar/...
+ * Add a locale here and everything else (hreflang, sitemap, OG alternates,
+ * the language switcher, geo detection) extends automatically.
+ * `localePrefix: 'always'` gives clean, shareable URLs: /en, /ar-EG, /ar-SA.
  */
 export const routing = defineRouting({
-  locales: ['en', 'ar'],
+  locales: ['en', 'ar-EG', 'ar-SA'],
   defaultLocale: 'en',
   localePrefix: 'always'
 });
 
 export type Locale = (typeof routing.locales)[number];
+
+/** True for any Arabic variant (RTL, Arabic font, shared rtl.css). */
+export const isRtl = (locale: string) => locale.startsWith('ar');

@@ -11,8 +11,11 @@ import { routing } from './routing';
  */
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://genudo.ai').replace(/\/$/, '');
 
-/** BCP-47 / OG locale tags per app locale (Arabic targets Egyptian). */
-const OG_LOCALE: Record<string, string> = { en: 'en_US', ar: 'ar_EG' };
+/** OG `og:locale` tag per app locale. */
+const OG_LOCALE: Record<string, string> = { en: 'en_US', 'ar-EG': 'ar_EG', 'ar-SA': 'ar_SA' };
+
+/** Public helper: og:locale for a given app locale (falls back to the raw locale). */
+export const ogLocale = (locale: string) => OG_LOCALE[locale] ?? locale;
 
 /** { en: "/en{path}", ar: "/ar{path}", "x-default": "/en{path}" } — for alternates.languages. */
 export function hreflangLanguages(path: string): Record<string, string> {

@@ -3,8 +3,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Tajawal } from 'next/font/google';
-import { routing } from '@/i18n/routing';
-import { SITE_URL, hreflangLanguages, siteJsonLd } from '@/i18n/seo';
+import { routing, isRtl } from '@/i18n/routing';
+import { SITE_URL, hreflangLanguages, siteJsonLd, ogLocale } from '@/i18n/seo';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 
@@ -51,7 +51,7 @@ export async function generateMetadata({
       title,
       description,
       url: `/${locale}`,
-      locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+      locale: ogLocale(locale),
       // ponytail: logo stand-in — swap for a real 1200×630 og image when available
       images: [{ url: '/genu/genudo-logo-color.png' }]
     },
@@ -80,11 +80,12 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const t = await getTranslations({ locale, namespace: 'seo' });
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  const rtl = isRtl(locale);
+  const dir = rtl ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir} className={locale === 'ar' ? tajawal.variable : undefined}>
-      <body className={locale === 'ar' ? 'is-ar' : undefined}>
+    <html lang={locale} dir={dir} className={rtl ? tajawal.variable : undefined}>
+      <body className={rtl ? 'is-ar' : undefined}>
         {/* GEO / rich results: Organization + WebSite graph (own trusted data). */}
         <script
           type="application/ld+json"
