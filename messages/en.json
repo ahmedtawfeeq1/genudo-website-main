@@ -1,0 +1,262 @@
+{
+  "terms": {
+    "agent": "AI Agent",
+    "knowledge": "Knowledge Base",
+    "models": "Smart Models Selection",
+    "pipeline": "Pipeline",
+    "stages": "Stages & Actions",
+    "followups": "Follow-ups",
+    "inbox": "Inbox",
+    "contacts": "Contacts",
+    "analytics": "Analytics Center",
+    "integrations": "Integrations",
+    "apiMcp": "API & MCP",
+    "salesAgent": "Sales Agent",
+    "customerService": "Customer Service",
+    "operations": "Operations Assistant",
+    "marketing": "Marketing Agencies",
+    "elearning": "E-learning & Academies",
+    "fitness": "Fitness Centres",
+    "clinics": "Clinics & Healthcare",
+    "hospitality": "Hospitality & Tourism",
+    "campsEvents": "Camps & Events",
+    "apiDocs": "API Documentation",
+    "changelog": "Changelog",
+    "blog": "Blog",
+    "security": "Trust & Security",
+    "pricing": "Pricing",
+    "customerStories": "Customer stories",
+    "contact": "Contact us",
+    "allUseCases": "All use cases"
+  },
+  "nav": {
+    "whoIsGenu": "Who is GENU?",
+    "solutions": "Solutions",
+    "product": "Product",
+    "resources": "Resources",
+    "pricing": "Pricing",
+    "signIn": "Sign in",
+    "getStarted": "Get started",
+    "secBuild": "Build",
+    "secOperate": "Operate",
+    "secEngage": "Engage & measure",
+    "secAiEmployees": "AI employees",
+    "secByIndustry": "By industry",
+    "secMore": "More",
+    "platformOverview": "Platform overview",
+    "everyUseCase": "See every use case",
+    "desc": {
+      "agent": "Persona, model & guardrails",
+      "knowledge": "Tables, files & websites",
+      "models": "Auto-routes to the best-fit model",
+      "pipeline": "Move deals through stages",
+      "stages": "Automate what happens next",
+      "followups": "Sequenced nudges per stage",
+      "inbox": "WhatsApp, IG, webchat, email",
+      "contacts": "One record per customer",
+      "analytics": "Outcomes, workload & cost",
+      "integrations": "CRMs, calendars & tools",
+      "salesAgent": "Qualify, follow up & close",
+      "customerService": "Answer & resolve, 24/7",
+      "operations": "Run the work behind the scenes",
+      "apiDocs": "Build on the GenuDo API",
+      "changelog": "What shipped, every week",
+      "blog": "Playbooks & product notes",
+      "security": "How we protect your data"
+    }
+  },
+  "footer": {
+    "tagline": "Genuine AI employees for every team — built from agents, knowledge, tools and pipelines, working your channels around the clock.",
+    "hProduct": "Product",
+    "hPlatform": "Platform",
+    "hEmployees": "Employees",
+    "hIndustries": "Industries",
+    "hCompany": "Company",
+    "rights": "© {year} GenuDo. All rights reserved.",
+    "microcopy": "Build reusable AI employees. Deploy them everywhere."
+  },
+  "common": {
+    "getStarted": "Get started",
+    "talkToSales": "Talk to sales",
+    "bookDemo": "Book a demo",
+    "learnMore": "Learn more",
+    "seeAll": "See all",
+    "readMore": "Read more"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Genuine AI employees, not chatbots",
+      "title": "Build AI employees that",
+      "titleAccent": "move work forward.",
+      "subtitle": "GenuDo turns your playbooks into genuine AI teammates — they own conversations, move deals through your pipeline, and get work done across your channels around the clock.",
+      "ctaPrimary": "Get started",
+      "ctaSecondary": "Talk to sales"
+    }
+  },
+  "whoisgenu": {
+    "eyebrow": "Who is GENU?",
+    "greeting": "Hey there!",
+    "intro": "I'm GENU — your genuine AI employee. Do you know what I can do? Let me show you around.",
+    "sayHi": "Say hi to GENU",
+    "exploreQuietly": "Explore quietly",
+    "soundNote": "Best experienced with sound on"
+  },
+  "seo": {
+    "default": {
+      "title": "AI employees that move work forward",
+      "description": "GenuDo builds genuine AI employees — agents grounded in your knowledge, with tools, channels and pipelines — that reply, act and close work across WhatsApp, Instagram, webchat and email, 24/7."
+    },
+    "home": {
+      "title": "Build AI employees that move work forward",
+      "description": "Turn your playbooks into genuine AI employees that own conversations, move deals through your pipeline and get work done across every channel, around the clock."
+    },
+    "whoIsGenu": {
+      "title": "Who is GENU? Meet your AI employee",
+      "description": "GENU is your genuine AI employee — grounded in your knowledge, working your channels. See what GENU can do for your team."
+    },
+    "aiEmployees": {
+      "title": "AI Agents & employees",
+      "description": "Shape AI employees with a persona, model and guardrails — grounded in your knowledge and connected to your tools. More than a chatbot: they do the work."
+    },
+    "knowledge": {
+      "title": "Knowledge Base for AI employees",
+      "description": "Ground every answer in your real business knowledge — files, tables and websites — so your AI employees reply accurately and on-brand, never guessing."
+    },
+    "models": {
+      "title": "Smart model selection & routing",
+      "description": "GenuDo auto-routes each task to the best-fit AI model for quality and cost — no manual model picking, no lock-in."
+    },
+    "pipelines": {
+      "title": "Sales pipeline your team can see",
+      "description": "Every conversation advances the right deal automatically — new, engaged, qualified, won — with stage actions, follow-ups and cost per stage on one board."
+    },
+    "stages": {
+      "title": "Pipeline stages & actions",
+      "description": "Define stages, entry conditions and automated actions so your AI employees know exactly what happens next at every step."
+    },
+    "followups": {
+      "title": "Automated follow-ups",
+      "description": "Sequenced, per-stage follow-ups that keep every lead warm — GenuDo nudges at the right time so deals never go cold."
+    },
+    "channels": {
+      "title": "One inbox for every channel",
+      "description": "WhatsApp, Instagram, Messenger, Telegram, webchat and email in one shared inbox — with human handoff in a click."
+    },
+    "contacts": {
+      "title": "Contacts & customer records",
+      "description": "One record per customer, enriched from every conversation — so your AI employees and team always have full context."
+    },
+    "analytics": {
+      "title": "Analytics Center — outcomes & cost",
+      "description": "See booked meetings, workload, funnel and cost per outcome — a live view of what your AI workforce actually produces, not just message volume."
+    },
+    "integrations": {
+      "title": "Integrations — connect your stack",
+      "description": "Plug GenuDo into the tools you already run — CRMs, calendars, sheets and automation platforms like Zapier, Make and n8n. 40+ integrations."
+    },
+    "apiMcp": {
+      "title": "API & MCP",
+      "description": "Build GenuDo deeply into your product with a clean API and an MCP server — bring your AI employees anywhere."
+    },
+    "product": {
+      "title": "Product overview",
+      "description": "Knowledge, tools, channels and pipelines in one workspace — everything your AI employee needs to reply, act, hand off and report."
+    },
+    "solSalesAgent": {
+      "title": "AI Sales Agent",
+      "description": "Qualify, follow up and close inbound leads 24/7. GenuDo's AI Sales Agent books demos and moves deals down your pipeline automatically."
+    },
+    "solCustomerService": {
+      "title": "AI Customer Service",
+      "description": "Answer and resolve customer questions around the clock across every channel — with humans in control for what matters."
+    },
+    "solOperations": {
+      "title": "AI Operations Assistant",
+      "description": "Run the work behind the scenes — GenuDo's Operations Assistant handles routine ops so your team focuses on judgment calls."
+    },
+    "indMarketing": {
+      "title": "GenuDo for marketing agencies",
+      "description": "Give every client an AI employee that replies, qualifies and reports across channels — scale accounts without scaling headcount."
+    },
+    "indElearning": {
+      "title": "GenuDo for e-learning & academies",
+      "description": "Enroll students, answer questions and follow up automatically — an AI employee for academies and online learning."
+    },
+    "indFitness": {
+      "title": "GenuDo for fitness centres",
+      "description": "Book classes, answer members and win leads 24/7 — an AI employee built for gyms and fitness centres."
+    },
+    "indClinics": {
+      "title": "GenuDo for clinics & healthcare",
+      "description": "Book appointments, answer patients and follow up — an AI employee for clinics, with humans in control of anything sensitive."
+    },
+    "indHospitality": {
+      "title": "GenuDo for hospitality & tourism",
+      "description": "Answer guests, take bookings and follow up in any language — an AI employee for hotels, travel and tourism."
+    },
+    "indCampsEvents": {
+      "title": "GenuDo for camps & events",
+      "description": "Register attendees, answer questions and follow up at scale — an AI employee for camps and events."
+    },
+    "useCases": {
+      "title": "Use cases",
+      "description": "See how one GENU switches into every job on your team — sales, support and operations — with a real slice of the product beside it."
+    },
+    "customers": {
+      "title": "Customer stories",
+      "description": "How teams across MENA use GenuDo AI employees to reply faster, qualify leads and close more — in learning, clinics, agencies, fitness and more."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Simple pricing for AI employees that do the work. Start free, scale as you grow — no credit card to begin."
+    },
+    "contact": {
+      "title": "Contact us",
+      "description": "Tell us what you want to automate — we'll scope your first AI employee live, in your channels. Talk to sales or book a demo."
+    },
+    "security": {
+      "title": "Trust & Security",
+      "description": "How GenuDo protects your data — human-in-the-loop approvals, auditable actions, scoped access and clear data handling."
+    },
+    "apiDocs": {
+      "title": "API Documentation",
+      "description": "Build on the GenuDo API — endpoints, auth and examples to bring your AI employees into any product or workflow."
+    },
+    "changelog": {
+      "title": "Changelog",
+      "description": "What shipped in GenuDo, every week — new features, improvements and fixes."
+    },
+    "blog": {
+      "title": "Blog — playbooks & product notes",
+      "description": "Playbooks, guides and product notes on building AI employees that move work forward."
+    },
+    "resources": {
+      "title": "Resources",
+      "description": "Guides, playbooks and tools to help you build and run AI employees with GenuDo."
+    },
+    "blogAiEmployeesVsChatbots": {
+      "title": "AI employees vs chatbots",
+      "description": "Why an AI employee — grounded, tool-using and pipeline-aware — does the work a chatbot can't."
+    },
+    "blogCostPerOutcome": {
+      "title": "Cost per outcome, not per message",
+      "description": "Measure your AI workforce by booked meetings and closed deals — not message volume. How to think about cost per outcome."
+    },
+    "blogGuardrailsThatMatter": {
+      "title": "Guardrails that matter",
+      "description": "The guardrails that keep AI employees safe and on-brand — approvals, scoped access and human handoff."
+    },
+    "blogLaunchAnalyticsCenter": {
+      "title": "Launching the Analytics Center",
+      "description": "A live view of outcomes, workload and cost per outcome — introducing the GenuDo Analytics Center."
+    },
+    "blogPipelineNotInbox": {
+      "title": "Pipeline, not inbox",
+      "description": "Why conversations should move through a pipeline your team can see — not pile up in an inbox."
+    },
+    "blogWhatsappTeamWorkflows": {
+      "title": "WhatsApp team workflows",
+      "description": "Run your whole team on WhatsApp with one shared inbox, AI replies and human handoff."
+    }
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Documentation — GenuDo</title>
+<link rel="stylesheet" href="genudo-site.css">
+<link rel="stylesheet" href="site2.css">
+<link rel="stylesheet" href="genu/genu-robot.css">
+<link rel="stylesheet" href="resources.css">
+</head>
+<body data-nav="resources">
+<div data-site-nav></div>
+
+<div class="rhead"><div class="container">
+  <div class="crumb"><a href="resources.html">Resources</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>API Documentation</span></div>
+  <h1>API Documentation</h1>
+  <p>Build on GenuDo: create agents, drive conversations, read contacts and pipelines, and receive events — over a clean REST API and MCP.</p>
+</div></div>
+
+<section class="s-sm"><div class="container">
+  <div class="docs">
+    <nav class="docs-nav">
+      <div class="dn-sec">Getting started</div>
+      <a href="#intro" class="on">Introduction</a>
+      <a href="#auth">Authentication</a>
+      <a href="#errors">Errors &amp; rate limits</a>
+      <div class="dn-sec">Core resources</div>
+      <a href="#agents">Agents</a>
+      <a href="#conversations">Conversations</a>
+      <a href="#contacts">Contacts</a>
+      <a href="#pipelines">Pipelines</a>
+      <div class="dn-sec">Events &amp; extend</div>
+      <a href="#webhooks">Webhooks</a>
+      <a href="#mcp">MCP</a>
+    </nav>
+    <main class="docs-main">
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>The GenuDo API is organised around REST. It has predictable, resource-oriented URLs, returns JSON, and uses standard HTTP verbs and status codes. The base URL for all requests is:</p>
+        <div class="endpoint"><span class="method get">BASE</span><span class="path">https://api.genudo.ai/v1</span></div>
+        <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span>Everything you can do in the GenuDo dashboard, you can do over the API — create agents, connect channels, drive conversations and read analytics.</span></div>
+      </section>
+
+      <section id="auth">
+        <h2>Authentication</h2>
+        <p>Authenticate with a workspace API key sent as a Bearer token. Create and rotate keys in <span class="mono">Settings → API keys</span>. Keep keys server-side — never ship them in a browser.</p>
+        <div class="code"><div class="code-head"><span class="lang">cURL</span></div><pre><span class="c"># Every request carries your key as a Bearer token</span>
+curl https://api.genudo.ai/v1/agents \
+  -H <span class="s">"Authorization: Bearer $GENUDO_API_KEY"</span></pre></div>
+      </section>
+
+      <section id="errors">
+        <h2>Errors &amp; rate limits</h2>
+        <p>GenuDo uses conventional HTTP status codes. <span class="mono">2xx</span> means success, <span class="mono">4xx</span> a problem with the request, and <span class="mono">5xx</span> an error on our side. Errors return a JSON body with a machine-readable <span class="mono">code</span> and a human message.</p>
+        <div class="code"><div class="code-head"><span class="lang">JSON · 422</span></div><pre>{
+  <span class="k">"error"</span>: {
+    <span class="k">"code"</span>: <span class="s">"validation_error"</span>,
+    <span class="k">"message"</span>: <span class="s">"channel is required"</span>,
+    <span class="k">"param"</span>: <span class="s">"channel"</span>
+  }
+}</pre></div>
+        <p>The API is rate limited per workspace. Limits are returned on every response in the <span class="mono">X-RateLimit-Remaining</span> header; a <span class="mono">429</span> means you should back off and retry with exponential delay.</p>
+      </section>
+
+      <section id="agents">
+        <h2>Agents</h2>
+        <p>An agent is a configured AI employee: a persona, a knowledge base, a set of tools and a model routing policy. Create one, then deploy it to any channel.</p>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/agents</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/v1/agents/{id}</span></div>
+        <div class="param head"><span class="pn">Parameter</span><span class="pt">Type</span><span class="pd">Description</span></div>
+        <div class="param"><span class="pn">name</span><span class="pt">string</span><span class="pd">Display name for the agent, e.g. “Sales Agent”.</span></div>
+        <div class="param"><span class="pn">persona</span><span class="pt">string</span><span class="pd">System instructions and tone the agent follows.</span></div>
+        <div class="param"><span class="pn">knowledge_ids</span><span class="pt">array</span><span class="pd">Knowledge bases the agent can read from.</span></div>
+        <div class="param"><span class="pn">model_policy</span><span class="pt">object</span><span class="pd">Routing rules — fast vs. reasoning model per task.</span></div>
+        <div class="code"><div class="code-head"><span class="lang">Node</span></div><pre><span class="k">const</span> res = <span class="k">await</span> fetch(<span class="s">"https://api.genudo.ai/v1/agents"</span>, {
+  method: <span class="s">"POST"</span>,
+  headers: {
+    <span class="k">"Authorization"</span>: <span class="s">`Bearer ${process.env.GENUDO_API_KEY}`</span>,
+    <span class="k">"Content-Type"</span>: <span class="s">"application/json"</span>
+  },
+  body: <span class="p">JSON</span>.stringify({
+    name: <span class="s">"Sales Agent"</span>,
+    persona: <span class="s">"Friendly, concise. Qualify then book a meeting."</span>,
+    knowledge_ids: [<span class="s">"kb_inventory"</span>, <span class="s">"kb_pricing"</span>],
+    model_policy: { <span class="k">routing</span>: <span class="s">"auto"</span> }
+  })
+});
+<span class="k">const</span> agent = <span class="k">await</span> res.json();</pre></div>
+      </section>
+
+      <section id="conversations">
+        <h2>Conversations</h2>
+        <p>Send a message into a conversation and get the agent’s reply, or list history. Conversations are tied to a contact and a channel.</p>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/conversations/{id}/messages</span></div>
+        <div class="code"><div class="code-head"><span class="lang">JSON · response</span></div><pre>{
+  <span class="k">"id"</span>: <span class="s">"msg_9f2"</span>,
+  <span class="k">"role"</span>: <span class="s">"agent"</span>,
+  <span class="k">"text"</span>: <span class="s">"The villa is available — shall I hold Thursday 2pm?"</span>,
+  <span class="k">"model"</span>: <span class="s">"fast"</span>,
+  <span class="k">"cost_usd"</span>: <span class="n">0.0021</span>,
+  <span class="k">"stage"</span>: <span class="s">"qualified"</span>
+}</pre></div>
+      </section>
+
+      <section id="contacts">
+        <h2>Contacts</h2>
+        <p>Contacts unify a customer across channels. Read a profile with its merged history, attributes and pipeline position.</p>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/v1/contacts/{id}</span></div>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/contacts/{id}/attributes</span></div>
+      </section>
+
+      <section id="pipelines">
+        <h2>Pipelines</h2>
+        <p>Read pipeline stages and move a contact between them. Stage changes fire whatever actions you’ve configured.</p>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/v1/pipelines/{id}</span></div>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/pipelines/{id}/move</span></div>
+      </section>
+
+      <section id="webhooks">
+        <h2>Webhooks</h2>
+        <p>Subscribe to events and GenuDo will POST them to your endpoint as they happen — new messages, stage changes, escalations and more. Verify the signature in the <span class="mono">X-Genudo-Signature</span> header.</p>
+        <div class="code"><div class="code-head"><span class="lang">JSON · event</span></div><pre>{
+  <span class="k">"type"</span>: <span class="s">"deal.stage_changed"</span>,
+  <span class="k">"contact_id"</span>: <span class="s">"con_7742"</span>,
+  <span class="k">"from"</span>: <span class="s">"new"</span>,
+  <span class="k">"to"</span>: <span class="s">"qualified"</span>,
+  <span class="k">"value_usd"</span>: <span class="n">4200</span>
+}</pre></div>
+      </section>
+
+      <section id="mcp" style="border-bottom:0">
+        <h2>MCP</h2>
+        <p>GenuDo speaks the <strong>Model Context Protocol</strong>. Point Claude Code, Cursor or your own client at the GenuDo MCP server and build, connect knowledge and drive agents from your editor.</p>
+        <div class="code"><div class="code-head"><span class="lang">shell</span></div><pre><span class="c"># Add GenuDo as an MCP server</span>
+mcp add genudo --key $GENUDO_API_KEY</pre></div>
+        <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg><span>Prefer to stay in your stack? See <a href="api-mcp.html" style="color:var(--primary);font-weight:600">API &amp; MCP</a> for the full integration guide.</span></div>
+      </section>
+    </main>
+  </div>
+</div></section>
+
+<div data-site-footer></div>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.docs-nav a'));
+  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function onScroll(){
+    var y=window.scrollY+120, cur=0;
+    secs.forEach(function(s,i){ if(s && s.offsetTop<=y) cur=i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i===cur); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+})();
+</script>
+<script src="genu/genu-robot.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

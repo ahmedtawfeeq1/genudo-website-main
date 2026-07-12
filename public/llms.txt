@@ -1,0 +1,46 @@
+# GenuDo
+
+> Genuine AI employees for every team — agents grounded in your knowledge, with tools, channels and pipelines, that reply, act and close work across WhatsApp, Instagram, webchat and email, 24/7.
+
+GenuDo turns your playbooks into reusable AI employees: an agent shaped with a
+persona, model and guardrails, grounded in your knowledge, connected to your
+tools, put to work on your channels through a pipeline — with humans in control
+via a shared inbox. The site is available in English (`/en`) and Egyptian
+Arabic (`/ar`). Base URL: https://genudo.ai
+
+## Product
+- [Product overview](https://genudo.ai/en/product): Knowledge, tools, channels and pipelines in one workspace.
+- [AI Agents & employees](https://genudo.ai/en/ai-employees): Shape AI employees with persona, model and guardrails.
+- [Knowledge Base](https://genudo.ai/en/knowledge): Ground answers in your files, tables and websites.
+- [Smart model selection](https://genudo.ai/en/models): Auto-route each task to the best-fit AI model.
+- [Pipeline](https://genudo.ai/en/pipelines): Conversations advance deals through stages automatically.
+- [Stages & Actions](https://genudo.ai/en/stages): Define stages, entry conditions and automated actions.
+- [Follow-ups](https://genudo.ai/en/followups): Sequenced, per-stage follow-ups so leads never go cold.
+- [Inbox & channels](https://genudo.ai/en/channels): One shared inbox across WhatsApp, Instagram, Messenger, Telegram, webchat and email.
+- [Contacts](https://genudo.ai/en/contacts): One enriched record per customer.
+- [Analytics Center](https://genudo.ai/en/analytics): Outcomes, workload, funnel and cost per outcome.
+- [Integrations](https://genudo.ai/en/integrations): 40+ integrations — CRMs, calendars, sheets, Zapier, Make, n8n.
+- [API & MCP](https://genudo.ai/en/api-mcp): Build GenuDo into your product via API and an MCP server.
+
+## Solutions (AI employees)
+- [AI Sales Agent](https://genudo.ai/en/sol-sales-agent): Qualify, follow up and close inbound leads 24/7.
+- [AI Customer Service](https://genudo.ai/en/sol-customer-service): Answer and resolve across every channel, around the clock.
+- [AI Operations Assistant](https://genudo.ai/en/sol-operations): Run routine operations behind the scenes.
+
+## By industry
+- [Marketing agencies](https://genudo.ai/en/ind-marketing)
+- [E-learning & academies](https://genudo.ai/en/ind-elearning)
+- [Fitness centres](https://genudo.ai/en/ind-fitness)
+- [Clinics & healthcare](https://genudo.ai/en/ind-clinics)
+- [Hospitality & tourism](https://genudo.ai/en/ind-hospitality)
+- [Camps & events](https://genudo.ai/en/ind-camps-events)
+
+## Company
+- [Pricing](https://genudo.ai/en/pricing): Simple pricing; start free.
+- [Customer stories](https://genudo.ai/en/customers)
+- [Use cases](https://genudo.ai/en/use-cases)
+- [Trust & Security](https://genudo.ai/en/security): Human-in-the-loop approvals, auditable actions, scoped access.
+- [API Documentation](https://genudo.ai/en/api-docs)
+- [Changelog](https://genudo.ai/en/changelog)
+- [Blog](https://genudo.ai/en/blog)
+- [Contact](https://genudo.ai/en/contact)

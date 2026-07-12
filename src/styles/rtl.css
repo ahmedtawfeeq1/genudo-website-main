@@ -1,0 +1,155 @@
+/* =========================================================================
+   RTL + Arabic typography layer.  Loaded LAST.
+   Every rule is scoped to [dir="rtl"] / html[lang="ar"] so the English (LTR)
+   experience stays byte-for-byte identical — the project's golden rule.
+   ========================================================================= */
+
+/* ---- Locale switcher dropdown (shared by both locales) ----
+   Trigger matches the .btn height (padding 12px / 15.5px). Menu uses logical
+   properties (inset-inline-end, text-align:start) so it mirrors under RTL. */
+.loc-wrap { position: relative; }
+.loc-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: inherit;
+  font-size: 15.5px;
+  font-weight: 560;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--border-2);
+  border-radius: 11px;
+  padding: 12px 13px; /* compact: flag + caret only, keeps .btn height */
+  white-space: nowrap;
+  transition: 0.16s ease;
+}
+.loc-switch:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.loc-switch:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.loc-switch .loc-flag {
+  font-size: 17px;
+  line-height: 1;
+}
+.loc-switch .loc-caret {
+  color: var(--ink-2);
+  transition: transform 0.16s ease;
+}
+.loc-switch[aria-expanded='true'] .loc-caret {
+  transform: rotate(180deg);
+}
+
+.loc-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  min-width: 190px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px -10px rgba(29, 41, 61, 0.28);
+  padding: 6px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.loc-opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: start;
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 540;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  border-radius: 9px;
+  padding: 9px 11px;
+  cursor: pointer;
+  transition: 0.12s;
+}
+.loc-opt .loc-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+.loc-opt .loc-name {
+  flex: 1;
+}
+.loc-opt:hover {
+  background: var(--bg);
+}
+.loc-opt.is-active {
+  color: var(--primary);
+}
+.loc-opt .loc-check {
+  color: var(--primary);
+}
+
+/* ---- Arabic typography (Tajawal, injected as --font-ar by next/font) ---- */
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
+html[lang="ar"] select {
+  font-family: var(--font-ar), "Tajawal", system-ui, sans-serif;
+}
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] .brand {
+  font-family: var(--font-ar), "Tajawal", system-ui, sans-serif;
+  /* Arabic must never inherit Latin negative letter-spacing */
+  letter-spacing: 0;
+}
+
+/* Keep code / monospace / numeric runs LTR even inside RTL copy */
+html[lang="ar"] .mono,
+html[lang="ar"] code,
+html[lang="ar"] kbd,
+[dir="rtl"] .num,
+[dir="rtl"] time {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* ---- Layout mirroring for the shared chrome (nav) ---- */
+[dir="rtl"] .nav-cta {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir="rtl"] .nav-links {
+  margin-left: 0;
+  margin-right: 6px;
+}
+[dir="rtl"] .nav-burger {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir="rtl"] .mega {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%) translateY(8px);
+}
+[dir="rtl"] .nav-item:hover .mega {
+  transform: translateX(50%) translateY(0);
+}
+
+/*
+  NOTE for the team: section-level mirroring (grid column order, arrow icon
+  direction, marquee scroll direction, absolute left/right offsets) should be
+  reviewed per component as each legacy section graduates from the HTML island
+  into a real React component. Prefer CSS logical properties
+  (margin-inline, inset-inline-start, padding-inline) in all NEW components so
+  they mirror automatically under [dir="rtl"].
+*/

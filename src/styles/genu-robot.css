@@ -1,0 +1,54 @@
+/* Animated GENU robot — floating bot, EVE hands, orbiting brand dots, blinking pixel eyes.
+   Adapted from the GENU Robot brand reference. Drop a <div class="genu" data-genu ...></div>
+   and load genu-robot.js. Size via --w/--h; orbit speed via --ospeed. */
+.genu{position:relative;width:var(--w,320px);height:var(--h,360px);
+  --hue:#6468f0;--hu:#6468f0;--hd:#4548c4;--hl:#a9abff;--acc:#ffe14d}
+
+.genu .lift{position:absolute;inset:0;animation:genu-bob var(--bob,4.6s) ease-in-out infinite}
+@keyframes genu-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.genu .haze{position:absolute;left:50%;top:30%;width:62%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(closest-side,var(--hue),transparent 70%);filter:blur(12px);opacity:.5;
+  animation:genu-haze var(--bob,4.6s) ease-in-out infinite;z-index:0}
+@keyframes genu-haze{0%,100%{opacity:.42;transform:translateX(-50%) scale(1)}50%{opacity:.62;transform:translateX(-50%) scale(1.06)}}
+
+.genu svg.bot{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:3}
+.genu .armg{transform-box:fill-box;transform-origin:center top}
+.genu .armL{animation:genu-swayL 4.6s ease-in-out infinite}
+.genu .armR{animation:genu-swayR 4.6s ease-in-out infinite}
+@keyframes genu-swayL{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(-7deg) translateY(-3px)}}
+@keyframes genu-swayR{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(7deg) translateY(-3px)}}
+
+/* orbiting dots (tilted 3D ring around the body) */
+.genu .ringline{position:absolute;left:50%;top:60%;width:84%;height:30%;transform:translate(-50%,-50%);
+  border:2px solid #6468f026;border-radius:50%;z-index:2}
+.genu .orbit{position:absolute;left:50%;top:60%;width:0;height:0;transform-style:preserve-3d;
+  animation:genu-spin3d var(--ospeed,7s) linear infinite;z-index:4}
+@keyframes genu-spin3d{to{transform:rotateX(72deg) rotateZ(360deg)}}
+.genu .orbit .sat{position:absolute;width:calc(var(--w,320px)*.042);aspect-ratio:1;border-radius:50%;
+  background:#c9caff;box-shadow:0 0 10px var(--hue);transform:translate(calc(var(--w,320px)*.40),-50%)}
+.genu .orbit .sat.s2{transform:rotate(120deg) translate(calc(var(--w,320px)*.40),-50%);width:calc(var(--w,320px)*.028);background:#fff}
+.genu .orbit .sat.s3{transform:rotate(240deg) translate(calc(var(--w,320px)*.40),-50%);width:calc(var(--w,320px)*.034);background:color-mix(in oklch,var(--hue) 50%,#fff)}
+/* the "do" dot hovering above */
+.genu .dodot{position:absolute;left:50%;top:2%;width:calc(var(--w,320px)*.04);aspect-ratio:1;border-radius:50%;
+  background:#c9caff;box-shadow:0 0 14px var(--hue),0 0 4px #fff;transform:translateX(-50%);
+  animation:genu-dotpulse 2.6s ease-in-out infinite;z-index:6}
+@keyframes genu-dotpulse{0%,100%{transform:translateX(-50%) translateY(0);opacity:1}50%{transform:translateX(-50%) translateY(-4px);opacity:.65}}
+
+/* head / body motion — every GENU looks around & nods now and then */
+.genu svg .headg{transform-box:fill-box;transform-origin:50% 92%;animation:genu-headlook 9s ease-in-out infinite}
+.genu svg .bodyg{transform-box:fill-box;transform-origin:50% 100%;animation:genu-bodynod 7s ease-in-out infinite}
+@keyframes genu-headlook{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(-5deg)}88%{transform:rotate(5deg)}95%{transform:rotate(0)}}
+@keyframes genu-bodynod{0%,78%,100%{transform:scaleY(1)}88%{transform:scaleY(.965) translateY(1px)}}
+
+/* prop animations */
+.genu svg .thinkarc,.genu svg .sparkle,.genu svg .rays{animation:genu-flick 1.5s ease-in-out infinite}
+@keyframes genu-flick{0%,100%{opacity:.35}50%{opacity:1}}
+.genu svg .bulb{transform-box:fill-box;transform-origin:50% 100%;animation:genu-bulbpulse 1.9s ease-in-out infinite}
+@keyframes genu-bulbpulse{0%,100%{transform:scale(.9);opacity:.85}50%{transform:scale(1.05);opacity:1}}
+.genu svg .searchscan{transform-box:fill-box;transform-origin:left center;animation:genu-scan 1.8s ease-in-out infinite}
+@keyframes genu-scan{0%,100%{transform:scaleX(.5);opacity:.6}50%{transform:scaleX(1);opacity:1}}
+
+@media (prefers-reduced-motion:reduce){
+  .genu *,.genu{animation:none!important}
+}

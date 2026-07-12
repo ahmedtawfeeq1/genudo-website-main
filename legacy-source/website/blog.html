@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — GenuDo</title>
+<link rel="stylesheet" href="genudo-site.css">
+<link rel="stylesheet" href="site2.css">
+<link rel="stylesheet" href="genu/genu-robot.css">
+<link rel="stylesheet" href="resources.css">
+</head>
+<body data-nav="resources">
+<div data-site-nav></div>
+
+<div class="rhead"><div class="container">
+  <div class="crumb"><a href="resources.html">Resources</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Blog</span></div>
+  <h1>The GenuDo blog</h1>
+  <p>Playbooks for building AI employees, notes from the product team, and what we’re learning about putting agents to work.</p>
+</div></div>
+
+<section class="s-sm"><div class="container">
+  <div class="blog-wrap">
+    <aside class="blog-side">
+      <div class="blog-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="blogSearch" placeholder="Search articles"></div>
+      <div class="blog-cats"><div class="t">Categories</div><div id="blogCats"></div></div>
+    </aside>
+    <div class="blog-grid" id="blogGrid"></div>
+  </div>
+</div></section>
+
+<div data-site-footer></div>
+
+<script type="application/json" id="blog-data">
+[
+  {"slug":"blog-ai-employees-vs-chatbots","cat":"Playbooks","title":"AI employees vs. chatbots: what actually changed","excerpt":"A chatbot answers. An employee owns an outcome — with knowledge, tools, a persona and a place in your pipeline. Here’s the difference in practice.","grad":"linear-gradient(135deg,#4f46e5,#7c3aed)","coverTitle":"From chatbots to <span class=\"a\">AI employees</span>","author":"YE","authorName":"Yasser El-Sayed","date":"Jul 10, 2026","read":"7 min"},
+  {"slug":"blog-whatsapp-team-workflows","cat":"Playbooks","title":"Run your team from WhatsApp (without the chaos)","excerpt":"Groups, private pings and Telegram channels are where work really happens. Here’s how to let an AI employee coordinate the team there — cleanly.","grad":"linear-gradient(135deg,#0b7a63,#22c55e)","coverTitle":"AI on <span class=\"a\">WhatsApp</span> &amp; Telegram","author":"MA","authorName":"Mariam Adel","date":"Jul 3, 2026","read":"6 min"},
+  {"slug":"blog-cost-per-outcome","cat":"Insights","title":"Stop measuring tokens. Measure cost per outcome.","excerpt":"Model routing changes the economics of automation. We break down how to think about cost when a fast model and a reasoning model share the work.","grad":"linear-gradient(135deg,#6366f1,#0ea5e9)","coverTitle":"Cost <span class=\"a\">per outcome</span>","author":"YE","authorName":"Yasser El-Sayed","date":"Jun 21, 2026","read":"5 min"},
+  {"slug":"blog-pipeline-not-inbox","cat":"Playbooks","title":"Why your AI needs a pipeline, not just an inbox","excerpt":"Answering messages isn’t the job — moving work forward is. Giving your agent a pipeline turns conversations into a process you can see and improve.","grad":"linear-gradient(135deg,#7c3aed,#a855f7)","coverTitle":"Conversations → <span class=\"a\">a process</span>","author":"MA","authorName":"Mariam Adel","date":"Jun 9, 2026","read":"6 min"},
+  {"slug":"blog-launch-analytics-center","cat":"Company","title":"Introducing the Analytics Center","excerpt":"See what your whole AI workforce produces — outcomes, workload and cost, by channel and by agent, in one place.","grad":"linear-gradient(135deg,#1e293b,#4338ca)","coverTitle":"New: <span class=\"a\">Analytics Center</span>","author":"YE","authorName":"Yasser El-Sayed","date":"May 30, 2026","read":"4 min"},
+  {"slug":"blog-guardrails-that-matter","cat":"Insights","title":"The guardrails that actually matter for customer-facing AI","excerpt":"Human-in-the-loop, on-policy answers, and knowing when to escalate. A practical guide to shipping agents you can trust with real customers.","grad":"linear-gradient(135deg,#0ea5e9,#06b6d4)","coverTitle":"Guardrails <span class=\"a\">that matter</span>","author":"MA","authorName":"Mariam Adel","date":"May 18, 2026","read":"8 min"}
+]
+</script>
+<script>
+(function(){
+  var data=JSON.parse(document.getElementById('blog-data').textContent);
+  var cats=['All'].concat(Array.from(new Set(data.map(function(d){return d.cat;}))));
+  var grid=document.getElementById('blogGrid'), catEl=document.getElementById('blogCats'), search=document.getElementById('blogSearch');
+  var active='All', q='';
+  function render(){
+    catEl.innerHTML=cats.map(function(c){return '<button class="blog-cat'+(c===active?' on':'')+'" data-c="'+c+'">'+c+'</button>';}).join('');
+    var items=data.filter(function(d){
+      var okCat=active==='All'||d.cat===active;
+      var okQ=!q||(d.title+' '+d.excerpt+' '+d.cat).toLowerCase().indexOf(q)>-1;
+      return okCat&&okQ;
+    });
+    grid.innerHTML=items.length?items.map(function(d){
+      return '<a class="pcard" href="'+d.slug+'.html">'+
+        '<div class="pcover" style="background:'+d.grad+'"><span class="pc-title">'+d.coverTitle+'</span></div>'+
+        '<div class="pc-body"><div class="pc-cat">'+d.cat+'</div><h3>'+d.title+'</h3><p>'+d.excerpt+'</p>'+
+        '<div class="pc-meta"><span class="av">'+d.author+'</span>'+d.authorName+'<span class="dot"></span>'+d.date+'<span class="dot"></span>'+d.read+'</div></div></a>';
+    }).join('') : '<p style="color:var(--ink-3)">No articles match your search.</p>';
+  }
+  catEl.addEventListener('click',function(e){var b=e.target.closest('[data-c]'); if(!b)return; active=b.dataset.c; render();});
+  search.addEventListener('input',function(){q=search.value.trim().toLowerCase(); render();});
+  render();
+})();
+</script>
+<script src="genu/genu-robot.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

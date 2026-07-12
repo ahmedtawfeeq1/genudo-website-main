@@ -1,0 +1,198 @@
+/* ============================================================
+   GenuDo concept animations — purpose-built, token-driven.
+   "GENU + motion explains the concept; a screenshot proves it."
+   Each .cstage is a self-contained looping scene. All motion is
+   gated on prefers-reduced-motion (freezes on a populated state).
+   Loaded AFTER site2.css.
+   ============================================================ */
+
+/* shared stage shell — works on white or tint sections */
+.cstage{position:relative; overflow:hidden; border-radius:20px;
+  background:linear-gradient(160deg,#0e1436 0%,#141a44 55%,#0b0f2b 100%);
+  border:1px solid rgba(255,255,255,.09); box-shadow:var(--shadow-lg);
+  min-height:340px; padding:28px 30px; color:#fff;}
+.cstage::before{content:""; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(520px 300px at 22% 30%, rgba(100,104,240,.28), transparent 66%);}
+.cstage::after{content:""; position:absolute; inset:0; opacity:.4; pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.09) 1px, transparent 0); background-size:26px 26px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 82%); mask-image:linear-gradient(180deg,#000,transparent 82%);}
+.cs-lbl{position:relative; z-index:2; display:inline-flex; align-items:center; gap:8px;
+  font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#a8adf0;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:6px 13px;}
+.cs-lbl .dot{width:7px; height:7px; border-radius:50%; background:var(--primary); box-shadow:0 0 8px var(--primary); animation:csDot 1.8s ease-in-out infinite;}
+@keyframes csDot{0%,100%{opacity:.5;}50%{opacity:1;}}
+.cs-body{position:relative; z-index:2; margin-top:20px;}
+
+/* chip/card primitives reused across scenes */
+.cchip{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; font-weight:560; color:#dfe1f7;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:6px 13px;}
+.cchip svg{width:14px; height:14px;}
+.cchip.ok{color:#8fe7b2; background:rgba(31,157,87,.16); border-color:rgba(31,157,87,.42);}
+.cchip.acc{color:#fff; background:rgba(100,104,240,.26); border-color:rgba(100,104,240,.5);}
+.cnode{display:grid; place-items:center; border-radius:14px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.13); color:#c8caff;}
+.cnode svg{width:20px; height:20px;}
+
+/* ═══ 1 · MESSAGE → PIPELINE STAGE ═══ */
+.cs-pipe .track{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:8px;}
+.cs-pipe .stg{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:13px; padding:12px 12px 14px; min-height:118px; position:relative; transition:.4s;}
+.cs-pipe .stg .sh{display:flex; justify-content:space-between; align-items:center; font-size:11px; color:#9aa0c8; font-weight:600;}
+.cs-pipe .stg .ct{font-family:"JetBrains Mono",monospace; font-size:11px; color:#c8caff; background:rgba(100,104,240,.2); border-radius:6px; padding:1px 7px;}
+.cs-pipe .stg .card{margin-top:9px; height:22px; border-radius:7px; background:rgba(255,255,255,.08);}
+.cs-pipe .stg .card + .card{margin-top:6px; width:80%;}
+.cs-pipe .msg{position:absolute; z-index:5; left:14px; top:150px; display:inline-flex; align-items:center; gap:7px;
+  font-size:12px; font-weight:560; color:#fff; background:var(--primary); border-radius:12px 12px 12px 4px; padding:7px 12px;
+  box-shadow:0 8px 22px rgba(100,104,240,.5);}
+.cs-pipe .msg svg{width:13px; height:13px;}
+.cstage:not(.paused) .cs-pipe .msg{animation:pipeMsg 5.5s cubic-bezier(.6,.05,.3,1) infinite;}
+.cstage:not(.paused) .cs-pipe .stg.hit{animation:pipeHit 5.5s ease infinite;}
+@keyframes pipeMsg{
+  0%{left:14px; top:150px; opacity:0; transform:translateY(6px) scale(.95);}
+  10%{opacity:1; transform:none;}
+  42%{left:14px; top:150px;}
+  62%{left:31%; top:150px; opacity:1;}
+  74%{left:31%; top:150px; opacity:1;}
+  84%{opacity:0; transform:scale(.7);}
+  100%{opacity:0;}
+}
+@keyframes pipeHit{0%,58%{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.05);}
+  72%,86%{border-color:rgba(100,104,240,.55); background:rgba(100,104,240,.14); box-shadow:0 0 0 3px rgba(100,104,240,.16);}
+  96%,100%{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.05); box-shadow:none;}}
+
+/* ═══ 2 · KNOWLEDGE RETRIEVAL ═══ */
+.cs-know .qbar{display:flex; align-items:center; gap:9px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+  border-radius:11px; padding:9px 13px; font-size:13px; color:#c7cbf2; max-width:360px;}
+.cs-know .qbar svg{width:15px; height:15px; color:var(--primary); flex:none;}
+.cs-know .qbar .cur{width:1.5px; height:15px; background:var(--primary); animation:csBlink 1s step-end infinite;}
+@keyframes csBlink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+.cs-know .stack{display:flex; gap:12px; margin-top:20px; position:relative;}
+.cs-know .doc{flex:1; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:11px; padding:12px; min-height:96px; transition:.4s;}
+.cs-know .doc .dt{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:600; color:#b6baf0;}
+.cs-know .doc .dt svg{width:14px; height:14px;}
+.cs-know .doc .ln{height:5px; border-radius:3px; background:rgba(255,255,255,.1); margin-top:9px;}
+.cs-know .doc .ln.s{width:70%;}
+.cstage:not(.paused) .cs-know .doc.hit{animation:knowHit 5s ease infinite;}
+.cs-know .doc:nth-child(2).hit{animation-delay:0s;}
+@keyframes knowHit{0%,30%{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.05);}
+  46%,66%{border-color:rgba(100,104,240,.6); background:rgba(100,104,240,.16); box-shadow:0 0 0 3px rgba(100,104,240,.16);}
+  84%,100%{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.05); box-shadow:none;}}
+.cs-know .ans{margin-top:18px; display:inline-flex; align-items:center; gap:8px; opacity:0;}
+.cstage:not(.paused) .cs-know .ans{animation:knowAns 5s ease infinite;}
+@keyframes knowAns{0%,64%{opacity:0; transform:translateY(8px);}74%,94%{opacity:1; transform:none;}100%{opacity:0;}}
+.cs-know .beam{position:absolute; top:-6px; width:2px; height:112px; background:linear-gradient(#7d82ff,transparent); box-shadow:0 0 12px #7d82ff; opacity:0;}
+.cstage:not(.paused) .cs-know .beam{animation:knowBeam 5s ease infinite;}
+@keyframes knowBeam{0%,32%{opacity:0; left:2%;}40%{opacity:.9; left:2%;}52%{opacity:.9; left:50%;}60%{opacity:0; left:50%;}100%{opacity:0;}}
+
+/* ═══ 3 · TOOL FIRING ═══ */
+.cs-tool .rig{position:relative; height:236px; display:grid; place-items:center;}
+.cs-tool .hub{position:relative; z-index:3; width:96px; height:110px; display:grid; place-items:center;}
+.cs-tool .tool{position:absolute; z-index:2; width:56px; height:56px;}
+.cs-tool .t1{top:6px; left:12%;}
+.cs-tool .t2{top:6px; right:12%;}
+.cs-tool .t3{bottom:6px; left:50%; transform:translateX(-50%);}
+.cs-tool svg.wire{position:absolute; inset:0; width:100%; height:100%; z-index:1; pointer-events:none;}
+.cs-tool .wire path{stroke:rgba(255,255,255,.16); stroke-width:2; fill:none;}
+.cs-tool .wire path.live{stroke:var(--primary); stroke-dasharray:7 9; }
+.cstage:not(.paused) .cs-tool .wire path.live{animation:toolFlow 1.4s linear infinite;}
+@keyframes toolFlow{to{stroke-dashoffset:-32;}}
+.cstage:not(.paused) .cs-tool .tool{animation:toolPing 4.2s ease infinite;}
+.cs-tool .t1{animation-delay:0s!important;} .cs-tool .t2{animation-delay:1.4s!important;} .cs-tool .t3{animation-delay:2.8s!important;}
+@keyframes toolPing{0%,60%,100%{box-shadow:none; border-color:rgba(255,255,255,.13);}
+  14%,30%{box-shadow:0 0 0 4px rgba(100,104,240,.2); border-color:rgba(100,104,240,.6);}}
+.cs-tool .ok{position:absolute; bottom:0; right:8px; z-index:4; opacity:0;}
+.cstage:not(.paused) .cs-tool .ok{animation:toolOk 4.2s ease infinite;}
+@keyframes toolOk{0%,20%{opacity:0; transform:translateY(6px);}32%,88%{opacity:1; transform:none;}100%{opacity:0;}}
+
+/* ═══ 4 · HANDOFF TO A HUMAN ═══ */
+.cs-hand .lane{position:relative; display:flex; align-items:center; justify-content:space-between; padding:10px 6px 0;}
+.cs-hand .who{display:flex; flex-direction:column; align-items:center; gap:9px; width:150px; z-index:2;}
+.cs-hand .who .cap{font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#9aa0c8;}
+.cs-hand .avatar{width:78px; height:78px; border-radius:50%; display:grid; place-items:center; font-size:24px; font-weight:700;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); color:#c8caff; transition:.4s;}
+.cstage:not(.paused) .cs-hand .human{animation:handHuman 6s ease infinite;}
+@keyframes handHuman{0%,52%{border-color:rgba(255,255,255,.16); box-shadow:none; opacity:.6;}
+  66%,92%{border-color:var(--success); box-shadow:0 0 0 4px rgba(31,157,87,.22); opacity:1;}100%{opacity:.6;}}
+.cs-hand .rail{position:absolute; left:150px; right:150px; top:44px; height:2px; background:rgba(255,255,255,.14);}
+.cs-hand .baton{position:absolute; top:33px; z-index:3; display:inline-flex; align-items:center; gap:7px;
+  font-size:11.5px; font-weight:560; color:#fff; background:var(--primary); border-radius:999px; padding:5px 12px; box-shadow:0 8px 20px rgba(100,104,240,.5); opacity:0;}
+.cs-hand .baton svg{width:13px;height:13px;}
+.cstage:not(.paused) .cs-hand .baton{animation:handBaton 6s cubic-bezier(.6,.05,.3,1) infinite;}
+@keyframes handBaton{0%,30%{opacity:0; left:150px;}38%{opacity:1;}60%{opacity:1; left:calc(100% - 260px);}68%{opacity:0; left:calc(100% - 260px);}100%{opacity:0;}}
+.cs-hand .note{text-align:center; margin-top:22px; font-size:12.5px; color:#9aa0c8;}
+
+/* ═══ 5 · ROLE / PERSONA CYCLE ═══ */
+.cs-role .rig{display:grid; grid-template-columns:120px 1fr; gap:22px; align-items:center;}
+.cs-role .genu{filter:drop-shadow(0 16px 28px rgba(0,0,0,.45));}
+.cs-role .card{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.13); border-radius:14px; padding:16px 18px;}
+.cs-role .card .role{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#8f95f0; font-weight:600;}
+.cs-role .card .nm{font-size:19px; font-weight:680; color:#fff; margin:5px 0 10px; letter-spacing:-.01em;}
+.cs-role .card .meta{display:flex; gap:8px; flex-wrap:wrap;}
+.cs-role .roleset{position:relative; height:80px;}
+.cs-role .rslide{position:absolute; inset:0; opacity:0;}
+.cstage:not(.paused) .cs-role .rslide{animation:roleCycle 12s linear infinite;}
+.cs-role .rslide:nth-child(1){animation-delay:0s;} .cs-role .rslide:nth-child(2){animation-delay:4s;} .cs-role .rslide:nth-child(3){animation-delay:8s;}
+@keyframes roleCycle{0%{opacity:0; transform:translateY(10px);}2%{opacity:1; transform:none;}33%{opacity:1; transform:none;}37%{opacity:0; transform:translateY(-10px);}100%{opacity:0;}}
+
+/* ═══ 6 · OUTCOME FUNNEL ═══ */
+.cs-funnel .bars{display:flex; flex-direction:column; gap:12px; max-width:440px; margin-top:6px;}
+.cs-funnel .bar{position:relative;}
+.cs-funnel .bar .lb{display:flex; justify-content:space-between; font-size:12px; color:#c7cbf2; margin-bottom:6px; font-weight:560;}
+.cs-funnel .bar .lb b{font-family:"JetBrains Mono",monospace; color:#fff;}
+.cs-funnel .bar .tr{height:16px; border-radius:8px; background:rgba(255,255,255,.08); overflow:hidden;}
+.cs-funnel .bar .fl{height:100%; border-radius:8px; background:linear-gradient(90deg,#6468f0,#8b8fff); width:0;}
+.cstage:not(.paused) .cs-funnel .bar .fl{animation:funFill 4.5s cubic-bezier(.5,0,.2,1) infinite;}
+.cs-funnel .bar:nth-child(1) .fl{--w:100%;} .cs-funnel .bar:nth-child(2) .fl{--w:74%;}
+.cs-funnel .bar:nth-child(3) .fl{--w:48%;} .cs-funnel .bar:nth-child(4) .fl{--w:29%; background:linear-gradient(90deg,#1f9d57,#37c977);}
+.cs-funnel .bar:nth-child(2) .fl{animation-delay:.2s;} .cs-funnel .bar:nth-child(3) .fl{animation-delay:.4s;} .cs-funnel .bar:nth-child(4) .fl{animation-delay:.6s;}
+@keyframes funFill{0%{width:0;}22%,82%{width:var(--w);}100%{width:0;}}
+
+/* pause control (optional, JS toggles .paused on .cstage) */
+.cs-pause{position:absolute; z-index:6; right:14px; bottom:12px; display:inline-flex; align-items:center; gap:6px;
+  font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#9aa0c8;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:5px 11px; cursor:pointer; transition:.15s;}
+.cs-pause:hover{color:#fff; border-color:rgba(255,255,255,.3);}
+.cs-pause svg{width:12px; height:12px;}
+
+/* ═══ inner-page bits reused across the new pages ═══ */
+.crumb{display:flex; align-items:center; gap:8px; font-size:12.5px; color:#a8aede; margin-bottom:18px;}
+.crumb a{color:#c7cbf2;} .crumb svg{width:13px; height:13px; opacity:.6;}
+.feat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+.featc{background:#fff; border:1px solid var(--border); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm); transition:.18s;}
+.featc:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
+.featc .oi{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; margin-bottom:14px; color:#fff;}
+.featc .oi svg{width:21px; height:21px;}
+.featc h4{font-size:18px; margin-bottom:8px; letter-spacing:-.01em;}
+.featc p{font-size:14px; color:var(--ink-2); margin:0; line-height:1.5;}
+
+/* cross-links to sibling product pages */
+.xnav{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:10px;}
+.xcard{display:flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow-sm); transition:.18s; text-decoration:none;}
+.xcard:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--border-2);}
+.xcard .xi{width:40px; height:40px; border-radius:11px; display:grid; place-items:center; color:#fff; flex:none;}
+.xcard .xi svg{width:20px; height:20px;}
+.xcard b{font-size:15px; letter-spacing:-.01em; color:var(--ink); display:block;}
+.xcard span{font-size:12.5px; color:var(--ink-3);}
+.xcard .go{margin-left:auto; color:var(--ink-3);} .xcard:hover .go{color:var(--primary);}
+.xcard .go svg{width:17px; height:17px;}
+
+/* integrations grid */
+.intg{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+.intc{background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); transition:.18s;}
+.intc:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
+.intc .ilogo{width:42px; height:42px; border-radius:11px; display:grid; place-items:center; color:#fff; font-weight:700; font-size:17px; margin-bottom:12px;}
+.intc b{font-size:15px; letter-spacing:-.01em; display:block;}
+.intc span{font-size:12.5px; color:var(--ink-3);}
+.intcat{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); margin:34px 0 16px;}
+
+@media(prefers-reduced-motion:reduce){
+  .cstage .cs-pipe .msg,.cs-know .beam,.cs-know .doc.hit,.cs-know .ans,.cs-tool .tool,.cs-tool .wire path.live,
+  .cs-hand .baton,.cs-hand .human,.cs-role .rslide,.cs-funnel .bar .fl,.cs-lbl .dot{animation:none!important;}
+  .cs-know .ans,.cs-tool .ok{opacity:1!important; transform:none!important;}
+  .cs-role .rslide:nth-child(1){opacity:1!important;}
+  .cs-funnel .bar .fl{width:var(--w)!important;}
+  .cs-hand .human{opacity:1!important; border-color:var(--success)!important;}
+}
+@media(max-width:860px){
+  .feat-grid,.xnav{grid-template-columns:1fr;}
+  .intg{grid-template-columns:1fr 1fr;}
+  .cs-hand .rail{left:90px; right:90px;}
+}

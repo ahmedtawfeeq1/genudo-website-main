@@ -1,0 +1,101 @@
+import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Tajawal } from 'next/font/google';
+import { routing } from '@/i18n/routing';
+import { SITE_URL, hreflangLanguages, siteJsonLd } from '@/i18n/seo';
+import SiteNav from '@/components/SiteNav';
+import SiteFooter from '@/components/SiteFooter';
+
+// --- Global styles: the ORIGINAL stylesheets, reused verbatim. -------------
+// Import order mirrors the legacy <head> so the cascade is identical.
+import '@/styles/genudo-site.css';
+import '@/styles/site2.css';
+import '@/styles/genu-robot.css';
+import '@/styles/concept.css';
+import '@/styles/home.css';
+import '@/styles/hero.css';
+import '@/styles/features.css';
+import '@/styles/pages.css';
+import '@/styles/resources.css';
+import '@/styles/chrome.css'; // nav + footer styles (ported from site-chrome.js)
+import '@/styles/rtl.css'; // scoped to [dir=rtl] / [lang=ar] — leaves EN untouched
+
+// Arabic UI font (Egypt + Gulf). Latin copy keeps the stack from genudo-site.css.
+const tajawal = Tajawal({
+  subsets: ['arabic'],
+  weight: ['400', '500', '700', '800'],
+  variable: '--font-ar',
+  display: 'swap'
+});
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'seo' });
+  const title = t('default.title');
+  const description = t('default.description');
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: { default: title, template: '%s · GenuDo' },
+    description,
+    applicationName: 'GenuDo',
+    alternates: { canonical: `/${locale}`, languages: hreflangLanguages('') },
+    openGraph: {
+      type: 'website',
+      siteName: 'GenuDo',
+      title,
+      description,
+      url: `/${locale}`,
+      locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+      // ponytail: logo stand-in — swap for a real 1200×630 og image when available
+      images: [{ url: '/genu/genudo-logo-color.png' }]
+    },
+    twitter: { card: 'summary_large_image', title, description, images: ['/genu/genudo-logo-color.png'] },
+    robots: { index: true, follow: true },
+    icons: { icon: '/genu/genudo-logo-color.png' }
+  };
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as never)) notFound();
+
+  // Enables static rendering for this locale.
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: 'seo' });
+  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+
+  return (
+    <html lang={locale} dir={dir} className={locale === 'ar' ? tajawal.variable : undefined}>
+      <body className={locale === 'ar' ? 'is-ar' : undefined}>
+        {/* GEO / rich results: Organization + WebSite graph (own trusted data). */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd(locale, t('default.description'))) }}
+        />
+        <NextIntlClientProvider messages={messages}>
+          <SiteNav />
+          {children}
+          <SiteFooter />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

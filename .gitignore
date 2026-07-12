@@ -1,10 +1,40 @@
+# dependencies
 /node_modules
-/.next
-/out
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+
+# production
 /build
+
+# misc
 .DS_Store
 *.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
 .env*.local
-.vercel
+.env
+
+# typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editors / local tooling
+/.cursor/
+/.vscode/
+/.idea/
+.mcp.json
+
+# source package / archives (not part of the app)
+*.zip
+
+# os
+.DS_Store
