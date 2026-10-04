@@ -1,0 +1,8 @@
+[agent]
+persistent_facts = [
+  "file:{project-root}/_bmad-output/project-context.md",
+  "Arabic UI labels inside product mockups follow the genudo-arabic-localization skill glossary verbatim. Marketing copy is Egyptian Arabic. Brand: جينـو / جينـو دو.",
+  "New CSS uses logical properties only (margin-inline, inset-inline-start, text-align:start). No letter-spacing or uppercase on Arabic.",
+  "Removing or renaming a route requires a 301 in next.config.mjs and a sitemap/hreflang update via src/i18n/seo.ts.",
+  "Never fabricate prices, metrics, customer names or capabilities. Use only fictional data in mockups (privacy gate). If a value is not in project-context.md, the discovery docs or the code, stop and ask.",
+]
