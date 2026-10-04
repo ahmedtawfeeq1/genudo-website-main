@@ -5,7 +5,11 @@
  * Root-relative links (href="/pricing") are prefixed with the locale so
  * navigation never bounces through the middleware or switches language.
  */
-export default function LegacyBody({ locale, en, ar }: { locale: string; en: string; ar?: string }) {
+import { routing } from '@/i18n/routing';
+
+export default function LegacyBody({ locale: raw, en, ar }: { locale: string; en: string; ar?: string }) {
+  // Allowlist: the locale is interpolated into raw HTML below.
+  const locale = (routing.locales as readonly string[]).includes(raw) ? raw : routing.defaultLocale;
   const rtl = locale.startsWith('ar') && !!ar;
   const html = (rtl ? ar! : en)
     .replace(/href="\/(?=[a-z])(?!media\/|genu\/|assets\/|logos\/|channels\/|shots\/)/g, `href="/${locale}/`)

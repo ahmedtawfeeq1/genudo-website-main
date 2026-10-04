@@ -5,6 +5,7 @@ type: note
 date: 2026-10-05
 source: claude-code
 tags: [website, build-brief, value-led, arabic, workflow]
+loredex: routed
 ---
 
 # Value-led website: build brief (contract for every builder)

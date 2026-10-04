@@ -49,30 +49,12 @@ export default function SiteFooter() {
           </div>
 
           <div className="foot-col">
-            <h5>{t('footer.hProduct')}</h5>
-            <Link href="/ai-employees">{t('terms.agent')}</Link>
-            <Link href="/knowledge">{t('terms.knowledge')}</Link>
-            <Link href="/models">{t('terms.models')}</Link>
-            <Link href="/pipelines">{t('terms.pipeline')}</Link>
-            <Link href="/stages">{t('terms.stages')}</Link>
-            <Link href="/followups">{t('terms.followups')}</Link>
-          </div>
-
-          <div className="foot-col">
-            <h5>{t('footer.hPlatform')}</h5>
-            <Link href="/channels">{t('terms.inbox')}</Link>
-            <Link href="/contacts">{t('terms.contacts')}</Link>
-            <Link href="/analytics">{t('terms.analytics')}</Link>
-            <Link href="/integrations">{t('terms.integrations')}</Link>
-            <Link href="/api-mcp">{t('terms.apiMcp')}</Link>
-          </div>
-
-          <div className="foot-col">
             <h5>{t('footer.hEmployees')}</h5>
             <Link href="/sol-sales-agent">{t('terms.salesAgent')}</Link>
             <Link href="/sol-customer-service">{t('terms.customerService')}</Link>
             <Link href="/sol-operations">{t('terms.operations')}</Link>
-            <Link href="/use-cases">{t('terms.allUseCases')}</Link>
+            <Link href="/how-it-works">{t('nav.howItWorks')}</Link>
+            <Link href="/who-is-genu">{t('nav.whoIsGenu')}</Link>
           </div>
 
           <div className="foot-col">
@@ -86,13 +68,20 @@ export default function SiteFooter() {
           </div>
 
           <div className="foot-col">
+            <h5>{t('footer.hResources')}</h5>
+            <Link href="/customers">{t('terms.customerStories')}</Link>
+            <Link href="/use-cases">{t('terms.allUseCases')}</Link>
+            <Link href="/blog">{t('terms.blog')}</Link>
+            <Link href="/changelog">{t('terms.changelog')}</Link>
+            <Link href="/security">{t('terms.security')}</Link>
+          </div>
+
+          <div className="foot-col">
             <h5>{t('footer.hCompany')}</h5>
             <Link href="/pricing">{t('terms.pricing')}</Link>
-            <Link href="/security">{t('terms.security')}</Link>
+            <Link href="/integrations">{t('terms.integrations')}</Link>
+            <Link href="/api-mcp">{t('terms.apiMcp')}</Link>
             <Link href="/api-docs">{t('terms.apiDocs')}</Link>
-            <Link href="/changelog">{t('terms.changelog')}</Link>
-            <Link href="/blog">{t('terms.blog')}</Link>
-            <Link href="/customers">{t('terms.customerStories')}</Link>
             <Link href="/contact">{t('terms.contact')}</Link>
           </div>
         </div>

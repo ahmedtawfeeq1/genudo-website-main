@@ -83,6 +83,18 @@ export default function SiteNav() {
     </Link>
   );
 
+  /* mobile link: 44px tap target, optional one-line outcome */
+  const M = ({ href, term, sub, strong }: { href: string; term: string; sub?: string; strong?: boolean }) => (
+    <Link
+      href={href}
+      onClick={() => setOpen(false)}
+      style={{ minHeight: 44, display: 'flex', flexDirection: 'column', justifyContent: 'center', ...(strong ? { fontWeight: 640, color: 'var(--ink)' } : null) }}
+    >
+      {t(term)}
+      {sub ? <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--ink-3)', lineHeight: 1.35 }}>{t(sub)}</span> : null}
+    </Link>
+  );
+
   const Arrow = () => <Svg name="arrow" />;
 
   return (
@@ -93,34 +105,32 @@ export default function SiteNav() {
         </Link>
 
         <nav className="nav-links">
-          <Link href="/who-is-genu" className={`nav-featured${isActive('/who-is-genu') ? ' on' : ''}`}>
-            {t('nav.whoIsGenu')}
-          </Link>
-
-          {/* Solutions */}
+          {/* AI employees */}
           <div className="nav-item">
             <button>
-              {t('nav.solutions')} <Svg name="caret" cls="caret" />
+              {t('nav.employees')} <Svg name="caret" cls="caret" />
             </button>
-            <div className="mega mega-wide">
-              <div className="mega-cols mega-cols-2">
-                <div className="mega-col">
-                  <div className="mega-sec-label">{t('nav.secAiEmployees')}</div>
-                  <ML href="/sol-sales-agent" name="sales" bg="#6468f0" term="terms.salesAgent" sub="nav.desc.salesAgent" />
-                  <ML href="/sol-customer-service" name="support" bg="#06b6d4" term="terms.customerService" sub="nav.desc.customerService" />
-                  <ML href="/sol-operations" name="ops" bg="#f97316" term="terms.operations" sub="nav.desc.operations" />
-                </div>
-                <div className="mega-col mega-col-wide">
-                  <div className="mega-sec-label">{t('nav.secByIndustry')}</div>
-                  <div className="mega-inds">
-                    <IL href="/ind-marketing" name="mkt" bg="#e2562a" term="terms.marketing" />
-                    <IL href="/ind-elearning" name="learn" bg="#6468f0" term="terms.elearning" />
-                    <IL href="/ind-fitness" name="fit" bg="#22c55e" term="terms.fitness" />
-                    <IL href="/ind-clinics" name="clinic" bg="#06b6d4" term="terms.clinics" />
-                    <IL href="/ind-hospitality" name="travel" bg="#a855f7" term="terms.hospitality" />
-                    <IL href="/ind-camps-events" name="camp" bg="#f59e0b" term="terms.campsEvents" />
-                  </div>
-                </div>
+            <div className="mega">
+              <div className="mega-sec-label">{t('nav.secAiEmployees')}</div>
+              <ML href="/sol-sales-agent" name="sales" bg="#6468f0" term="terms.salesAgent" sub="nav.desc.salesAgent" />
+              <ML href="/sol-customer-service" name="support" bg="#06b6d4" term="terms.customerService" sub="nav.desc.customerService" />
+              <ML href="/sol-operations" name="ops" bg="#f97316" term="terms.operations" sub="nav.desc.operations" />
+            </div>
+          </div>
+
+          {/* Industries */}
+          <div className="nav-item">
+            <button>
+              {t('nav.industries')} <Svg name="caret" cls="caret" />
+            </button>
+            <div className="mega">
+              <div className="mega-inds">
+                <IL href="/ind-marketing" name="mkt" bg="#e2562a" term="terms.marketing" />
+                <IL href="/ind-elearning" name="learn" bg="#6468f0" term="terms.elearning" />
+                <IL href="/ind-fitness" name="fit" bg="#22c55e" term="terms.fitness" />
+                <IL href="/ind-clinics" name="clinic" bg="#06b6d4" term="terms.clinics" />
+                <IL href="/ind-hospitality" name="travel" bg="#a855f7" term="terms.hospitality" />
+                <IL href="/ind-camps-events" name="camp" bg="#f59e0b" term="terms.campsEvents" />
               </div>
               <div className="mega-foot">
                 <Link href="/use-cases" onClick={() => setOpen(false)}>
@@ -130,64 +140,40 @@ export default function SiteNav() {
             </div>
           </div>
 
-          {/* Product */}
-          <div className="nav-item">
-            <button>
-              {t('nav.product')} <Svg name="caret" cls="caret" />
-            </button>
-            <div className="mega mega-wide">
-              <div className="mega-cols">
-                <div className="mega-col">
-                  <div className="mega-sec-label">{t('nav.secBuild')}</div>
-                  <ML href="/ai-employees" name="agent" bg="#6468f0" term="terms.agent" sub="nav.desc.agent" />
-                  <ML href="/knowledge" name="know" bg="#10b981" term="terms.knowledge" sub="nav.desc.knowledge" />
-                  <ML href="/models" name="models" bg="#6366f1" term="terms.models" sub="nav.desc.models" />
-                </div>
-                <div className="mega-col">
-                  <div className="mega-sec-label">{t('nav.secOperate')}</div>
-                  <ML href="/pipelines" name="pipe" bg="#8b5cf6" term="terms.pipeline" sub="nav.desc.pipeline" />
-                  <ML href="/stages" name="stages" bg="#a855f7" term="terms.stages" sub="nav.desc.stages" />
-                  <ML href="/followups" name="followup" bg="#ec4899" term="terms.followups" sub="nav.desc.followups" />
-                </div>
-                <div className="mega-col">
-                  <div className="mega-sec-label">{t('nav.secEngage')}</div>
-                  <ML href="/channels" name="inbox" bg="#06b6d4" term="terms.inbox" sub="nav.desc.inbox" />
-                  <ML href="/contacts" name="contacts" bg="#0ea5e9" term="terms.contacts" sub="nav.desc.contacts" />
-                  <ML href="/analytics" name="analytics" bg="#22c55e" term="terms.analytics" sub="nav.desc.analytics" />
-                  <ML href="/integrations" name="integ" bg="#14b8a6" term="terms.integrations" sub="nav.desc.integrations" />
-                </div>
-              </div>
-              <div className="mega-foot">
-                <Link href="/product" onClick={() => setOpen(false)}>
-                  {t('nav.platformOverview')} <Arrow />
-                </Link>
-                <Link href="/api-mcp" onClick={() => setOpen(false)}>
-                  {t('terms.apiMcp')} <Arrow />
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Link href="/how-it-works" className={isActive('/how-it-works') ? 'on' : undefined}>
+            {t('nav.howItWorks')}
+          </Link>
+          <Link href="/pricing" className={isActive('/pricing') ? 'on' : undefined}>
+            {t('terms.pricing')}
+          </Link>
 
           {/* Resources */}
           <div className="nav-item">
             <button>
               {t('nav.resources')} <Svg name="caret" cls="caret" />
             </button>
-            <div className="mega">
-              <div className="mega-grid">
-                <ML href="/api-docs" name="docs" bg="#0ea5e9" term="terms.apiDocs" sub="nav.desc.apiDocs" />
-                <ML href="/changelog" name="change" bg="#8b5cf6" term="terms.changelog" sub="nav.desc.changelog" />
-                <ML href="/blog" name="blog" bg="#22c55e" term="terms.blog" sub="nav.desc.blog" />
-                <ML href="/security" name="support" bg="#10b981" term="terms.security" sub="nav.desc.security" />
+            <div className="mega mega-wide">
+              <div className="mega-cols mega-cols-2" style={{ gridTemplateColumns: '1fr 1fr' }}>
+                <div className="mega-col">
+                  <div className="mega-sec-label">{t('nav.secProof')}</div>
+                  <ML href="/customers" name="agent" bg="#6468f0" term="terms.customerStories" sub="nav.desc.customers" />
+                  <ML href="/use-cases" name="sales" bg="#e2562a" term="terms.allUseCases" sub="nav.desc.useCases" />
+                  <ML href="/blog" name="blog" bg="#22c55e" term="terms.blog" sub="nav.desc.blog" />
+                  <ML href="/changelog" name="change" bg="#8b5cf6" term="terms.changelog" sub="nav.desc.changelog" />
+                </div>
+                <div className="mega-col">
+                  <div className="mega-sec-label">{t('nav.secDevelopers')}</div>
+                  <ML href="/security" name="support" bg="#10b981" term="terms.security" sub="nav.desc.security" />
+                  <ML href="/integrations" name="integ" bg="#14b8a6" term="terms.integrations" sub="nav.desc.integrations" />
+                  <ML href="/api-mcp" name="api" bg="#0ea5e9" term="terms.apiMcp" sub="nav.desc.apiMcp" />
+                  <ML href="/api-docs" name="docs" bg="#0ea5e9" term="terms.apiDocs" sub="nav.desc.apiDocs" />
+                </div>
               </div>
             </div>
           </div>
 
-          <Link href="/customers" className={isActive('/customers') ? 'on' : undefined}>
-            {t('terms.customerStories')}
-          </Link>
-          <Link href="/pricing" className={isActive('/pricing') ? 'on' : undefined}>
-            {t('terms.pricing')}
+          <Link href="/who-is-genu" className={`nav-featured${isActive('/who-is-genu') ? ' on' : ''}`}>
+            {t('nav.whoIsGenu')}
           </Link>
         </nav>
 
@@ -211,40 +197,35 @@ export default function SiteNav() {
       {/* Mobile menu */}
       <div className="nav-mobile">
         <div className="container">
-          <Link href="/who-is-genu" style={{ fontWeight: 640, color: 'var(--ink)' }} onClick={() => setOpen(false)}>
-            {t('nav.whoIsGenu')}
-          </Link>
-          <div className="nm-sec">{t('nav.solutions')}</div>
-          <Link href="/sol-sales-agent" onClick={() => setOpen(false)}>{t('terms.salesAgent')}</Link>
-          <Link href="/sol-customer-service" onClick={() => setOpen(false)}>{t('terms.customerService')}</Link>
-          <Link href="/sol-operations" onClick={() => setOpen(false)}>{t('terms.operations')}</Link>
-          <Link href="/ind-marketing" onClick={() => setOpen(false)}>{t('terms.marketing')}</Link>
-          <Link href="/ind-elearning" onClick={() => setOpen(false)}>{t('terms.elearning')}</Link>
-          <Link href="/ind-fitness" onClick={() => setOpen(false)}>{t('terms.fitness')}</Link>
-          <Link href="/ind-clinics" onClick={() => setOpen(false)}>{t('terms.clinics')}</Link>
-          <Link href="/ind-hospitality" onClick={() => setOpen(false)}>{t('terms.hospitality')}</Link>
-          <Link href="/ind-camps-events" onClick={() => setOpen(false)}>{t('terms.campsEvents')}</Link>
-          <div className="nm-sec">{t('nav.product')}</div>
-          <Link href="/ai-employees" onClick={() => setOpen(false)}>{t('terms.agent')}</Link>
-          <Link href="/pipelines" onClick={() => setOpen(false)}>{t('terms.pipeline')}</Link>
-          <Link href="/knowledge" onClick={() => setOpen(false)}>{t('terms.knowledge')}</Link>
-          <Link href="/models" onClick={() => setOpen(false)}>{t('terms.models')}</Link>
-          <Link href="/stages" onClick={() => setOpen(false)}>{t('terms.stages')}</Link>
-          <Link href="/followups" onClick={() => setOpen(false)}>{t('terms.followups')}</Link>
-          <Link href="/channels" onClick={() => setOpen(false)}>{t('terms.inbox')}</Link>
-          <Link href="/contacts" onClick={() => setOpen(false)}>{t('terms.contacts')}</Link>
-          <Link href="/analytics" onClick={() => setOpen(false)}>{t('terms.analytics')}</Link>
-          <Link href="/integrations" onClick={() => setOpen(false)}>{t('terms.integrations')}</Link>
+          <div className="nm-sec">{t('nav.employees')}</div>
+          <M href="/sol-sales-agent" term="terms.salesAgent" sub="nav.desc.salesAgent" />
+          <M href="/sol-customer-service" term="terms.customerService" sub="nav.desc.customerService" />
+          <M href="/sol-operations" term="terms.operations" sub="nav.desc.operations" />
+          <div className="nm-sec">{t('nav.industries')}</div>
+          <M href="/ind-marketing" term="terms.marketing" />
+          <M href="/ind-elearning" term="terms.elearning" />
+          <M href="/ind-fitness" term="terms.fitness" />
+          <M href="/ind-clinics" term="terms.clinics" />
+          <M href="/ind-hospitality" term="terms.hospitality" />
+          <M href="/ind-camps-events" term="terms.campsEvents" />
+          <M href="/use-cases" term="terms.allUseCases" />
+          <div className="nm-sec">{t('nav.secExplore')}</div>
+          <M href="/how-it-works" term="nav.howItWorks" />
+          <M href="/pricing" term="terms.pricing" />
+          <M href="/who-is-genu" term="nav.whoIsGenu" strong />
           <div className="nm-sec">{t('nav.resources')}</div>
-          <Link href="/customers" onClick={() => setOpen(false)}>{t('terms.customerStories')}</Link>
-          <Link href="/api-docs" onClick={() => setOpen(false)}>{t('terms.apiDocs')}</Link>
-          <Link href="/changelog" onClick={() => setOpen(false)}>{t('terms.changelog')}</Link>
-          <Link href="/blog" onClick={() => setOpen(false)}>{t('terms.blog')}</Link>
-          <div className="nm-sec">{t('nav.secMore')}</div>
-          <Link href="/pricing" onClick={() => setOpen(false)}>{t('terms.pricing')}</Link>
-          <Link href="/security" onClick={() => setOpen(false)}>{t('terms.security')}</Link>
-          <Link href="/contact" onClick={() => setOpen(false)}>{t('terms.contact')}</Link>
-          <a href="https://app.genudo.ai/auth/register" className="btn btn-primary" style={{ marginTop: 14, justifyContent: 'center' }}>
+          <M href="/customers" term="terms.customerStories" />
+          <M href="/blog" term="terms.blog" />
+          <M href="/changelog" term="terms.changelog" />
+          <M href="/security" term="terms.security" />
+          <M href="/integrations" term="terms.integrations" />
+          <M href="/api-mcp" term="terms.apiMcp" />
+          <M href="/api-docs" term="terms.apiDocs" />
+          <M href="/contact" term="terms.contact" />
+          <a href="https://app.genudo.ai/auth/login" className="btn" style={{ marginTop: 14, justifyContent: 'center', minHeight: 44, border: '1px solid var(--border)', color: 'var(--ink)' }}>
+            {t('nav.signIn')}
+          </a>
+          <a href="https://app.genudo.ai/auth/register" className="btn btn-primary" style={{ marginTop: 10, justifyContent: 'center', minHeight: 44 }}>
             {t('nav.getStarted')}
           </a>
         </div>
