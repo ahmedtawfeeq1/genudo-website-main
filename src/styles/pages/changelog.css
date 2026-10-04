@@ -1,0 +1,33 @@
+/* /changelog: release notes, rendered statically. Every selector is scoped to .pg-changelog. */
+.pg-changelog { overflow-x: clip; }
+.pg-changelog .rhead p { font-size: 17px; }
+.pg-changelog .clog { grid-template-columns: 230px minmax(0, 1fr); }
+.pg-changelog .clog-list { padding-inline: 0; border-inline: 0; padding-inline-start: 28px; border-inline-start: 2px solid var(--border); min-inline-size: 0; }
+.pg-changelog .clog-item::before { inset-inline: auto; inset-inline-start: -35px; }
+.pg-changelog .clog-date { direction: inherit; unicode-bidi: plaintext; }
+.pg-changelog .clog-filter { text-align: start; display: flex; align-items: center; min-block-size: 44px; text-decoration: none; }
+.pg-changelog .clog-cover .cc-tag { letter-spacing: 0; text-transform: none; font-size: 12px; }
+.pg-changelog .clog-tag { letter-spacing: 0; text-transform: none; font-size: 12px; }
+.pg-changelog .clog-item ul { padding-inline: 0; padding-inline-start: 20px; }
+.pg-changelog .clog-item p, .pg-changelog .clog-item li { overflow-wrap: anywhere; }
+.pg-changelog .clog-cover .cc-h { font-size: 24px; }
+.pg-changelog .clog-social a { min-inline-size: 44px; min-block-size: 44px; }
+.pg-changelog .clog-note { font-size: 14.5px; color: var(--ink-3, #6c727e); margin-block-start: 8px; }
+.pg-changelog .clog-note a { color: var(--primary); text-decoration: underline; }
+@media (max-width: 900px) {
+  .pg-changelog .clog { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-changelog .clog-filters { flex-direction: row; flex-wrap: wrap; }
+  .pg-changelog .clog-filter { background: #fff; border: 1px solid var(--border); }
+}
+@media (max-width: 720px) {
+  .pg-changelog .rhead { padding-block: 40px 28px; }
+  .pg-changelog .rhead h1 { font-size: clamp(28px, 8vw, 36px); }
+  .pg-changelog .clog-list { padding-inline-start: 20px; }
+  .pg-changelog .clog-item::before { inset-inline-start: -27px; }
+  .pg-changelog .clog-cover { padding: 24px 20px; }
+  .pg-changelog .clog-cover .cc-h { font-size: 21px; }
+}
+
+/* Arabic: no Latin tracking, uppercase or mono font on Arabic dates and tags. */
+.legacy-rtl .pg-changelog, .legacy-rtl .pg-changelog * { letter-spacing: 0; text-transform: none; }
+.legacy-rtl .pg-changelog :is(.clog-date, .cc-tag, .clog-tag) { font-family: inherit; font-size: 12.5px; }

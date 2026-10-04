@@ -98,120 +98,120 @@
       "description": "GenuDo builds genuine AI employees — agents grounded in your knowledge, with tools, channels and pipelines — that reply, act and close work across WhatsApp, Instagram, webchat and email, 24/7."
     },
     "home": {
-      "title": "Build AI employees that move work forward",
-      "description": "Turn your playbooks into genuine AI employees that own conversations, move deals through your pipeline and get work done across every channel, around the clock."
+      "title": "AI employees that answer every customer, day and night",
+      "description": "AI employees that answer on WhatsApp, Instagram, Messenger and web chat, follow up with silent leads and book meetings, with capped AI cost."
     },
     "whoIsGenu": {
-      "title": "Who is GENU? Meet your AI employee",
-      "description": "GENU is your genuine AI employee — grounded in your knowledge, working your channels. See what GENU can do for your team."
+      "title": "Meet GENU, the guide to your AI workforce",
+      "description": "GENU introduces your AI team: Aaref for sales, Adnan for support, ROZ for quality. They answer customers day and night while you stay in control."
     },
     "howItWorks": {
-      "title": "How GenuDo works: from first message to booked meeting",
-      "description": "See how your AI employees answer every customer, follow up until they decide, stay within a budget you set, and hand over to you in one tap."
+      "title": "How GenuDo works: from first message to sale",
+      "description": "Hire AI employees that answer every chat, move leads to a decision, chase the quiet ones and keep AI cost capped. See how it works."
     },
     "integrations": {
-      "title": "Integrations — connect your stack",
-      "description": "Plug GenuDo into the tools you already run — CRMs, calendars, sheets and automation platforms like Zapier, Make and n8n. 40+ integrations."
+      "title": "Integrations with the tools you already use",
+      "description": "GenuDo works with WhatsApp, Instagram, Messenger, website chat, calendars, CRMs and helpdesks, with no change to how your team works."
     },
     "apiMcp": {
-      "title": "API & MCP",
-      "description": "Build GenuDo deeply into your product with a clean API and an MCP server — bring your AI employees anywhere."
+      "title": "Run your AI team from Claude or ChatGPT",
+      "description": "Set up and coach your AI employees in plain language from Claude or ChatGPT. Every change is shown as a diff and confirmed first. Setup takes about 3 minutes."
     },
     "solSalesAgent": {
-      "title": "AI Sales Agent",
-      "description": "Qualify, follow up and close inbound leads 24/7. GenuDo's AI Sales Agent books demos and moves deals down your pipeline automatically."
+      "title": "Aaref: AI sales employee that answers and follows up",
+      "description": "Aaref answers every inquiry instantly, qualifies leads, follows up with quiet ones, books meetings and updates your CRM, on WhatsApp, Instagram and web chat."
     },
     "solCustomerService": {
-      "title": "AI Customer Service",
-      "description": "Answer and resolve customer questions around the clock across every channel — with humans in control for what matters."
+      "title": "Adnan: AI Support Employee for WhatsApp and More",
+      "description": "Adnan answers customers instantly from your own policies, any hour, and hands the rest to your team, with Zoho Desk and Zendesk. Start free."
     },
     "solOperations": {
-      "title": "AI Operations Assistant",
-      "description": "Run the work behind the scenes — GenuDo's Operations Assistant handles routine ops so your team focuses on judgment calls."
+      "title": "ROZ: See How Your Team Replies on WhatsApp",
+      "description": "ROZ reviews your team's company WhatsApp chats and flags slow replies, stalled deals and missed opportunities, so you see everything without reading every chat."
     },
     "indMarketing": {
-      "title": "GenuDo for marketing agencies",
-      "description": "Give every client an AI employee that replies, qualifies and reports across channels — scale accounts without scaling headcount."
+      "title": "Marketing agencies: answer every paid lead",
+      "description": "Protect the client retainer. An AI employee answers and qualifies every campaign lead in seconds, books the call, and follows up with the ones who went quiet."
     },
     "indElearning": {
-      "title": "GenuDo for e-learning & academies",
-      "description": "Enroll students, answer questions and follow up automatically — an AI employee for academies and online learning."
+      "title": "Turn course inquiries into enrolled students",
+      "description": "An AI employee answers course, fee and schedule questions on WhatsApp day and night, recommends the right course and books the admissions advisor call."
     },
     "indFitness": {
-      "title": "GenuDo for fitness centres",
-      "description": "Book classes, answer members and win leads 24/7 — an AI employee built for gyms and fitness centres."
+      "title": "Trial classes booked, members looked after",
+      "description": "Book trial classes, answer plan questions and collect freeze requests over WhatsApp, so your front desk can focus on the members in the gym."
     },
     "indClinics": {
-      "title": "GenuDo for clinics & healthcare",
-      "description": "Book appointments, answer patients and follow up — an AI employee for clinics, with humans in control of anything sensitive."
+      "title": "Clinics: fill appointment slots, answer any hour",
+      "description": "An AI employee answers prep, price and availability questions at any hour and books appointments. Scheduling and admin only; medical questions go to your team."
     },
     "indHospitality": {
-      "title": "GenuDo for hospitality & tourism",
-      "description": "Answer guests, take bookings and follow up in any language — an AI employee for hotels, travel and tourism."
+      "title": "AI for Hotels: Capture Bookings at 3 am",
+      "description": "Answer guests in any time zone, any hour. GenuDo AI employees reply in seconds, collect dates and details, and hand your front desk a ready booking request."
     },
     "indCampsEvents": {
-      "title": "GenuDo for camps & events",
-      "description": "Register attendees, answer questions and follow up at scale — an AI employee for camps and events."
+      "title": "AI for Camps & Events: Absorb Registration Rushes",
+      "description": "Answer every parent in seconds when registration opens, calm safety worries, and collect details without temporary staff. WhatsApp, Instagram and web chat."
     },
     "useCases": {
-      "title": "Use cases",
-      "description": "See how one GENU switches into every job on your team — sales, support and operations — with a real slice of the product beside it."
+      "title": "Use cases by outcome, team and industry",
+      "description": "Start from the result you want: no customer waiting till morning, no lead forgotten. Find the AI employee and the industry page that fit your business."
     },
     "customers": {
-      "title": "Customer stories",
-      "description": "How teams across MENA use GenuDo AI employees to reply faster, qualify leads and close more — in learning, clinics, agencies, fitness and more."
+      "title": "Customer stories: leads answered, meetings booked",
+      "description": "Real founders on camera: how Wellspring, TIQNIAT and ePreneurs stopped losing leads after hours with a GenuDo AI employee on WhatsApp."
     },
     "pricing": {
-      "title": "Pricing",
-      "description": "Simple pricing for AI employees that do the work. Start free, scale as you grow — no credit card to begin."
+      "title": "Pricing: Free to Enterprise AI employee plans",
+      "description": "Start free, then pick Starter, Growth or Scale as your AI employees take on more conversations. See what each plan includes and compare them side by side."
     },
     "contact": {
-      "title": "Contact us",
-      "description": "Tell us what you want to automate — we'll scope your first AI employee live, in your channels. Talk to sales or book a demo."
+      "title": "Book a demo: see an AI employee answer your customers",
+      "description": "In one call we set up a working AI employee on your own channels. No slides, no pitch. Reply within one business day, no card required."
     },
     "security": {
-      "title": "Trust & Security",
-      "description": "How GenuDo protects your data — human-in-the-loop approvals, auditable actions, scoped access and clear data handling."
+      "title": "Security: your data, your rules, every action logged",
+      "description": "Control what your AI employees say and do: answers from your own facts, every action logged, spend caps per chat, and one-tap human takeover."
     },
     "apiDocs": {
-      "title": "API Documentation",
-      "description": "Build on the GenuDo API — endpoints, auth and examples to bring your AI employees into any product or workflow."
+      "title": "GenuDo API documentation",
+      "description": "REST API reference for GenuDo: authentication, scoped tokens, endpoints, JSON responses and errors. Connect your own tools to your AI employees."
     },
     "changelog": {
-      "title": "Changelog",
-      "description": "What shipped in GenuDo, every week — new features, improvements and fixes."
+      "title": "GenuDo changelog: what's new",
+      "description": "See what shipped in GenuDo: new features, improvements and fixes for your AI employees, inbox, follow-ups and analytics."
     },
     "blog": {
-      "title": "Blog — playbooks & product notes",
-      "description": "Playbooks, guides and product notes on building AI employees that move work forward."
+      "title": "The GenuDo blog: AI employees in practice",
+      "description": "Practical writing on AI employees for sales and support: pipelines, guardrails, predictable cost and running your team from WhatsApp."
     },
     "resources": {
-      "title": "Resources",
-      "description": "Guides, playbooks and tools to help you build and run AI employees with GenuDo."
+      "title": "Resources for AI-run customer conversations",
+      "description": "Guides, customer stories, security, integrations and developer docs to put an AI employee on your WhatsApp and see the outcome before you commit."
     },
     "blogAiEmployeesVsChatbots": {
-      "title": "AI employees vs chatbots",
-      "description": "Why an AI employee — grounded, tool-using and pipeline-aware — does the work a chatbot can't."
+      "title": "AI employees vs. chatbots: what changed",
+      "description": "A chatbot answers questions. An AI employee follows up, books meetings and moves deals forward. Here is the difference for your business."
     },
     "blogCostPerOutcome": {
-      "title": "Cost per outcome, not per message",
-      "description": "Measure your AI workforce by booked meetings and closed deals — not message volume. How to think about cost per outcome."
+      "title": "Measure cost per outcome, not per request",
+      "description": "Per-request pricing hides what matters. Track what you pay to qualify a lead, resolve a question or book a meeting, and cap spend per chat."
     },
     "blogGuardrailsThatMatter": {
-      "title": "Guardrails that matter",
-      "description": "The guardrails that keep AI employees safe and on-brand — approvals, scoped access and human handoff."
+      "title": "Guardrails for customer-facing AI",
+      "description": "The few guardrails that really protect customers and your brand: answers from your facts, spend caps, one-tap human takeover and review."
     },
     "blogLaunchAnalyticsCenter": {
-      "title": "Launching the Analytics Center",
-      "description": "A live view of outcomes, workload and cost per outcome — introducing the GenuDo Analytics Center."
+      "title": "Introducing the Analytics Center",
+      "description": "See opportunities won and lost, the pipeline funnel, AI cost and cost per conversion in one dashboard built for owners and team leads."
     },
     "blogPipelineNotInbox": {
-      "title": "Pipeline, not inbox",
-      "description": "Why conversations should move through a pipeline your team can see — not pile up in an inbox."
+      "title": "Why your AI needs a pipeline, not an inbox",
+      "description": "An inbox lists messages. A pipeline moves each opportunity to the next stage, with follow-ups and clear ownership. Why that matters for sales."
     },
     "blogWhatsappTeamWorkflows": {
-      "title": "WhatsApp team workflows",
-      "description": "Run your whole team on WhatsApp with one shared inbox, AI replies and human handoff."
+      "title": "Run your team from WhatsApp, without chaos",
+      "description": "Keep WhatsApp, add structure: shared inbox, private notes, AI on or off per chat and quality review of your team's conversations."
     }
   }
 }

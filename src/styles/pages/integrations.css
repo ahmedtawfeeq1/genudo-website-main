@@ -1,0 +1,69 @@
+/* /integrations: works-with-your-tools page. Every selector is scoped to .pg-integrations. */
+.pg-integrations { overflow-x: clip; }
+.pg-integrations .phero-in > * { min-inline-size: 0; }
+.pg-integrations .phero .lead { max-inline-size: 520px; font-size: 16px; }
+.pg-integrations .crumb { flex-wrap: wrap; }
+.pg-integrations .heroc-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.pg-integrations .heroc-cta .btn { min-block-size: 48px; }
+.pg-integrations .pg-hub { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 22px; padding: 18px; color: #eef0ff; display: grid; gap: 14px; }
+.pg-integrations .pg-hub-row small { display: block; font-size: 13px; color: #a8aede; margin-block-end: 8px; }
+.pg-integrations .pg-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pg-integrations .pg-pill { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: #fff; }
+.pg-integrations .pg-pill img { inline-size: 20px; block-size: 20px; background: #fff; border-radius: 5px; padding: 1px; }
+.pg-integrations .pg-hub-mid { display: flex; align-items: center; justify-content: center; gap: 12px; background: linear-gradient(160deg,#6468f0,#4b39c9); border: 1px solid rgba(255,255,255,.3); border-radius: 18px; padding: 12px 16px; }
+.pg-integrations .pg-hub-mid img { inline-size: 64px; block-size: 64px; }
+.pg-integrations .pg-hub-mid b { font-size: 18px; color: #fff; }
+.pg-integrations .intg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-block-start: 30px; }
+.pg-integrations .pg-group .intg { margin-block-start: 16px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.pg-integrations .intc { display: flex; flex-direction: column; gap: 3px; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: var(--shadow-sm); min-inline-size: 0; }
+.pg-integrations .intc .ilogo { inline-size: 46px; block-size: 46px; border-radius: 12px; overflow: hidden; margin-block-end: 10px; display: grid; place-items: center; background: #fff; border: 1px solid var(--border); }
+.pg-integrations .intc .ilogo img { inline-size: 100%; block-size: 100%; object-fit: contain; }
+.pg-integrations .intc .pg-letter { color: #fff; font-weight: 700; font-size: 20px; border: 0; }
+.pg-integrations .intc b { display: block; font-size: 15px; font-weight: 640; }
+.pg-integrations .intc span { font-size: 14px; line-height: 1.45; color: var(--ink-3); }
+.pg-integrations .pg-chans .intc span { color: var(--ink-2); }
+.pg-integrations .pg-groups { display: grid; gap: 28px; margin-block-start: 34px; }
+.pg-integrations .pg-group { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 22px; box-shadow: var(--shadow-sm); }
+.pg-integrations .pg-group h3 { font-size: 19px; margin: 0 0 6px; }
+.pg-integrations .pg-group > p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+.pg-integrations .pg-group .intc { box-shadow: none; background: var(--tint, #f6f6fe); }
+.pg-integrations .pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; align-items: center; }
+.pg-integrations .pg-split.pg-flip .pg-shot { order: -1; }
+.pg-integrations .pg-copy { min-inline-size: 0; }
+.pg-integrations .pg-copy .lead { margin-block-start: 14px; font-size: 16px; }
+.pg-integrations .pg-copy .plist { margin-block: 20px; }
+.pg-integrations .pg-copy .plist li { font-size: 15px; }
+.pg-integrations .plist .ic svg { inline-size: 19px; block-size: 19px; flex: none; color: var(--success); }
+.pg-integrations .btn { min-block-size: 44px; }
+.pg-integrations .pg-shot { min-inline-size: 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); background: #fff; }
+.pg-integrations .pg-shot img { display: block; inline-size: 100%; max-inline-size: 100%; block-size: auto; }
+.pg-integrations .pg-mock { min-inline-size: 0; display: flex; justify-content: center; }
+.pg-integrations .pg-devs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-block-start: 30px; }
+.pg-integrations .pg-dev { background: var(--tint, #f6f6fe); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; min-inline-size: 0; }
+.pg-integrations .pg-dev b { display: block; font-size: 16px; margin-block-end: 4px; }
+.pg-integrations .pg-dev span { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+.pg-integrations .pg-links { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 22px; }
+.pg-integrations .faq p a { text-decoration: underline; }
+.pg-integrations .xnav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-block-start: 20px; }
+.pg-integrations .xcard { min-block-size: 64px; min-inline-size: 0; }
+.pg-integrations .xcard .go { margin-inline: 0; margin-inline-start: auto; }
+.pg-integrations .xi img { inline-size: 28px; block-size: 28px; }
+.pg-integrations .ctaf-cta .btn { min-block-size: 48px; }
+.pg-integrations .ctaf-sec { min-block-size: 44px; }
+.legacy-rtl .pg-integrations .eyebrow { font-family: inherit; letter-spacing: 0; text-transform: none; font-size: 14px; }
+.legacy-rtl .pg-integrations :is(.crumb svg, .xcard .go svg, .ctaf-sec svg, .btn svg) { transform: scaleX(-1); }
+@media (max-width: 960px) {
+  .pg-integrations .intg.pg-chans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-integrations .pg-split { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-integrations .pg-split.pg-flip .pg-shot { order: 0; }
+  .pg-integrations .xnav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .pg-integrations .s { padding-block: 52px; }
+  .pg-integrations .pg-devs, .pg-integrations .xnav { grid-template-columns: minmax(0, 1fr); }
+  .pg-integrations .pg-group .intg { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-integrations .phero { padding-block: 40px 48px; }
+  .pg-integrations .phero h1 { font-size: clamp(28px, 8vw, 36px); }
+  .pg-integrations .heroc-cta .btn { inline-size: 100%; justify-content: center; }
+  .pg-integrations .ctaf-card { padding-inline: 20px; }
+}

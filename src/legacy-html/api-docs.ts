@@ -1,3 +1,137 @@
-// AUTO-GENERATED from legacy-source/website/api-docs.html — server-rendered as-is (pixel-identical).
-const html: string = "<div class=\"rhead\"><div class=\"container\">\n  <div class=\"crumb\"><a href=\"/resources\">Resources</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg><span>API Documentation</span></div>\n  <h1>API Documentation</h1>\n  <p>Build on GenuDo: create agents, drive conversations, read contacts and pipelines, and receive events — over a clean REST API and MCP.</p>\n</div></div>\n\n<section class=\"s-sm\"><div class=\"container\">\n  <div class=\"docs\">\n    <nav class=\"docs-nav\">\n      <div class=\"dn-sec\">Getting started</div>\n      <a href=\"#intro\" class=\"on\">Introduction</a>\n      <a href=\"#auth\">Authentication</a>\n      <a href=\"#errors\">Errors &amp; rate limits</a>\n      <div class=\"dn-sec\">Core resources</div>\n      <a href=\"#agents\">Agents</a>\n      <a href=\"#conversations\">Conversations</a>\n      <a href=\"#contacts\">Contacts</a>\n      <a href=\"#pipelines\">Pipelines</a>\n      <div class=\"dn-sec\">Events &amp; extend</div>\n      <a href=\"#webhooks\">Webhooks</a>\n      <a href=\"#mcp\">MCP</a>\n    </nav>\n    <main class=\"docs-main\">\n      <section id=\"intro\">\n        <h2>Introduction</h2>\n        <p>The GenuDo API is organised around REST. It has predictable, resource-oriented URLs, returns JSON, and uses standard HTTP verbs and status codes. The base URL for all requests is:</p>\n        <div class=\"endpoint\"><span class=\"method get\">BASE</span><span class=\"path\">https://api.genudo.ai/v1</span></div>\n        <div class=\"callout\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v4M12 16h.01\"/></svg><span>Everything you can do in the GenuDo dashboard, you can do over the API — create agents, connect channels, drive conversations and read analytics.</span></div>\n      </section>\n\n      <section id=\"auth\">\n        <h2>Authentication</h2>\n        <p>Authenticate with a workspace API key sent as a Bearer token. Create and rotate keys in <span class=\"mono\">Settings → API keys</span>. Keep keys server-side — never ship them in a browser.</p>\n        <div class=\"code\"><div class=\"code-head\"><span class=\"lang\">cURL</span></div><pre><span class=\"c\"># Every request carries your key as a Bearer token</span>\ncurl https://api.genudo.ai/v1/agents \\\n  -H <span class=\"s\">\"Authorization: Bearer $GENUDO_API_KEY\"</span></pre></div>\n      </section>\n\n      <section id=\"errors\">\n        <h2>Errors &amp; rate limits</h2>\n        <p>GenuDo uses conventional HTTP status codes. <span class=\"mono\">2xx</span> means success, <span class=\"mono\">4xx</span> a problem with the request, and <span class=\"mono\">5xx</span> an error on our side. Errors return a JSON body with a machine-readable <span class=\"mono\">code</span> and a human message.</p>\n        <div class=\"code\"><div class=\"code-head\"><span class=\"lang\">JSON · 422</span></div><pre>{\n  <span class=\"k\">\"error\"</span>: {\n    <span class=\"k\">\"code\"</span>: <span class=\"s\">\"validation_error\"</span>,\n    <span class=\"k\">\"message\"</span>: <span class=\"s\">\"channel is required\"</span>,\n    <span class=\"k\">\"param\"</span>: <span class=\"s\">\"channel\"</span>\n  }\n}</pre></div>\n        <p>The API is rate limited per workspace. Limits are returned on every response in the <span class=\"mono\">X-RateLimit-Remaining</span> header; a <span class=\"mono\">429</span> means you should back off and retry with exponential delay.</p>\n      </section>\n\n      <section id=\"agents\">\n        <h2>Agents</h2>\n        <p>An agent is a configured AI employee: a persona, a knowledge base, a set of tools and a model routing policy. Create one, then deploy it to any channel.</p>\n        <div class=\"endpoint\"><span class=\"method post\">POST</span><span class=\"path\">/v1/agents</span></div>\n        <div class=\"endpoint\"><span class=\"method get\">GET</span><span class=\"path\">/v1/agents/{id}</span></div>\n        <div class=\"param head\"><span class=\"pn\">Parameter</span><span class=\"pt\">Type</span><span class=\"pd\">Description</span></div>\n        <div class=\"param\"><span class=\"pn\">name</span><span class=\"pt\">string</span><span class=\"pd\">Display name for the agent, e.g. “Sales Agent”.</span></div>\n        <div class=\"param\"><span class=\"pn\">persona</span><span class=\"pt\">string</span><span class=\"pd\">System instructions and tone the agent follows.</span></div>\n        <div class=\"param\"><span class=\"pn\">knowledge_ids</span><span class=\"pt\">array</span><span class=\"pd\">Knowledge bases the agent can read from.</span></div>\n        <div class=\"param\"><span class=\"pn\">model_policy</span><span class=\"pt\">object</span><span class=\"pd\">Routing rules — fast vs. reasoning model per task.</span></div>\n        <div class=\"code\"><div class=\"code-head\"><span class=\"lang\">Node</span></div><pre><span class=\"k\">const</span> res = <span class=\"k\">await</span> fetch(<span class=\"s\">\"https://api.genudo.ai/v1/agents\"</span>, {\n  method: <span class=\"s\">\"POST\"</span>,\n  headers: {\n    <span class=\"k\">\"Authorization\"</span>: <span class=\"s\">`Bearer ${process.env.GENUDO_API_KEY}`</span>,\n    <span class=\"k\">\"Content-Type\"</span>: <span class=\"s\">\"application/json\"</span>\n  },\n  body: <span class=\"p\">JSON</span>.stringify({\n    name: <span class=\"s\">\"Sales Agent\"</span>,\n    persona: <span class=\"s\">\"Friendly, concise. Qualify then book a meeting.\"</span>,\n    knowledge_ids: [<span class=\"s\">\"kb_inventory\"</span>, <span class=\"s\">\"kb_pricing\"</span>],\n    model_policy: { <span class=\"k\">routing</span>: <span class=\"s\">\"auto\"</span> }\n  })\n});\n<span class=\"k\">const</span> agent = <span class=\"k\">await</span> res.json();</pre></div>\n      </section>\n\n      <section id=\"conversations\">\n        <h2>Conversations</h2>\n        <p>Send a message into a conversation and get the agent’s reply, or list history. Conversations are tied to a contact and a channel.</p>\n        <div class=\"endpoint\"><span class=\"method post\">POST</span><span class=\"path\">/v1/conversations/{id}/messages</span></div>\n        <div class=\"code\"><div class=\"code-head\"><span class=\"lang\">JSON · response</span></div><pre>{\n  <span class=\"k\">\"id\"</span>: <span class=\"s\">\"msg_9f2\"</span>,\n  <span class=\"k\">\"role\"</span>: <span class=\"s\">\"agent\"</span>,\n  <span class=\"k\">\"text\"</span>: <span class=\"s\">\"The villa is available — shall I hold Thursday 2pm?\"</span>,\n  <span class=\"k\">\"model\"</span>: <span class=\"s\">\"fast\"</span>,\n  <span class=\"k\">\"cost_usd\"</span>: <span class=\"n\">0.0021</span>,\n  <span class=\"k\">\"stage\"</span>: <span class=\"s\">\"qualified\"</span>\n}</pre></div>\n      </section>\n\n      <section id=\"contacts\">\n        <h2>Contacts</h2>\n        <p>Contacts unify a customer across channels. Read a profile with its merged history, attributes and pipeline position.</p>\n        <div class=\"endpoint\"><span class=\"method get\">GET</span><span class=\"path\">/v1/contacts/{id}</span></div>\n        <div class=\"endpoint\"><span class=\"method post\">POST</span><span class=\"path\">/v1/contacts/{id}/attributes</span></div>\n      </section>\n\n      <section id=\"pipelines\">\n        <h2>Pipelines</h2>\n        <p>Read pipeline stages and move a contact between them. Stage changes fire whatever actions you’ve configured.</p>\n        <div class=\"endpoint\"><span class=\"method get\">GET</span><span class=\"path\">/v1/pipelines/{id}</span></div>\n        <div class=\"endpoint\"><span class=\"method post\">POST</span><span class=\"path\">/v1/pipelines/{id}/move</span></div>\n      </section>\n\n      <section id=\"webhooks\">\n        <h2>Webhooks</h2>\n        <p>Subscribe to events and GenuDo will POST them to your endpoint as they happen — new messages, stage changes, escalations and more. Verify the signature in the <span class=\"mono\">X-Genudo-Signature</span> header.</p>\n        <div class=\"code\"><div class=\"code-head\"><span class=\"lang\">JSON · event</span></div><pre>{\n  <span class=\"k\">\"type\"</span>: <span class=\"s\">\"deal.stage_changed\"</span>,\n  <span class=\"k\">\"contact_id\"</span>: <span class=\"s\">\"con_7742\"</span>,\n  <span class=\"k\">\"from\"</span>: <span class=\"s\">\"new\"</span>,\n  <span class=\"k\">\"to\"</span>: <span class=\"s\">\"qualified\"</span>,\n  <span class=\"k\">\"value_usd\"</span>: <span class=\"n\">4200</span>\n}</pre></div>\n      </section>\n\n      <section id=\"mcp\" style=\"border-bottom:0\">\n        <h2>MCP</h2>\n        <p>GenuDo speaks the <strong>Model Context Protocol</strong>. Point Claude Code, Cursor or your own client at the GenuDo MCP server and build, connect knowledge and drive agents from your editor.</p>\n        <div class=\"code\"><div class=\"code-head\"><span class=\"lang\">shell</span></div><pre><span class=\"c\"># Add GenuDo as an MCP server</span>\nmcp add genudo --key $GENUDO_API_KEY</pre></div>\n        <div class=\"callout\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m8 6-6 6 6 6\"/><path d=\"m16 6 6 6-6 6\"/></svg><span>Prefer to stay in your stack? See <a href=\"/api-mcp\" style=\"color:var(--primary);font-weight:600\">API &amp; MCP</a> for the full integration guide.</span></div>\n      </section>\n    </main>\n  </div>\n</div></section>";
+// /api-docs — value-led rewrite (EN). See docs/website/BUILD-BRIEF.md.
+const html = `<div class="pg-api-docs">
+<div class="rhead"><div class="container">
+  <div class="crumb"><a href="/resources">Resources</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>API Documentation</span></div>
+  <h1>API Documentation</h1>
+  <p>Build on GenuDo: create agents, drive conversations, read contacts and pipelines, and send data to your own systems at the right moment, over a clean REST API and MCP.</p>
+</div></div>
+
+<section class="s-sm"><div class="container">
+  <div class="docs">
+    <nav class="docs-nav" aria-label="API documentation sections">
+      <div class="dn-sec">Getting started</div>
+      <a href="#intro" class="on">Introduction</a>
+      <a href="#auth">Authentication</a>
+      <a href="#errors">Errors &amp; rate limits</a>
+      <div class="dn-sec">Core resources</div>
+      <a href="#agents">Agents</a>
+      <a href="#conversations">Conversations</a>
+      <a href="#contacts">Contacts</a>
+      <a href="#pipelines">Pipelines</a>
+      <div class="dn-sec">Automate &amp; extend</div>
+      <a href="#actions">Stage actions</a>
+      <a href="#mcp">MCP</a>
+    </nav>
+    <main class="docs-main">
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>The GenuDo API is organised around REST. It has predictable, resource-oriented URLs, returns JSON, and uses standard HTTP verbs and status codes. The base URL for all requests is:</p>
+        <div class="endpoint"><span class="method get">BASE</span><span class="path">https://api.genudo.ai/v1</span></div>
+        <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span>Plug GenuDo into the systems you already run: read and update opportunities, send messages and keep your knowledge base current. The always-current, complete reference lives at <span class="mono">api.genudo.ai/docs</span>.</span></div>
+      </section>
+
+      <section id="auth">
+        <h2>Authentication</h2>
+        <p>Authenticate with a scoped, revocable token sent as a Bearer token. Create tokens in <span class="mono">API Keys &amp; Tokens</span> (the Developer section of the sidebar). Keep tokens server-side and never ship them in a browser.</p>
+        <div class="code"><div class="code-head"><span class="lang">cURL</span></div><pre><span class="c"># Every request carries your token as a Bearer token</span>
+curl https://api.genudo.ai/v1/agents \\
+  -H <span class="s">"Authorization: Bearer $GENUDO_TOKEN"</span></pre></div>
+        <p>Each token carries only the scopes you give it:</p>
+        <div class="scopes"><code>opportunities:read</code><code>opportunities:write</code><code>conversations:write</code><code>messages:send</code><code>knowledge:read</code><code>knowledge:write</code><code>mcp:use</code></div>
+        <p>The full token is shown once, when you create it, and only a hashed copy is kept. Choose an expiry of 30 days, 90 days (the default), 1 year or none, and revoke a token whenever you need to. The full reference lives at <span class="mono">api.genudo.ai/docs</span>.</p>
+      </section>
+
+      <section id="errors">
+        <h2>Errors &amp; rate limits</h2>
+        <p>GenuDo uses conventional HTTP status codes. <span class="mono">2xx</span> means success, <span class="mono">4xx</span> a problem with the request, and <span class="mono">5xx</span> an error on our side. Errors return a JSON body with a machine-readable <span class="mono">code</span> and a human message.</p>
+        <div class="code"><div class="code-head"><span class="lang">JSON · 422</span></div><pre>{
+  <span class="k">"error"</span>: {
+    <span class="k">"code"</span>: <span class="s">"validation_error"</span>,
+    <span class="k">"message"</span>: <span class="s">"channel is required"</span>,
+    <span class="k">"param"</span>: <span class="s">"channel"</span>
+  }
+}</pre></div>
+        <p>The API is rate limited per workspace. A <span class="mono">429</span> means you should back off and retry with an exponential delay.</p>
+      </section>
+
+      <section id="agents">
+        <h2>Agents</h2>
+        <p>An agent is a configured AI employee: a persona, a knowledge base, a set of tools and a model routing policy. Create one, then deploy it to any channel.</p>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/agents</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/v1/agents/{id}</span></div>
+        <div class="param head"><span class="pn">Parameter</span><span class="pt">Type</span><span class="pd">Description</span></div>
+        <div class="param"><span class="pn">name</span><span class="pt">string</span><span class="pd">Display name for the agent, e.g. &ldquo;Sales Agent&rdquo;.</span></div>
+        <div class="param"><span class="pn">persona</span><span class="pt">string</span><span class="pd">Instructions and tone the agent follows.</span></div>
+        <div class="param"><span class="pn">knowledge_ids</span><span class="pt">array</span><span class="pd">Knowledge bases the agent can read from.</span></div>
+        <div class="param"><span class="pn">model_policy</span><span class="pt">object</span><span class="pd">Routing rules: a fast model or a reasoning model per task.</span></div>
+        <div class="code"><div class="code-head"><span class="lang">Node</span></div><pre><span class="k">const</span> res = <span class="k">await</span> fetch(<span class="s">"https://api.genudo.ai/v1/agents"</span>, {
+  method: <span class="s">"POST"</span>,
+  headers: {
+    <span class="k">"Authorization"</span>: <span class="s">"Bearer "</span> + process.env.GENUDO_TOKEN,
+    <span class="k">"Content-Type"</span>: <span class="s">"application/json"</span>
+  },
+  body: <span class="p">JSON</span>.stringify({
+    name: <span class="s">"Sales Agent"</span>,
+    persona: <span class="s">"Friendly, concise. Qualify then book a meeting."</span>,
+    knowledge_ids: [<span class="s">"kb_inventory"</span>, <span class="s">"kb_pricing"</span>],
+    model_policy: { <span class="k">routing</span>: <span class="s">"auto"</span> }
+  })
+});
+<span class="k">const</span> agent = <span class="k">await</span> res.json();</pre></div>
+      </section>
+
+      <section id="conversations">
+        <h2>Conversations</h2>
+        <p>Send a message into a conversation and get the agent&rsquo;s reply, or list history. Conversations are tied to a contact and a channel.</p>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/conversations/{id}/messages</span></div>
+        <div class="code"><div class="code-head"><span class="lang">JSON · response</span></div><pre>{
+  <span class="k">"id"</span>: <span class="s">"msg_9f2"</span>,
+  <span class="k">"role"</span>: <span class="s">"agent"</span>,
+  <span class="k">"text"</span>: <span class="s">"The villa is available. Shall I hold Thursday 2pm?"</span>,
+  <span class="k">"model"</span>: <span class="s">"fast"</span>,
+  <span class="k">"cost_usd"</span>: <span class="n">0.0021</span>,
+  <span class="k">"stage"</span>: <span class="s">"qualified"</span>
+}</pre></div>
+      </section>
+
+      <section id="contacts">
+        <h2>Contacts</h2>
+        <p>Contacts unify a customer across channels. Read a profile with its merged history, attributes and pipeline position.</p>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/v1/contacts/{id}</span></div>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/contacts/{id}/attributes</span></div>
+      </section>
+
+      <section id="pipelines">
+        <h2>Pipelines</h2>
+        <p>Read pipeline stages and move a contact between them. Stage changes fire whatever actions you have configured.</p>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/v1/pipelines/{id}</span></div>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/v1/pipelines/{id}/move</span></div>
+      </section>
+
+      <section id="actions">
+        <h2>Stage actions</h2>
+        <p>Send data out the moment it matters. Each stage can run actions that call your endpoint (POST by default) with the fields you map from the conversation: when the stage starts, on any message, on a customer message, or when the AI decides it is time (for example, to look up free slots or book a meeting). You set the headers, the payload, how many times it may fire and how many retries it gets, and every run is logged.</p>
+        <div class="code"><div class="code-head"><span class="lang">JSON · payload</span></div><pre>{
+  <span class="k">"contact_name"</span>: <span class="s">"Mona Adel"</span>,
+  <span class="k">"phone"</span>: <span class="s">"+20 100 000 0000"</span>,
+  <span class="k">"stage"</span>: <span class="s">"qualified"</span>,
+  <span class="k">"client_needs"</span>: <span class="s">"Evening slot, two people"</span>
+}</pre></div>
+      </section>
+
+      <section id="mcp" style="border-bottom:0">
+        <h2>MCP</h2>
+        <p>GenuDo speaks the <strong>Model Context Protocol</strong>. Point Claude, Claude Code, ChatGPT, Codex or your own client at the GenuDo MCP server and build, connect knowledge and run your agents from your editor or chat. Sign in from your browser, or use a token with the <span class="mono">mcp:use</span> scope.</p>
+        <div class="code"><div class="code-head"><span class="lang">shell</span></div><pre><span class="c"># MCP server URL</span>
+https://api.genudo.ai/mcp
+
+<span class="c"># Claude Code</span>
+claude mcp add --transport http genudo \\
+  https://api.genudo.ai/mcp</pre></div>
+        <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg><span>Prefer to work in plain language? See <a href="/api-mcp">API &amp; MCP</a> to run your AI team from Claude or ChatGPT, with every change shown as a diff before it runs.</span></div>
+      </section>
+    </main>
+  </div>
+</div></section>
+</div>`;
 export default html;

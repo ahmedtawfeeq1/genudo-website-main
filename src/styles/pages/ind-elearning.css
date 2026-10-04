@@ -1,0 +1,33 @@
+/* /ind-elearning: page-only styles, every selector scoped to .pg-ind-elearning. */
+.pg-ind-elearning .pg-hero-ph { inline-size: 100%; max-inline-size: 340px; margin-inline: auto; }
+.pg-ind-elearning .pg-hero-ph .mk-phone { box-shadow: 0 30px 70px -30px rgba(6,10,40,.6); }
+.pg-ind-elearning .pg-emp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 20px; }
+.pg-ind-elearning .pg-emp { display: flex; flex-direction: column; align-items: flex-start; min-inline-size: 0; }
+.pg-ind-elearning .pg-emp .mk-emp { inline-size: 100%; flex: 1; }
+.pg-ind-elearning .pg-fu { min-inline-size: 0; }
+.pg-ind-elearning .pg-fu .mk { inline-size: 100%; }
+.pg-ind-elearning .pg-emps { margin-block-start: 30px; }
+.pg-ind-elearning .pg-tag { display: block; font-size: 12.5px; font-weight: 650; color: var(--mk-hue, #6468f0); margin-block-end: 2px; }
+.pg-ind-elearning .pg-go { display: inline-flex; align-items: center; gap: 6px; min-block-size: 44px; margin-block-start: 8px; font-weight: 650; font-size: 14.5px; color: var(--primary, #4f46e5); }
+.pg-ind-elearning .pg-go svg { inline-size: 15px; block-size: 15px; }
+.legacy-rtl .pg-ind-elearning .pg-go svg { transform: scaleX(-1); }
+.pg-ind-elearning .pg-duo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; justify-items: center; margin-block-start: 34px; }
+.pg-ind-elearning .pg-ph { inline-size: 100%; max-inline-size: 340px; }
+.pg-ind-elearning .pg-proof { max-inline-size: 640px; margin: 28px auto 0; }
+.pg-ind-elearning .pg-steps { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.pg-ind-elearning .pg-step { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--border, #e2e5ea); border-radius: 16px; padding: 20px; }
+.pg-ind-elearning .pg-n { flex: none; inline-size: 38px; block-size: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--primary, #4f46e5); color: #fff; font-weight: 700; }
+.pg-ind-elearning .pg-step h4 { font-size: 17px; margin: 0 0 6px; }
+.pg-ind-elearning .pg-step p { margin: 0; font-size: 15px; color: var(--ink-2, #475569); line-height: 1.55; }
+.pg-ind-elearning .pg-control { margin: 22px 0 0; font-size: 15.5px; color: var(--ink-2, #475569); max-inline-size: 760px; }
+.pg-ind-elearning .pg-cta-genu { display: block; margin: 0 auto 8px; max-inline-size: 96px; block-size: auto; }
+.pg-ind-elearning .featc p { font-size: 15px; }
+@media (min-width: 720px) {
+  .pg-ind-elearning .pg-duo--2 { grid-template-columns: repeat(2, minmax(0, 340px)); justify-content: center; gap: 40px; }
+  .pg-ind-elearning .pg-duo--1 { grid-template-columns: minmax(0, 340px); justify-content: center; }
+  .pg-ind-elearning .pg-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pg-ind-elearning .pg-step { flex-direction: column; }
+}
+/* Arabic: no Latin tracking, uppercase or mono font on eyebrows and copy. */
+.legacy-rtl .pg-ind-elearning, .legacy-rtl .pg-ind-elearning * { letter-spacing: 0; text-transform: none; }
+.legacy-rtl .pg-ind-elearning .eyebrow { font-family: inherit; font-size: 13.5px; }

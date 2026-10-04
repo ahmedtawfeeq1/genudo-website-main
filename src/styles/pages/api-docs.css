@@ -1,0 +1,36 @@
+/* /api-docs: API reference. Every selector is scoped to .pg-api-docs. Code stays LTR in dir="ltr" blocks. */
+.pg-api-docs { overflow-x: clip; }
+.pg-api-docs .rhead p { font-size: 17px; }
+.pg-api-docs .docs { grid-template-columns: 236px minmax(0, 1fr); }
+.pg-api-docs .docs-main { min-inline-size: 0; max-inline-size: 760px; }
+.pg-api-docs .docs-nav a { min-block-size: 40px; display: flex; align-items: center; }
+.pg-api-docs .docs-main p { font-size: 16px; }
+.pg-api-docs .endpoint { overflow-x: auto; direction: ltr; text-align: start; flex-wrap: nowrap; max-inline-size: 100%; }
+.pg-api-docs .endpoint .path { white-space: nowrap; }
+.pg-api-docs .code { max-inline-size: 100%; direction: ltr; text-align: start; }
+.pg-api-docs .code pre { overflow-x: auto; max-inline-size: 100%; }
+.pg-api-docs .param .pn, .pg-api-docs .param .pt { direction: ltr; unicode-bidi: isolate; text-align: start; overflow-wrap: anywhere; }
+.pg-api-docs .param .pd { min-inline-size: 0; overflow-wrap: anywhere; }
+.pg-api-docs .param.head .pn, .pg-api-docs .param.head .pt { direction: inherit; }
+.pg-api-docs .mono, .pg-api-docs code { font-family: "JetBrains Mono", monospace; font-size: .92em; direction: ltr; unicode-bidi: isolate; overflow-wrap: anywhere; }
+.pg-api-docs .scopes { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 12px 18px; }
+.pg-api-docs .scopes code { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 5px 9px; font-size: 12.5px; }
+.pg-api-docs .callout { align-items: flex-start; }
+.pg-api-docs .callout span { min-inline-size: 0; }
+.pg-api-docs .callout a { color: var(--primary); font-weight: 600; text-decoration: underline; }
+@media (max-width: 900px) {
+  .pg-api-docs .docs { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .pg-api-docs .docs-nav { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pg-api-docs .docs-nav .dn-sec { flex-basis: 100%; margin-block: 8px 2px; }
+  .pg-api-docs .docs-nav a { background: #fff; border: 1px solid var(--border); }
+}
+@media (max-width: 720px) {
+  .pg-api-docs .rhead { padding-block: 40px 28px; }
+  .pg-api-docs .rhead h1 { font-size: clamp(28px, 8vw, 36px); }
+  .pg-api-docs .docs-main h2 { font-size: 26px; }
+  .pg-api-docs .code { padding: 14px; }
+}
+
+/* Arabic: no Latin tracking, uppercase or mono font on Arabic labels. */
+.legacy-rtl .pg-api-docs, .legacy-rtl .pg-api-docs *:not(pre):not(code):not(pre *) { letter-spacing: 0; text-transform: none; }
+.legacy-rtl .pg-api-docs :is(.dn-sec, .param.head, .param.head span) { font-family: inherit; font-size: 13px; }

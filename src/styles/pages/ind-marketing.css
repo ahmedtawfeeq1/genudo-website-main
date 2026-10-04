@@ -1,0 +1,51 @@
+/* pg-ind-marketing: page styles (value-led rewrite). Every selector is scoped to .pg-ind-marketing. */
+.pg-ind-marketing .phero-media { display: flex; justify-content: center; min-inline-size: 0; }
+.pg-ind-marketing .phero-in > * { min-inline-size: 0; }
+.pg-ind-marketing .phero h1 { font-size: clamp(30px, 6.2vw, 50px); line-height: 1.2; }
+.pg-ind-marketing .phero .lead { max-inline-size: 520px; }
+.pg-ind-marketing .phero .crumb a, .pg-ind-marketing .phero .crumb span { overflow-wrap: anywhere; }
+.pg-ind-marketing .crumb svg { inline-size: 14px; block-size: 14px; vertical-align: middle; }
+.pg-ind-marketing .heroc-cta .btn, .pg-ind-marketing .ctaf-cta .btn { min-block-size: 48px; }
+.pg-ind-marketing .feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.pg-ind-marketing .featc { min-inline-size: 0; }
+.pg-ind-marketing .featc p, .pg-ind-marketing .featc h4 { overflow-wrap: anywhere; }
+.pg-ind-marketing .pg-emps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-block-start: 30px; }
+.pg-ind-marketing .pg-emps > * { min-inline-size: 0; }
+.pg-ind-marketing .pg-ch { margin-block-start: 12px; }
+.pg-ind-marketing .pg-kpis { display: grid; gap: 12px; min-inline-size: 0; }
+.pg-ind-marketing .pg-caption { margin: 4px 0 0; font-size: 13px; color: #6b7280; text-align: center; }
+.legacy-rtl .pg-ind-marketing .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13px; }
+.pg-ind-marketing .pg-more { margin: 14px 0 0; }
+.pg-ind-marketing .pg-more a { display: inline-flex; align-items: center; gap: 6px; min-block-size: 44px; font-weight: 600; color: #4f53d8; }
+.pg-ind-marketing .pg-more svg { inline-size: 16px; block-size: 16px; }
+[dir="rtl"] .pg-ind-marketing .pg-more svg, .legacy-rtl .pg-ind-marketing .pg-more svg, .legacy-rtl .pg-ind-marketing .crumb svg, .legacy-rtl .pg-ind-marketing .ctaf-sec svg { transform: scaleX(-1); }
+.pg-ind-marketing .pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.pg-ind-marketing .pg-copy, .pg-ind-marketing .pg-media { min-inline-size: 0; }
+.pg-ind-marketing .pg-copy h3 { margin-block: 10px 12px; }
+.pg-ind-marketing .pg-copy .plist { margin-block-start: 16px; }
+.pg-ind-marketing .pg-copy .plist li { align-items: flex-start; }
+.pg-ind-marketing .pg-flip .pg-copy { order: 2; }
+.pg-ind-marketing .pg-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 32px 0 0; padding: 0; list-style: none; }
+.pg-ind-marketing .pg-step { background: #fff; border: 1px solid var(--border, #e2e5ea); border-radius: 18px; padding: 22px; min-inline-size: 0; }
+.pg-ind-marketing .pg-step h4 { margin: 12px 0 8px; }
+.pg-ind-marketing .pg-step p { margin: 0; font-size: 15.5px; line-height: 1.65; }
+.pg-ind-marketing .pg-n { display: inline-grid; place-items: center; inline-size: 38px; block-size: 38px; border-radius: 50%; background: #6468f0; color: #fff; font-weight: 700; }
+.pg-ind-marketing .pg-note { display: flex; gap: 14px; align-items: flex-start; border-inline-start: 4px solid #6468f0; background: #f4f5ff; border-radius: 14px; padding: 18px 20px; max-inline-size: 820px; margin-inline: auto; }
+.pg-ind-marketing .pg-note svg { flex: none; inline-size: 24px; block-size: 24px; color: #6468f0; margin-block-start: 2px; }
+.pg-ind-marketing .pg-note p { margin: 0; line-height: 1.7; }
+.pg-ind-marketing .faq-item summary { min-block-size: 48px; }
+@media (max-width: 960px) {
+  .pg-ind-marketing .pg-split { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-ind-marketing .pg-flip .pg-copy { order: 0; }
+}
+@media (max-width: 720px) {
+  .pg-ind-marketing .feat-grid, .pg-ind-marketing .pg-steps, .pg-ind-marketing .pg-emps { grid-template-columns: minmax(0, 1fr); }
+  .pg-ind-marketing .s { padding-block: 56px; }
+  .pg-ind-marketing .phero { padding-block: 44px 52px; }
+  .pg-ind-marketing .pg-step p, .pg-ind-marketing .featc p, .pg-ind-marketing .pg-copy p, .pg-ind-marketing .plist li { font-size: 15.5px; }
+}
+.pg-ind-marketing .pg-emp { min-inline-size: 0; display: flex; flex-direction: column; }
+.pg-ind-marketing .pg-emp > .mk-emp { flex: 1; }
+.pg-ind-marketing .pg-media > .mk { max-inline-size: 100%; }
+.pg-ind-marketing .pg-media > .mk-phone { margin-inline: auto; }
+.legacy-rtl .pg-ind-marketing .pg-copy { text-align: start; }
