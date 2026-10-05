@@ -99,3 +99,40 @@ Suggested flow: send the PDF (or route to legal for approval first), log the req
 curl -X POST https://genudo.ai/api/forms -H 'Content-Type: application/json' \
   -d '{"form":"demo_request","data":{"name":"TEST","email":"qa@example.com","message":"test"},"meta":{"locale":"en","page":"/en/contact"}}'
 ```
+
+## n8n: WhatsApp notification text (all forms)
+
+Use as an **Expression** in the WhatsApp node's `text` field (directly after the webhook node; otherwise replace `$json.body` with `$('<webhook node name>').item.json.body`):
+
+```
+{{ (() => {
+  const b = $json.body || {};
+  const d = b.data || {};
+  const m = b.meta || {};
+  const title = {
+    demo_request: '🟣 طلب ديمو جديد من الموقع',
+    privacy_request: '🔒 طلب خصوصية (صاحب بيانات) — يحتاج رد',
+    document_request: '📄 طلب وثيقة (DPA / Security)'
+  }[b.form] || ('📝 نموذج جديد: ' + b.form);
+  const label = {
+    name: 'الاسم', full_name: 'الاسم', company: 'الشركة', email: 'الإيميل', work_email: 'إيميل العمل',
+    phone: 'الموبايل', topic: 'الموضوع', message: 'الرسالة', request_type: 'نوع الطلب',
+    relationship: 'العلاقة', country: 'الدولة', details: 'التفاصيل', document: 'الوثيقة',
+    role: 'الوظيفة', confirmed: 'أكّد صحة البيانات'
+  };
+  const fields = Object.entries(d)
+    .filter(([, v]) => v !== '' && v != null)
+    .map(([k, v]) => `*${label[k] || k}:* ${Array.isArray(v) ? v.join(', ') : v}`)
+    .join('\n');
+  const when = m.submittedAt ? DateTime.fromISO(m.submittedAt).setZone('Africa/Cairo').toFormat('dd LLL yyyy, HH:mm') : '-';
+  const utm = m.utm && Object.keys(m.utm).length ? Object.entries(m.utm).map(([k, v]) => `${k}=${v}`).join(' | ') : '';
+  const info = [
+    `🌐 *الصفحة:* ${m.page || '-'} (${m.locale || '-'})`,
+    `🕒 *الوقت (القاهرة):* ${when}`,
+    `📍 *الدولة:* ${m.country || '-'}`,
+    m.referrer ? `↩️ *جاي من:* ${m.referrer}` : '',
+    utm ? `📣 *الحملة:* ${utm}` : ''
+  ].filter(Boolean).join('\n');
+  return `*${title}*\n\n${fields}\n\n${info}`;
+})() }}
+```
