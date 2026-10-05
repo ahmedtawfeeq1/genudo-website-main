@@ -90,6 +90,11 @@ export default function SiteFooter() {
         <div className="foot-bottom">
           <span>{t('footer.rights', { year })}</span>
           <span className="mono">{t('footer.microcopy')}</span>
+          <span className="foot-legal">
+            <Link href="/legal/privacy-policy">{t('footer.privacy')}</Link>
+            <Link href="/legal/terms-of-service">{t('footer.terms')}</Link>
+            <Link href="/legal/cookies">{t('footer.cookies')}</Link>
+          </span>
         </div>
       </div>
     </footer>

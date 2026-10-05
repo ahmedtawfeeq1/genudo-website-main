@@ -66,7 +66,10 @@
     "hResources": "Resources",
     "hCompany": "Pricing & developers",
     "rights": "© {year} GenuDo. All rights reserved.",
-    "microcopy": "No customer waits until morning."
+    "microcopy": "No customer waits until morning.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
   },
   "common": {
     "getStarted": "Start free",
@@ -214,6 +217,38 @@
     "aiWorkforce": {
       "title": "What is an AI workforce? AI employees explained",
       "description": "An AI workforce is a team of AI employees that answer customers on WhatsApp, follow up, book meetings and update your CRM. See how they differ from chatbots."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "How GenuDo collects, uses, protects and transfers personal data under Egyptian, Saudi, UAE, Bahraini and EU data protection laws."
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "description": "The terms that govern your use of GenuDo AI employees: subscriptions, acceptable use, data protection, liability and termination."
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "Which cookies and tracking technologies GenuDo uses, why, and how to manage your choices."
+    },
+    "subprocessors": {
+      "title": "Sub-processors",
+      "description": "The third-party service providers that may process personal data on behalf of GenuDo to deliver the Service."
+    },
+    "privacyHistory": {
+      "title": "Legal document history",
+      "description": "Material changes to the GenuDo Privacy Policy and Terms of Service, newest first."
+    },
+    "dpa": {
+      "title": "Data Processing Agreement (DPA)",
+      "description": "Request GenuDo’s Data Processing Agreement for your business, covering GDPR, Saudi, UAE and Egyptian data protection law."
+    },
+    "securityWhitepaper": {
+      "title": "Security whitepaper",
+      "description": "Request the GenuDo security whitepaper: technical and organisational controls that protect your data."
+    },
+    "privacyRequests": {
+      "title": "Data subject requests",
+      "description": "Access, correct, delete or move your personal data, or withdraw consent. Submit a privacy request to GenuDo."
     }
   }
 }

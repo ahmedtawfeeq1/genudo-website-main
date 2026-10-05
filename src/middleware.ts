@@ -42,5 +42,5 @@ export default function middleware(req: NextRequest) {
 export const config = {
   // Home redirect, locale-prefixed routes, and everything else except Next
   // internals and files with an extension (so /public assets pass through).
-  matcher: ['/', '/(en|ar-EG)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/(en|ar-EG)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)']
 };

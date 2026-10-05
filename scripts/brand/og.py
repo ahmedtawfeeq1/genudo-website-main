@@ -11,6 +11,7 @@ from PIL import Image
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 ROOT = os.getcwd()
 LOCALES = {'en': 'ltr', 'ar-EG': 'rtl'}
+REGEN = '--all' in __import__('sys').argv   # default: only missing cards; --all re-renders every card
 EMP = {'/sol-sales-agent': 'aaref', '/sol-customer-service': 'adnan', '/sol-operations': 'roz'}
 EYEBROW = {
     'en': {'emp': 'AI employee', 'ind': 'Industries', 'blog': 'GenuDo blog', 'site': 'AI employees for WhatsApp & beyond'},
@@ -79,9 +80,15 @@ def shoot(page_html, out):
     with tempfile.TemporaryDirectory() as tmp:
         f = os.path.join(tmp, 'c.html'); png = os.path.join(tmp, 'c.png')
         open(f, 'w').write(page_html)
-        subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files',
-                        '--virtual-time-budget=8000', '--window-size=1200,630', f'--screenshot={png}', f'file://{f}'],
-                       check=True, capture_output=True)
+        cmd = [CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files',
+               '--virtual-time-budget=8000', '--window-size=1200,630', f'--screenshot={png}', f'file://{f}']
+        for attempt in range(3):   # headless Chrome occasionally fails to start next to another Chrome
+            try:
+                subprocess.run(cmd, check=True, capture_output=True, timeout=60)
+                break
+            except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+                if attempt == 2:
+                    raise
         im = Image.open(png).convert('RGB').crop((0, 0, 1200, 630))
         buf = io.BytesIO(); im.save(buf, 'JPEG', quality=84, optimize=True, progressive=True)
         assert buf.tell() < 600_000, f'{out} is {buf.tell()} bytes; WhatsApp drops images over 600 KB'
@@ -93,13 +100,15 @@ def main():
         seo = json.load(open(f'messages/{locale}.json'))['seo']
         os.makedirs(f'public/og/{locale}', exist_ok=True)
         for route, key in sorted(routes().items()):
+            if not REGEN and os.path.exists(f'public/og/{locale}/{slug(route)}.jpg'):
+                continue
             shoot(card(locale, route, seo[key]['title'], seo[key]['description']), f'public/og/{locale}/{slug(route)}.jpg')
         print(locale, 'done')
 
 
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) == 3:   # preview one card:  og.py <locale> <route>
+    if len(sys.argv) == 3 and sys.argv[1] != '--all':   # preview one card:  og.py <locale> <route>
         seo = json.load(open(f'messages/{sys.argv[1]}.json'))['seo']; r = sys.argv[2]
         k = routes()[r]; os.makedirs(f'public/og/{sys.argv[1]}', exist_ok=True)
         shoot(card(sys.argv[1], r, seo[k]['title'], seo[k]['description']), f'public/og/{sys.argv[1]}/{slug(r)}.jpg')

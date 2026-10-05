@@ -65,7 +65,7 @@ const html = `<div class="pg-contact">
     <div class="cxform">
       <h2>احجز ديمو</h2>
       <p class="sub">قولنا الشغلانة اللي عايزها تتعمل وهنرد عليك في خلال يوم عمل. عايز تتكلم دلوقتي؟ ابعت للوكيل بتاعنا على <bdi>WhatsApp</bdi>، شغّال <bdi>24/7</bdi>.</p>
-      <form class="cxf" id="cxForm" action="mailto:info@genudo.ai" method="post" enctype="text/plain">
+      <form class="cxf" id="cxForm" action="/api/forms" method="post" data-form="demo_request" data-sending="جاري الإرسال…" data-ok="شكرًا! طلبك وصلنا وهنرد عليك خلال يوم عمل." data-err="حصلت مشكلة في الإرسال. جرّب تاني أو ابعتلنا على info@genudo.ai."><div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="cxrow">
           <div class="cxfield"><label for="f-name">الاسم بالكامل</label><input id="f-name" name="name" type="text" placeholder="اسمك" autocomplete="name" required></div>
           <div class="cxfield"><label for="f-company">الشركة</label><input id="f-company" name="company" type="text" placeholder="اسم الشركة" autocomplete="organization"></div>
@@ -85,6 +85,7 @@ const html = `<div class="pg-contact">
         </div>
         <div class="cxfield"><label for="f-msg">عايز موظفك يعمل إيه بالظبط؟</label><textarea id="f-msg" name="message" placeholder="مثلًا: يرد على استفسارات العيادة على WhatsApp بالليل ويحجز أول استشارة." required></textarea></div>
         <button type="submit" class="btn btn-primary btn-lg cxsubmit">اطلب الديمو <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         <div class="cxnote"><span class="live-dot"></span>بنرد عادةً في خلال يوم عمل.</div>
       </form>
     </div>

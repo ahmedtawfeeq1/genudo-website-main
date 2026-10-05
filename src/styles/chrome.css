@@ -167,3 +167,8 @@
     border-block-start: 0;
   }
 }
+
+/* Footer legal links (privacy, terms) in the bottom bar. */
+.footer .foot-legal { display: inline-flex; flex-wrap: wrap; gap: 8px 20px; }
+.footer .foot-legal a { color: inherit; text-decoration: none; min-block-size: 44px; display: inline-flex; align-items: center; }
+.footer .foot-legal a:hover { text-decoration: underline; }

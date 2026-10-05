@@ -65,7 +65,7 @@ const html = `<div class="pg-contact">
     <div class="cxform">
       <h2>Book a demo</h2>
       <p class="sub">Tell us the job you want done and we will reply within one business day. Prefer to chat now? Message our AI on WhatsApp, it is live 24/7.</p>
-      <form class="cxf" id="cxForm" action="mailto:info@genudo.ai" method="post" enctype="text/plain">
+      <form class="cxf" id="cxForm" action="/api/forms" method="post" data-form="demo_request" data-sending="Sending…" data-ok="Thanks! We got your request and will reply within one business day." data-err="Sorry, that didn't go through. Please try again or email info@genudo.ai."><div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="cxrow">
           <div class="cxfield"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
           <div class="cxfield"><label for="f-company">Company</label><input id="f-company" name="company" type="text" placeholder="Company name" autocomplete="organization"></div>
@@ -85,6 +85,7 @@ const html = `<div class="pg-contact">
         </div>
         <div class="cxfield"><label for="f-msg">What do you want to automate?</label><textarea id="f-msg" name="message" placeholder="e.g. Answer clinic inquiries on WhatsApp at night and book the first consultation." required></textarea></div>
         <button type="submit" class="btn btn-primary btn-lg cxsubmit">Request my demo <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         <div class="cxnote"><span class="live-dot"></span>Typical reply within one business day.</div>
       </form>
     </div>
