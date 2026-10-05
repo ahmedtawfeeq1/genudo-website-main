@@ -8,7 +8,7 @@ const html = `<div class="pg-ind-elearning">
     <div class="heroc-cta"><a href="/contact" class="btn btn-primary btn-lg">احجز ديمو</a><a href="https://app.genudo.ai/auth/register" class="btn btn-ondark btn-lg">ابدأ دلوقتي</a></div>
     <div class="pchips"><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg>ترشيح الكورس المناسب</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>حجز مكالمات المستشار</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>متابعة مش بتنسى</span></div>
   </div>
-  <div class="phero-media"><div class="pg-hero-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة واتساب: طالبة محتملة بتسأل عن كورس مسائي وبتحجز مكالمة مع المستشارة">
+  <div class="phero-media"><div class="pg-hero-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp: طالبة محتملة بتسأل عن كورس مسائي وبتحجز مكالمة مع المستشارة">
   <div class="mk-phone__screen">
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">م</span><div class="mk-phone__who"><b>منى عادل</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
     <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
@@ -54,7 +54,7 @@ const html = `<div class="pg-ind-elearning">
 
 <section class="s white-bg" id="conversation"><div class="container">
   <div class="s-head"><span class="eyebrow">محادثة حقيقية</span><h2>من «فيه كورس بالليل؟» لحد مكالمة متحجزة.</h2><p class="lead">ده اللي عارف بيعمله على <bdi>WhatsApp</bdi> الساعة <bdi>9:40</bdi> بالليل، والمستشارين أوفلاين. بيانات تخيلية، بس الخطوات حقيقية.</p></div>
-  <div class="pg-duo pg-duo--1"><div class="pg-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة واتساب: طالبة محتملة بتسأل عن كورس مسائي وبتحجز مكالمة مع المستشارة">
+  <div class="pg-duo pg-duo--1"><div class="pg-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp: طالبة محتملة بتسأل عن كورس مسائي وبتحجز مكالمة مع المستشارة">
   <div class="mk-phone__screen">
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">م</span><div class="mk-phone__who"><b>منى عادل</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
     <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>

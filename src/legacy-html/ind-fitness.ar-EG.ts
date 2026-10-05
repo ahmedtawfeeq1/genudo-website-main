@@ -8,7 +8,7 @@ const html = `<div class="pg-ind-fitness">
     <div class="heroc-cta"><a href="/contact" class="btn btn-primary btn-lg">احجز ديمو</a><a href="https://app.genudo.ai/auth/register" class="btn btn-ondark btn-lg">ابدأ دلوقتي</a></div>
     <div class="pchips"><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>حجز الحصص التجريبية</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>أسئلة الاشتراكات</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>تذكير ومتابعة</span></div>
   </div>
-  <div class="phero-media"><div class="pg-hero-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة واتساب: زائر بيحجز حصة تجريبية">
+  <div class="phero-media"><div class="pg-hero-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp: زائر بيحجز حصة تجريبية">
   <div class="mk-phone__screen">
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">ك</span><div class="mk-phone__who"><b>كريم سعيد</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
     <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
@@ -52,7 +52,7 @@ const html = `<div class="pg-ind-fitness">
 
 <section class="s white-bg" id="conversation"><div class="container">
   <div class="s-head"><span class="eyebrow">محادثات حقيقية</span><h2>حصة تجريبية اتحجزت وطلب تجميد اتسجّل، كله على <bdi>WhatsApp</bdi>.</h2><p class="lead">محادثتين مبقاش لازم الريسبشن يرد عليهم بإيده. بيانات تخيلية، بس الخطوات حقيقية.</p></div>
-  <div class="pg-duo pg-duo--2"><div class="pg-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة واتساب: زائر بيحجز حصة تجريبية">
+  <div class="pg-duo pg-duo--2"><div class="pg-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp: زائر بيحجز حصة تجريبية">
   <div class="mk-phone__screen">
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">ك</span><div class="mk-phone__who"><b>كريم سعيد</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
     <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
@@ -66,7 +66,7 @@ const html = `<div class="pg-ind-fitness">
     </div>
     <div class="mk-phone__compose">الوكيل يتولّى هذه المحادثة. اختر «تدخّل بشري» للرد بنفسك.</div>
   </div>
-</div></div><div class="pg-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة واتساب: عضوة بتطلب تجميد وبيتحوّل الطلب للريسبشن">
+</div></div><div class="pg-ph"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp: عضوة بتطلب تجميد وبيتحوّل الطلب للريسبشن">
   <div class="mk-phone__screen">
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">م</span><div class="mk-phone__who"><b>منى عادل</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
     <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>

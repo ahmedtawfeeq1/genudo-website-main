@@ -23,7 +23,7 @@ const html = `<div class="pg-sol-operations">
 </div></section>
 
 <section class="s white-bg"><div class="container">
-  <div class="s-head"><span class="eyebrow">اللي بيتغيّر عندك</span><h2>تشوف الصورة كاملة من غير ما تسأل حد.</h2><p class="lead">فريقك بيرد على عملاء كتير كل يوم من واتساب الشركة، وإنت مش هتقعد تقرا كل الرسايل. روز بتعمل ده بدالك وبتطلّعلك المهم بس.</p></div>
+  <div class="s-head"><span class="eyebrow">اللي بيتغيّر عندك</span><h2>تشوف الصورة كاملة من غير ما تسأل حد.</h2><p class="lead">فريقك بيرد على عملاء كتير كل يوم من WhatsApp الشركة، وإنت مش هتقعد تقرا كل الرسايل. روز بتعمل ده بدالك وبتطلّعلك المهم بس.</p></div>
   <div class="feat-grid" style="margin-top:34px">
     <div class="featc"><div class="oi" style="background:#f97316"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h4>تعرف مين استنى كتير</h4><p>الرد المتأخر بيتعلّم عليه، فتعرف مين من عملائك استنى كتير وتلحق تصلّح الموقف.</p></div>
     <div class="featc"><div class="oi" style="background:#f97316"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></div><h4>الصفقة الواقفة متتنسيش</h4><p>المحادثة سكتت والمتابعة اتنسيت؟ روز بتلاقيها وتنبّهك عليها.</p></div>
@@ -47,7 +47,7 @@ const html = `<div class="pg-sol-operations">
 <section class="s white-bg" id="how"><div class="container">
   <div class="s-head"><span class="eyebrow">بتشتغل إزاي</span><h2>تربط الخط بمسح كود، وروز تبدأ تراجع.</h2></div>
   <div class="pg-connect">
-    <div class="pg-qr" role="img" aria-label="نموذج توضيحي لشاشة ربط واتساب، الكود المعروض وهمي وليس كودًا حقيقيًا">
+    <div class="pg-qr" role="img" aria-label="نموذج توضيحي لشاشة ربط WhatsApp، الكود المعروض وهمي وليس كودًا حقيقيًا">
       <b class="pg-qr-title"><bdi>WhatsApp</bdi> · الأجهزة المرتبطة</b>
       <div class="pg-qr-box"><span class="pg-qr-tag">نموذج وهمي</span></div>
       <small>امسح الكود من موبايل الشركة</small>
@@ -68,7 +68,7 @@ const html = `<div class="pg-sol-operations">
       <ul class="plist"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>نص مكتوب لكل رسالة صوتية</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>تعرف المحادثات اللي استنت كتير</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>تنبيه واضح بالسبب، مش بس رقم</li></ul>
     </div>
     <div class="prow-media pg-phone">
-      <div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة واتساب على خط الشركة، رد فريقك فيها متأخر وروز نبّهت عليها">
+      <div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp على خط الشركة، رد فريقك فيها متأخر وروز نبّهت عليها">
         <div class="mk-phone__screen">
           <div class="mk-phone__status"><span>4:21</span></div>
           <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--amber">ك</span><div class="mk-phone__who"><b>كريم سعيد</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
