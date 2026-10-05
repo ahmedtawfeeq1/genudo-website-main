@@ -6,7 +6,9 @@ import { NextRequest, NextResponse } from 'next/server';
  * Envelope contract: docs/website/FORMS-WEBHOOK.md.
  *
  * Env: FORMS_WEBHOOK_URL (defaults to the GenuDo n8n webhook), FORMS_WEBHOOK_SECRET
- * (optional; sent as X-GenuDo-Signature so n8n can reject spoofed calls).
+ * (optional; sent as X-GenuDo-Signature so n8n can reject spoofed calls),
+ * FORMS_CLIENT_IP_HEADER (header the proxy overwrites; default x-real-ip),
+ * FORMS_GLOBAL_PER_MIN (site-wide submission cap; default 60).
  */
 const WEBHOOK = process.env.FORMS_WEBHOOK_URL || 'https://automationv2.loop-x.co/webhook/genudo-website-forms';
 const FORMS = new Set(['demo_request', 'privacy_request', 'document_request']);
@@ -15,32 +17,44 @@ const MAX_VALUE = 5000;
 
 const MAX_BODY = 32_000; // bytes; the largest real form is a few KB
 
-// ponytail: in-memory per-IP limit; resets on restart and is per container. Move to
-// Redis or the reverse proxy if the site runs more than one replica.
+// Two in-memory limits, per container (move to Redis/the proxy for several replicas):
+// - per client IP: 8/min, best effort (only as trustworthy as the proxy header);
+// - site-wide: FORMS_GLOBAL_PER_MIN (default 60/min). This one cannot be bypassed by
+//   spoofing addresses, so floods fail closed instead of reaching n8n.
+const PER_IP = 8;
+const GLOBAL = Number(process.env.FORMS_GLOBAL_PER_MIN) || 60;
+const MAX_KEYS = 5_000;
 const hits = new Map<string, number[]>();
+let globalHits: number[] = [];
+
 function limited(ip: string) {
   const now = Date.now();
-  if (hits.size > 5_000) {
-    // Bound memory: drop keys with no hit in the last minute.
-    for (const [k, v] of hits) if (now - v[v.length - 1] >= 60_000) hits.delete(k);
-    if (hits.size > 5_000) hits.clear();
-  }
+  globalHits = globalHits.filter((t) => now - t < 60_000);
+  if (globalHits.length >= GLOBAL) return true;
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < 60_000);
   recent.push(now);
+  hits.delete(ip); // re-insert so Map order = least recently seen first
   hits.set(ip, recent);
-  return recent.length > 8;
+  // Bound memory by evicting the least recently seen keys; never reset everyone.
+  for (const k of hits.keys()) {
+    if (hits.size <= MAX_KEYS) break;
+    hits.delete(k);
+  }
+  globalHits.push(now);
+  return recent.length > PER_IP;
 }
 
 /**
- * Client IP as seen by our reverse proxy. X-Real-IP is overwritten by the proxy;
- * otherwise use the LAST X-Forwarded-For hop (appended by the proxy). The first
- * hop is whatever the client sent and must never be trusted for rate limiting.
+ * Client IP from ONE header that the reverse proxy overwrites on every request
+ * (FORMS_CLIENT_IP_HEADER, default "x-real-ip"; nginx: proxy_set_header X-Real-IP
+ * $remote_addr). Never read a header the proxy only appends to. For
+ * x-forwarded-for, the last hop is the one the proxy added.
  */
+const IP_HEADER = (process.env.FORMS_CLIENT_IP_HEADER || 'x-real-ip').toLowerCase();
 function clientIp(req: NextRequest) {
-  const real = req.headers.get('x-real-ip')?.trim();
-  if (real) return real;
-  const hops = (req.headers.get('x-forwarded-for') ?? '').split(',').map((h) => h.trim()).filter(Boolean);
-  return hops[hops.length - 1] || 'unknown';
+  const raw = req.headers.get(IP_HEADER) ?? '';
+  const hop = IP_HEADER === 'x-forwarded-for' ? raw.split(',').map((h) => h.trim()).filter(Boolean).pop() : raw.trim();
+  return hop || 'unknown';
 }
 
 const clean = (v: unknown) =>
