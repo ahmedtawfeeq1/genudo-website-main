@@ -13,30 +13,65 @@ const FORMS = new Set(['demo_request', 'privacy_request', 'document_request']);
 const MAX_FIELDS = 40;
 const MAX_VALUE = 5000;
 
+const MAX_BODY = 32_000; // bytes; the largest real form is a few KB
+
 // ponytail: in-memory per-IP limit; resets on restart and is per container. Move to
 // Redis or the reverse proxy if the site runs more than one replica.
 const hits = new Map<string, number[]>();
 function limited(ip: string) {
   const now = Date.now();
+  if (hits.size > 5_000) {
+    // Bound memory: drop keys with no hit in the last minute.
+    for (const [k, v] of hits) if (now - v[v.length - 1] >= 60_000) hits.delete(k);
+    if (hits.size > 5_000) hits.clear();
+  }
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < 60_000);
   recent.push(now);
   hits.set(ip, recent);
   return recent.length > 8;
 }
 
+/**
+ * Client IP as seen by our reverse proxy. X-Real-IP is overwritten by the proxy;
+ * otherwise use the LAST X-Forwarded-For hop (appended by the proxy). The first
+ * hop is whatever the client sent and must never be trusted for rate limiting.
+ */
+function clientIp(req: NextRequest) {
+  const real = req.headers.get('x-real-ip')?.trim();
+  if (real) return real;
+  const hops = (req.headers.get('x-forwarded-for') ?? '').split(',').map((h) => h.trim()).filter(Boolean);
+  return hops[hops.length - 1] || 'unknown';
+}
+
 const clean = (v: unknown) =>
   typeof v === 'string' ? v.slice(0, MAX_VALUE).trim() : Array.isArray(v) ? v.slice(0, 20).map((x) => String(x).slice(0, 200)) : undefined;
 
 export async function POST(req: NextRequest) {
-  const ip = (req.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || req.headers.get('x-real-ip') || 'unknown';
+  const ip = clientIp(req);
   if (limited(ip)) return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
+  if (Number(req.headers.get('content-length') ?? 0) > MAX_BODY) return NextResponse.json({ ok: false, error: 'too_large' }, { status: 413 });
 
   let body: { form?: string; data?: Record<string, unknown>; meta?: Record<string, unknown> };
   try {
-    body = await req.json();
+    // Read with a hard cap: content-length can be absent (chunked) or wrong.
+    const reader = req.body?.getReader();
+    const chunks: Uint8Array[] = [];
+    let size = 0;
+    while (reader) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > MAX_BODY) {
+        await reader.cancel();
+        return NextResponse.json({ ok: false, error: 'too_large' }, { status: 413 });
+      }
+      chunks.push(value);
+    }
+    body = JSON.parse(Buffer.concat(chunks).toString('utf8'));
   } catch {
     return NextResponse.json({ ok: false, error: 'bad_json' }, { status: 400 });
   }
+  if (!body || typeof body !== 'object') return NextResponse.json({ ok: false, error: 'bad_json' }, { status: 400 });
   const form = String(body.form ?? '');
   if (!FORMS.has(form) || !body.data || typeof body.data !== 'object') {
     return NextResponse.json({ ok: false, error: 'unknown_form' }, { status: 400 });

@@ -5,6 +5,7 @@ type: note
 date: 2026-10-05
 source: claude-code
 tags: [website, forms, n8n, webhook]
+loredex: routed
 ---
 
 # Website forms → n8n webhook
