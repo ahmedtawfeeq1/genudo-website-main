@@ -68,7 +68,7 @@ const html = `<div class="pg-integrations">
 <section class="s white-bg" id="developers"><div class="container">
   <div class="s-head"><span class="eyebrow">للمطوّرين</span><h2>محتاج حاجة مخصوصة؟ فيه طرق تانية للربط.</h2><p class="lead">الأدوات المذكورة فوق هي الأسهل. لو عندك نظام داخلي أو أداة مش في القايمة، المطوّر بتاعك يقدر يربطها بالطرق دي.</p></div>
   <div class="pg-devs"><div class="pg-dev"><b><bdi>API</bdi></b><span>اقرا بيانات المحادثات والفرص واكتب فيها من نظامك.</span></div><div class="pg-dev"><b><bdi>MCP</bdi></b><span>وصّل مساعدك الذكي بحسابك على جينـو دو.</span></div><div class="pg-dev"><b>إجراءات بتنادي على نظامك</b><span>الموظف بيبعت بيانات العميل لأي رابط تحدده في اللحظة المناسبة.</span></div><div class="pg-dev"><b><bdi>Zapier</bdi> و <bdi>Make</bdi> و <bdi>n8n</bdi></b><span>وصّل جينـو دو بآلاف التطبيقات من غير كود.</span></div></div>
-  <div class="pg-links"><a class="btn btn-ghost" href="/api-mcp">تفاصيل <bdi>API</bdi> و <bdi>MCP</bdi></a><a class="btn btn-ghost" href="/api-docs">توثيق <bdi>API</bdi></a></div>
+  <div class="pg-links"><a class="btn btn-ghost" href="/api-mcp">تفاصيل <bdi>API</bdi> و <bdi>MCP</bdi></a><a class="btn btn-ghost" href="https://api.genudo.ai/docs" target="_blank" rel="noopener noreferrer">توثيق <bdi>API</bdi></a></div>
 </div></section>
 
 <section class="s tint-bg"><div class="container">

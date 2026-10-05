@@ -26,7 +26,6 @@ export const ROUTES = [
   '/pricing',
   '/contact',
   '/security',
-  '/api-docs',
   '/changelog',
   '/blog',
   '/resources',

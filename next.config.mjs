@@ -22,6 +22,9 @@ const nextConfig = {
       // ar-SA is paused (owner decision D2): Gulf URLs serve the Egyptian site.
       { source: '/ar-SA', destination: '/ar-EG', permanent: false },
       { source: '/ar-SA/:path*', destination: '/ar-EG/:path*', permanent: false },
+      // API docs live outside the marketing site.
+      { source: '/:locale(en|ar-EG|ar-SA)/api-docs', destination: 'https://api.genudo.ai/docs', permanent: true },
+      { source: '/api-docs', destination: 'https://api.genudo.ai/docs', permanent: true },
       ...Object.entries(FOLDED).flatMap(([from, anchor]) => [
         { source: `/:locale(en|ar-EG)/${from}`, destination: `/:locale/how-it-works${anchor}`, permanent: true },
         { source: `/${from}`, destination: `/en/how-it-works${anchor}`, permanent: true }

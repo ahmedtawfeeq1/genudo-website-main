@@ -32,7 +32,7 @@ Arabic (`/ar`). Base URL: https://genudo.ai
 - [Customer stories](https://genudo.ai/en/customers)
 - [Use cases](https://genudo.ai/en/use-cases)
 - [Trust & Security](https://genudo.ai/en/security): Human-in-the-loop approvals, auditable actions, scoped access.
-- [API Documentation](https://genudo.ai/en/api-docs)
+- [API Documentation](https://api.genudo.ai/docs)
 - [Changelog](https://genudo.ai/en/changelog)
 - [Blog](https://genudo.ai/en/blog)
 - [Contact](https://genudo.ai/en/contact)

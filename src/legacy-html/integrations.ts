@@ -68,7 +68,7 @@ const html = `<div class="pg-integrations">
 <section class="s white-bg" id="developers"><div class="container">
   <div class="s-head"><span class="eyebrow">For developers</span><h2>Need something custom? There are other ways to connect.</h2><p class="lead">The tools above are the easy path. If you have an in-house system or a tool that is not listed, your developer can connect it these ways.</p></div>
   <div class="pg-devs"><div class="pg-dev"><b><bdi>API</bdi></b><span>Read conversation and opportunity data and write to it from your own system.</span></div><div class="pg-dev"><b><bdi>MCP</bdi></b><span>Connect your AI assistant to your GenuDo account.</span></div><div class="pg-dev"><b>Actions that call your system</b><span>The employee sends customer data to any URL you set, at the right moment.</span></div><div class="pg-dev"><b><bdi>Zapier</bdi>, <bdi>Make</bdi> and <bdi>n8n</bdi></b><span>Connect GenuDo to thousands of apps without code.</span></div></div>
-  <div class="pg-links"><a class="btn btn-ghost" href="/api-mcp"><bdi>API</bdi> and <bdi>MCP</bdi> details</a><a class="btn btn-ghost" href="/api-docs"><bdi>API</bdi> documentation</a></div>
+  <div class="pg-links"><a class="btn btn-ghost" href="/api-mcp"><bdi>API</bdi> and <bdi>MCP</bdi> details</a><a class="btn btn-ghost" href="https://api.genudo.ai/docs" target="_blank" rel="noopener noreferrer"><bdi>API</bdi> documentation</a></div>
 </div></section>
 
 <section class="s tint-bg"><div class="container">

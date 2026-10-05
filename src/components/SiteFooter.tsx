@@ -81,7 +81,7 @@ export default function SiteFooter() {
             <Link href="/pricing">{t('terms.pricing')}</Link>
             <Link href="/integrations">{t('terms.integrations')}</Link>
             <Link href="/api-mcp">{t('terms.apiMcp')}</Link>
-            <Link href="/api-docs">{t('terms.apiDocs')}</Link>
+            <a href="https://api.genudo.ai/docs" target="_blank" rel="noopener noreferrer">{t('terms.apiDocs')}</a>
             <Link href="/contact">{t('terms.contact')}</Link>
           </div>
         </div>

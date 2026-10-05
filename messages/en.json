@@ -173,10 +173,6 @@
       "title": "Security: your data, your rules, every action logged",
       "description": "Control what your AI employees say and do: answers from your own facts, every action logged, spend caps per chat, and one-tap human takeover."
     },
-    "apiDocs": {
-      "title": "GenuDo API documentation",
-      "description": "REST API reference for GenuDo: authentication, scoped tokens, endpoints, JSON responses and errors. Connect your own tools to your AI employees."
-    },
     "changelog": {
       "title": "GenuDo changelog: what's new",
       "description": "See what shipped in GenuDo: new features, improvements and fixes for your AI employees, inbox, follow-ups and analytics."

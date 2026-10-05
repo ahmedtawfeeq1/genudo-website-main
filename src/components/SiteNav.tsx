@@ -64,15 +64,24 @@ export default function SiteNav() {
   const isActive = (href: string) => pathname === href;
 
   /* mega-link builder */
-  const ML = ({ href, name, bg, term, sub }: { href: string; name: string; bg: string; term: string; sub: string }) => (
-    <Link className="mega-link" href={href} onClick={() => setOpen(false)}>
-      <Mi name={name} bg={bg} />
-      <span>
-        <b>{t(term)}</b>
-        <span>{t(sub)}</span>
-      </span>
-    </Link>
-  );
+  // External URLs (e.g. the API docs) open in a new tab instead of routing in-site.
+  const ext = (href: string) => (href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {});
+  const ML = ({ href, name, bg, term, sub }: { href: string; name: string; bg: string; term: string; sub: string }) => {
+    const body = (
+      <>
+        <Mi name={name} bg={bg} />
+        <span>
+          <b>{t(term)}</b>
+          <span>{t(sub)}</span>
+        </span>
+      </>
+    );
+    return href.startsWith('http') ? (
+      <a className="mega-link" href={href} {...ext(href)} onClick={() => setOpen(false)}>{body}</a>
+    ) : (
+      <Link className="mega-link" href={href} onClick={() => setOpen(false)}>{body}</Link>
+    );
+  };
 
   const IL = ({ href, name, bg, term }: { href: string; name: string; bg: string; term: string }) => (
     <Link className="ind-link" href={href} onClick={() => setOpen(false)}>
@@ -84,16 +93,19 @@ export default function SiteNav() {
   );
 
   /* mobile link: 44px tap target, optional one-line outcome */
-  const M = ({ href, term, sub, strong }: { href: string; term: string; sub?: string; strong?: boolean }) => (
-    <Link
-      href={href}
-      onClick={() => setOpen(false)}
-      style={{ minHeight: 44, display: 'flex', flexDirection: 'column', justifyContent: 'center', ...(strong ? { fontWeight: 640, color: 'var(--ink)' } : null) }}
-    >
-      {t(term)}
-      {sub ? <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--ink-3)', lineHeight: 1.35 }}>{t(sub)}</span> : null}
-    </Link>
-  );
+  const M = ({ href, term, sub, strong }: { href: string; term: string; sub?: string; strong?: boolean }) => {
+    const props = {
+      onClick: () => setOpen(false),
+      style: { minHeight: 44, display: 'flex', flexDirection: 'column', justifyContent: 'center', ...(strong ? { fontWeight: 640, color: 'var(--ink)' } : null) } as React.CSSProperties
+    };
+    const body = (
+      <>
+        {t(term)}
+        {sub ? <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--ink-3)', lineHeight: 1.35 }}>{t(sub)}</span> : null}
+      </>
+    );
+    return href.startsWith('http') ? <a href={href} {...ext(href)} {...props}>{body}</a> : <Link href={href} {...props}>{body}</Link>;
+  };
 
   const Arrow = () => <Svg name="arrow" />;
 
@@ -166,7 +178,7 @@ export default function SiteNav() {
                   <ML href="/security" name="support" bg="#10b981" term="terms.security" sub="nav.desc.security" />
                   <ML href="/integrations" name="integ" bg="#14b8a6" term="terms.integrations" sub="nav.desc.integrations" />
                   <ML href="/api-mcp" name="api" bg="#0ea5e9" term="terms.apiMcp" sub="nav.desc.apiMcp" />
-                  <ML href="/api-docs" name="docs" bg="#0ea5e9" term="terms.apiDocs" sub="nav.desc.apiDocs" />
+                  <ML href="https://api.genudo.ai/docs" name="docs" bg="#0ea5e9" term="terms.apiDocs" sub="nav.desc.apiDocs" />
                 </div>
               </div>
             </div>
@@ -220,7 +232,7 @@ export default function SiteNav() {
           <M href="/security" term="terms.security" />
           <M href="/integrations" term="terms.integrations" />
           <M href="/api-mcp" term="terms.apiMcp" />
-          <M href="/api-docs" term="terms.apiDocs" />
+          <M href="https://api.genudo.ai/docs" term="terms.apiDocs" />
           <M href="/contact" term="terms.contact" />
           <a href="https://app.genudo.ai/auth/login" className="btn" style={{ marginTop: 14, justifyContent: 'center', minHeight: 44, border: '1px solid var(--border)', color: 'var(--ink)' }}>
             {t('nav.signIn')}
