@@ -92,7 +92,6 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
-  const t = await getTranslations({ locale, namespace: 'seo' });
   const rtl = isRtl(locale);
   const dir = rtl ? 'rtl' : 'ltr';
 
@@ -102,7 +101,7 @@ export default async function LocaleLayout({
         {/* GEO / rich results: Organization + WebSite graph (own trusted data). */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd(locale, t('default.description'))) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd(locale)) }}
         />
         <NextIntlClientProvider messages={messages}>
           <SiteNav />

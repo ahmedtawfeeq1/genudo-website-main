@@ -13,7 +13,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   return (
     <>
-      <LegacyBody locale={locale} en={en} ar={ar} />
+      <LegacyBody locale={locale} route="/contact" en={en} ar={ar} />
       <LegacyScripts scripts={["/genu/genu-robot.js"]} />
     </>
   );

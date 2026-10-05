@@ -397,6 +397,24 @@ const html = `<div class="pg-how-it-works">
   </div>
 </section>
 
+<!-- 09 · FAQ -->
+<section id="faq" class="hiw-sec hiw-faq" aria-labelledby="hiw-faq-title">
+  <div class="container">
+    <div class="hiw-faq-head">
+      <span class="hiw-kicker">Questions</span>
+      <h2 id="hiw-faq-title">Questions about how it works</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item"><summary>How does setup work?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>You answer six quick questions about your business, by typing or by voice, and your employee's tone and instructions are built from your answers. Then you arrange its stages, connect WhatsApp or another channel, try it with Test AI and switch it on. No code is needed, and if you book a demo our team sets it up with you.</p></details>
+      <details class="faq-item"><summary>What are a pipeline and a stage, in plain words?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>A pipeline is the path a customer takes with one AI employee, from the first message to a decision; in GenuDo, each AI employee is one pipeline. Stages are the steps along that path, such as New lead, Interested, Won or Lost. For each stage you tell the employee when a customer enters it and what to do there, so every conversation keeps moving.</p></details>
+      <details class="faq-item"><summary>How do follow-ups work?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Each stage can have its own follow-up sequence: timed messages that go out when a customer stops replying, for example one after 3 hours and another after a day with a video. Each message is different, and you set the timing. If the last follow-up gets no reply, the opportunity moves to the stage you choose, such as Lost.</p></details>
+      <details class="faq-item"><summary>Where do the employee's answers come from?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>From your own knowledge: the prices, FAQs, policies and schedules you add, typed into a table or uploaded from a spreadsheet. You decide which knowledge each employee answers from, and when you change a fact, the next reply uses it. A question your knowledge doesn't cover can go to your team instead of a guess.</p></details>
+      <details class="faq-item"><summary>How does the AI cost stay capped?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Smart routing sends each message to the lowest-cost model that can handle it: simple questions to a cheaper model, harder ones to a stronger model. You also set a maximum spend per conversation; when a chat reaches it, the AI pauses and hands the chat to your team with an alert. The cost of every reply sits in your inbox, so nothing is hidden.</p></details>
+      <details class="faq-item"><summary>Can it update my CRM or calendar?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Yes. At the stage you choose, the employee can look up free slots, book the meeting in your calendar, send the confirmation and update your CRM, such as <bdi>HubSpot</bdi> or <bdi>Zoho</bdi>. Tools that are not connected directly can usually be reached through <bdi>Zapier</bdi>, <bdi>Make</bdi>, <bdi>n8n</bdi> or the API. The <a href="/integrations">integrations page</a> has the full list.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="s ctaf"><div class="container"><div class="ctaf-card">
   <div class="ctaf-genu genu" data-genu data-expr="happy" data-liven style="--w:86px;--h:98px;--ospeed:7s"></div>
   <span class="hiw-kicker hiw-kicker--dark">Get started</span>

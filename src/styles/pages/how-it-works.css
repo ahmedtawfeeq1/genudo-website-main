@@ -354,6 +354,17 @@
   .pg-how-it-works .hiw-pair { grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; }
 }
 
+/* ---- FAQ (reuses the global .faq / .faq-item from pages.css) ---- */
+.pg-how-it-works .hiw-faq-head { max-inline-size: 760px; margin-inline: auto; text-align: center; }
+.pg-how-it-works .hiw-faq-head h2 { margin-block: 14px 0; font-size: clamp(27px, 6.6vw, 42px); line-height: 1.15; }
+.pg-how-it-works .hiw-faq .faq { margin-block-start: 24px; }
+.pg-how-it-works .hiw-faq .faq-item summary { min-block-size: 44px; font-size: 16.5px; line-height: 1.45; }
+.pg-how-it-works .hiw-faq .faq-item p { font-size: 15.5px; }
+.pg-how-it-works .hiw-faq .faq-item a { color: var(--primary); font-weight: 600; text-decoration: underline; }
+.pg-how-it-works.is-ar .hiw-faq-head h2 { line-height: 1.4; }
+.pg-how-it-works.is-ar .hiw-faq .faq-item summary { line-height: 1.6; }
+.pg-how-it-works.is-ar .hiw-faq .faq-item p { line-height: 1.8; }
+
 /* ---- final CTA (reuses .ctaf from site2.css) ---- */
 .pg-how-it-works .ctaf { padding-block: 56px 64px; }
 .pg-how-it-works .ctaf-card .hiw-kicker { margin-block-end: 2px; }

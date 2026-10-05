@@ -13,6 +13,9 @@ const FOLDED = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Separate output for verification builds (NEXT_DIST_DIR=.next-verify) so they
+  // never clobber a running `next dev`, which owns .next.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   // The reference pages mount legacy markup that uses plain <img> tags with static
   // paths under /public. Disabling the Image Optimizer keeps rendering 1:1 with the
   // original static site. Migrate to next/image per component when you componentize.

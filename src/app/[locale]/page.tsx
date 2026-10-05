@@ -19,5 +19,5 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <LegacyBody locale={locale} en={en} ar={ar} />;
+  return <LegacyBody locale={locale} route="/" en={en} ar={ar} />;
 }

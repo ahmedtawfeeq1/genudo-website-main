@@ -168,6 +168,7 @@ export default function SiteNav() {
               <div className="mega-cols mega-cols-2" style={{ gridTemplateColumns: '1fr 1fr' }}>
                 <div className="mega-col">
                   <div className="mega-sec-label">{t('nav.secProof')}</div>
+                  <ML href="/ai-workforce" name="agent" bg="#0ea5e9" term="terms.aiWorkforce" sub="nav.desc.aiWorkforce" />
                   <ML href="/customers" name="agent" bg="#6468f0" term="terms.customerStories" sub="nav.desc.customers" />
                   <ML href="/use-cases" name="sales" bg="#e2562a" term="terms.allUseCases" sub="nav.desc.useCases" />
                   <ML href="/blog" name="blog" bg="#22c55e" term="terms.blog" sub="nav.desc.blog" />
@@ -223,6 +224,7 @@ export default function SiteNav() {
           <M href="/use-cases" term="terms.allUseCases" />
           <div className="nm-sec">{t('nav.secExplore')}</div>
           <M href="/how-it-works" term="nav.howItWorks" />
+          <M href="/ai-workforce" term="terms.aiWorkforce" />
           <M href="/pricing" term="terms.pricing" />
           <M href="/who-is-genu" term="nav.whoIsGenu" strong />
           <div className="nm-sec">{t('nav.resources')}</div>

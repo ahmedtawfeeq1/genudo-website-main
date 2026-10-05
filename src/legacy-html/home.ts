@@ -441,6 +441,24 @@ const html = `<div class="pg-home">
   </div>
 </section>
 
+<!-- ══ FAQ ══ -->
+<section class="hm-faq" id="faq" aria-labelledby="hm-faq-title">
+  <div class="container">
+    <div class="hm-head hm-head--center">
+      <p class="hm-eyebrow">Questions</p>
+      <h2 class="hm-h2" id="hm-faq-title">Common questions about GenuDo</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item"><summary>What is GenuDo?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref for sales, Adnan for customer support and ROZ for WhatsApp quality control) that answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up, book meetings and update your CRM, while your team stays in control.</p></details>
+      <details class="faq-item"><summary>Which channels does it work on?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>GenuDo works on WhatsApp, Instagram, Messenger and your website chat. Every conversation from every channel lands in one inbox, and each customer stays one conversation whichever channel they use. The website chat widget takes your brand colours and can collect name, phone and email if you want.</p></details>
+      <details class="faq-item"><summary>Does it speak Arabic and local dialects?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Yes. You can choose one of 14 regional Arabic dialects, such as Egyptian, Gulf or Levantine, or turn on automatic multi-dialect so every customer hears their own. It also understands voice notes and images, and replies in English or other languages when the customer writes in them.</p></details>
+      <details class="faq-item"><summary>Can I take over a conversation myself?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Yes, at any time and in one tap. Press Take over in the inbox or the mobile app and reply yourself; the AI stops in that chat until you hand it back. You can also leave private notes for your team that the customer never sees.</p></details>
+      <details class="faq-item"><summary>What does GenuDo cost?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Every package and price is on the <a href="/pricing">pricing page</a>. Inside the platform you see what every reply costs, and you can set a spending cap per conversation: when a chat reaches it, the AI pauses and alerts your team. That way there are no surprise bills.</p></details>
+      <details class="faq-item"><summary>Is my data safe?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Your AI employees answer from the facts you give them, and you decide what goes in and when it changes. Every action they take is logged, API access uses scoped tokens you can revoke at any time, and you can take over any chat. The <a href="/security">security page</a> explains each control.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- ══ FINAL CTA ══ -->
 <section class="hm-final" aria-labelledby="hm-final-title">
   <div class="container">

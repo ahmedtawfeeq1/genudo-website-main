@@ -397,6 +397,24 @@ const html = `<div class="pg-how-it-works is-ar">
   </div>
 </section>
 
+<!-- 09 · FAQ -->
+<section id="faq" class="hiw-sec hiw-faq" aria-labelledby="hiw-faq-title">
+  <div class="container">
+    <div class="hiw-faq-head">
+      <span class="hiw-kicker">أسئلة</span>
+      <h2 id="hiw-faq-title">أسئلة عن طريقة الشغل</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item"><summary>التجهيز بيمشي إزاي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>بتجاوب على 6 أسئلة سريعة عن شغلك، كتابة أو بصوتك، ومن إجاباتك بيتبني أسلوب الموظف وتعليماته. بعدها بترتّب المراحل، وتربط <bdi>WhatsApp</bdi> أو أي قناة تانية، وتجرّبه بـ «اختبار الوكيل»، وتشغّله. مش محتاج كود، ولو حجزت ديمو فريقنا بيجهّزه معاك.</p></details>
+      <details class="faq-item"><summary>يعني إيه مسار ومرحلة، بكلام بسيط؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>المسار هو الطريق اللي العميل بيمشيه مع موظف واحد، من أول رسالة لحد ما ياخد قرار، وكل موظف في جينـو دو هو مسار واحد. والمراحل هي خطوات الطريق ده، زي «عميل محتمل جديد» و«مهتم» و«مكتسبة» أو «ضائعة». ولكل مرحلة بتقول للموظف العميل يدخلها إمتى ويعمل فيها إيه، علشان كل محادثة تفضل ماشية لقدّام.</p></details>
+      <details class="faq-item"><summary>المتابعات بتشتغل إزاي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>كل مرحلة ممكن يبقى ليها سلسلة متابعات: رسايل بمواعيد بتتبعت لما العميل يسكت، زي رسالة بعد 3 ساعات وتانية بعد يوم ومعاها فيديو. كل رسالة مختلفة عن اللي قبلها، وإنت اللي بتحدد التوقيت. ولو آخر متابعة ما اتردّش عليها، الفرصة بتتنقل للمرحلة اللي تختارها، زي «ضائعة».</p></details>
+      <details class="faq-item"><summary>الموظف بيجيب إجاباته منين؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>من معلوماتك إنت: الأسعار والأسئلة المتكررة والسياسات والمواعيد اللي بتضيفها، سواء كتبتها في جدول أو رفعتها من شيت <bdi>Excel</bdi>. إنت اللي بتحدد كل موظف يرد من أنهي معلومات، ولما تعدّل معلومة، الرد اللي بعده بيطلع بيها. والسؤال اللي مالوش إجابة عندك ممكن يروح لفريقك بدل ما الموظف يخمّن.</p></details>
+      <details class="faq-item"><summary>إزاي تكلفة الذكاء الاصطناعي بتفضل ليها سقف؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>التوجيه الذكي بيبعت كل رسالة لأرخص موديل يقدر عليها: السؤال البسيط لموديل أوفر، والصعب لموديل أقوى. وكمان بتحط حد أقصى للصرف على كل محادثة، ولو المحادثة وصلت له، الموظف بيقف ويسيبها لفريقك ومعاها تنبيه. وتكلفة كل رد قدامك في صندوق الوارد، فمفيش حاجة مستخبية.</p></details>
+      <details class="faq-item"><summary>يقدر يحدّث الـ <bdi>CRM</bdi> أو الكالندر بتاعي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>أيوه. في المرحلة اللي تختارها، الموظف يقدر يدوّر على المواعيد الفاضية، ويحجز الميعاد على الكالندر بتاعك، ويبعت التأكيد، ويحدّث الـ <bdi>CRM</bdi> زي <bdi>HubSpot</bdi> أو <bdi>Zoho</bdi>. والأدوات اللي مش مربوطة مباشرةً غالبًا تقدر توصلها عن طريق <bdi>Zapier</bdi> أو <bdi>Make</bdi> أو <bdi>n8n</bdi> أو الـ <bdi>API</bdi>. القايمة كاملة في <a href="/integrations">صفحة التكاملات</a>.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="s ctaf"><div class="container"><div class="ctaf-card">
   <div class="ctaf-genu genu" data-genu data-expr="happy" data-liven style="--w:86px;--h:98px;--ospeed:7s"></div>
   <span class="hiw-kicker hiw-kicker--dark">ابدأ دلوقتي</span>

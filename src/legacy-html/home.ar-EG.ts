@@ -441,6 +441,24 @@ const html = `<div class="pg-home">
   </div>
 </section>
 
+<!-- ══ FAQ ══ -->
+<section class="hm-faq" id="faq" aria-labelledby="hm-faq-title">
+  <div class="container">
+    <div class="hm-head hm-head--center">
+      <p class="hm-eyebrow">أسئلة</p>
+      <h2 class="hm-h2" id="hm-faq-title">أسئلة بتتسأل كتير عن جينـو دو</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item"><summary>يعني إيه جينـو دو؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>جينـو دو منصة فريق عمل بالذكاء الاصطناعي للشركات في مصر والشرق الأوسط. بتديك موظفين بالذكاء الاصطناعي: عارف للمبيعات، وعدنان لخدمة العملاء، وروز لمراجعة جودة محادثات <bdi>WhatsApp</bdi>. بيردوا على عملائك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات الموقع بلهجتهم، ويتابعوا ويحجزوا المواعيد ويحدّثوا الـ <bdi>CRM</bdi>، وإنت متحكم في كل حاجة.</p></details>
+      <details class="faq-item"><summary>بيشتغل على أنهي قنوات؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات موقعك. كل المحادثات من كل القنوات بتتجمع في صندوق وارد واحد، وكل عميل بيفضل محادثة واحدة مهما غيّر القناة. وشات الموقع بياخد ألوان البراند بتاعك، ويقدر ياخد من العميل اسمه وتليفونه وإيميله لو حبيت.</p></details>
+      <details class="faq-item"><summary>بيتكلم عربي وبلهجة عملائي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>أيوه. تقدر تختار لهجة من 14 لهجة عربية، زي المصري والخليجي والشامي، أو تسيبه يتكيّف تلقائيًا مع لهجة كل عميل. وكمان بيفهم الفويس نوت والصور، وبيرد بالإنجليزي أو بلغات تانية لو العميل كتب بيها.</p></details>
+      <details class="faq-item"><summary>أقدر أمسك المحادثة بنفسي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>في أي وقت، وبلمسة واحدة. دوس «تدخّل بشري» من صندوق الوارد أو من تطبيق الموبايل ورد بنفسك، والموظف بيقف في المحادثة دي لحد ما ترجّعها له بـ «إعادة إلى الوكيل». وتقدر كمان تسيب ملاحظات خاصة لفريقك، العميل مبيشوفهاش.</p></details>
+      <details class="faq-item"><summary>جينـو دو بيكلّف كام؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>كل الباقات والأسعار موجودة في <a href="/pricing">صفحة الأسعار</a>. وجوّه المنصة بتشوف كل رد كلّفك كام، وتقدر تحط حد أقصى لتكلفة كل محادثة: لو المحادثة وصلت له، الموظف بيقف وفريقك بياخد تنبيه. يعني مفيش فواتير مفاجئة.</p></details>
+      <details class="faq-item"><summary>بياناتي في أمان؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>موظفينك بيردوا من المعلومات اللي إنت بتديهالهم، وإنت اللي بتحدد إيه اللي يدخل وإمتى يتغيّر. كل إجراء بيعملوه متسجّل، ومفاتيح الـ <bdi>API</bdi> محدودة الصلاحيات وتقدر تلغيها في أي وقت، وتقدر تمسك أي محادثة بنفسك. التفاصيل كلها في <a href="/security">صفحة الأمان</a>.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- ══ FINAL CTA ══ -->
 <section class="hm-final" aria-labelledby="hm-final-title">
   <div class="container">

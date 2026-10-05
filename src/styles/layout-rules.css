@@ -361,3 +361,17 @@
 .legacy-page .mixrun {
   display: inline !important;
 }
+
+/* Media never exceeds its container. Videos otherwise render at their native
+   1280-1800px width once metadata loads, widening the page on every device. */
+.legacy-page :is(video, img, iframe) {
+  max-inline-size: 100%;
+}
+.legacy-page video {
+  block-size: auto;
+}
+/* Grid/flex children default to min-width:auto, so one wide child (video,
+   table, long URL) can blow out the whole column. */
+.legacy-page :is(.phero-in, .container) > * {
+  min-inline-size: 0;
+}

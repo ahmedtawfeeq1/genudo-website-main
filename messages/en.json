@@ -27,7 +27,8 @@
     "pricing": "Pricing",
     "customerStories": "Customer stories",
     "contact": "Contact us",
-    "allUseCases": "All use cases"
+    "allUseCases": "All use cases",
+    "aiWorkforce": "AI workforce guide"
   },
   "nav": {
     "whoIsGenu": "Who is GENU?",
@@ -54,7 +55,8 @@
       "security": "How we keep your data and your control",
       "integrations": "Plug into the CRM and tools you already use",
       "apiMcp": "Bring your AI employees into your own product",
-      "apiDocs": "Endpoints, auth and examples"
+      "apiDocs": "Endpoints, auth and examples",
+      "aiWorkforce": "What AI employees are and how they work"
     }
   },
   "footer": {
@@ -94,8 +96,8 @@
   },
   "seo": {
     "default": {
-      "title": "AI employees that move work forward",
-      "description": "GenuDo builds genuine AI employees — agents grounded in your knowledge, with tools, channels and pipelines — that reply, act and close work across WhatsApp, Instagram, webchat and email, 24/7."
+      "title": "GenuDo: AI employees for WhatsApp, sales and support",
+      "description": "GenuDo gives your business AI employees that answer customers on WhatsApp, Instagram, Messenger and web chat, follow up, book meetings and update your CRM."
     },
     "home": {
       "title": "AI employees that answer every customer, day and night",
@@ -118,15 +120,15 @@
       "description": "Set up and coach your AI employees in plain language from Claude or ChatGPT. Every change is shown as a diff and confirmed first. Setup takes about 3 minutes."
     },
     "solSalesAgent": {
-      "title": "Aaref: AI sales employee that answers and follows up",
+      "title": "Aaref: AI sales agent for WhatsApp that follows up",
       "description": "Aaref answers every inquiry instantly, qualifies leads, follows up with quiet ones, books meetings and updates your CRM, on WhatsApp, Instagram and web chat."
     },
     "solCustomerService": {
-      "title": "Adnan: AI Support Employee for WhatsApp and More",
+      "title": "Adnan: AI customer service agent for WhatsApp and web",
       "description": "Adnan answers customers instantly from your own policies, any hour, and hands the rest to your team, with Zoho Desk and Zendesk. Start free."
     },
     "solOperations": {
-      "title": "ROZ: See How Your Team Replies on WhatsApp",
+      "title": "ROZ: AI quality control for your team's WhatsApp chats",
       "description": "ROZ reviews your team's company WhatsApp chats and flags slow replies, stalled deals and missed opportunities, so you see everything without reading every chat."
     },
     "indMarketing": {
@@ -208,6 +210,10 @@
     "blogWhatsappTeamWorkflows": {
       "title": "Run your team from WhatsApp, without chaos",
       "description": "Keep WhatsApp, add structure: shared inbox, private notes, AI on or off per chat and quality review of your team's conversations."
+    },
+    "aiWorkforce": {
+      "title": "What is an AI workforce? AI employees explained",
+      "description": "An AI workforce is a team of AI employees that answer customers on WhatsApp, follow up, book meetings and update your CRM. See how they differ from chatbots."
     }
   }
 }

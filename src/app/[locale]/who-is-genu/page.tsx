@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <BodyNav value="whoisgenu" />
-      <LegacyBody locale={locale} en={en} ar={ar} />
+      <LegacyBody locale={locale} route="/who-is-genu" en={en} ar={ar} />
       <LegacyScripts scripts={['/js/who-is-genu.js']} />
     </>
   );

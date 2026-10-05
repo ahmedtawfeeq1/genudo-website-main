@@ -6,6 +6,7 @@
  * navigation never bounces through the middleware or switches language.
  */
 import { routing } from '@/i18n/routing';
+import { pageJsonLd } from '@/i18n/schema';
 
 const INLINE = new Set(['bdi', 'b', 'strong', 'em', 'code', 'small']);
 const RAW = new Set(['script', 'style', 'pre', 'textarea']);
@@ -51,12 +52,20 @@ export function wrapMixedRuns(html: string): string {
   return out.join('');
 }
 
-export default function LegacyBody({ locale: raw, en, ar }: { locale: string; en: string; ar?: string }) {
+export default function LegacyBody({ locale: raw, route, en, ar }: { locale: string; route?: string; en: string; ar?: string }) {
   // Allowlist: the locale is interpolated into raw HTML below.
   const locale = (routing.locales as readonly string[]).includes(raw) ? raw : routing.defaultLocale;
   const rtl = locale.startsWith('ar') && !!ar;
   const html = wrapMixedRuns(rtl ? ar! : en)
     .replace(/href="\/(?=[a-z])(?!media\/|genu\/|assets\/|logos\/|channels\/|shots\/)/g, `href="/${locale}/`)
     .replace(/href="\/"/g, `href="/${locale}"`);
-  return <div className={`legacy-page${rtl ? ' legacy-rtl' : ''}`} dangerouslySetInnerHTML={{ __html: html }} />;
+  // Structured data derived from the same body (FAQ, breadcrumb, article, service).
+  // Escape "<" so page text can never close the script element.
+  const ld = route ? pageJsonLd({ locale, route, html: rtl ? ar! : en, en }) : null;
+  return (
+    <>
+      {ld && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, '\\u003c') }} />}
+      <div className={`legacy-page${rtl ? ' legacy-rtl' : ''}`} dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  );
 }

@@ -78,11 +78,35 @@ export function pageMetadata({ route, seoKey }: { route: string; seoKey: string 
 }
 
 // --- Organization / brand facts (single source of truth for JSON-LD) --------
+/**
+ * Canonical entity statement (docs/seo/GEO-STRATEGY.md section 1). Use the same
+ * wording on every profile (LinkedIn, G2, Crunchbase, YouTube): AI engines build
+ * the brand entity from repeated, consistent descriptions.
+ */
+export const ENTITY = {
+  en: 'GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref for sales, Adnan for customer support and ROZ for WhatsApp quality control) that answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up, book meetings and update your CRM, while your team stays in control.',
+  ar: 'جينـو دو منصة فريق عمل بالذكاء الاصطناعي للشركات في مصر والشرق الأوسط. بتديك موظفين بالذكاء الاصطناعي: عارف للمبيعات، وعدنان لخدمة العملاء، وروز لمراجعة جودة محادثات WhatsApp. بيردوا على عملائك على WhatsApp و Instagram و Messenger وشات الموقع بلهجتهم، ويتابعوا ويحجزوا المواعيد ويحدّثوا الـ CRM، وإنت متحكم في كل حاجة.'
+};
+
 export const ORG = {
   name: 'GenuDo',
   legalName: 'GenuDo',
+  alternateName: ['Genudo', 'جينـو دو', 'جينو دو'],
   url: SITE_URL,
   logo: `${SITE_URL}/icon-512.png`, // square mark: what Google shows for the brand
+  email: 'info@genudo.ai',
+  knowsAbout: [
+    'AI workforce',
+    'AI employees',
+    'AI agents for business',
+    'AI sales agent',
+    'AI customer service',
+    'WhatsApp AI agent',
+    'WhatsApp quality control',
+    'Conversational AI in Arabic',
+    'موظفين بالذكاء الاصطناعي',
+    'خدمة عملاء بالذكاء الاصطناعي'
+  ],
   sameAs: [
     'https://www.facebook.com/genudo.official/',
     'https://www.linkedin.com/company/genudo/',
@@ -92,7 +116,8 @@ export const ORG = {
 };
 
 /** JSON-LD graph (Organization + WebSite) for GEO / rich results. Injected in the root layout. */
-export function siteJsonLd(locale: string, description: string) {
+export function siteJsonLd(locale: string) {
+  const description = locale.startsWith('ar') ? ENTITY.ar : ENTITY.en;
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -101,9 +126,14 @@ export function siteJsonLd(locale: string, description: string) {
         '@id': `${SITE_URL}/#organization`,
         name: ORG.name,
         legalName: ORG.legalName,
+        alternateName: ORG.alternateName,
         url: ORG.url,
-        logo: ORG.logo,
+        logo: { '@type': 'ImageObject', url: ORG.logo, width: 512, height: 512 },
+        email: ORG.email,
         description,
+        knowsAbout: ORG.knowsAbout,
+        areaServed: [{ '@type': 'Place', name: 'Middle East and North Africa' }],
+        contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: ORG.email, availableLanguage: ['Arabic', 'English'] },
         sameAs: ORG.sameAs
       },
       {
@@ -111,6 +141,7 @@ export function siteJsonLd(locale: string, description: string) {
         '@id': `${SITE_URL}/#website`,
         url: `${SITE_URL}/${locale}`,
         name: ORG.name,
+        alternateName: ORG.alternateName,
         description,
         inLanguage: locale,
         publisher: { '@id': `${SITE_URL}/#organization` }

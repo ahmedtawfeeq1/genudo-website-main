@@ -10,6 +10,7 @@ export const ROUTES = [
   '',
   '/who-is-genu',
   '/how-it-works',
+  '/ai-workforce',
   '/integrations',
   '/api-mcp',
   '/sol-sales-agent',
@@ -37,9 +38,13 @@ export const ROUTES = [
   '/blog/whatsapp-team-workflows'
 ];
 
+/** Last substantive content release. Bump when page copy changes; crawlers use it to schedule recrawls. */
+const LAST_MODIFIED = new Date('2026-10-05');
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.map((route) => ({
     url: `${SITE_URL}/${routing.defaultLocale}${route}`,
+    lastModified: LAST_MODIFIED,
     alternates: { languages: absoluteLanguages(route) }
   }));
 }

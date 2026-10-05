@@ -15,7 +15,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <BodyNav value="pricing" />
-      <LegacyBody locale={locale} en={en} ar={ar} />
+      <LegacyBody locale={locale} route="/pricing" en={en} ar={ar} />
       <LegacyScripts scripts={["/genu/genu-robot.js"]} />
     </>
   );

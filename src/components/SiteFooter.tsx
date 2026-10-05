@@ -54,6 +54,7 @@ export default function SiteFooter() {
             <Link href="/sol-customer-service">{t('terms.customerService')}</Link>
             <Link href="/sol-operations">{t('terms.operations')}</Link>
             <Link href="/how-it-works">{t('nav.howItWorks')}</Link>
+            <Link href="/ai-workforce">{t('terms.aiWorkforce')}</Link>
             <Link href="/who-is-genu">{t('nav.whoIsGenu')}</Link>
           </div>
 

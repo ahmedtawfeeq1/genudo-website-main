@@ -841,3 +841,44 @@ html[dir="rtl"] .pg-home .hm-clock small {
     transition: none;
   }
 }
+
+/* =========================================================================
+   FAQ (reuses the global .faq / .faq-item from pages.css)
+   ========================================================================= */
+.pg-home .hm-faq {
+  padding-block: 64px;
+  background: var(--bg);
+}
+.pg-home .hm-faq .hm-head {
+  margin-block-end: 20px;
+}
+.pg-home .hm-faq .faq {
+  margin-block-start: 0;
+}
+.pg-home .hm-faq .faq-item summary {
+  min-block-size: 44px;
+  font-size: 16.5px;
+  line-height: 1.45;
+}
+.pg-home .hm-faq .faq-item p {
+  font-size: 15.5px;
+}
+.pg-home .hm-faq .faq-item a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+html[dir="rtl"] .pg-home .hm-faq .faq-item summary {
+  line-height: 1.6;
+}
+html[dir="rtl"] .pg-home .hm-faq .faq-item p {
+  line-height: 1.8;
+}
+@media (min-width: 960px) {
+  .pg-home .hm-faq {
+    padding-block: 96px;
+  }
+  .pg-home .hm-faq .faq-item summary {
+    font-size: 17px;
+  }
+}
