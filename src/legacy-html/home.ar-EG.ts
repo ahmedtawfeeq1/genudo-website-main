@@ -8,7 +8,7 @@ const html = `<div class="pg-home">
 <section class="hm-hero" aria-labelledby="hm-hero-title">
   <div class="container hm-hero__in">
     <div class="hm-hero__copy">
-      <p class="hm-kicker"><span class="live-dot" aria-hidden="true"></span><span>موظفين بالذكاء الاصطناعي على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وموقعك</span></p>
+      <p class="hm-kicker"><span class="live-dot" aria-hidden="true"></span><span>موظفين بالذكاء الاصطناعي على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وموقعك</span></p>
       <h1 class="hm-h1" id="hm-hero-title">ولا عميل يستنى.<br><span class="hm-accent">ولا فرصة تضيع.</span></h1>
       <p class="hm-lead">جينـو دو بيديك فريق موظفين بالذكاء الاصطناعي بيردوا على عملائك أول ما يكتبوا، بيتابعوا اللي سكت، وبيحجزوا المواعيد… بالليل وبالنهار. وإنت متحكم في كل حاجة من موبايلك.</p>
       <div class="hm-cta">
@@ -97,7 +97,7 @@ const html = `<div class="pg-home">
     <div class="hm-night__head">
       <div class="hm-clock" aria-hidden="true"><bdi>2:00</bdi><small>بالليل</small></div>
       <h2 class="hm-h2" id="hm-night-title">سؤال سريع… مين بيرد على عملائك الساعة اتنين بالليل؟</h2>
-      <p class="hm-sub">عملاؤك بيكلموك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وموقعك، في أي وقت. وكل عميل بيستنى… بيروح لغيرك.</p>
+      <p class="hm-sub">عملاؤك بيكلموك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وموقعك، في أي وقت. وكل عميل بيستنى… بيروح لغيرك.</p>
     </div>
     <div class="hm-pains">
       <article class="hm-pain">
@@ -133,7 +133,7 @@ const html = `<div class="pg-home">
       <div class="hm-pillar__copy">
         <span class="hm-num">01</span>
         <h3>كل عميل بيلاقي رد، بالليل وبالنهار</h3>
-        <p>مفيش رسالة بتستنى للصبح، ومفيش عميل محتمل بيبرد. الرد بيوصل على طول على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> ودردشة موقعك. واللي ما ردّش؟ المتابعة مش بتنسى.</p>
+        <p>مفيش رسالة بتستنى للصبح، ومفيش عميل محتمل بيبرد. الرد بيوصل على طول على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> ودردشة موقعك. واللي ما ردّش؟ المتابعة مش بتنسى.</p>
         <p class="hm-how">إزاي بنعملها</p>
         <ul class="hm-proof">
           <li><i class="mk-ic mk-ic--check"></i><span>رد فوري على كل قنواتك، من مكان واحد</span></li>
@@ -164,7 +164,7 @@ const html = `<div class="pg-home">
         <ul class="hm-proof">
           <li><i class="mk-ic mk-ic--check"></i><span>مراحل بتحرّك كل فرصة لقدّام: مهتم، حجز موعد، مكتسبة</span></li>
           <li><i class="mk-ic mk-ic--check"></i><span>بيشوف المواعيد الفاضية، وبيحجز، وبيبعت التأكيد على <bdi>WhatsApp</bdi></span></li>
-          <li><i class="mk-ic mk-ic--check"></i><span>بيحدّث الـ<bdi>CRM</bdi> بتاعك أول ما العميل يبقى جاهز، وبيسجّل البيانات اللي جمعها من المحادثة</span></li>
+          <li><i class="mk-ic mk-ic--check"></i><span>بيحدّث الـ <bdi>CRM</bdi> بتاعك أول ما العميل يبقى جاهز، وبيسجّل البيانات اللي جمعها من المحادثة</span></li>
         </ul>
         <a class="hm-link" href="/how-it-works#pipelines">شوف إزاي الفرصة بتتحرك لحد البيع<i class="mk-ic mk-ic--arrow"></i></a>
       </div>
@@ -343,7 +343,7 @@ const html = `<div class="pg-home">
           <ul class="mk-emp__list">
             <li><i class="mk-ic mk-ic--check"></i><span>بيرد من معلوماتك إنت: الأسعار والسياسات والمواعيد</span></li>
             <li><i class="mk-ic mk-ic--check"></i><span>بيحوّل المشاكل الصعبة للشخص المناسب في فريقك</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></span></li>
           </ul>
         </div>
         <span class="hm-emp__go">اتعرّف على عدنان<i class="mk-ic mk-ic--arrow"></i></span>

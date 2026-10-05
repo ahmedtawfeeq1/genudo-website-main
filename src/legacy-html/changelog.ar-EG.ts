@@ -39,7 +39,7 @@ const html = `<div class="pg-changelog">
       <div class="clog-tags"><span class="clog-tag feature">ميزة جديدة</span><span class="clog-tag improvement">تحسين</span></div>
       <h3>توجيه النماذج حسب كل مهمة</h3><p><bdi>جينـو دو</bdi> دلوقتي بيبعت كل رسالة للنموذج اللي محتاجها: نموذج أقل تكلفة للأسئلة البسيطة وأقوى للحالات الصعبة، وتكلفة كل رد قدامك.</p><ul><li>توجيه تلقائي حسب تعقيد الرسالة</li><li>حد إنفاق لكل محادثة بيوقّف الوكيل مؤقتًا وبينبّه فريقك</li><li>التكلفة وزمن الرد والثقة بتظهر لكل رد في اختبار الوكيل</li></ul>
     </article>
-      <p class="clog-note">عايز تشغّل فريقك من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>؟ شوف <a href="/api-mcp"><bdi>API</bdi> و <bdi>MCP</bdi></a>.</p>
+      <p class="clog-note">عايز تشغّل فريقك من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>؟ شوف <a href="/api-mcp"><bdi>API</bdi> و <bdi>MCP</bdi></a>.</p>
     </div>
   </div>
 </div></section>

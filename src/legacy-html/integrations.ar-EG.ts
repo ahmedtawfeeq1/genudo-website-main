@@ -4,14 +4,14 @@ const html = `<div class="pg-integrations">
   <div>
     <div class="crumb"><span>المصادر</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>التكاملات</span></div>
     <h1>شغّال مع الأدوات اللي بتستخدمها، من غير ما تغيّر طريقة شغلك.</h1>
-    <p class="lead">عملاؤك بيكلموك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi>، وفريقك شغّال على الكالندر والـ <bdi>CRM</bdi> بتوعه. جينـو دو بيدخل في النص: بيرد ويحجز ويحدّث، والنتيجة بتظهر في الأدوات اللي فريقك متعوّد عليها.</p>
+    <p class="lead">عملاؤك بيكلموك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi>، وفريقك شغّال على الكالندر والـ <bdi>CRM</bdi> بتوعه. جينـو دو بيدخل في النص: بيرد ويحجز ويحدّث، والنتيجة بتظهر في الأدوات اللي فريقك متعوّد عليها.</p>
     <div class="heroc-cta"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ دلوقتي</a><a href="/contact" class="btn btn-ondark btn-lg">احجز ديمو</a></div>
   </div>
   <div class="phero-media">
     <div class="pg-hub" role="img" aria-label="عملاؤك / جينـو دو / أدواتك">
       <div class="pg-hub-row"><small>عملاؤك</small><div class="pg-pills"><span class="pg-pill"><bdi>WhatsApp</bdi></span><span class="pg-pill"><bdi>Instagram</bdi></span><span class="pg-pill"><bdi>Messenger</bdi></span><span class="pg-pill">شات الموقع</span></div></div>
       <div class="pg-hub-mid"><img src="/media/img/genu.svg" alt="" width="84" height="84"><b>جينـو دو</b></div>
-      <div class="pg-hub-row"><small>أدواتك</small><div class="pg-pills"><span class="pg-pill"><img src="/logos/google-calendar.svg" alt="" width="20" height="20"><bdi>Google Calendar</bdi></span><span class="pg-pill"><img src="/logos/hubspot.svg" alt="" width="20" height="20"><bdi>HubSpot</bdi></span><span class="pg-pill"><img src="/logos/zoho.svg" alt="" width="20" height="20"><bdi>Zoho</bdi></span><span class="pg-pill"><img src="/logos/slack.svg" alt="" width="20" height="20"><bdi>Slack</bdi></span></div></div>
+      <div class="pg-hub-row"><small>أدواتك</small><div class="pg-pills"><span class="pg-pill"><img src="/logos/google-calendar.svg" alt="" width="20" height="20"><bdi>Google Calendar</bdi></span><span class="pg-pill"><img src="/logos/hubspot.svg" alt="" width="20" height="20"><bdi>HubSpot</bdi></span><span class="pg-pill"><img src="/logos/zoho.svg" alt="" width="20" height="20"><bdi>Zoho</bdi></span></div></div>
     </div>
   </div>
 </div></section>
@@ -32,7 +32,7 @@ const html = `<div class="pg-integrations">
       <ul class="plist"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>اطلب بالكلام بدل ما تدوّر في الشاشات</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>أي تعديل بتشوفه الأول قبل ما يتطبّق على حسابك</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>من غير ما تعمل مفتاح أو تنسخ بيانات: بتوافق من المتصفح</li></ul>
       <a href="/api-mcp" class="btn btn-ghost">شوف التفاصيل <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="pg-shot"><img src="/media/shots/mcp-claude-plugin.jpg" alt="صفحة إضافة جينـو دو في Claude و ChatGPT" width="1600" height="1075" loading="lazy"></div>
+    <div class="pg-shot"><img src="/media/shots/mcp-claude-plugin.jpg" alt="صفحة إضافة جينـو دو في Claude و ChatGPT" width="1600" height="1075" loading="lazy"></div>
   </div>
 </div></section>
 
@@ -67,8 +67,8 @@ const html = `<div class="pg-integrations">
 
 <section class="s white-bg" id="developers"><div class="container">
   <div class="s-head"><span class="eyebrow">للمطوّرين</span><h2>محتاج حاجة مخصوصة؟ فيه طرق تانية للربط.</h2><p class="lead">الأدوات المذكورة فوق هي الأسهل. لو عندك نظام داخلي أو أداة مش في القايمة، المطوّر بتاعك يقدر يربطها بالطرق دي.</p></div>
-  <div class="pg-devs"><div class="pg-dev"><b><bdi>API</bdi></b><span>اقرا بيانات المحادثات والفرص واكتب فيها من نظامك.</span></div><div class="pg-dev"><b><bdi>MCP</bdi></b><span>وصّل مساعدك الذكي بحسابك على جينـو دو.</span></div><div class="pg-dev"><b>إجراءات بتنادي على نظامك</b><span>الموظف بيبعت بيانات العميل لأي رابط تحدده في اللحظة المناسبة.</span></div><div class="pg-dev"><b><bdi>Zapier</bdi> و <bdi>Make</bdi> و <bdi>n8n</bdi></b><span>وصّل جينـو دو بآلاف التطبيقات من غير كود.</span></div></div>
-  <div class="pg-links"><a class="btn btn-ghost" href="/api-mcp">تفاصيل <bdi>API</bdi> و <bdi>MCP</bdi></a><a class="btn btn-ghost" href="/api-docs">توثيق <bdi>API</bdi></a></div>
+  <div class="pg-devs"><div class="pg-dev"><b><bdi>API</bdi></b><span>اقرا بيانات المحادثات والفرص واكتب فيها من نظامك.</span></div><div class="pg-dev"><b><bdi>MCP</bdi></b><span>وصّل مساعدك الذكي بحسابك على جينـو دو.</span></div><div class="pg-dev"><b>إجراءات بتنادي على نظامك</b><span>الموظف بيبعت بيانات العميل لأي رابط تحدده في اللحظة المناسبة.</span></div><div class="pg-dev"><b><bdi>Zapier</bdi> و <bdi>Make</bdi> و <bdi>n8n</bdi></b><span>وصّل جينـو دو بآلاف التطبيقات من غير كود.</span></div></div>
+  <div class="pg-links"><a class="btn btn-ghost" href="/api-mcp">تفاصيل <bdi>API</bdi> و <bdi>MCP</bdi></a><a class="btn btn-ghost" href="/api-docs">توثيق <bdi>API</bdi></a></div>
 </div></section>
 
 <section class="s tint-bg"><div class="container">
@@ -78,7 +78,7 @@ const html = `<div class="pg-integrations">
 
 <section class="s white-bg"><div class="container">
   <div class="s-head"><h2>كمّل رحلتك</h2></div>
-  <div class="xnav"><a class="xcard" href="/use-cases"><span class="xi" style="background:#8b5cf6"><img src="/media/img/genu.svg" alt="" width="28" height="28"></span><span><b>حالات الاستخدام</b><span>ابدأ من النتيجة اللي عايزها</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="xcard" href="/how-it-works"><span class="xi" style="background:#52a7cc"><img src="/media/img/genu.svg" alt="" width="28" height="28"></span><span><b>جولة في جينـو دو</b><span>إزاي الموظفين بيشتغلوا</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="xcard" href="/api-mcp"><span class="xi" style="background:#f5b03c"><img src="/media/img/genu.svg" alt="" width="28" height="28"></span><span><b><bdi>API</bdi> و <bdi>MCP</bdi></b><span>للمطوّرين وللربط المخصوص</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  <div class="xnav"><a class="xcard" href="/use-cases"><span class="xi" style="background:#8b5cf6"><img src="/media/img/genu.svg" alt="" width="28" height="28"></span><span><b>حالات الاستخدام</b><span>ابدأ من النتيجة اللي عايزها</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="xcard" href="/how-it-works"><span class="xi" style="background:#52a7cc"><img src="/media/img/genu.svg" alt="" width="28" height="28"></span><span><b>جولة في جينـو دو</b><span>إزاي الموظفين بيشتغلوا</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="xcard" href="/api-mcp"><span class="xi" style="background:#f5b03c"><img src="/media/img/genu.svg" alt="" width="28" height="28"></span><span><b><bdi>API</bdi> و <bdi>MCP</bdi></b><span>للمطوّرين وللربط المخصوص</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
 </div></section>
 
 <section class="s ctaf"><div class="container"><div class="ctaf-card">

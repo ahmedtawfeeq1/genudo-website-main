@@ -53,7 +53,7 @@ const html = `<div class="pg-how-it-works is-ar">
       <div class="hiw-copy">
         <ul class="hiw-proof">
           <li><span><b>عارف للمبيعات:</b> بيرد على الاستفسارات، بيفرز المهتمين، بيتابع اللي سكت، وبيساعد يحجز المواعيد.</span></li>
-          <li><span><b>عدنان لخدمة ونجاح العملاء:</b> بيرد من معلوماتك، وبيحوّل المشاكل للشخص الصح في فريقك، وبيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi>.</span></li>
+          <li><span><b>عدنان لخدمة ونجاح العملاء:</b> بيرد من معلوماتك، وبيحوّل المشاكل للشخص الصح في فريقك، وبيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi>.</span></li>
           <li><span><b>روز لمراقبة الجودة:</b> بتراجع محادثات فريقك على <bdi>WhatsApp</bdi> الشركة، وبتتوصّل بمسح كود من موبايلك.</span></li>
           <li><span>عندك أكتر من رقم؟ عيّن روز لكل رقم <bdi>WhatsApp</bdi>، وعارف لكل فرع.</span></li>
         </ul>
@@ -83,7 +83,7 @@ const html = `<div class="pg-how-it-works is-ar">
           <ul class="mk-emp__list">
             <li><i class="mk-ic mk-ic--check"></i>بيرد من معلوماتك إنت: الأسعار والسياسات والمواعيد</li>
             <li><i class="mk-ic mk-ic--check"></i>بيحوّل المشاكل الصعبة للشخص المناسب في فريقك</li>
-            <li><i class="mk-ic mk-ic--check"></i>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></li>
+            <li><i class="mk-ic mk-ic--check"></i>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></li>
           </ul>
         </div>
         <div class="mk mk-emp mk-emp--roz" dir="rtl" lang="ar">
@@ -278,7 +278,7 @@ const html = `<div class="pg-how-it-works is-ar">
       <div class="hiw-copy">
         <span class="hiw-kicker"><b>06</b> القنوات</span>
         <h2>كل القنوات في صندوق وارد واحد، وتستلم أي محادثة بضغطة.</h2>
-        <p class="lead"><bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> ودردشة موقعك في مكان واحد. الموظف بيرد على طول، وإنت بتدخل وقت ما تحب، حتى من موبايلك.</p>
+        <p class="lead"><bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> ودردشة موقعك في مكان واحد. الموظف بيرد على طول، وإنت بتدخل وقت ما تحب، حتى من موبايلك.</p>
         <p class="hiw-how"><b>إزاي؟</b> دوس «تدخّل بشري» والوكيل يقف في المحادثة دي بس. خلّص كلامك مع العميل، ورجّعها للوكيل بضغطة.</p>
       </div>
       <div class="hiw-copy">
@@ -343,7 +343,7 @@ const html = `<div class="pg-how-it-works is-ar">
         <li><span>تكلفة التحويل، والتكلفة حسب المرحلة، والتكلفة عبر الوقت، لآخر 7 أو 30 أو 90 يوم.</span></li>
         <li><span>اسأل <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>: «فين بنخسر عملاء؟»، ويرد عليك من أرقامك في جينـو دو.</span></li>
       </ul>
-      <div class="hiw-links"><a href="/api-mcp">اربط <bdi>Claude</bdi> و <bdi>ChatGPT</bdi> ←</a></div>
+      <div class="hiw-links"><a href="/api-mcp">اربط <bdi>Claude</bdi> و <bdi>ChatGPT</bdi> ←</a></div>
     </div>
     <div class="hiw-visual">
       <div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="لوحة التحكم: الفرص وتكلفة الذكاء الاصطناعي">

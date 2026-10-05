@@ -11,7 +11,7 @@ const html = `<div class="pg-integrations">
     <div class="pg-hub" role="img" aria-label="Your customers / GenuDo / Your tools">
       <div class="pg-hub-row"><small>Your customers</small><div class="pg-pills"><span class="pg-pill"><bdi>WhatsApp</bdi></span><span class="pg-pill"><bdi>Instagram</bdi></span><span class="pg-pill"><bdi>Messenger</bdi></span><span class="pg-pill">Website chat</span></div></div>
       <div class="pg-hub-mid"><img src="/media/img/genu.svg" alt="" width="84" height="84"><b>GenuDo</b></div>
-      <div class="pg-hub-row"><small>Your tools</small><div class="pg-pills"><span class="pg-pill"><img src="/logos/google-calendar.svg" alt="" width="20" height="20"><bdi>Google Calendar</bdi></span><span class="pg-pill"><img src="/logos/hubspot.svg" alt="" width="20" height="20"><bdi>HubSpot</bdi></span><span class="pg-pill"><img src="/logos/zoho.svg" alt="" width="20" height="20"><bdi>Zoho</bdi></span><span class="pg-pill"><img src="/logos/slack.svg" alt="" width="20" height="20"><bdi>Slack</bdi></span></div></div>
+      <div class="pg-hub-row"><small>Your tools</small><div class="pg-pills"><span class="pg-pill"><img src="/logos/google-calendar.svg" alt="" width="20" height="20"><bdi>Google Calendar</bdi></span><span class="pg-pill"><img src="/logos/hubspot.svg" alt="" width="20" height="20"><bdi>HubSpot</bdi></span><span class="pg-pill"><img src="/logos/zoho.svg" alt="" width="20" height="20"><bdi>Zoho</bdi></span></div></div>
     </div>
   </div>
 </div></section>

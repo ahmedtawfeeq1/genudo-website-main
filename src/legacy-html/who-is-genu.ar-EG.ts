@@ -9,13 +9,13 @@ const html = `<div class="pg-who-is-genu is-ar">
     <div class="wg-hero-copy">
       <span class="eyebrow">مين جينـو؟</span>
       <h1>أهلًا، أنا <em>جينـو</em>.<br>وجاي أعرّفك على فريق شغلك الجديد.</h1>
-      <p class="lead">أنا الدليل بتاعك في جينـو دو. معايا هتعيّن موظفين بالذكاء الاصطناعي: عارف للمبيعات، وعدنان لخدمة العملاء، وروز لمراقبة الجودة. بيردّوا على عملائك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> وشات موقعك، بالليل والنهار، وإنت ماسك الدفة.</p>
+      <p class="lead">أنا الدليل بتاعك في جينـو دو. معايا هتعيّن موظفين بالذكاء الاصطناعي: عارف للمبيعات، وعدنان لخدمة العملاء، وروز لمراقبة الجودة. بيردّوا على عملائك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> وشات موقعك، بالليل والنهار، وإنت ماسك الدفة.</p>
       <div class="wg-cta">
         <a href="/contact" class="btn btn-primary btn-lg">احجز ديمو</a>
         <a href="#film" class="btn btn-ondark btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>اتفرّج على الفيلم</a>
       </div>
       <div class="wg-chans" aria-label="القنوات">
-        <span><bdi>WhatsApp</bdi></span><span><bdi>Instagram</bdi></span><span><bdi>Messenger</bdi></span><span>شات الموقع</span>
+        <span><bdi>WhatsApp</bdi></span><span><bdi>Instagram</bdi> و <bdi>Messenger</bdi></span><span>شات الموقع</span>
       </div>
     </div>
 
@@ -41,7 +41,7 @@ const html = `<div class="pg-who-is-genu is-ar">
     <div class="wg-head wg-rv">
       <span class="eyebrow">سؤال سريع</span>
       <h2>مين بيرد على عملائك الساعة اتنين بالليل؟</h2>
-      <p class="lead">عملائك بيكلّموك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وموقعك، في أي وقت. وأي عميل بيستنى، بيروح لغيرك.</p>
+      <p class="lead">عملائك بيكلّموك على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وموقعك، في أي وقت. وأي عميل بيستنى، بيروح لغيرك.</p>
     </div>
     <div class="wg-cards">
       <article class="wg-card wg-rv">
@@ -107,7 +107,7 @@ const html = `<div class="pg-who-is-genu is-ar">
           <ul class="mk-emp__list">
             <li><i class="mk-ic mk-ic--check"></i><span>بيرد من معلوماتك إنت: الأسعار والسياسات والمواعيد</span></li>
             <li><i class="mk-ic mk-ic--check"></i><span>بيحوّل المشاكل الصعبة للشخص المناسب في فريقك</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></span></li>
           </ul>
         </div>
         <a class="wg-more" href="/sol-customer-service">اعرف عدنان أكتر<svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -197,7 +197,7 @@ const html = `<div class="pg-who-is-genu is-ar">
           <div class="wg-beat-copy">
             <span class="wg-num">3</span>
             <h3>بيرد ويحجز، بالليل والنهار</h3>
-            <p>موظفك بيرد فورًا على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات موقعك. بيفهم الفويس نوتس، بيسأل الأسئلة الصح، وبيساعد يحجز الميعاد على الكالندر بتاعك.</p>
+            <p>موظفك بيرد فورًا على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات موقعك. بيفهم الفويس نوتس، بيسأل الأسئلة الصح، وبيساعد يحجز الميعاد على الكالندر بتاعك.</p>
             <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>جينـو:</b> عميل بعت الساعة اتنين بالليل؟ عارف رد عليه وحجزله.</span></p>
           </div>
           <div class="wg-media">
@@ -338,7 +338,7 @@ const html = `<div class="pg-who-is-genu is-ar">
       <span class="eyebrow">ليه تطمّن</span>
       <h2>فريق بيشتغل بقواعدك إنت.</h2>
     </div>
-    <div class="wg-cards wg-cards--4">
+    <div class="wg-cards">
       <article class="wg-card wg-rv">
         <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></span>
         <h3>بيتكلم لغة عملائك</h3>
@@ -348,11 +348,6 @@ const html = `<div class="pg-who-is-genu is-ar">
         <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M8 7h8M8 11h6"/></svg></span>
         <h3>بيرد من معلوماتك</h3>
         <p>أسعارك وسياساتك ومواعيدك هي المرجع، وتعدّلها في أي وقت.</p>
-      </article>
-      <article class="wg-card wg-rv">
-        <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V5z"/><path d="M12 8v5M12 16h.01"/></svg></span>
-        <h3>التكلفة تحت السيطرة</h3>
-        <p>كل رسالة بتروح لأرخص موديل مناسب لها، وتحط حد أقصى للصرف على كل محادثة. لو وصل له، الموظف بيقف وبينبّه فريقك.</p>
       </article>
       <article class="wg-card wg-rv">
         <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>

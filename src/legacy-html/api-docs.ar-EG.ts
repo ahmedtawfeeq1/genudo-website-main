@@ -3,7 +3,7 @@ const html = `<div class="pg-api-docs">
 <div class="rhead"><div class="container">
   <div class="crumb"><a href="/resources">الموارد</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>توثيق <bdi>API</bdi></span></div>
   <h1>توثيق <bdi>API</bdi></h1>
-  <p>ابني فوق <bdi>جينـو دو</bdi>: اعمل وكلاء، ووجّه المحادثات، واقرا جهات الاتصال والمسارات، وابعت البيانات لأنظمتك في الوقت المناسب، من خلال <bdi>REST API</bdi> و <bdi>MCP</bdi>.</p>
+  <p>ابني فوق <bdi>جينـو دو</bdi>: اعمل وكلاء، ووجّه المحادثات، واقرا جهات الاتصال والمسارات، وابعت البيانات لأنظمتك في الوقت المناسب، من خلال <bdi>REST API</bdi> و <bdi>MCP</bdi>.</p>
 </div></div>
 
 <section class="s-sm"><div class="container">
@@ -128,7 +128,7 @@ https://api.genudo.ai/mcp
 <span class="c"># Claude Code</span>
 claude mcp add --transport http genudo \\
   https://api.genudo.ai/mcp</pre></div>
-        <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg><span>عايز تشتغل بكلام عادي؟ شوف <a href="/api-mcp"><bdi>API</bdi> و <bdi>MCP</bdi></a> علشان تشغّل فريقك من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi> وكل تغيير بيظهرلك كـ <bdi>diff</bdi> قبل ما يتنفّذ.</span></div>
+        <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg><span>عايز تشتغل بكلام عادي؟ شوف <a href="/api-mcp"><bdi>API</bdi> و <bdi>MCP</bdi></a> علشان تشغّل فريقك من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi> وكل تغيير بيظهرلك كـ <bdi>diff</bdi> قبل ما يتنفّذ.</span></div>
       </section>
     </main>
   </div>

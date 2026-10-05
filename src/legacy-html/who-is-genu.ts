@@ -16,7 +16,7 @@ const html = `<div class="pg-who-is-genu">
         <a href="#film" class="btn btn-ondark btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>Watch the film</a>
       </div>
       <div class="wg-chans" aria-label="Channels">
-        <span>WhatsApp</span><span>Instagram</span><span>Messenger</span><span>Website chat</span>
+        <span>WhatsApp</span><span>Instagram &amp; Messenger</span><span>Website chat</span>
       </div>
     </div>
 
@@ -339,7 +339,7 @@ const html = `<div class="pg-who-is-genu">
       <span class="eyebrow">Why you can relax</span>
       <h2>A team that works by your rules.</h2>
     </div>
-    <div class="wg-cards wg-cards--4">
+    <div class="wg-cards">
       <article class="wg-card wg-rv">
         <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></span>
         <h3>Speaks like your customers</h3>
@@ -349,11 +349,6 @@ const html = `<div class="pg-who-is-genu">
         <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M8 7h8M8 11h6"/></svg></span>
         <h3>Answers from your facts</h3>
         <p>Your prices, policies and schedules are the source, and you can update them anytime.</p>
-      </article>
-      <article class="wg-card wg-rv">
-        <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V5z"/><path d="M12 8v5M12 16h.01"/></svg></span>
-        <h3>Costs stay in check</h3>
-        <p>Each message goes to the lowest-cost model that can handle it, and you set a spend cap per conversation. At the cap, the AI pauses and alerts your team.</p>
       </article>
       <article class="wg-card wg-rv">
         <span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>

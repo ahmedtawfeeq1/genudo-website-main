@@ -21,6 +21,7 @@ import '@/styles/pages.css';
 import '@/styles/resources.css';
 import '@/styles/chrome.css'; // nav + footer styles (ported from site-chrome.js)
 import '@/styles/mockups.css'; // shared product-UI mockup kit (EN + AR)
+import '@/styles/layout-rules.css'; // 3/6 card grids, one-line hero chips (all breakpoints)
 import '@/styles/rtl.css'; // scoped to [dir=rtl] / [lang=ar] — leaves EN untouched
 
 // Arabic UI font (Egypt + Gulf). Latin copy keeps the stack from genudo-site.css.

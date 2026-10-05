@@ -1,0 +1,363 @@
+/* =========================================================================
+   Site-wide layout rules (owner rule, Oct 2026): card collections come in
+   3 or 6 and never leave a lone card on a row, on desktop, iPad landscape
+   (1024), iPad portrait (768) and phones. Fixed sets (4 pricing plans, the
+   GENU family, 4-step flows, channel/tool groups) go 4-up, then 2x2, then 1.
+   Hero chip rows hold at most 3 chips and stay on one line.
+   Counts are read from the markup with :has(), so editors only keep the
+   3/6 (or fixed-set) count; the columns follow.
+   ========================================================================= */
+
+/* ---- Card grids ---------------------------------------------------------- */
+.legacy-page .hm-pains,
+.legacy-page .hm-emps,
+.legacy-page .hm-steps,
+.legacy-page .hm-inds,
+.legacy-page .wg-cards,
+.legacy-page .wg-traits,
+.legacy-page .wg-family,
+.legacy-page .hiw-emps,
+.legacy-page .hiw-steps,
+.legacy-page .pg-outs,
+.legacy-page .flow,
+.legacy-page .xnav,
+.legacy-page .feat-grid,
+.legacy-page .pg-emps,
+.legacy-page .pg-steps,
+.legacy-page .pg-emp-grid,
+.legacy-page .pg-ogrid,
+.legacy-page .gal,
+.legacy-page .cs-band,
+.legacy-page .st-narr,
+.legacy-page .pg-pillars,
+.legacy-page .plans,
+.legacy-page .cx-steps,
+.legacy-page .cx-for,
+.legacy-page .pg-hub,
+.legacy-page .pg-chans,
+.legacy-page .pg-groups,
+.legacy-page .pg-devs,
+.legacy-page .pg-ex,
+.legacy-page .pg-caps,
+.legacy-page .blog-grid,
+.legacy-page .matchgrid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+@media (min-width: 600px) {
+.legacy-page .hm-pains:has(> :nth-child(2):last-child),
+.legacy-page .hm-emps:has(> :nth-child(2):last-child),
+.legacy-page .hm-steps:has(> :nth-child(2):last-child),
+.legacy-page .hm-inds:has(> :nth-child(2):last-child),
+.legacy-page .wg-cards:has(> :nth-child(2):last-child),
+.legacy-page .wg-traits:has(> :nth-child(2):last-child),
+.legacy-page .wg-family:has(> :nth-child(2):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(2):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(2):last-child),
+.legacy-page .pg-outs:has(> :nth-child(2):last-child),
+.legacy-page .flow:has(> :nth-child(2):last-child),
+.legacy-page .xnav:has(> :nth-child(2):last-child),
+.legacy-page .feat-grid:has(> :nth-child(2):last-child),
+.legacy-page .pg-emps:has(> :nth-child(2):last-child),
+.legacy-page .pg-steps:has(> :nth-child(2):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(2):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(2):last-child),
+.legacy-page .gal:has(> :nth-child(2):last-child),
+.legacy-page .cs-band:has(> :nth-child(2):last-child),
+.legacy-page .st-narr:has(> :nth-child(2):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(2):last-child),
+.legacy-page .plans:has(> :nth-child(2):last-child),
+.legacy-page .cx-steps:has(> :nth-child(2):last-child),
+.legacy-page .cx-for:has(> :nth-child(2):last-child),
+.legacy-page .pg-hub:has(> :nth-child(2):last-child),
+.legacy-page .pg-chans:has(> :nth-child(2):last-child),
+.legacy-page .pg-groups:has(> :nth-child(2):last-child),
+.legacy-page .pg-devs:has(> :nth-child(2):last-child),
+.legacy-page .pg-ex:has(> :nth-child(2):last-child),
+.legacy-page .pg-caps:has(> :nth-child(2):last-child),
+.legacy-page .blog-grid:has(> :nth-child(2):last-child),
+.legacy-page .matchgrid:has(> :nth-child(2):last-child),
+.legacy-page .hm-pains:has(> :nth-child(4):last-child),
+.legacy-page .hm-emps:has(> :nth-child(4):last-child),
+.legacy-page .hm-steps:has(> :nth-child(4):last-child),
+.legacy-page .hm-inds:has(> :nth-child(4):last-child),
+.legacy-page .wg-cards:has(> :nth-child(4):last-child),
+.legacy-page .wg-traits:has(> :nth-child(4):last-child),
+.legacy-page .wg-family:has(> :nth-child(4):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(4):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(4):last-child),
+.legacy-page .pg-outs:has(> :nth-child(4):last-child),
+.legacy-page .flow:has(> :nth-child(4):last-child),
+.legacy-page .xnav:has(> :nth-child(4):last-child),
+.legacy-page .feat-grid:has(> :nth-child(4):last-child),
+.legacy-page .pg-emps:has(> :nth-child(4):last-child),
+.legacy-page .pg-steps:has(> :nth-child(4):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(4):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(4):last-child),
+.legacy-page .gal:has(> :nth-child(4):last-child),
+.legacy-page .cs-band:has(> :nth-child(4):last-child),
+.legacy-page .st-narr:has(> :nth-child(4):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(4):last-child),
+.legacy-page .plans:has(> :nth-child(4):last-child),
+.legacy-page .cx-steps:has(> :nth-child(4):last-child),
+.legacy-page .cx-for:has(> :nth-child(4):last-child),
+.legacy-page .pg-hub:has(> :nth-child(4):last-child),
+.legacy-page .pg-chans:has(> :nth-child(4):last-child),
+.legacy-page .pg-groups:has(> :nth-child(4):last-child),
+.legacy-page .pg-devs:has(> :nth-child(4):last-child),
+.legacy-page .pg-ex:has(> :nth-child(4):last-child),
+.legacy-page .pg-caps:has(> :nth-child(4):last-child),
+.legacy-page .blog-grid:has(> :nth-child(4):last-child),
+.legacy-page .matchgrid:has(> :nth-child(4):last-child),
+.legacy-page .hm-pains:has(> :nth-child(8):last-child),
+.legacy-page .hm-emps:has(> :nth-child(8):last-child),
+.legacy-page .hm-steps:has(> :nth-child(8):last-child),
+.legacy-page .hm-inds:has(> :nth-child(8):last-child),
+.legacy-page .wg-cards:has(> :nth-child(8):last-child),
+.legacy-page .wg-traits:has(> :nth-child(8):last-child),
+.legacy-page .wg-family:has(> :nth-child(8):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(8):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(8):last-child),
+.legacy-page .pg-outs:has(> :nth-child(8):last-child),
+.legacy-page .flow:has(> :nth-child(8):last-child),
+.legacy-page .xnav:has(> :nth-child(8):last-child),
+.legacy-page .feat-grid:has(> :nth-child(8):last-child),
+.legacy-page .pg-emps:has(> :nth-child(8):last-child),
+.legacy-page .pg-steps:has(> :nth-child(8):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(8):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(8):last-child),
+.legacy-page .gal:has(> :nth-child(8):last-child),
+.legacy-page .cs-band:has(> :nth-child(8):last-child),
+.legacy-page .st-narr:has(> :nth-child(8):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(8):last-child),
+.legacy-page .plans:has(> :nth-child(8):last-child),
+.legacy-page .cx-steps:has(> :nth-child(8):last-child),
+.legacy-page .cx-for:has(> :nth-child(8):last-child),
+.legacy-page .pg-hub:has(> :nth-child(8):last-child),
+.legacy-page .pg-chans:has(> :nth-child(8):last-child),
+.legacy-page .pg-groups:has(> :nth-child(8):last-child),
+.legacy-page .pg-devs:has(> :nth-child(8):last-child),
+.legacy-page .pg-ex:has(> :nth-child(8):last-child),
+.legacy-page .pg-caps:has(> :nth-child(8):last-child),
+.legacy-page .blog-grid:has(> :nth-child(8):last-child),
+.legacy-page .matchgrid:has(> :nth-child(8):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (min-width: 720px) {
+.legacy-page .hm-pains:has(> :nth-child(3):last-child),
+.legacy-page .hm-emps:has(> :nth-child(3):last-child),
+.legacy-page .hm-steps:has(> :nth-child(3):last-child),
+.legacy-page .hm-inds:has(> :nth-child(3):last-child),
+.legacy-page .wg-cards:has(> :nth-child(3):last-child),
+.legacy-page .wg-traits:has(> :nth-child(3):last-child),
+.legacy-page .wg-family:has(> :nth-child(3):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(3):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(3):last-child),
+.legacy-page .pg-outs:has(> :nth-child(3):last-child),
+.legacy-page .flow:has(> :nth-child(3):last-child),
+.legacy-page .xnav:has(> :nth-child(3):last-child),
+.legacy-page .feat-grid:has(> :nth-child(3):last-child),
+.legacy-page .pg-emps:has(> :nth-child(3):last-child),
+.legacy-page .pg-steps:has(> :nth-child(3):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(3):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(3):last-child),
+.legacy-page .gal:has(> :nth-child(3):last-child),
+.legacy-page .cs-band:has(> :nth-child(3):last-child),
+.legacy-page .st-narr:has(> :nth-child(3):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(3):last-child),
+.legacy-page .plans:has(> :nth-child(3):last-child),
+.legacy-page .cx-steps:has(> :nth-child(3):last-child),
+.legacy-page .cx-for:has(> :nth-child(3):last-child),
+.legacy-page .pg-hub:has(> :nth-child(3):last-child),
+.legacy-page .pg-chans:has(> :nth-child(3):last-child),
+.legacy-page .pg-groups:has(> :nth-child(3):last-child),
+.legacy-page .pg-devs:has(> :nth-child(3):last-child),
+.legacy-page .pg-ex:has(> :nth-child(3):last-child),
+.legacy-page .pg-caps:has(> :nth-child(3):last-child),
+.legacy-page .blog-grid:has(> :nth-child(3):last-child),
+.legacy-page .matchgrid:has(> :nth-child(3):last-child),
+.legacy-page .hm-pains:has(> :nth-child(6):last-child),
+.legacy-page .hm-emps:has(> :nth-child(6):last-child),
+.legacy-page .hm-steps:has(> :nth-child(6):last-child),
+.legacy-page .hm-inds:has(> :nth-child(6):last-child),
+.legacy-page .wg-cards:has(> :nth-child(6):last-child),
+.legacy-page .wg-traits:has(> :nth-child(6):last-child),
+.legacy-page .wg-family:has(> :nth-child(6):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(6):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(6):last-child),
+.legacy-page .pg-outs:has(> :nth-child(6):last-child),
+.legacy-page .flow:has(> :nth-child(6):last-child),
+.legacy-page .xnav:has(> :nth-child(6):last-child),
+.legacy-page .feat-grid:has(> :nth-child(6):last-child),
+.legacy-page .pg-emps:has(> :nth-child(6):last-child),
+.legacy-page .pg-steps:has(> :nth-child(6):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(6):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(6):last-child),
+.legacy-page .gal:has(> :nth-child(6):last-child),
+.legacy-page .cs-band:has(> :nth-child(6):last-child),
+.legacy-page .st-narr:has(> :nth-child(6):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(6):last-child),
+.legacy-page .plans:has(> :nth-child(6):last-child),
+.legacy-page .cx-steps:has(> :nth-child(6):last-child),
+.legacy-page .cx-for:has(> :nth-child(6):last-child),
+.legacy-page .pg-hub:has(> :nth-child(6):last-child),
+.legacy-page .pg-chans:has(> :nth-child(6):last-child),
+.legacy-page .pg-groups:has(> :nth-child(6):last-child),
+.legacy-page .pg-devs:has(> :nth-child(6):last-child),
+.legacy-page .pg-ex:has(> :nth-child(6):last-child),
+.legacy-page .pg-caps:has(> :nth-child(6):last-child),
+.legacy-page .blog-grid:has(> :nth-child(6):last-child),
+.legacy-page .matchgrid:has(> :nth-child(6):last-child),
+.legacy-page .hm-pains:has(> :nth-child(9):last-child),
+.legacy-page .hm-emps:has(> :nth-child(9):last-child),
+.legacy-page .hm-steps:has(> :nth-child(9):last-child),
+.legacy-page .hm-inds:has(> :nth-child(9):last-child),
+.legacy-page .wg-cards:has(> :nth-child(9):last-child),
+.legacy-page .wg-traits:has(> :nth-child(9):last-child),
+.legacy-page .wg-family:has(> :nth-child(9):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(9):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(9):last-child),
+.legacy-page .pg-outs:has(> :nth-child(9):last-child),
+.legacy-page .flow:has(> :nth-child(9):last-child),
+.legacy-page .xnav:has(> :nth-child(9):last-child),
+.legacy-page .feat-grid:has(> :nth-child(9):last-child),
+.legacy-page .pg-emps:has(> :nth-child(9):last-child),
+.legacy-page .pg-steps:has(> :nth-child(9):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(9):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(9):last-child),
+.legacy-page .gal:has(> :nth-child(9):last-child),
+.legacy-page .cs-band:has(> :nth-child(9):last-child),
+.legacy-page .st-narr:has(> :nth-child(9):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(9):last-child),
+.legacy-page .plans:has(> :nth-child(9):last-child),
+.legacy-page .cx-steps:has(> :nth-child(9):last-child),
+.legacy-page .cx-for:has(> :nth-child(9):last-child),
+.legacy-page .pg-hub:has(> :nth-child(9):last-child),
+.legacy-page .pg-chans:has(> :nth-child(9):last-child),
+.legacy-page .pg-groups:has(> :nth-child(9):last-child),
+.legacy-page .pg-devs:has(> :nth-child(9):last-child),
+.legacy-page .pg-ex:has(> :nth-child(9):last-child),
+.legacy-page .pg-caps:has(> :nth-child(9):last-child),
+.legacy-page .blog-grid:has(> :nth-child(9):last-child),
+.legacy-page .matchgrid:has(> :nth-child(9):last-child) {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+@media (min-width: 1024px) {
+.legacy-page .hm-pains:has(> :nth-child(4):last-child),
+.legacy-page .hm-emps:has(> :nth-child(4):last-child),
+.legacy-page .hm-steps:has(> :nth-child(4):last-child),
+.legacy-page .hm-inds:has(> :nth-child(4):last-child),
+.legacy-page .wg-cards:has(> :nth-child(4):last-child),
+.legacy-page .wg-traits:has(> :nth-child(4):last-child),
+.legacy-page .wg-family:has(> :nth-child(4):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(4):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(4):last-child),
+.legacy-page .pg-outs:has(> :nth-child(4):last-child),
+.legacy-page .flow:has(> :nth-child(4):last-child),
+.legacy-page .xnav:has(> :nth-child(4):last-child),
+.legacy-page .feat-grid:has(> :nth-child(4):last-child),
+.legacy-page .pg-emps:has(> :nth-child(4):last-child),
+.legacy-page .pg-steps:has(> :nth-child(4):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(4):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(4):last-child),
+.legacy-page .gal:has(> :nth-child(4):last-child),
+.legacy-page .cs-band:has(> :nth-child(4):last-child),
+.legacy-page .st-narr:has(> :nth-child(4):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(4):last-child),
+.legacy-page .plans:has(> :nth-child(4):last-child),
+.legacy-page .cx-steps:has(> :nth-child(4):last-child),
+.legacy-page .cx-for:has(> :nth-child(4):last-child),
+.legacy-page .pg-hub:has(> :nth-child(4):last-child),
+.legacy-page .pg-chans:has(> :nth-child(4):last-child),
+.legacy-page .pg-groups:has(> :nth-child(4):last-child),
+.legacy-page .pg-devs:has(> :nth-child(4):last-child),
+.legacy-page .pg-ex:has(> :nth-child(4):last-child),
+.legacy-page .pg-caps:has(> :nth-child(4):last-child),
+.legacy-page .blog-grid:has(> :nth-child(4):last-child),
+.legacy-page .matchgrid:has(> :nth-child(4):last-child),
+.legacy-page .hm-pains:has(> :nth-child(8):last-child),
+.legacy-page .hm-emps:has(> :nth-child(8):last-child),
+.legacy-page .hm-steps:has(> :nth-child(8):last-child),
+.legacy-page .hm-inds:has(> :nth-child(8):last-child),
+.legacy-page .wg-cards:has(> :nth-child(8):last-child),
+.legacy-page .wg-traits:has(> :nth-child(8):last-child),
+.legacy-page .wg-family:has(> :nth-child(8):last-child),
+.legacy-page .hiw-emps:has(> :nth-child(8):last-child),
+.legacy-page .hiw-steps:has(> :nth-child(8):last-child),
+.legacy-page .pg-outs:has(> :nth-child(8):last-child),
+.legacy-page .flow:has(> :nth-child(8):last-child),
+.legacy-page .xnav:has(> :nth-child(8):last-child),
+.legacy-page .feat-grid:has(> :nth-child(8):last-child),
+.legacy-page .pg-emps:has(> :nth-child(8):last-child),
+.legacy-page .pg-steps:has(> :nth-child(8):last-child),
+.legacy-page .pg-emp-grid:has(> :nth-child(8):last-child),
+.legacy-page .pg-ogrid:has(> :nth-child(8):last-child),
+.legacy-page .gal:has(> :nth-child(8):last-child),
+.legacy-page .cs-band:has(> :nth-child(8):last-child),
+.legacy-page .st-narr:has(> :nth-child(8):last-child),
+.legacy-page .pg-pillars:has(> :nth-child(8):last-child),
+.legacy-page .plans:has(> :nth-child(8):last-child),
+.legacy-page .cx-steps:has(> :nth-child(8):last-child),
+.legacy-page .cx-for:has(> :nth-child(8):last-child),
+.legacy-page .pg-hub:has(> :nth-child(8):last-child),
+.legacy-page .pg-chans:has(> :nth-child(8):last-child),
+.legacy-page .pg-groups:has(> :nth-child(8):last-child),
+.legacy-page .pg-devs:has(> :nth-child(8):last-child),
+.legacy-page .pg-ex:has(> :nth-child(8):last-child),
+.legacy-page .pg-caps:has(> :nth-child(8):last-child),
+.legacy-page .blog-grid:has(> :nth-child(8):last-child),
+.legacy-page .matchgrid:has(> :nth-child(8):last-child) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Tool-logo tiles vary in count: centre the last row instead of leaving a
+   tile stranded at the start. */
+.legacy-page .intg {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.legacy-page .intg > * {
+  flex: 0 1 150px;
+}
+
+/* ---- Hero chip rows: max 3, one line ----------------------------------- */
+.legacy-page :is(.pchips, .wg-chans, .hiw-pills, .pg-jump, .cx-trust) {
+  flex-wrap: nowrap !important;
+}
+.legacy-page :is(.pchips, .wg-chans, .hiw-pills, .pg-jump, .cx-trust) > * {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+@media (max-width: 719.98px) {
+  .legacy-page :is(.pchips, .wg-chans, .hiw-pills, .pg-jump, .cx-trust) {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px !important;
+  }
+  .legacy-page :is(.pchips, .wg-chans, .hiw-pills, .pg-jump, .cx-trust) > * {
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.3;
+    font-size: 12px !important;
+    padding: 7px 6px !important;
+    gap: 4px !important;
+  }
+  .legacy-page :is(.pchips, .wg-chans, .hiw-pills, .pg-jump, .cx-trust) > * :is(svg, img) {
+    inline-size: 13px !important;
+    block-size: 13px !important;
+    flex: none;
+  }
+}
+
+/* Mixed Arabic + Latin runs are wrapped in .mixrun by LegacyBody so a flex
+   parent treats the whole line as one item. Page rules that style every
+   descendant span as flex must not split it again. */
+.legacy-page .mixrun {
+  display: inline !important;
+}

@@ -7,7 +7,7 @@ const html = `<div class="pg-sol-customer-service">
     <h1>كل عميل بياخد الإجابة الصح على طول، في أي ساعة. وفريقك بيركّز بس على اللي محتاج إنسان.</h1>
     <p class="lead">عدنان هو موظف خدمة العملاء بالذكاء الاصطناعي في جينـو دو. بيرد من معلوماتك إنت: أسعارك وسياساتك ومواعيدك. ولما المشكلة تبقى محتاجة حد من فريقك، بيحوّلها له على طول ومعاها المحادثة كلها.</p>
     <div class="heroc-cta"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ دلوقتي</a><a href="/contact" class="btn btn-ondark btn-lg">احجز ديمو</a></div>
-    <div class="pchips"><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>رد فوري في أي ساعة</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6a8 8 0 0 0 8 8 8 8 0 0 0 8-8V6z"/><path d="m9 12 2 2 4-4"/></svg>ملتزم بسياساتك</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h6a3 3 0 0 0 3-3V8"/></svg>بيحوّل لفريقك</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></span></div>
+    <div class="pchips"><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>رد فوري في أي ساعة</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6a8 8 0 0 0 8 8 8 8 0 0 0 8-8V6z"/><path d="m9 12 2 2 4-4"/></svg>ملتزم بسياساتك</span><span class="pchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h6a3 3 0 0 0 3-3V8"/></svg>بيحوّل لفريقك</span></div>
   </div>
   <div class="phero-media">
     <div class="scs-hero">
@@ -32,12 +32,12 @@ const html = `<div class="pg-sol-customer-service">
 </div></section>
 
 <section class="s white-bg"><div class="container">
-  <div class="s-head"><span class="eyebrow">اللي هتلاحظه في شغلك</span><h2>أربع حاجات بتتغيّر من أول يوم عدنان يشتغل فيه.</h2><p class="lead">مش شات بوت وخلاص. عدنان بيشيل من على فريقك الأسئلة اللي بتتكرر كل يوم، ويسيبلهم الشغل اللي محتاج فهم وتعاطف.</p></div>
+  <div class="s-head"><span class="eyebrow">اللي هتلاحظه في شغلك</span><h2>ست حاجات بتتغيّر من أول يوم عدنان يشتغل فيه.</h2><p class="lead">مش شات بوت وخلاص. عدنان بيشيل من على فريقك الأسئلة اللي بتتكرر كل يوم، ويسيبلهم الشغل اللي محتاج فهم وتعاطف.</p></div>
   <div class="feat-grid scs-outs">
-    <div class="featc"><div class="oi" style="background:#3b82f6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div><h4>العميل مبيستناش للصبح</h4><p>رسالة الساعة اتنين بالليل بيترد عليها زي رسالة الضهر بالظبط، على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات الموقع.</p></div>
+    <div class="featc"><div class="oi" style="background:#3b82f6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div><h4>العميل مبيستناش للصبح</h4><p>رسالة الساعة اتنين بالليل بيترد عليها زي رسالة الضهر بالظبط، على <bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات الموقع.</p></div>
     <div class="featc"><div class="oi" style="background:#3b82f6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></div><h4>فريقك بيشتغل في اللي يستاهل</h4><p>الأسئلة المتكررة بيخلّصها عدنان. وفريقك بيمسك الحالات الحساسة والمعقدة، وقدامه كل التفاصيل.</p></div>
     <div class="featc"><div class="oi" style="background:#3b82f6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6a8 8 0 0 0 8 8 8 8 0 0 0 8-8V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h4>سياساتك متحترمة</h4><p>بيرد من معلوماتك المكتوبة: الإرجاع والضمان والتوصيل. ولو السؤال مش عندك، بدل ما يخمّن بيحوّله لحد من فريقك.</p></div>
-    <div class="featc"><div class="oi" style="background:#3b82f6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>التذاكر بتروح مكانها</h4><p>الحالات اللي محتاجة إنسان بتوصل لـ<bdi>Zoho Desk</bdi> أو <bdi>Zendesk</bdi>، المكان اللي فريقك شغال عليه أصلًا.</p></div>
+    <div class="featc"><div class="oi" style="background:#3b82f6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>التذاكر بتروح مكانها</h4><p>الحالات اللي محتاجة إنسان بتوصل لـ <bdi>Zoho Desk</bdi> أو <bdi>Zendesk</bdi>، المكان اللي فريقك شغال عليه أصلًا.</p></div><div class="featc"><div class="oi" style="background:#8b5cf6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h4>بيفهم الفويس نوت والصورة</h4><p>العميل يبعت فويس نوت أو صورة للمشكلة، عدنان بيسمعها ويفهمها ويرد عليها زي الرسالة المكتوبة بالظبط.</p></div><div class="featc"><div class="oi" style="background:#10b981"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h4>بيرد بلهجة عميلك</h4><p>مصري وخليجي وشامي وغيرهم: أربعتاشر لهجة عربية، أو يسيب عدنان يختار اللهجة المناسبة لكل عميل لوحده.</p></div>
   </div>
 </div></section>
 
@@ -59,7 +59,7 @@ const html = `<div class="pg-sol-customer-service">
         <ul class="mk-emp__list">
           <li><i class="mk-ic mk-ic--check"></i>بيرد من معلوماتك إنت: الأسعار والسياسات والمواعيد</li>
           <li><i class="mk-ic mk-ic--check"></i>بيحوّل المشاكل الصعبة للشخص المناسب في فريقك</li>
-          <li><i class="mk-ic mk-ic--check"></i>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></li>
+          <li><i class="mk-ic mk-ic--check"></i>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></li>
         </ul>
       </div>
     </div>
@@ -151,7 +151,7 @@ const html = `<div class="pg-sol-customer-service">
     <div class="fstep"><div class="n">03</div><h4>يرد أو يحوّل</h4><p>لو الإجابة عندك، بيرد على طول. لو لأ، بيحوّل لفريقك ومعاه المحادثة كلها.</p></div>
     <div class="fstep"><div class="n">04</div><h4>يطمّن على العميل</h4><p>بيتابع مع العميل بعدها، وفريقك بيشوف كل حالة في صندوق الوارد.</p></div>
   </div>
-  <p class="scs-proof">عدنان بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi>، وتقدر تربطه بأدوات تانية. <a href="/integrations">شوف التكاملات</a></p>
+  <p class="scs-proof">عدنان بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi>، وتقدر تربطه بأدوات تانية. <a href="/integrations">شوف التكاملات</a></p>
 </div></section>
 
 <section class="s white-bg"><div class="container">
