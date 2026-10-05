@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { SITE_URL } from '@/i18n/seo';
 
 /**
  * Website form intake. Every form on the site posts here; we validate, drop bots,
@@ -127,8 +128,8 @@ export async function POST(req: NextRequest) {
       ip,
       userAgent: (req.headers.get('user-agent') ?? '').slice(0, 300),
       country: req.headers.get('cf-ipcountry') || req.headers.get('x-vercel-ip-country') || undefined,
-      // Behind nginx/Cloudflare the server sees 0.0.0.0:3000; use the public host instead.
-      site: `${req.headers.get('x-forwarded-proto') === 'http' ? 'http' : 'https'}://${req.headers.get('x-forwarded-host') || req.headers.get('host') || 'genudo.ai'}`
+      // Configured public URL. Never derive it from Host/X-Forwarded-Host (client-controlled).
+      site: SITE_URL
     }
   };
 

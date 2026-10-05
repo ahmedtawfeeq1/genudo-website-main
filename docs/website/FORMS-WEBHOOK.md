@@ -102,37 +102,46 @@ curl -X POST https://genudo.ai/api/forms -H 'Content-Type: application/json' \
 
 ## n8n: WhatsApp notification text (all forms)
 
-Use as an **Expression** in the WhatsApp node's `text` field (directly after the webhook node; otherwise replace `$json.body` with `$('<webhook node name>').item.json.body`):
+Add a **Code** node ("Format WhatsApp message", mode *Run Once for All Items*, JavaScript) between the webhook and the WhatsApp node, then set the WhatsApp `text` field to the expression `{{ $json.message }}`. A Code node avoids expression-editor parsing limits; the original `body` is passed through for later nodes.
 
-```
-{{ (() => {
-  const b = $json.body || {};
-  const d = b.data || {};
-  const m = b.meta || {};
-  const title = {
-    demo_request: '🟣 طلب ديمو جديد من الموقع',
-    privacy_request: '🔒 طلب خصوصية (صاحب بيانات) — يحتاج رد',
-    document_request: '📄 طلب وثيقة (DPA / Security)'
-  }[b.form] || ('📝 نموذج جديد: ' + b.form);
-  const label = {
-    name: 'الاسم', full_name: 'الاسم', company: 'الشركة', email: 'الإيميل', work_email: 'إيميل العمل',
-    phone: 'الموبايل', topic: 'الموضوع', message: 'الرسالة', request_type: 'نوع الطلب',
-    relationship: 'العلاقة', country: 'الدولة', details: 'التفاصيل', document: 'الوثيقة',
-    role: 'الوظيفة', confirmed: 'أكّد صحة البيانات'
-  };
-  const fields = Object.entries(d)
-    .filter(([, v]) => v !== '' && v != null)
-    .map(([k, v]) => `*${label[k] || k}:* ${Array.isArray(v) ? v.join(', ') : v}`)
+```javascript
+const TITLES = {
+  demo_request: '🟣 طلب ديمو جديد من الموقع',
+  privacy_request: '🔒 طلب خصوصية (صاحب بيانات) - يحتاج رد',
+  document_request: '📄 طلب وثيقة (DPA / Security)'
+};
+const LABELS = {
+  name: 'الاسم', full_name: 'الاسم', company: 'الشركة', email: 'الإيميل', work_email: 'إيميل العمل',
+  phone: 'الموبايل', topic: 'الموضوع', message: 'الرسالة', request_type: 'نوع الطلب',
+  relationship: 'العلاقة', country: 'الدولة', details: 'التفاصيل', document: 'الوثيقة',
+  role: 'الوظيفة', confirmed: 'أكّد صحة البيانات'
+};
+
+return $input.all().map((item) => {
+  const body = item.json.body || {};
+  const data = body.data || {};
+  const meta = body.meta || {};
+
+  const fields = Object.entries(data)
+    .filter(([, value]) => value !== '' && value != null)
+    .map(([key, value]) => `*${LABELS[key] || key}:* ${Array.isArray(value) ? value.join(', ') : value}`)
     .join('\n');
-  const when = m.submittedAt ? DateTime.fromISO(m.submittedAt).setZone('Africa/Cairo').toFormat('dd LLL yyyy, HH:mm') : '-';
-  const utm = m.utm && Object.keys(m.utm).length ? Object.entries(m.utm).map(([k, v]) => `${k}=${v}`).join(' | ') : '';
+
+  const when = meta.submittedAt
+    ? DateTime.fromISO(meta.submittedAt).setZone('Africa/Cairo').toFormat('dd LLL yyyy, HH:mm')
+    : '-';
+  const utm = Object.entries(meta.utm || {}).map(([k, v]) => `${k}=${v}`).join(' | ');
+
   const info = [
-    `🌐 *الصفحة:* ${m.page || '-'} (${m.locale || '-'})`,
+    `🌐 *الصفحة:* ${meta.page || '-'} (${meta.locale || '-'})`,
     `🕒 *الوقت (القاهرة):* ${when}`,
-    `📍 *الدولة:* ${m.country || '-'}`,
-    m.referrer ? `↩️ *جاي من:* ${m.referrer}` : '',
+    `📍 *الدولة:* ${meta.country || '-'}`,
+    meta.referrer ? `↩️ *جاي من:* ${meta.referrer}` : '',
     utm ? `📣 *الحملة:* ${utm}` : ''
   ].filter(Boolean).join('\n');
-  return `*${title}*\n\n${fields}\n\n${info}`;
-})() }}
+
+  const title = TITLES[body.form] || `📝 نموذج جديد: ${body.form}`;
+
+  return { json: { ...item.json, message: `*${title}*\n\n${fields}\n\n${info}` } };
+});
 ```
