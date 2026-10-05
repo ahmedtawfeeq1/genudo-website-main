@@ -4,7 +4,7 @@ import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
 
-// GCC → Gulf Arabic; other Arab countries → Egyptian Arabic; everywhere else
+// Arab countries (GCC included, while ar-SA is paused) → Egyptian Arabic; everywhere else
 // falls through to next-intl (Accept-Language, then default `en`).
 const GULF = new Set(['SA', 'AE', 'KW', 'QA', 'BH', 'OM']);
 const ARAB = new Set([
@@ -13,7 +13,7 @@ const ARAB = new Set([
 
 function geoLocale(country: string): string | null {
   const c = country.toUpperCase();
-  if (GULF.has(c)) return 'ar-SA';
+  if (GULF.has(c)) return 'ar-EG'; // ar-SA paused (owner decision D2)
   if (ARAB.has(c)) return 'ar-EG';
   return null;
 }
@@ -42,5 +42,5 @@ export default function middleware(req: NextRequest) {
 export const config = {
   // Home redirect, locale-prefixed routes, and everything else except Next
   // internals and files with an extension (so /public assets pass through).
-  matcher: ['/', '/(en|ar-EG|ar-SA)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/(en|ar-EG)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)']
 };

@@ -1,0 +1,36 @@
+/* /sol-customer-service (Adnan). Every selector is scoped to .pg-sol-customer-service. */
+.pg-sol-customer-service .scs-hero { display: flex; flex-direction: column; gap: 14px; align-items: center; background: #fff; border-radius: 22px; padding: 18px 14px; max-inline-size: 420px; margin-inline: auto; box-shadow: 0 24px 60px -24px rgba(10, 12, 40, .5); }
+.pg-sol-customer-service .scs-who { display: flex; align-items: center; gap: 12px; align-self: stretch; }
+.pg-sol-customer-service .scs-who img { inline-size: 64px; max-inline-size: 100%; height: auto; flex: none; }
+.pg-sol-customer-service .scs-who b { display: block; font-size: 18px; color: var(--ink, #14162b); }
+.pg-sol-customer-service .scs-who span { font-size: 14px; color: var(--ink-3, #6c727e); }
+.pg-sol-customer-service .scs-outs { margin-block-start: 28px; }
+.pg-sol-customer-service .scs-split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: center; }
+.pg-sol-customer-service .scs-copy, .pg-sol-customer-service .scs-media { min-inline-size: 0; }
+.pg-sol-customer-service .scs-copy .eyebrow { display: block; margin-block-end: 12px; }
+.pg-sol-customer-service .scs-copy h3 { margin-block-end: 14px; }
+.pg-sol-customer-service .scs-copy p { color: var(--ink-2, #475569); font-size: 16px; line-height: 1.6; margin: 0 0 14px; }
+.pg-sol-customer-service .scs-copy .plist li { align-items: flex-start; font-size: 15.5px; line-height: 1.5; }
+.pg-sol-customer-service .scs-copy .plist li::before { content: ""; flex: none; inline-size: 18px; block-size: 18px; margin-block-start: 3px; border-radius: 50%; background: var(--success, #16a34a) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.pg-sol-customer-service .scs-note { font-size: 13.5px !important; color: var(--ink-3, #6c727e) !important; }
+.pg-sol-customer-service .scs-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.pg-sol-customer-service .scs-links .btn { min-block-size: 44px; }
+.pg-sol-customer-service .scs-media--emp { inline-size: 100%; max-inline-size: 360px; margin-inline: auto; }
+.pg-sol-customer-service .scs-wide { margin-block-start: 28px; }
+.pg-sol-customer-service .scs-proof { margin-block-start: 22px; font-size: 15px; color: var(--ink-2, #475569); }
+.pg-sol-customer-service .scs-proof a { color: var(--primary, #6468f0); font-weight: 600; text-decoration: underline; }
+.pg-sol-customer-service .scs-xnav { margin-block-start: 24px; }
+.pg-sol-customer-service .xcard .go { margin-inline: 0; margin-inline-start: auto; }
+.pg-sol-customer-service .xcard .go svg { transform: none; }
+.pg-sol-customer-service .crumb, .pg-sol-customer-service .pchips { min-inline-size: 0; }
+@media (min-width: 900px) {
+  .pg-sol-customer-service .scs-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+  .pg-sol-customer-service .scs-split--flip .scs-media { order: -1; }
+}
+@media (max-width: 720px) {
+  .pg-sol-customer-service .scs-outs, .pg-sol-customer-service .scs-steps { grid-template-columns: minmax(0, 1fr); }
+  .pg-sol-customer-service .pchip { min-block-size: 36px; }
+}
+/* Arabic: mirror direction arrows; no tracking/uppercase/mono on Arabic eyebrows */
+.legacy-rtl .pg-sol-customer-service :is(.crumb svg, .xcard .go svg, .ctaf-sec svg) { transform: scaleX(-1); }
+.legacy-rtl .pg-sol-customer-service .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }

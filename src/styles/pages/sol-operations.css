@@ -1,0 +1,54 @@
+/* /sol-operations page styles. Every selector is scoped to .pg-sol-operations. */
+.pg-sol-operations .pg-hero-card { display: block; min-width: 0; }
+.pg-sol-operations .pg-hero-card .mk { max-width: 100%; }
+.pg-sol-operations .pg-cap { display: block; margin-block-start: 8px; font-size: 13px; opacity: .72; text-align: center; }
+.pg-sol-operations .pg-hero-card .mk-card { max-inline-size: 440px; margin-inline: auto; }
+
+.pg-sol-operations .pg-meet { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+.pg-sol-operations .pg-roz-fig { display: flex; justify-content: center; }
+.pg-sol-operations .pg-roz-fig img { width: min(240px, 70%); height: auto; max-width: 100%; display: block; }
+@media (min-width: 720px) {
+  .pg-sol-operations .pg-meet { grid-template-columns: 280px 1fr; gap: 48px; }
+}
+
+.pg-sol-operations .pg-connect { display: grid; grid-template-columns: 1fr; gap: 28px; margin-block-start: 30px; align-items: center; }
+@media (min-width: 720px) {
+  .pg-sol-operations .pg-connect { grid-template-columns: 260px 1fr; gap: 48px; }
+}
+.pg-sol-operations .pg-qr {
+  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+  padding: 18px; border: 1px solid #e5e7eb; border-radius: 18px; background: #fff;
+  box-shadow: 0 8px 28px rgba(17, 24, 39, .08); max-inline-size: 280px; inline-size: 100%; margin-inline: auto;
+}
+.pg-sol-operations .pg-qr-title { font-size: 15px; }
+.pg-sol-operations .pg-qr small { font-size: 14px; color: #6b7280; }
+/* Deliberately fake: a plain checkerboard with a "placeholder" label, never a scannable code. */
+.pg-sol-operations .pg-qr-box {
+  position: relative; inline-size: 168px; max-inline-size: 100%; aspect-ratio: 1; border-radius: 10px;
+  border: 8px solid #fff; outline: 1px solid #e5e7eb;
+  background: repeating-conic-gradient(#d1d5db 0 25%, #f3f4f6 0 50%) 0 0 / 28px 28px;
+}
+.pg-sol-operations .pg-qr-tag {
+  position: absolute; inset-inline: 10%; inset-block-start: 50%; transform: translateY(-50%);
+  background: #111827; color: #fff; font-size: 14px; font-weight: 700; padding: 6px 10px;
+  border-radius: 8px; text-align: center;
+}
+
+.pg-sol-operations .pg-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.pg-sol-operations .pg-steps li { display: flex; gap: 14px; align-items: flex-start; }
+.pg-sol-operations .pg-steps .n {
+  flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  background: #6468f0; color: #fff; font-weight: 700;
+}
+.pg-sol-operations .pg-steps h4 { margin-block: 0 4px; margin-inline: 0; }
+.pg-sol-operations .pg-steps li > div { min-width: 0; }
+.pg-sol-operations .pg-steps p { margin: 0; font-size: 15px; line-height: 1.6; }
+
+.pg-sol-operations .pg-phone { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.pg-sol-operations .pg-phone .mk-phone { max-inline-size: min(340px, 100%); }
+.pg-sol-operations .pg-more { margin-block-start: 26px; font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.pg-sol-operations .pg-more a { min-height: 44px; display: inline-flex; align-items: center; font-weight: 600; }
+.pg-sol-operations .faq-item summary { min-height: 44px; }
+
+/* Arabic: no tracking, uppercase or monospace on eyebrows (cursive script). */
+.legacy-rtl .pg-sol-operations .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }

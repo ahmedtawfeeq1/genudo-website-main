@@ -1,0 +1,56 @@
+/* /pricing: every selector scoped to .pg-pricing. Logical properties; mobile-first. */
+.pg-pricing { overflow-x: clip; }
+.pg-pricing .prhead { background: linear-gradient(180deg, #f3f4ff, #f8f8f8); border-block-end: 1px solid var(--border); padding-block: 44px 56px; text-align: center; }
+.pg-pricing .prhead h1 { font-size: clamp(30px, 8vw, 52px); line-height: 1.15; text-wrap: balance; }
+.pg-pricing .prhead p { color: var(--ink-2); font-size: 16px; margin: 14px auto 0; max-inline-size: 560px; line-height: 1.65; }
+.pg-pricing .prhead .pill { display: inline-flex; align-items: center; gap: 7px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); background: var(--tint); border: 1px solid var(--tint-2); border-radius: 999px; padding: 6px 13px; margin-block-end: 16px; }
+.legacy-rtl .pg-pricing .plan .price { direction: ltr; justify-content: flex-end; }
+.pg-pricing .plans { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; margin-block-start: -30px; }
+.pg-pricing .plan { position: relative; display: flex; flex-direction: column; min-inline-size: 0; background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 26px 22px; box-shadow: var(--shadow-sm); }
+.pg-pricing .plan.pop { border-color: var(--primary); box-shadow: 0 20px 50px -20px rgba(100,104,240,.45); }
+.pg-pricing .plan .badge { position: absolute; inset-block-start: -12px; inset-inline: 0; margin-inline: auto; inline-size: max-content; font-size: 12px; font-weight: 700; color: #fff; background: var(--primary); border-radius: 999px; padding: 4px 13px; white-space: nowrap; }
+.pg-pricing .plan .pn { font-size: 18px; font-weight: 680; }
+.pg-pricing .plan .pd { font-size: 14px; color: var(--ink-3); margin-block: 5px 16px; line-height: 1.5; }
+.pg-pricing .plan .price { display: flex; align-items: baseline; gap: 4px; }
+.pg-pricing .plan .price .cur { font-size: 20px; font-weight: 640; color: var(--ink); align-self: flex-start; margin-block-start: 6px; }
+.pg-pricing .plan .price .amt { font-size: 38px; font-weight: 760; color: var(--ink); line-height: 1; }
+.pg-pricing .plan .bill { font-size: 13px; color: var(--ink-3); margin-block: 6px 18px; }
+.pg-pricing .plan .pbtn { display: flex; align-items: center; justify-content: center; min-block-size: 46px; border-radius: 11px; padding: 11px; font-weight: 640; font-size: 15px; text-decoration: none; transition: .15s; }
+.pg-pricing .plan .pbtn.ghost { border: 1px solid var(--border-2); color: var(--ink); }
+.pg-pricing .plan .pbtn.ghost:hover { background: var(--bg); border-color: var(--primary); color: var(--primary); }
+.pg-pricing .plan .pbtn.solid { background: var(--primary); color: #fff; }
+.pg-pricing .plan .pbtn.solid:hover { background: var(--primary-600, #4f52d6); }
+.pg-pricing .plan .inc { font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-block: 20px 12px; }
+.pg-pricing .plan ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.pg-pricing .plan li { display: flex; gap: 9px; align-items: flex-start; font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.pg-pricing .plan li svg { inline-size: 16px; block-size: 16px; flex: none; margin-block-start: 3px; color: var(--primary); }
+.pg-pricing .plan li b { color: var(--ink); font-weight: 640; }
+.pg-pricing .ent { margin-block-start: 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; background: radial-gradient(120% 160% at 15% 0%, #26307e, #141a40 65%); color: #fff; border-radius: 20px; padding: 24px 22px; }
+.pg-pricing .ent h3 { color: #fff; font-size: 21px; }
+.pg-pricing .ent p { color: #c7cbf2; margin: 6px 0 0; font-size: 15px; max-inline-size: 520px; line-height: 1.6; }
+.pg-pricing .ent .btn { min-block-size: 48px; }
+.pg-pricing .cmpbox { overflow-x: auto; margin-block-start: 24px; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 6px 12px 12px; box-shadow: var(--shadow-sm); -webkit-overflow-scrolling: touch; }
+.pg-pricing .cmp { inline-size: 100%; min-inline-size: 640px; border-collapse: collapse; margin-block-start: 8px; }
+.pg-pricing .cmp th, .pg-pricing .cmp td { padding: 14px 12px; text-align: center; font-size: 14px; border-block-end: 1px solid var(--border); }
+.pg-pricing .cmp thead th { background: #fff; vertical-align: bottom; padding-block-start: 18px; }
+.pg-pricing .cmp th.feat, .pg-pricing .cmp td.feat { text-align: start; color: var(--ink-2); font-weight: 500; }
+.pg-pricing .cmp thead .pn { font-size: 16px; font-weight: 680; color: var(--ink); }
+.pg-pricing .cmp thead .pp { font-size: 12px; color: var(--ink-3); font-weight: 500; margin-block-start: 2px; }
+.pg-pricing .cmp thead th.pop { background: linear-gradient(180deg, var(--tint), #fff); border-start-start-radius: 12px; border-start-end-radius: 12px; }
+.pg-pricing .cmp .grouprow td { background: var(--bg); font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); text-align: start; font-weight: 700; }
+.pg-pricing .cmp td.pop { background: color-mix(in srgb, var(--primary) 4%, #fff); }
+.pg-pricing .cmp .yes { inline-size: 20px; block-size: 20px; display: inline-grid; place-items: center; color: var(--success); }
+.pg-pricing .cmp .yes svg { inline-size: 18px; block-size: 18px; }
+.pg-pricing .cmp .no { color: var(--border-2); }
+.pg-pricing .cmp td b { color: var(--ink); font-weight: 660; }
+.pg-pricing .cmpnote { text-align: center; color: var(--ink-3); font-size: 14px; margin-block-start: 18px; line-height: 1.6; }
+.pg-pricing .cmpnote a { color: var(--primary); font-weight: 600; }
+.pg-pricing .faq-item summary { min-block-size: 44px; font-size: 16px; }
+.pg-pricing .ctaf-cta .btn { min-block-size: 48px; }
+.pg-pricing .ctaf-sec { min-block-size: 44px; display: inline-flex; align-items: center; gap: 6px; }
+.legacy-rtl .pg-pricing .ctaf-sec svg { transform: scaleX(-1); }
+@media (min-width: 640px) { .pg-pricing .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .pg-pricing .plans { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } .pg-pricing .cmpbox { padding-inline: 20px; } .pg-pricing .prhead { padding-block-start: 64px; } }
+@media (max-width: 720px) { .pg-pricing .ent .btn { inline-size: 100%; justify-content: center; } }
+/* Arabic: no tracking/uppercase/mono on labels. Kept last and as specific as the base rules so it wins. */
+.legacy-rtl .pg-pricing .prhead .pill, .legacy-rtl .pg-pricing .plan .inc, .legacy-rtl .pg-pricing .cmp .grouprow td, .legacy-rtl .pg-pricing .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13px; }

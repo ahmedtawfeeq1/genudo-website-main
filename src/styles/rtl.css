@@ -125,6 +125,14 @@ html[lang^="ar"] .brand {
   letter-spacing: 0;
 }
 
+/* Arabic is cursive: any letter-spacing (the Latin body -0.01em, or the
+   tracked uppercase eyebrows/section labels) breaks joining and looks gappy.
+   Zero it everywhere on Arabic pages (specificity 0,1,1 beats single-class rules). */
+html[lang^="ar"] body,
+html[lang^="ar"] body * {
+  letter-spacing: 0;
+}
+
 /* Keep code / monospace / numeric runs LTR even inside RTL copy */
 html[lang^="ar"] .mono,
 html[lang^="ar"] code,
@@ -238,4 +246,104 @@ html[lang^="ar"] .legacy-page.legacy-rtl [dir="ltr"] [dir="rtl"] {
 }
 html[lang^="ar"] .legacy-page.legacy-rtl [dir="ltr"] :is(h1, h2, h3, h4, h5, button, input, textarea, select) {
   font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Eyebrow labels: Arabic has no case and tracking breaks letter joining */
+html[lang^="ar"] .legacy-page.legacy-rtl .eyebrow {
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: inherit;
+}
+
+/* =========================================================================
+   QA fixes: Arabic text must never render in the Latin mono face (falls back
+   to an ugly system monospace), nor carry tracking / uppercase.
+   ========================================================================= */
+html[lang^="ar"] :is(.mega-sec-label, .nm-sec, .ctaf-trust, .badge, .eyebrow, .ft-badge) {
+  font-family: var(--font-ar), "Tajawal", system-ui, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+/* Footer microcopy is Arabic prose in a .mono span: keep it RTL, Arabic face. */
+html[lang^="ar"] footer .mono,
+html[lang^="ar"] .footer .mono {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  font-family: var(--font-ar), "Tajawal", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+/* ---- Icon + mixed Arabic/Latin text rows -------------------------------------
+   A flex row splits every bare text run and every <bdi> into its own flex item,
+   so "WhatsApp و Messenger" gets wide gaps and the words can no longer wrap as
+   one sentence. For these list rows we keep the text in normal inline flow and
+   pin the check icon to the inline start instead. */
+html[lang^="ar"] .pg-pricing .plan li,
+html[lang^="ar"] .plist li,
+html[lang^="ar"] .mk-emp__list li {
+  display: block;
+  position: relative;
+}
+html[lang^="ar"] .pg-pricing .plan li { padding-inline-start: 26px; }
+html[lang^="ar"] .plist li { padding-inline-start: 30px; }
+html[lang^="ar"] .mk-emp__list li { padding-inline-start: 22px; }
+html[lang^="ar"] .pg-pricing .plan li > svg,
+html[lang^="ar"] .plist li > svg,
+html[lang^="ar"] .plist li > .ic,
+html[lang^="ar"] .plist li::before,
+html[lang^="ar"] .mk-emp__list li > .mk-ic {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 3px;
+}
+html[lang^="ar"] .plist li > svg,
+html[lang^="ar"] .plist li > .ic { inset-block-start: 2px; }
+html[lang^="ar"] .plist li::before { inset-block-start: 3px; }
+html[lang^="ar"] .mk-emp__list li > .mk-ic { inset-block-start: 5px; }
+
+/* ---- Mobile: keep the language switcher reachable --------------------------
+   At <=980px the whole .nav-cta group is hidden, which also hid the locale
+   switcher (the mobile drawer has no language link). Show only the globe next
+   to the burger; the sign-in / start buttons already live in the drawer. */
+@media (max-width: 1180px) {
+  .nav .nav-in .nav-cta {
+    display: flex;
+    align-items: center;
+    margin-inline-start: auto;
+    margin-inline-end: 4px;
+  }
+  .nav .nav-in .nav-cta > .btn {
+    display: none;
+  }
+  .nav .nav-in .nav-burger {
+    margin: 0;
+  }
+  .nav .nav-in .loc-switch {
+    min-inline-size: 44px;
+    min-block-size: 44px;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  .nav .nav-in .loc-switch .loc-name,
+  .nav .nav-in .loc-switch .loc-caret {
+    display: none;
+  }
+}
+
+/* ---- QA: comfortable tap targets on touch widths (both locales) ---------- */
+@media (max-width: 720px) {
+  .footer .foot-col a:not(.brand) {
+    padding-block: 12px;
+    margin-bottom: 0;
+  }
+  .footer .foot-social a {
+    inline-size: 44px;
+    block-size: 44px;
+  }
+  .nav .nav-burger {
+    min-inline-size: 44px;
+    min-block-size: 44px;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -1,0 +1,538 @@
+/* =========================================================================
+   /who-is-genu — page styles (value-led rewrite). See docs/website/BUILD-BRIEF.md.
+   Every selector is scoped to .pg-who-is-genu. Logical properties only, so the
+   Arabic (RTL) page mirrors on its own. Mobile-first: 360px, then 720 / 960 / 1100.
+   Mockups inside use the shared kit (src/styles/mockups.css).
+   ========================================================================= */
+
+.pg-who-is-genu {
+  --wg-night: #0c1030;
+  --wg-lilac: #a9abff;
+  --wg-soft: #c7cbf2;
+  overflow-x: clip;
+}
+.pg-who-is-genu .container { padding-inline: 16px; }
+.pg-who-is-genu img,
+.pg-who-is-genu video { max-width: 100%; height: auto; }
+
+/* ---- shared section rhythm ---- */
+.pg-who-is-genu .wg-sec { padding-block: 56px; }
+.pg-who-is-genu .wg-head {
+  max-width: 740px;
+  margin-inline: auto;
+  margin-block-end: 28px;
+  text-align: center;
+}
+.pg-who-is-genu .wg-head h2 { margin-block-start: 12px; line-height: 1.15; }
+.pg-who-is-genu .wg-head .lead { margin-block-start: 14px; }
+.pg-who-is-genu .eyebrow { display: block; }
+.pg-who-is-genu .lead { font-size: 17px; }
+
+/* Arabic: no tracking or uppercase on the eyebrows, a touch more leading. */
+.pg-who-is-genu.is-ar .eyebrow {
+  font-family: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+.pg-who-is-genu.is-ar h1,
+.pg-who-is-genu.is-ar h2,
+.pg-who-is-genu.is-ar h3 { letter-spacing: 0; }
+.pg-who-is-genu.is-ar .wg-head h2 { line-height: 1.35; }
+.pg-who-is-genu.is-ar .lead { line-height: 1.75; }
+
+/* Arrows point forward in both directions. */
+.pg-who-is-genu.is-ar .wg-flip { transform: scaleX(-1); }
+
+/* ---- links with an arrow ---- */
+.pg-who-is-genu .wg-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--primary);
+  transition: gap 0.18s ease;
+}
+.pg-who-is-genu .wg-more svg { inline-size: 16px; block-size: 16px; flex: none; }
+.pg-who-is-genu .wg-more:hover { gap: 10px; }
+.pg-who-is-genu .wg-more-row { text-align: center; margin-block-start: 18px; }
+
+/* ---- speech bubble (hero + narrator) ---- */
+.pg-who-is-genu .wg-bubble {
+  position: relative;
+  margin: 0;
+  max-inline-size: 300px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: #fff;
+  color: #141a40;
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  box-shadow: 0 18px 40px -18px rgba(6, 10, 40, 0.55);
+}
+.pg-who-is-genu .wg-bubble::after {
+  content: "";
+  position: absolute;
+  inset-block-end: -7px;
+  inset-inline: 0;
+  margin-inline: auto;
+  inline-size: 14px;
+  block-size: 14px;
+  background: #fff;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.pg-who-is-genu .wg-bubble.is-new { animation: pgWigPop 0.42s cubic-bezier(0.2, 0.7, 0.2, 1); }
+
+/* =========================================================================
+   HERO
+   ========================================================================= */
+.pg-who-is-genu .wg-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 40px 52px;
+  color: #fff;
+  background: radial-gradient(130% 120% at 50% 0%, #232c8a 0%, #141a44 50%, #0a0e2b 100%);
+}
+.pg-who-is-genu .wg-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+  background-size: 34px 34px;
+  -webkit-mask-image: radial-gradient(85% 75% at 50% 40%, #000, transparent);
+  mask-image: radial-gradient(85% 75% at 50% 40%, #000, transparent);
+}
+.pg-who-is-genu .wg-hero-in {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+.pg-who-is-genu .wg-hero .eyebrow { color: var(--wg-lilac); }
+.pg-who-is-genu .wg-hero h1 {
+  margin-block-start: 12px;
+  color: #fff;
+  font-size: clamp(34px, 8.4vw, 60px);
+  line-height: 1.1;
+}
+.pg-who-is-genu.is-ar .wg-hero h1 { line-height: 1.35; }
+.pg-who-is-genu .wg-hero h1 em { font-style: normal; color: var(--wg-lilac); }
+.pg-who-is-genu .wg-hero .lead { margin-block-start: 16px; max-inline-size: 560px; color: var(--wg-soft); }
+.pg-who-is-genu .wg-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 24px; }
+.pg-who-is-genu .wg-cta .btn { min-height: 48px; justify-content: center; }
+.pg-who-is-genu .wg-chans { display: flex; flex-wrap: wrap; gap: 8px; margin-block-start: 20px; }
+.pg-who-is-genu .wg-chans span {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(169, 171, 255, 0.3);
+  color: #d4d7fa;
+  font-size: 13.5px;
+}
+
+/* GENU stage: bubble, tappable GENU, the crew underneath */
+.pg-who-is-genu .wg-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.pg-who-is-genu .wg-stage::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 30%;
+  inset-inline: 0;
+  margin-inline: auto;
+  inline-size: min(420px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(120, 126, 255, 0.34), rgba(120, 126, 255, 0) 70%);
+  pointer-events: none;
+}
+.pg-who-is-genu .wg-genu {
+  position: relative;
+  appearance: none;
+  inline-size: min(210px, 56vw);
+  min-height: 44px;
+  margin-block-start: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 28px;
+  background: none;
+  cursor: pointer;
+}
+.pg-who-is-genu .wg-genu img {
+  display: block;
+  inline-size: 100%;
+  filter: drop-shadow(0 24px 36px rgba(0, 0, 0, 0.5));
+  animation: pgWigFloat 6s ease-in-out infinite;
+}
+.pg-who-is-genu .wg-genu.is-hop img { animation: pgWigHop 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.pg-who-is-genu .wg-genu:focus-visible { outline: 2px solid var(--wg-lilac); outline-offset: 6px; }
+.pg-who-is-genu .wg-hint { color: #9ea2e0; font-size: 13.5px; }
+.pg-who-is-genu .wg-crew {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pg-who-is-genu .wg-crew li { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.pg-who-is-genu .wg-crew img { inline-size: 52px; filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.45)); }
+.pg-who-is-genu .wg-crew li:nth-child(2) img { animation: pgWigFloat 6s ease-in-out -2s infinite; }
+.pg-who-is-genu .wg-crew span { color: #d4d7fa; font-size: 13.5px; font-weight: 600; }
+
+/* =========================================================================
+   CARDS (question + trust)
+   ========================================================================= */
+.pg-who-is-genu .wg-cards { display: grid; gap: 14px; }
+.pg-who-is-genu .wg-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.pg-who-is-genu .wg-ic {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  inline-size: 42px;
+  block-size: 42px;
+  border-radius: 12px;
+  background: var(--tint);
+  color: var(--primary);
+}
+.pg-who-is-genu .wg-ic svg { inline-size: 20px; block-size: 20px; }
+.pg-who-is-genu .wg-card h3 { margin-block: 14px 6px; font-size: 19px; line-height: 1.35; }
+.pg-who-is-genu .wg-card p { margin: 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.6; }
+.pg-who-is-genu.is-ar .wg-card p { line-height: 1.75; }
+.pg-who-is-genu .wg-bridge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-inline-size: 680px;
+  margin: 28px auto 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--tint);
+  color: var(--ink);
+  font-size: 16.5px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+.pg-who-is-genu .wg-bridge img { inline-size: 36px; flex: none; }
+
+/* =========================================================================
+   FAMILY
+   ========================================================================= */
+.pg-who-is-genu .wg-family-sec { background: #fff; }
+.pg-who-is-genu .wg-family { display: grid; gap: 16px; }
+.pg-who-is-genu .wg-member { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.pg-who-is-genu .wg-member .mk-emp { flex: 1; }
+.pg-who-is-genu .wg-member--genu .mk-emp { border-style: dashed; border-color: #c9cbfb; }
+.pg-who-is-genu .wg-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--tint);
+  color: var(--ink);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+.pg-who-is-genu .wg-note svg { inline-size: 22px; block-size: 22px; flex: none; color: var(--primary); margin-block-start: 1px; }
+
+/* =========================================================================
+   HOW IT WORKS (narrated walk)
+   ========================================================================= */
+.pg-who-is-genu .wg-walk { display: grid; gap: 20px; }
+.pg-who-is-genu .wg-narr { display: none; }
+.pg-who-is-genu .wg-beats {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+.pg-who-is-genu .wg-beat {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.pg-who-is-genu .wg-beat.is-on {
+  border-color: var(--tint-2);
+  box-shadow: 0 24px 50px -30px rgba(29, 41, 61, 0.38);
+}
+.pg-who-is-genu .wg-num {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 34px;
+  block-size: 34px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+.pg-who-is-genu .wg-beat h3 { margin-block: 12px 8px; font-size: clamp(21px, 5.4vw, 26px); line-height: 1.3; }
+.pg-who-is-genu .wg-beat-copy > p { margin: 0; color: var(--ink-2); font-size: 16px; line-height: 1.65; }
+.pg-who-is-genu.is-ar .wg-beat-copy > p { line-height: 1.8; }
+.pg-who-is-genu .wg-beat-copy > p.wg-says {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-block-start: 14px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--tint);
+  color: #2b2f8f;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+.pg-who-is-genu .wg-says img { inline-size: 32px; block-size: 32px; flex: none; }
+.pg-who-is-genu .wg-says b { color: var(--primary); }
+.pg-who-is-genu .wg-media { display: grid; gap: 14px; min-width: 0; }
+.pg-who-is-genu .wg-media > .mk { min-width: 0; max-inline-size: 100%; }
+.pg-who-is-genu .wg-step { color: var(--ink-3); font-size: 14px; }
+.pg-who-is-genu .wg-step b { color: var(--primary); }
+
+/* =========================================================================
+   FILM
+   ========================================================================= */
+.pg-who-is-genu .wg-film { background: linear-gradient(180deg, var(--wg-night), #141a44); color: #fff; }
+.pg-who-is-genu .wg-film .eyebrow { color: var(--wg-lilac); }
+.pg-who-is-genu .wg-film h2 { color: #fff; }
+.pg-who-is-genu .wg-film .lead { color: var(--wg-soft); }
+.pg-who-is-genu .wg-player {
+  max-inline-size: 960px;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(169, 171, 255, 0.25);
+  background: #000;
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.8);
+}
+.pg-who-is-genu .wg-player video { display: block; inline-size: 100%; aspect-ratio: 16 / 9; }
+.pg-who-is-genu .wg-chapters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-inline-size: 960px;
+  margin: 20px auto 0;
+  padding: 0;
+  list-style: none;
+}
+.pg-who-is-genu .wg-chapters li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(169, 171, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: #d6d8fb;
+  font-size: 14px;
+}
+
+/* =========================================================================
+   CHARACTER
+   ========================================================================= */
+.pg-who-is-genu .wg-character { background: #fff; }
+.pg-who-is-genu .wg-char { display: grid; gap: 28px; align-items: center; }
+.pg-who-is-genu .wg-char-media,
+.pg-who-is-genu .wg-char-copy { min-width: 0; }
+.pg-who-is-genu .wg-loop {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #0b0d1f;
+  box-shadow: var(--shadow-lg);
+}
+.pg-who-is-genu .wg-loop video { display: block; inline-size: 100%; aspect-ratio: 16 / 9; }
+.pg-who-is-genu .wg-poses {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pg-who-is-genu .wg-poses li {
+  padding: 8px 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.pg-who-is-genu .wg-char-copy h2 { margin-block-start: 12px; line-height: 1.15; }
+.pg-who-is-genu.is-ar .wg-char-copy h2 { line-height: 1.35; }
+.pg-who-is-genu .wg-char-copy .lead { margin-block-start: 14px; }
+.pg-who-is-genu .wg-traits { display: grid; gap: 16px; margin: 22px 0 0; padding: 0; list-style: none; }
+.pg-who-is-genu .wg-traits li { display: flex; gap: 12px; align-items: flex-start; }
+.pg-who-is-genu .wg-traits b { display: block; font-size: 17px; line-height: 1.4; }
+.pg-who-is-genu .wg-traits p { margin: 4px 0 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.6; }
+.pg-who-is-genu .wg-swatches { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.pg-who-is-genu .wg-swatches span { display: inline-flex; align-items: center; gap: 6px; }
+.pg-who-is-genu .wg-swatches i {
+  inline-size: 12px;
+  block-size: 12px;
+  border-radius: 50%;
+  background: var(--c);
+  flex: none;
+}
+
+/* =========================================================================
+   FINAL CTA (reuses .ctaf from site2.css)
+   ========================================================================= */
+.pg-who-is-genu .wg-final { padding-block: 48px 64px; }
+.pg-who-is-genu .wg-final .ctaf-card { padding: 48px 20px 44px; border-radius: 24px; }
+.pg-who-is-genu .wg-final-genu { display: block; inline-size: 92px; margin-inline: auto; }
+.pg-who-is-genu .wg-final h2 { line-height: 1.2; }
+.pg-who-is-genu.is-ar .wg-final h2 { line-height: 1.4; }
+.pg-who-is-genu .wg-final .ctaf-sec { min-height: 44px; }
+.pg-who-is-genu .wg-final .ctaf-trust { justify-content: center; }
+.pg-who-is-genu.is-ar .wg-final .ctaf-trust {
+  font-family: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 14px;
+}
+
+/* =========================================================================
+   SCROLL REVEAL (only when the script is running and motion is allowed)
+   ========================================================================= */
+.pg-who-is-genu.js-on .wg-rv {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.pg-who-is-genu.js-on .wg-rv.in { opacity: 1; transform: none; }
+
+/* =========================================================================
+   BREAKPOINTS
+   ========================================================================= */
+@media (max-width: 479px) {
+  .pg-who-is-genu .wg-cta .btn { flex: 1 1 100%; }
+}
+
+@media (min-width: 720px) {
+  .pg-who-is-genu .container { padding-inline: 28px; }
+  .pg-who-is-genu .wg-sec { padding-block: 76px; }
+  .pg-who-is-genu .wg-head { margin-block-end: 40px; }
+  .pg-who-is-genu .wg-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .pg-who-is-genu .wg-cards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-who-is-genu .wg-family { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .pg-who-is-genu .wg-beat { padding: 24px; }
+  .pg-who-is-genu .wg-media--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .pg-who-is-genu .wg-final .ctaf-card { padding: 72px 40px 68px; border-radius: 30px; }
+  .pg-who-is-genu .wg-crew img { inline-size: 60px; }
+}
+
+@media (min-width: 960px) {
+  .pg-who-is-genu .wg-sec { padding-block: 92px; }
+  .pg-who-is-genu .wg-hero { padding-block: 72px 88px; }
+  .pg-who-is-genu .wg-hero-in { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 48px; }
+  .pg-who-is-genu .wg-genu { inline-size: 240px; }
+  .pg-who-is-genu .wg-char { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 52px; }
+
+  /* Narrated walk: GENU stays beside the steps and speaks each one. */
+  .pg-who-is-genu.wg-narrating .wg-walk { grid-template-columns: 220px minmax(0, 1fr); gap: 36px; align-items: start; }
+  .pg-who-is-genu.wg-narrating .wg-narr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    inset-block-start: 96px;
+    padding-block-start: 8px;
+  }
+  .pg-who-is-genu.wg-narrating .wg-narr .wg-bubble {
+    max-inline-size: 220px;
+    font-size: 15px;
+    box-shadow: 0 18px 40px -16px rgba(29, 41, 61, 0.3);
+  }
+  .pg-who-is-genu.wg-narrating .wg-narr img {
+    inline-size: 150px;
+    filter: drop-shadow(0 18px 26px rgba(29, 41, 61, 0.28));
+    animation: pgWigFloat 6s ease-in-out infinite;
+  }
+  .pg-who-is-genu.wg-narrating .wg-narr.is-talk img { animation: pgWigNod 0.5s ease-in-out 2; }
+  /* The narrator speaks the line, so the inline copy is kept for screen readers only. */
+  .pg-who-is-genu.wg-narrating .wg-beat-copy > p.wg-says {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .pg-who-is-genu .wg-cards--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pg-who-is-genu .wg-family { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pg-who-is-genu .wg-beat {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 28px;
+    padding: 28px;
+  }
+  .pg-who-is-genu .wg-media--pair { grid-template-columns: 1fr; }
+}
+
+/* =========================================================================
+   MOTION
+   ========================================================================= */
+@keyframes pgWigFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pgWigHop {
+  0% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(-16px) scale(1.04, 0.97); }
+  70% { transform: translateY(0) scale(0.98, 1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes pgWigNod {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-4px) rotate(-3deg); }
+}
+@keyframes pgWigPop {
+  from { opacity: 0; transform: translateY(6px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-who-is-genu .wg-genu img,
+  .pg-who-is-genu .wg-crew img,
+  .pg-who-is-genu .wg-narr img,
+  .pg-who-is-genu .wg-bubble { animation: none !important; }
+  .pg-who-is-genu.js-on .wg-rv { opacity: 1; transform: none; transition: none; }
+  .pg-who-is-genu .wg-more { transition: none; }
+}

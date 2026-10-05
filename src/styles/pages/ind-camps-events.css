@@ -1,0 +1,56 @@
+/* /ind-camps-events: ind-camps-events value-led page. Every selector is scoped to .pg-ind-camps-events. */
+.pg-ind-camps-events { overflow-x: clip; }
+.pg-ind-camps-events .pg-who { display: flex; align-items: center; gap: 12px; margin-block: 4px 14px; }
+.pg-ind-camps-events .pg-who img { inline-size: 72px; block-size: 72px; flex: none; }
+.pg-ind-camps-events .pg-who b { display: block; font-size: 20px; color: #fff; }
+.pg-ind-camps-events .pg-who small { display: block; font-size: 14px; color: #c7cbf2; }
+.pg-ind-camps-events .phero .lead { max-inline-size: 520px; font-size: 16px; }
+.pg-ind-camps-events .pchip { white-space: normal; font-size: 13.5px; }
+.pg-ind-camps-events .phero-in > * { min-inline-size: 0; }
+.pg-ind-camps-events .heroc-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.pg-ind-camps-events .heroc-cta .btn { min-block-size: 48px; }
+.pg-ind-camps-events .pg-mock { min-inline-size: 0; display: flex; justify-content: center; }
+.pg-ind-camps-events .pg-mock > .mk { inline-size: 100%; }
+.pg-ind-camps-events .pg-outs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-block-start: 30px; }
+.pg-ind-camps-events .pg-outs .featc p { font-size: 15px; }
+.pg-ind-camps-events .pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.pg-ind-camps-events .pg-split.pg-flip .pg-mock { order: -1; }
+.pg-ind-camps-events .pg-copy .lead { margin-block-start: 14px; font-size: 16px; }
+.pg-ind-camps-events .pg-copy .plist { margin-block: 20px; }
+.pg-ind-camps-events .pg-copy .plist li { font-size: 15px; }
+.pg-ind-camps-events .pg-note { font-size: 14.5px; color: var(--ink-3, #6c727e); margin-block-start: 8px; }
+.pg-ind-camps-events .btn { min-block-size: 44px; }
+.pg-ind-camps-events .pg-vid { margin-block-start: 36px; max-inline-size: 860px; margin-inline: auto; }
+.pg-ind-camps-events .pg-vid video { display: block; inline-size: 100%; max-inline-size: 100%; block-size: auto; border-radius: 16px; background: #0c1030; }
+.pg-ind-camps-events .pg-board { margin-block-start: 28px; min-inline-size: 0; }
+.pg-ind-camps-events .pg-links { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 22px; }
+.pg-ind-camps-events .flow p, .pg-ind-camps-events .fstep p { font-size: 15px; }
+.pg-ind-camps-events .faq p a { text-decoration: underline; }
+.pg-ind-camps-events .xcard { min-block-size: 64px; }
+.pg-ind-camps-events .xi img { inline-size: 28px; block-size: 28px; }
+.pg-ind-camps-events .ctaf-cta .btn { min-block-size: 48px; }
+.pg-ind-camps-events .ctaf-sec { min-block-size: 44px; display: inline-flex; align-items: center; gap: 6px; }
+@media (max-width: 960px) {
+  .pg-ind-camps-events .pg-outs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-ind-camps-events .pg-split { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-ind-camps-events .pg-split.pg-flip .pg-mock { order: 0; }
+}
+@media (max-width: 720px) {
+  .pg-ind-camps-events .s { padding-block: 56px; }
+  .pg-ind-camps-events .pg-outs { grid-template-columns: minmax(0, 1fr); }
+  .pg-ind-camps-events .flow { grid-template-columns: minmax(0, 1fr); }
+  .pg-ind-camps-events .phero { padding-block: 40px 48px; }
+  .pg-ind-camps-events .phero h1 { font-size: clamp(28px, 8vw, 36px); }
+  .pg-ind-camps-events .heroc-cta .btn { inline-size: 100%; justify-content: center; }
+}
+.pg-ind-camps-events .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pg-ind-camps-events .flow::before { display: none; }
+.pg-ind-camps-events .pg-emps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-block-start: 28px; }
+.pg-ind-camps-events .pg-emps > .mk { min-inline-size: 0; }
+.pg-ind-camps-events .mk-card { min-inline-size: 0; }
+.pg-ind-camps-events .xnav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) {
+  .pg-ind-camps-events .pg-emps, .pg-ind-camps-events .flow, .pg-ind-camps-events .xnav { grid-template-columns: minmax(0, 1fr); }
+}
+/* Arabic: no Latin tracking, uppercase or mono font on eyebrows. */
+.legacy-rtl .pg-ind-camps-events .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }

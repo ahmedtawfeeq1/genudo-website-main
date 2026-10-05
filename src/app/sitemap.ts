@@ -9,18 +9,10 @@ import { SITE_URL, absoluteLanguages } from '@/i18n/seo';
 export const ROUTES = [
   '',
   '/who-is-genu',
-  '/ai-employees',
-  '/knowledge',
-  '/models',
-  '/pipelines',
-  '/stages',
-  '/followups',
-  '/channels',
-  '/contacts',
-  '/analytics',
+  '/how-it-works',
+  '/ai-workforce',
   '/integrations',
   '/api-mcp',
-  '/product',
   '/sol-sales-agent',
   '/sol-customer-service',
   '/sol-operations',
@@ -34,8 +26,15 @@ export const ROUTES = [
   '/customers',
   '/pricing',
   '/contact',
+  '/legal/privacy-policy',
+  '/legal/terms-of-service',
+  '/legal/cookies',
+  '/legal/subprocessors',
+  '/legal/privacy-history',
+  '/legal/dpa',
+  '/privacy/requests',
+  '/security/whitepaper',
   '/security',
-  '/api-docs',
   '/changelog',
   '/blog',
   '/resources',
@@ -47,9 +46,13 @@ export const ROUTES = [
   '/blog/whatsapp-team-workflows'
 ];
 
+/** Last substantive content release. Bump when page copy changes; crawlers use it to schedule recrawls. */
+const LAST_MODIFIED = new Date('2026-10-05');
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.map((route) => ({
     url: `${SITE_URL}/${routing.defaultLocale}${route}`,
+    lastModified: LAST_MODIFIED,
     alternates: { languages: absoluteLanguages(route) }
   }));
 }

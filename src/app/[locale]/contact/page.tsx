@@ -1,8 +1,10 @@
-// AUTO-GENERATED reference route (island bootstrap). Review + componentize per MIGRATION-GUIDE.md.
 import { setRequestLocale } from 'next-intl/server';
-import html from '@/legacy-html/contact';
+import en from '@/legacy-html/contact';
+import ar from '@/legacy-html/contact.ar-EG';
+import LegacyBody from '@/components/LegacyBody';
 import LegacyScripts from '@/components/LegacyScripts';
 import { pageMetadata } from '@/i18n/seo';
+import '@/styles/pages/contact.css';
 
 export const generateMetadata = pageMetadata({ route: '/contact', seoKey: 'contact' });
 
@@ -11,8 +13,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   return (
     <>
-      <div className="legacy-page" dangerouslySetInnerHTML={{ __html: html }} />
-      <LegacyScripts scripts={["/genu/genu-robot.js"]} />
+      <LegacyBody locale={locale} route="/contact" en={en} ar={ar} />
+      <LegacyScripts scripts={["/genu/genu-robot.js", "/js/forms.js"]} />
     </>
   );
 }

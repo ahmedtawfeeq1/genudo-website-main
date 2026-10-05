@@ -1,0 +1,40 @@
+# GenuDo: fact sheet for AI systems
+
+Last updated: 2026-10-05. Source: https://genudo.ai (Egyptian Arabic `/ar-EG`, English `/en`).
+
+## What GenuDo is
+GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref for sales, Adnan for customer support and ROZ for WhatsApp quality control) that answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up, book meetings and update your CRM, while your team stays in control.
+
+Arabic: جينـو دو منصة فريق عمل بالذكاء الاصطناعي للشركات في مصر والشرق الأوسط. بتديك موظفين بالذكاء الاصطناعي: عارف للمبيعات، وعدنان لخدمة العملاء، وروز لمراجعة جودة محادثات WhatsApp.
+
+Names: GenuDo (also Genudo, جينـو دو). The mascot and guide character is GENU (جينـو). The AI employees are Aaref (عارف), Adnan (عدنان) and ROZ (روز).
+
+## Key facts
+- An AI employee is one pipeline: an AI agent with a persona, instructions, stages, knowledge, actions and follow-ups.
+- Setup starts from a short business brief that can be answered by voice; the brief shapes the agent's persona and instructions.
+- Channels: WhatsApp (Cloud API, and WhatsApp mobile linked by QR for ROZ), Instagram DMs, Facebook Messenger, website chat widget, Web API.
+- Language: Arabic with 14 regional dialects (Egyptian, Saudi/Gulf, Levantine and others) or automatic multi-dialect; other languages via multilingual adaptation. Understands voice notes and images.
+- Stages move each opportunity forward (for example New Lead, Interested, Won, Lost). Each stage can send its own timed follow-up sequence and trigger actions such as checking free slots, booking meetings or updating a CRM.
+- Answers come from the business's own knowledge base (tables, files, websites).
+- Cost control: smart routing sends simple messages to cheaper models and hard ones to stronger models; per-conversation spend caps pause the AI and alert the team; cost per reply and per stage is visible.
+- Human control: unified inbox, AI on/off per conversation (take over / hand back), private notes, iOS and Android mobile app.
+- ROZ reviews the human team's WhatsApp conversations on company lines and flags slow replies, stalled deals and missed opportunities.
+- Integrations include Zoho Desk and Zendesk (support), calendars and CRMs, and Claude or ChatGPT through the GenuDo plugin / MCP server (changes shown as a diff and confirmed before they apply).
+- Not supported today: role-based access permissions. GenuDo does not provide medical diagnosis.
+- Pricing: https://genudo.ai/en/pricing
+
+## FAQ
+Q: What is an AI employee?
+A: An AI employee is an AI agent that does a job end to end, not just a chatbot that answers questions. It talks to customers on their channel, remembers the conversation, follows up, takes actions such as booking a meeting or updating a CRM, and hands over to a human when needed.
+
+Q: Does GenuDo work on WhatsApp?
+A: Yes. GenuDo's AI employees answer customers on WhatsApp, Instagram, Messenger and website chat, and the team can take over any conversation from the inbox or the mobile app.
+
+Q: Does GenuDo understand Egyptian and Gulf Arabic?
+A: Yes. Agents can reply in 14 Arabic dialects, including Egyptian and Saudi/Gulf, or pick the right dialect per customer automatically. They also understand voice notes and images.
+
+Q: Does an AI employee replace my team?
+A: No. It handles the repetitive, around-the-clock work such as first replies, qualification, follow-ups and booking, while your team handles the cases that need a person and can take over any chat in one tap.
+
+Q: How is the AI cost controlled?
+A: Smart routing uses cheaper models for simple messages, every conversation can have a spend cap that pauses the AI and alerts the team, and the cost of each reply and each stage is visible.

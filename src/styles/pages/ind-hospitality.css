@@ -1,0 +1,56 @@
+/* /ind-hospitality: ind-hospitality value-led page. Every selector is scoped to .pg-ind-hospitality. */
+.pg-ind-hospitality { overflow-x: clip; }
+.pg-ind-hospitality .pg-who { display: flex; align-items: center; gap: 12px; margin-block: 4px 14px; }
+.pg-ind-hospitality .pg-who img { inline-size: 72px; block-size: 72px; flex: none; }
+.pg-ind-hospitality .pg-who b { display: block; font-size: 20px; color: #fff; }
+.pg-ind-hospitality .pg-who small { display: block; font-size: 14px; color: #c7cbf2; }
+.pg-ind-hospitality .phero .lead { max-inline-size: 520px; font-size: 16px; }
+.pg-ind-hospitality .pchip { white-space: normal; font-size: 13.5px; }
+.pg-ind-hospitality .phero-in > * { min-inline-size: 0; }
+.pg-ind-hospitality .heroc-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.pg-ind-hospitality .heroc-cta .btn { min-block-size: 48px; }
+.pg-ind-hospitality .pg-mock { min-inline-size: 0; display: flex; justify-content: center; }
+.pg-ind-hospitality .pg-mock > .mk { inline-size: 100%; }
+.pg-ind-hospitality .pg-outs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-block-start: 30px; }
+.pg-ind-hospitality .pg-outs .featc p { font-size: 15px; }
+.pg-ind-hospitality .pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.pg-ind-hospitality .pg-split.pg-flip .pg-mock { order: -1; }
+.pg-ind-hospitality .pg-copy .lead { margin-block-start: 14px; font-size: 16px; }
+.pg-ind-hospitality .pg-copy .plist { margin-block: 20px; }
+.pg-ind-hospitality .pg-copy .plist li { font-size: 15px; }
+.pg-ind-hospitality .pg-note { font-size: 14.5px; color: var(--ink-3, #6c727e); margin-block-start: 8px; }
+.pg-ind-hospitality .btn { min-block-size: 44px; }
+.pg-ind-hospitality .pg-vid { margin-block-start: 36px; max-inline-size: 860px; margin-inline: auto; }
+.pg-ind-hospitality .pg-vid video { display: block; inline-size: 100%; max-inline-size: 100%; block-size: auto; border-radius: 16px; background: #0c1030; }
+.pg-ind-hospitality .pg-board { margin-block-start: 28px; min-inline-size: 0; }
+.pg-ind-hospitality .pg-links { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 22px; }
+.pg-ind-hospitality .flow p, .pg-ind-hospitality .fstep p { font-size: 15px; }
+.pg-ind-hospitality .faq p a { text-decoration: underline; }
+.pg-ind-hospitality .xcard { min-block-size: 64px; }
+.pg-ind-hospitality .xi img { inline-size: 28px; block-size: 28px; }
+.pg-ind-hospitality .ctaf-cta .btn { min-block-size: 48px; }
+.pg-ind-hospitality .ctaf-sec { min-block-size: 44px; display: inline-flex; align-items: center; gap: 6px; }
+@media (max-width: 960px) {
+  .pg-ind-hospitality .pg-outs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-ind-hospitality .pg-split { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-ind-hospitality .pg-split.pg-flip .pg-mock { order: 0; }
+}
+@media (max-width: 720px) {
+  .pg-ind-hospitality .s { padding-block: 56px; }
+  .pg-ind-hospitality .pg-outs { grid-template-columns: minmax(0, 1fr); }
+  .pg-ind-hospitality .flow { grid-template-columns: minmax(0, 1fr); }
+  .pg-ind-hospitality .phero { padding-block: 40px 48px; }
+  .pg-ind-hospitality .phero h1 { font-size: clamp(28px, 8vw, 36px); }
+  .pg-ind-hospitality .heroc-cta .btn { inline-size: 100%; justify-content: center; }
+}
+.pg-ind-hospitality .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pg-ind-hospitality .flow::before { display: none; }
+.pg-ind-hospitality .pg-emps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-block-start: 28px; }
+.pg-ind-hospitality .pg-emps > .mk { min-inline-size: 0; }
+.pg-ind-hospitality .mk-card { min-inline-size: 0; }
+.pg-ind-hospitality .xnav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) {
+  .pg-ind-hospitality .pg-emps, .pg-ind-hospitality .flow, .pg-ind-hospitality .xnav { grid-template-columns: minmax(0, 1fr); }
+}
+/* Arabic: no Latin tracking, uppercase or mono font on eyebrows. */
+.legacy-rtl .pg-ind-hospitality .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }

@@ -1,0 +1,94 @@
+/* /contact: book-a-demo conversion page. Every selector scoped to .pg-contact. Mobile-first. */
+.pg-contact { overflow-x: clip; }
+.pg-contact .cxhead { background: linear-gradient(180deg, #f3f4ff, #f8f8f8); border-block-end: 1px solid var(--border); padding-block: 44px 40px; text-align: center; }
+.pg-contact .cxhead h1 { font-size: clamp(30px, 8vw, 52px); line-height: 1.15; text-wrap: balance; }
+.pg-contact .cxhead p { color: var(--ink-2); font-size: 16px; margin: 14px auto 0; max-inline-size: 600px; line-height: 1.65; }
+.pg-contact .cxhead .pill { display: inline-flex; align-items: center; gap: 7px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); background: var(--tint); border: 1px solid var(--tint-2); border-radius: 999px; padding: 6px 13px; margin-block-end: 16px; }
+.pg-contact .cx-cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-block-start: 26px; }
+.pg-contact .cx-cta .btn, .pg-contact .cx-wa-sec { min-block-size: 48px; display: inline-flex; align-items: center; justify-content: center; }
+.pg-contact .cx-wa-sec { border: 1px solid var(--border-2); background: #fff; color: var(--ink); border-radius: 12px; padding-inline: 20px; font-weight: 640; text-decoration: none; }
+.pg-contact .cx-wa-sec:hover { border-color: var(--primary); color: var(--primary); }
+.pg-contact .cx-trust { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 20px; justify-content: center; }
+.pg-contact .cx-trust li { display: inline-flex; align-items: center; gap: 7px; font-size: 14.5px; color: var(--ink-2); }
+.pg-contact .cx-trust svg { inline-size: 16px; block-size: 16px; color: var(--success); flex: none; }
+
+.pg-contact .cx-get { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; align-items: center; }
+.pg-contact .cx-get h2 { margin-block-start: 8px; }
+.pg-contact .cx-steps { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 18px; }
+.pg-contact .cx-steps li { display: flex; gap: 14px; align-items: flex-start; }
+.pg-contact .cx-steps b { display: block; font-size: 17px; color: var(--ink); }
+.pg-contact .cx-steps p { margin: 4px 0 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+.pg-contact .cx-ic { inline-size: 42px; block-size: 42px; border-radius: 12px; flex: none; display: grid; place-items: center; background: var(--tint); color: var(--primary); }
+.pg-contact .cx-ic svg { inline-size: 20px; block-size: 20px; }
+.pg-contact .cx-phone { min-inline-size: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.pg-contact .cx-phone > .mk { inline-size: 100%; }
+
+.pg-contact .cx-for { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-block-start: 28px; }
+.pg-contact .cx-for-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 22px; box-shadow: var(--shadow-sm); min-inline-size: 0; }
+.pg-contact .cx-for-card h3 { font-size: 18px; margin-block: 14px 6px; }
+.pg-contact .cx-for-card p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+
+.pg-contact .cx-reassure { background: radial-gradient(120% 160% at 15% 0%, #26307e, #141a40 65%); color: #fff; border-radius: 20px; padding: 26px 22px; }
+.pg-contact .cx-reassure h2 { color: #fff; font-size: clamp(22px, 5.5vw, 28px); }
+.pg-contact .cx-reassure ul { list-style: none; margin: 18px 0 22px; padding: 0; display: grid; gap: 12px; }
+.pg-contact .cx-reassure li { display: flex; gap: 10px; align-items: flex-start; color: #dfe2fa; font-size: 15px; line-height: 1.55; }
+.pg-contact .cx-reassure li svg { inline-size: 18px; block-size: 18px; flex: none; margin-block-start: 2px; color: #8fe6b8; }
+.pg-contact .cx-reassure .cx-wa-sec { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+.pg-contact .cx-reassure .cx-wa-sec:hover { background: rgba(255,255,255,.1); color: #fff; border-color: #fff; }
+
+.pg-contact .cxwrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; scroll-margin-block-start: 80px; }
+.pg-contact .cxform { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 24px 18px; box-shadow: var(--shadow-sm); min-inline-size: 0; }
+.pg-contact .cxform h2 { font-size: 23px; }
+.pg-contact .cxform .sub { color: var(--ink-2); font-size: 15px; margin-block: 7px 22px; line-height: 1.6; }
+.pg-contact .cxf { display: grid; gap: 14px; }
+.pg-contact .cxrow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.pg-contact .cxfield { display: flex; flex-direction: column; gap: 6px; min-inline-size: 0; }
+.pg-contact .cxfield label { font-size: 13.5px; font-weight: 640; color: var(--ink); }
+.pg-contact .cxfield .opt { color: var(--ink-3); font-weight: 400; }
+.pg-contact .cxfield input, .pg-contact .cxfield textarea, .pg-contact .cxfield select { font-family: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--border-2); border-radius: 11px; padding: 12px 13px; min-block-size: 46px; transition: .15s; inline-size: 100%; box-sizing: border-box; }
+.pg-contact .cxfield textarea { min-block-size: 120px; resize: vertical; line-height: 1.5; }
+.pg-contact .cxfield input:focus, .pg-contact .cxfield textarea:focus, .pg-contact .cxfield select:focus { outline: none; border-color: var(--primary); background: #fff; box-shadow: 0 0 0 3px var(--tint); }
+.pg-contact .cxfield input::placeholder, .pg-contact .cxfield textarea::placeholder { color: var(--ink-3); }
+.pg-contact .cxsubmit { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-block-start: 4px; min-block-size: 48px; inline-size: 100%; }
+.legacy-rtl .pg-contact .cxsubmit svg { transform: scaleX(-1); }
+.pg-contact .cxnote { font-size: 13.5px; color: var(--ink-3); display: flex; align-items: center; gap: 7px; }
+.pg-contact .cxnote .live-dot { background: var(--success); }
+
+.pg-contact .cxinfo { display: flex; flex-direction: column; gap: 14px; min-inline-size: 0; }
+.pg-contact .cxwa { background: radial-gradient(130% 150% at 15% 0%, #123d2b, #0a2a1e 70%); color: #fff; border-radius: 20px; padding: 24px 22px; position: relative; overflow: hidden; }
+.pg-contact .cxwa .wa-ic { inline-size: 40px; block-size: 40px; border-radius: 11px; background: #25D366; display: grid; place-items: center; margin-block-end: 14px; }
+.pg-contact .cxwa .wa-ic svg { inline-size: 22px; block-size: 22px; fill: #fff; }
+.pg-contact .cxwa h3 { color: #fff; font-size: 18px; }
+.pg-contact .cxwa p { color: #a9d9c3; font-size: 14.5px; margin-block: 6px 16px; line-height: 1.6; }
+.pg-contact .cxwa .wa-btn { display: inline-flex; align-items: center; gap: .3em; min-block-size: 44px; background: #25D366; color: #062a1a; font-weight: 680; font-size: 15px; padding-inline: 18px; border-radius: 11px; transition: .15s; }
+.pg-contact .cxwa .wa-btn:hover { filter: brightness(1.06); }
+.pg-contact .cxwa .wa-badge { position: absolute; inset-block-start: 20px; inset-inline-end: 20px; font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #8fe6b8; background: rgba(37,211,102,.14); border: 1px solid rgba(37,211,102,.3); border-radius: 999px; padding: 4px 10px; }
+.pg-contact .cxcard { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 8px; }
+.pg-contact .cxitem { display: flex; gap: 14px; align-items: flex-start; padding: 15px 14px; }
+.pg-contact .cxitem + .cxitem { border-block-start: 1px solid var(--border); }
+.pg-contact .cxitem .ic { inline-size: 38px; block-size: 38px; border-radius: 11px; flex: none; display: grid; place-items: center; background: var(--tint); color: var(--primary); }
+.pg-contact .cxitem .ic svg { inline-size: 18px; block-size: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pg-contact .cxitem .lbl { font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-block-end: 3px; }
+.pg-contact .cxitem .val { font-size: 15px; color: var(--ink); font-weight: 540; line-height: 1.55; overflow-wrap: anywhere; }
+.pg-contact .cxitem a.val { display: inline-flex; align-items: center; min-block-size: 44px; }
+.pg-contact .cxitem a.val:hover { color: var(--primary); }
+.pg-contact .cxsoc { display: flex; gap: 10px; margin-block-start: 4px; padding: 4px 4px 0; }
+.pg-contact .cxsoc a { inline-size: 44px; block-size: 44px; border-radius: 11px; display: grid; place-items: center; background: var(--tint); color: var(--primary); transition: .15s; }
+.pg-contact .cxsoc a:hover { background: var(--primary); color: #fff; }
+.pg-contact .cxsoc svg { inline-size: 19px; block-size: 19px; fill: currentColor; }
+
+@media (min-width: 720px) {
+  .pg-contact .cx-for { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pg-contact .cxrow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-contact .cxform { padding: 32px 30px; }
+  .pg-contact .cxsubmit { inline-size: auto; }
+  .pg-contact .cx-reassure { padding: 32px; }
+}
+@media (min-width: 960px) {
+  .pg-contact .cxhead { padding-block: 64px 48px; }
+  .pg-contact .cx-get { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; }
+  .pg-contact .cxwrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 28px; }
+}
+.pg-contact .mk-caption { font-size: 13px; color: var(--ink-3); text-align: center; }
+/* Arabic: no tracking/uppercase/mono on labels. Kept last and as specific as the base rules so it wins. */
+.legacy-rtl .pg-contact .cxhead .pill, .legacy-rtl .pg-contact .cxitem .lbl, .legacy-rtl .pg-contact .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13px; }

@@ -1,0 +1,48 @@
+/* /security: trust-outcomes page. Every selector is scoped to .pg-security. */
+.pg-security { overflow-x: clip; }
+.pg-security .phero .lead { max-inline-size: 540px; font-size: 16px; }
+.pg-security .pchip { white-space: normal; font-size: 13.5px; }
+.pg-security .phero-in > * { min-inline-size: 0; }
+.pg-security .heroc-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.pg-security .heroc-cta .btn, .pg-security .btn { min-block-size: 44px; }
+.pg-security .heroc-cta .btn { min-block-size: 48px; }
+.pg-security .pg-mock { min-inline-size: 0; display: flex; justify-content: center; }
+.pg-security .pg-mock > .mk { inline-size: 100%; }
+.pg-security .pg-trust { padding: 20px; max-inline-size: 460px; }
+.pg-security .pg-trust ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 12px; }
+.pg-security .pg-trust li { display: flex; align-items: flex-start; gap: 12px; }
+.pg-security .pg-trust li > .mk-ic { flex: none; inline-size: 20px; block-size: 20px; margin-block-start: 3px; color: #4b39c9; }
+.pg-security .pg-trust li b { display: block; font-size: 15px; }
+.pg-security .pg-trust li small { display: block; font-size: 13.5px; color: #5b6170; line-height: 1.5; }
+.pg-security .pg-outs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-block-start: 30px; }
+.pg-security .pg-outs .featc p { font-size: 15px; }
+.pg-security .pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.pg-security .pg-split.pg-flip .pg-mock { order: -1; }
+.pg-security .pg-copy { min-inline-size: 0; }
+.pg-security .pg-copy .lead { margin-block-start: 14px; font-size: 16px; }
+.pg-security .pg-copy .plist { margin-block: 20px; }
+.pg-security .pg-copy .plist li { font-size: 15px; }
+.pg-security .pg-road { max-inline-size: 720px; margin-inline: auto; text-align: center; }
+.pg-security .pg-road h3 { margin-block: 14px 10px; }
+.pg-security .pg-road p { font-size: 16px; line-height: 1.7; color: var(--ink-2, #3b4150); }
+.pg-security .faq p a { text-decoration: underline; }
+.pg-security .ctaf-cta .btn { min-block-size: 48px; }
+.pg-security .ctaf-sec { min-block-size: 44px; display: inline-flex; align-items: center; gap: 6px; }
+.legacy-rtl .pg-security .ctaf-sec svg { transform: scaleX(-1); }
+@media (max-width: 960px) {
+  .pg-security .pg-outs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-security .pg-split { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-security .pg-split.pg-flip .pg-mock { order: 0; }
+}
+@media (max-width: 720px) {
+  .pg-security .s { padding-block: 52px; }
+  .pg-security .pg-outs { grid-template-columns: minmax(0, 1fr); }
+  .pg-security .phero { padding-block: 40px 48px; }
+  .pg-security .phero h1 { font-size: clamp(27px, 7.6vw, 36px); line-height: 1.25; }
+  .pg-security .heroc-cta .btn, .pg-security .ctaf-cta .btn { inline-size: 100%; justify-content: center; }
+}
+.pg-security .pg-stack { inline-size: 100%; display: grid; gap: 16px; min-inline-size: 0; }
+.pg-security .pg-trust .mk-card__head { padding: 0; border: 0; }
+
+/* Arabic: no Latin tracking, uppercase or mono font on eyebrows. */
+.legacy-rtl .pg-security .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }

@@ -1,0 +1,7 @@
+[workflow]
+persistent_facts = [
+  "file:{project-root}/_bmad-output/project-context.md",
+  "Source inputs for this PRD live in {project-root}/docs/discovery/ (00-index, 02-messaging-audit, 04-product-ui-components-catalog, 05-terminology-glossary, 06-gaps-risks-open-questions incl. §4 owner decisions, 07-product-platform-deep-dive, 08-proposed-backlog). Send them to subagents for extraction.",
+  "Scope: rewrite the GenuDo marketing website from feature-led to value-led. ar-EG is the primary locale, English is secondary, ar-SA is paused, and pricing content is frozen.",
+  "Never invent metrics, customer results, prices or capabilities. Claims must be rated safe/careful per the video project's GENUDO_PLATFORM_CONTEXT.md §4. The repo is public: no internal metrics or billing figures.",
+]

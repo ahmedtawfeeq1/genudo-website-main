@@ -1,0 +1,16 @@
+.git
+node_modules
+.next
+.next-verify
+.claude
+.cursor
+_bmad
+_bmad-output
+docs
+legacy-source
+i18n-extraction
+*.zip
+*.log
+.env*
+Dockerfile
+docker-compose.yml

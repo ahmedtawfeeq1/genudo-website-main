@@ -1,9 +1,11 @@
-// AUTO-GENERATED reference route (island bootstrap). Review + componentize per MIGRATION-GUIDE.md.
 import { setRequestLocale } from 'next-intl/server';
-import html from '@/legacy-html/ind-elearning';
+import en from '@/legacy-html/ind-elearning';
+import ar from '@/legacy-html/ind-elearning.ar-EG';
+import LegacyBody from '@/components/LegacyBody';
 import LegacyScripts from '@/components/LegacyScripts';
 import BodyNav from '@/components/BodyNav';
 import { pageMetadata } from '@/i18n/seo';
+import '@/styles/pages/ind-elearning.css';
 
 export const generateMetadata = pageMetadata({ route: '/ind-elearning', seoKey: 'indElearning' });
 
@@ -13,8 +15,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <BodyNav value="solutions" />
-      <div className="legacy-page" dangerouslySetInnerHTML={{ __html: html }} />
-      <LegacyScripts scripts={["/genu/genu-robot.js","/js/concept.js"]} />
+      <LegacyBody locale={locale} route="/ind-elearning" en={en} ar={ar} />
+      <LegacyScripts scripts={['/genu/genu-robot.js', '/js/concept.js']} />
     </>
   );
 }

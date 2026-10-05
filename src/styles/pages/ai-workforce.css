@@ -1,0 +1,139 @@
+/* /ai-workforce — pillar guide (EN + ar-EG). Every selector is scoped to .pg-ai-workforce.
+   Reuses the site sections (.phero, .s, .s-head, .feat-grid/.featc, .flow/.fstep, .xnav/.xcard,
+   .faq/.faq-item, .ctaf) and the mockup kit (.mk-emp, .mk-ic). Logical properties only.
+   Mobile-first: designed at 360-390px, then 720 / 900 / 960 / 1200. */
+
+.pg-ai-workforce { overflow-x: clip; }
+.pg-ai-workforce .container { padding-inline: 16px; }
+.pg-ai-workforce img,
+.pg-ai-workforce video { max-inline-size: 100%; block-size: auto; }
+.pg-ai-workforce .s { padding-block: 56px; }
+
+/* ---- hero ---- */
+.pg-ai-workforce .aw-hero { padding-block: 40px 52px; }
+.pg-ai-workforce .aw-hero__copy { min-inline-size: 0; }
+.pg-ai-workforce .crumb { flex-wrap: wrap; font-size: 13.5px; }
+.pg-ai-workforce .crumb .mk-ic { opacity: 0.6; }
+.pg-ai-workforce .aw-hero h1 { font-size: clamp(26px, 7vw, 46px); line-height: 1.15; }
+.pg-ai-workforce .aw-def { margin-block: 18px 0; max-inline-size: 640px; font-size: 16.5px; line-height: 1.65; color: #dfe2fa; }
+.pg-ai-workforce .aw-def strong { color: #fff; font-weight: 650; }
+.pg-ai-workforce .aw-hero .lead { max-inline-size: 640px; font-size: 16px; line-height: 1.65; }
+.pg-ai-workforce .aw-updated { display: inline-flex; align-items: center; gap: 8px; margin-block-start: 16px; font-size: 14px; color: #a8aede; }
+.pg-ai-workforce .heroc-cta .btn { min-block-size: 48px; }
+.pg-ai-workforce .aw-film { margin: 0; }
+.pg-ai-workforce .aw-film video { display: block; inline-size: 100%; aspect-ratio: 16 / 9; border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 18px; background: #0a0d24; box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6); }
+.pg-ai-workforce .aw-film figcaption { margin-block-start: 10px; font-size: 14px; line-height: 1.5; color: #a8aede; text-align: center; }
+
+/* ---- in-this-guide index ---- */
+.pg-ai-workforce .aw-toc { padding-block: 22px; background: #fff; border-block-end: 1px solid var(--border); }
+.pg-ai-workforce .aw-toc__title { display: block; margin-block-end: 10px; font-size: 15px; color: var(--ink); }
+.pg-ai-workforce .aw-toc ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.pg-ai-workforce .aw-toc a { display: inline-flex; align-items: center; min-block-size: 44px; padding-block: 8px; padding-inline: 14px; border: 1px solid var(--border); border-radius: 999px; font-size: 14.5px; line-height: 1.35; color: var(--ink-2); background: var(--bg); transition: border-color 0.2s ease, color 0.2s ease; }
+.pg-ai-workforce .aw-toc a:hover,
+.pg-ai-workforce .aw-toc a:focus-visible { border-color: var(--primary); color: var(--primary); }
+.pg-ai-workforce :is(#what, #vs-chatbot, #outcomes, #employees, #how, #industries, #control, #faq) { scroll-margin-block-start: 80px; }
+
+/* ---- answer-first copy ---- */
+.pg-ai-workforce .s-head h2 { font-size: clamp(26px, 6.4vw, 40px); line-height: 1.2; }
+.pg-ai-workforce .aw-answer { font-size: 17px; line-height: 1.65; color: var(--ink-2); }
+.pg-ai-workforce .aw-defs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; }
+.pg-ai-workforce .aw-defblock { min-inline-size: 0; }
+.pg-ai-workforce .aw-defblock h2 { margin-block: 12px 0; font-size: clamp(26px, 6.4vw, 36px); line-height: 1.2; }
+.pg-ai-workforce .aw-defblock p { margin-block: 14px 0; font-size: 16px; line-height: 1.7; color: var(--ink-2); }
+.pg-ai-workforce .aw-defblock .aw-answer { font-size: 17px; color: var(--ink); }
+.pg-ai-workforce .aw-more { margin-block-start: 24px; }
+.pg-ai-workforce .aw-more a { display: inline-flex; align-items: center; gap: 8px; min-block-size: 44px; font-size: 16px; font-weight: 650; color: var(--primary); transition: gap 0.2s ease; }
+.pg-ai-workforce .aw-more a:hover { gap: 12px; }
+.pg-ai-workforce .aw-note { margin-block-start: 14px; font-size: 14px; line-height: 1.6; color: var(--ink-3); }
+
+/* ---- comparison table: scrolls inside its own wrapper, never the page ---- */
+.pg-ai-workforce .aw-scroll-hint { margin-block: 20px 8px; font-size: 13.5px; color: var(--ink-3); }
+.pg-ai-workforce .aw-table-wrap { margin-block-start: 8px; max-inline-size: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-inline: contain; border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: var(--shadow-sm); }
+.pg-ai-workforce .aw-table-wrap:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.pg-ai-workforce .aw-table { inline-size: 100%; min-inline-size: 660px; border-collapse: separate; border-spacing: 0; font-size: 15px; line-height: 1.55; }
+.pg-ai-workforce .aw-table caption { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.pg-ai-workforce .aw-table :is(th, td) { padding-block: 14px; padding-inline: 16px; text-align: start; vertical-align: top; border-block-end: 1px solid var(--border); }
+.pg-ai-workforce .aw-table tbody tr:last-child :is(th, td) { border-block-end: 0; }
+.pg-ai-workforce .aw-table thead th { font-size: 14.5px; font-weight: 700; color: var(--ink); background: var(--bg); }
+.pg-ai-workforce .aw-table tbody th { font-weight: 650; color: var(--ink); }
+.pg-ai-workforce .aw-table td { color: var(--ink-2); }
+.pg-ai-workforce .aw-table :is(thead th:first-child, tbody th) { position: sticky; inset-inline-start: 0; z-index: 1; inline-size: 124px; min-inline-size: 112px; background: #fff; border-inline-end: 1px solid var(--border); }
+.pg-ai-workforce .aw-table thead th:first-child { background: var(--bg); }
+.pg-ai-workforce .aw-table .is-us { background: var(--tint); color: var(--ink); }
+.pg-ai-workforce .aw-table thead .is-us { color: var(--primary); }
+
+/* ---- outcome + control cards (3 / 6, columns come from layout-rules.css) ---- */
+.pg-ai-workforce .aw-grid { gap: 16px; margin-block-start: 28px; }
+.pg-ai-workforce .featc .oi .mk-ic { inline-size: 21px; block-size: 21px; }
+.pg-ai-workforce .featc h3 { margin-block-end: 8px; font-size: 18px; line-height: 1.35; }
+.pg-ai-workforce .featc p { font-size: 15px; line-height: 1.6; }
+
+/* ---- the three employees ---- */
+.pg-ai-workforce .aw-emps { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; max-inline-size: 440px; margin-block-start: 28px; margin-inline: auto; }
+.pg-ai-workforce .aw-emp { display: flex; flex-direction: column; gap: 8px; min-inline-size: 0; color: inherit; text-decoration: none; }
+.pg-ai-workforce .aw-emp .mk-emp { flex: 1; transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; }
+.pg-ai-workforce .aw-emp:hover .mk-emp { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow); }
+.pg-ai-workforce .aw-emp .mk-emp__list li { font-size: 14.5px; }
+.pg-ai-workforce .aw-emp__go { display: inline-flex; align-items: center; gap: 8px; min-block-size: 44px; font-size: 15.5px; font-weight: 650; color: var(--primary); }
+
+/* ---- 3 steps ---- */
+.pg-ai-workforce .aw-steps { margin-block: 30px 0; padding: 0; list-style: none; }
+.pg-ai-workforce .aw-steps .fstep h3 { font-size: 17px; line-height: 1.35; }
+.pg-ai-workforce .aw-steps .fstep p { font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+
+/* ---- industries (6 links) ---- */
+.pg-ai-workforce .aw-inds { gap: 14px; margin-block-start: 28px; }
+.pg-ai-workforce .aw-inds .xcard { align-items: flex-start; min-block-size: 44px; }
+.pg-ai-workforce .aw-inds .xi .mk-ic { inline-size: 20px; block-size: 20px; }
+.pg-ai-workforce .aw-xtxt { flex: 1; min-inline-size: 0; }
+.pg-ai-workforce .aw-inds .aw-xtxt b { font-size: 16px; line-height: 1.4; }
+.pg-ai-workforce .aw-inds .aw-xtxt span { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+.pg-ai-workforce .aw-inds .aw-xtxt > span { display: block; margin-block-start: 4px; }
+.pg-ai-workforce .aw-inds .go { align-self: center; margin-inline-start: auto; }
+.pg-ai-workforce .aw-inds .go .mk-ic { inline-size: 17px; block-size: 17px; }
+
+/* ---- FAQ (global .faq / .faq-item from pages.css) ---- */
+.pg-ai-workforce #faq .faq { margin-block-start: 24px; }
+.pg-ai-workforce .faq-item summary { min-block-size: 44px; font-size: 16.5px; line-height: 1.45; }
+.pg-ai-workforce .faq-item p { font-size: 15.5px; }
+.pg-ai-workforce .faq-item a { color: var(--primary); font-weight: 600; text-decoration: underline; }
+
+/* ---- final CTA (.ctaf from site2.css) ---- */
+.pg-ai-workforce .ctaf { padding-block: 56px 64px; }
+.pg-ai-workforce .ctaf-cta .btn { min-block-size: 48px; }
+.pg-ai-workforce .ctaf-sec { min-block-size: 44px; }
+
+@media (max-width: 719.98px) {
+  .pg-ai-workforce .aw-hero .heroc-cta .btn { flex: 1 1 100%; justify-content: center; }
+}
+@media (min-width: 720px) {
+  .pg-ai-workforce .container { padding-inline: 28px; }
+  .pg-ai-workforce .aw-scroll-hint { display: none; }
+  .pg-ai-workforce .aw-table-wrap { margin-block-start: 28px; }
+  .pg-ai-workforce .aw-table :is(thead th:first-child, tbody th) { position: static; }
+}
+@media (min-width: 860px) {
+  .pg-ai-workforce .aw-emps { grid-template-columns: repeat(3, minmax(0, 1fr)); max-inline-size: none; }
+}
+@media (min-width: 900px) {
+  .pg-ai-workforce .aw-defs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+}
+@media (min-width: 960px) {
+  .pg-ai-workforce .s { padding-block: 88px; }
+  .pg-ai-workforce .aw-hero { padding-block: 64px 80px; }
+  .pg-ai-workforce .ctaf { padding-block: 86px 94px; }
+}
+
+/* ---- Arabic: no tracking / uppercase / mono on Arabic, taller lines, mirrored arrows ---- */
+.pg-ai-workforce.is-ar .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }
+.pg-ai-workforce.is-ar .aw-hero h1 { line-height: 1.4; }
+.pg-ai-workforce.is-ar :is(.s-head h2, .aw-defblock h2) { line-height: 1.45; }
+.pg-ai-workforce.is-ar :is(.featc h3, .fstep h3, .faq-item summary) { line-height: 1.6; letter-spacing: 0; }
+.pg-ai-workforce.is-ar :is(.aw-def, .aw-answer, .aw-defblock p, .featc p, .fstep p, .faq-item p, .aw-table) { line-height: 1.8; }
+.pg-ai-workforce.is-ar .xcard b { letter-spacing: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-ai-workforce .aw-emp .mk-emp,
+  .pg-ai-workforce .aw-toc a,
+  .pg-ai-workforce .aw-more a { transition: none; }
+}

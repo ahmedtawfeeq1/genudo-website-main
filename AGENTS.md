@@ -23,3 +23,9 @@ project's `docs/` — `loredex route` picks up both.
 Never add `loredex: routed` yourself — the router stamps it after filing.
 A pre-stamped file is skipped as already-filed and will never reach the vault.
 <!-- loredex:end -->
+
+<!-- bmad:start -->
+## BMad
+Conventions, owner decisions and invariants live in `_bmad-output/project-context.md` (read it first). Product facts and messaging are in `docs/discovery/`.
+Arabic: Egyptian for marketing copy; the `genudo-arabic-localization` skill glossary for product UI labels. This repo is PUBLIC: never invent or commit prices, metrics or customer data.
+<!-- bmad:end -->

@@ -1,0 +1,29 @@
+# GenuDo website. The app listens on 127.0.0.1:3000 only; your existing reverse proxy
+# (nginx/Caddy) serves HTTPS on the domain and forwards to it. See docs/website/DEPLOY.md.
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://genudo.ai}
+    # Production pulls the image GitHub Actions builds; `docker compose build` still works locally.
+    image: ghcr.io/ahmedtawfeeq1/genudo-website:${IMAGE_TAG:-latest}
+    container_name: genudo-website
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${WEB_PORT:-3000}:3000"
+    environment:
+      FORMS_WEBHOOK_URL: ${FORMS_WEBHOOK_URL:-https://automationv2.loop-x.co/webhook/genudo-website-forms}
+      FORMS_WEBHOOK_SECRET: ${FORMS_WEBHOOK_SECRET:-}
+      # The proxy must overwrite this header with the visitor's IP (nginx: X-Real-IP $remote_addr).
+      FORMS_CLIENT_IP_HEADER: ${FORMS_CLIENT_IP_HEADER:-x-real-ip}
+      FORMS_GLOBAL_PER_MIN: ${FORMS_GLOBAL_PER_MIN:-60}
+    read_only: true
+    tmpfs:
+      - /tmp:mode=1777
+      - /app/.next/cache:uid=1001,gid=1001,mode=0755
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }

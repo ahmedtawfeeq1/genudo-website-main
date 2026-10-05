@@ -1,8 +1,11 @@
-// AUTO-GENERATED reference route (island bootstrap). Review + componentize per MIGRATION-GUIDE.md.
 import { setRequestLocale } from 'next-intl/server';
-import html from '@/legacy-html/api-mcp';
+import en from '@/legacy-html/api-mcp';
+import ar from '@/legacy-html/api-mcp.ar-EG';
+import LegacyBody from '@/components/LegacyBody';
 import LegacyScripts from '@/components/LegacyScripts';
+import BodyNav from '@/components/BodyNav';
 import { pageMetadata } from '@/i18n/seo';
+import '@/styles/pages/api-mcp.css';
 
 export const generateMetadata = pageMetadata({ route: '/api-mcp', seoKey: 'apiMcp' });
 
@@ -11,8 +14,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   return (
     <>
-      <div className="legacy-page" dangerouslySetInnerHTML={{ __html: html }} />
-      <LegacyScripts scripts={["/genu/genu-robot.js","/js/site2.js","/js/concept.js"]} />
+      <BodyNav value="resources" />
+      <LegacyBody locale={locale} route="/api-mcp" en={en} ar={ar} />
+      <LegacyScripts scripts={["/genu/genu-robot.js","/js/concept.js"]} />
     </>
   );
 }
