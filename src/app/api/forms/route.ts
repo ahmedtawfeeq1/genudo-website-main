@@ -27,10 +27,9 @@ const MAX_KEYS = 5_000;
 const hits = new Map<string, number[]>();
 let globalHits: number[] = [];
 
-function limited(ip: string) {
+/** Per-IP limit (best effort). Rejected requests do not touch the site-wide budget. */
+function ipLimited(ip: string) {
   const now = Date.now();
-  globalHits = globalHits.filter((t) => now - t < 60_000);
-  if (globalHits.length >= GLOBAL) return true;
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < 60_000);
   recent.push(now);
   hits.delete(ip); // re-insert so Map order = least recently seen first
@@ -40,8 +39,21 @@ function limited(ip: string) {
     if (hits.size <= MAX_KEYS) break;
     hits.delete(k);
   }
-  globalHits.push(now);
   return recent.length > PER_IP;
+}
+
+/**
+ * Site-wide budget, spent only by valid submissions about to be forwarded, so junk,
+ * malformed and per-IP-blocked requests cannot lock real visitors out.
+ * ponytail: a flood of valid-looking submissions from spoofed IPs can still use it up;
+ * that is the deliberate trade-off (n8n stays protected). Add a CAPTCHA if it happens.
+ */
+function globalBudgetSpent() {
+  const now = Date.now();
+  globalHits = globalHits.filter((t) => now - t < 60_000);
+  if (globalHits.length >= GLOBAL) return true;
+  globalHits.push(now);
+  return false;
 }
 
 /**
@@ -62,7 +74,7 @@ const clean = (v: unknown) =>
 
 export async function POST(req: NextRequest) {
   const ip = clientIp(req);
-  if (limited(ip)) return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
+  if (ipLimited(ip)) return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
   if (Number(req.headers.get('content-length') ?? 0) > MAX_BODY) return NextResponse.json({ ok: false, error: 'too_large' }, { status: 413 });
 
   let body: { form?: string; data?: Record<string, unknown>; meta?: Record<string, unknown> };
@@ -96,6 +108,8 @@ export async function POST(req: NextRequest) {
   if (entries.some(([k, v]) => k === 'website' && String(v).trim())) return NextResponse.json({ ok: true });
   const data = Object.fromEntries(entries.filter(([k]) => k !== 'website').map(([k, v]) => [k.slice(0, 60), clean(v)]).filter(([, v]) => v !== undefined));
   if (!data.email && !data.work_email) return NextResponse.json({ ok: false, error: 'email_required' }, { status: 400 });
+
+  if (globalBudgetSpent()) return NextResponse.json({ ok: false, error: 'busy' }, { status: 429 });
 
   const m = body.meta ?? {};
   const pick = (k: string) => (typeof m[k] === 'string' ? (m[k] as string).slice(0, 500) : undefined);

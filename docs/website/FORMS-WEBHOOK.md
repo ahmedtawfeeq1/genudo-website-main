@@ -89,7 +89,7 @@ Suggested flow: send the PDF (or route to legal for approval first), log the req
 ## Protection built in
 
 - **Honeypot:** a hidden `website` field; bots that fill it get a fake "ok" and nothing is forwarded.
-- **Rate limits:** 8 per minute per client IP, plus a site-wide cap (`FORMS_GLOBAL_PER_MIN`, default 60/min) that fails closed even if addresses are spoofed. The client IP is read only from `FORMS_CLIENT_IP_HEADER` (default `X-Real-IP`), which **the reverse proxy must overwrite on every request** (nginx: `proxy_set_header X-Real-IP $remote_addr;`). Both limits are in memory per container; move them to the proxy or Redis if you run several replicas.
+- **Rate limits:** 8 per minute per client IP, plus a site-wide cap (`FORMS_GLOBAL_PER_MIN`, default 60/min) that fails closed even if addresses are spoofed. Only valid submissions about to be forwarded count toward the site-wide cap, so junk requests cannot lock real visitors out; if valid-looking spam ever exhausts it, add a CAPTCHA. The client IP is read only from `FORMS_CLIENT_IP_HEADER` (default `X-Real-IP`), which **the reverse proxy must overwrite on every request** (nginx: `proxy_set_header X-Real-IP $remote_addr;`). Both limits are in memory per container; move them to the proxy or Redis if you run several replicas.
 - **Limits:** at most 40 fields, 5,000 characters per value; unknown `form` values and submissions without an email are rejected (400) before reaching n8n.
 - The webhook URL is never exposed to the browser.
 
