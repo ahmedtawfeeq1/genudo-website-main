@@ -10,6 +10,30 @@ const FOLDED = {
   channels: '#channels', contacts: '#channels', analytics: '#analytics'
 };
 
+// Security headers (production only; dev needs eval/websockets). The CSP allows what the
+// site and the GTM container (GA, Google Ads, Meta, TikTok, Cloudflare insights) load.
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://static.cloudflareinsights.com https://connect.facebook.net https://analytics.tiktok.com https://capi-automation.s3.us-east-2.amazonaws.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.googletagmanager.com",
+  "font-src 'self' data: https://fonts.gstatic.com",
+  "img-src 'self' data: blob: https:",
+  "media-src 'self'",
+  "connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://*.doubleclick.net https://*.google.com https://www.googleadservices.com https://static.cloudflareinsights.com https://connect.facebook.net https://www.facebook.com https://analytics.tiktok.com https://business-api.tiktok.com https://*.tiktok.com https://*.tiktokv.com https://*.tiktokw.us",
+  "frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://www.facebook.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self' https://www.facebook.com", // Meta pixel posts a hidden form to /tr/
+  "frame-ancestors 'self'"
+].join('; ');
+const SECURITY_HEADERS = [
+  { key: 'Content-Security-Policy', value: CSP },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -22,6 +46,9 @@ const nextConfig = {
   // paths under /public. Disabling the Image Optimizer keeps rendering 1:1 with the
   // original static site. Migrate to next/image per component when you componentize.
   images: { unoptimized: true },
+  async headers() {
+    return process.env.NODE_ENV === 'production' ? [{ source: '/:path*', headers: SECURITY_HEADERS }] : [];
+  },
   async redirects() {
     return [
       // ar-SA is paused (owner decision D2): Gulf URLs serve the Egyptian site.

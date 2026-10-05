@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Tajawal } from 'next/font/google';
+import Script from 'next/script';
 import { routing, isRtl } from '@/i18n/routing';
 import { SITE_URL, hreflangLanguages, siteJsonLd, ogLocale, ogImage } from '@/i18n/seo';
 import SiteNav from '@/components/SiteNav';
@@ -23,6 +24,9 @@ import '@/styles/chrome.css'; // nav + footer styles (ported from site-chrome.js
 import '@/styles/mockups.css'; // shared product-UI mockup kit (EN + AR)
 import '@/styles/layout-rules.css'; // 3/6 card grids, one-line hero chips (all breakpoints)
 import '@/styles/rtl.css'; // scoped to [dir=rtl] / [lang=ar] — leaves EN untouched
+
+// Google Tag Manager: GA, Meta and TikTok tags live inside this container (same as the old site).
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-KTSQZ7VH';
 
 // Arabic UI font (Egypt + Gulf). Latin copy keeps the stack from genudo-site.css.
 const tajawal = Tajawal({
@@ -98,6 +102,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} className={rtl ? tajawal.variable : undefined}>
       <body className={rtl ? 'is-ar' : undefined}>
+        {GTM_ID && (
+          <>
+            <Script id="gtm" strategy="afterInteractive">
+              {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
+            </Script>
+            <noscript>
+              <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} />
+            </noscript>
+          </>
+        )}
         {/* GEO / rich results: Organization + WebSite graph (own trusted data). */}
         <script
           type="application/ld+json"
