@@ -4,72 +4,86 @@ topic: deploy-docker
 type: note
 date: 2026-10-05
 source: claude-code
-tags: [deploy, docker, nginx]
+tags: [deploy, docker, nginx, cloudflare]
+loredex: routed
 ---
 
-# Deploy the GenuDo website with Docker
+# Deploy the GenuDo website (production server runbook)
 
-The site runs as one container (`genudo-website`, Next.js standalone, non-root, read-only filesystem) listening on `127.0.0.1:3000`. The web server you already use for the domain (nginx assumed below) keeps handling HTTPS and forwards to it. The forms endpoint needs this server process, so the site cannot be served as static files.
+## The setup
 
-## 0. Inventory (read-only)
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/ahmedtawfeeq1/genudo-website-main/feat/value-led-website/deploy/server-check.sh -o server-check.sh
-bash server-check.sh 2>&1 | tee server-check.txt
+```
+visitor ──HTTPS──> Cloudflare ──HTTP:80──> nginx (EC2, Ubuntu 24.04) ──> 127.0.0.1:3001  genudo-website container
+                                                  ├─ app.genudo.ai / console  -> :4173   (unchanged)
+                                                  └─ tools.genudo.ai          -> :3000   genudo-ops-center (unchanged)
 ```
 
-## 1. Get the code and build (old site keeps running)
+- **Image:** built by GitHub Actions (`.github/workflows/docker-image.yml`) and published to `ghcr.io/ahmedtawfeeq1/genudo-website`. The server only pulls it: with 1 GB RAM and ~1.8 GB free disk it cannot build Next.js.
+- **Tags:** `latest` (main), `feat-value-led-website` (this branch), `sha-<commit>` (pin or rollback).
+- **Port:** 3001 (3000 is used by ops-center).
+- **Old site:** static files in `/home/ubuntu/genudo/dist`, served by `/etc/nginx/sites-available/genudo.ai`. Untouched, so rollback is one config swap.
+
+## One-time setup
 
 ```bash
-sudo mkdir -p /opt/genudo-website && sudo chown $USER /opt/genudo-website
-git clone -b feat/value-led-website https://github.com/ahmedtawfeeq1/genudo-website-main.git /opt/genudo-website
-cd /opt/genudo-website
-cp .env.example .env        # edit if needed (webhook URL/secret, port)
-docker compose build
+# 1. Code (only the compose/env/nginx files are used; no build on the server)
+git clone -b feat/value-led-website https://github.com/ahmedtawfeeq1/genudo-website-main.git ~/genudo-website
+cd ~/genudo-website
+cp .env.example .env
+nano .env    # IMAGE_TAG=feat-value-led-website (until merged to main), WEB_PORT=3001, FORMS_WEBHOOK_SECRET=...
+
+# 2. Pull and start (the old site keeps serving the domain)
+docker compose pull
 docker compose up -d
-docker compose ps           # wait for "healthy"
-```
+docker compose ps                                          # wait for (healthy)
+curl -s -o /dev/null -w "%{http_code}\n" http://127.0.0.1:3001/en          # 200
+curl -s http://127.0.0.1:3001/ar-EG | grep -o "<title>[^<]*"               # Arabic title
 
-If port 3000 is already taken on the server, set `WEB_PORT=3001` in `.env` and use that port in the nginx `upstream` too.
-
-## 2. Test before switching the domain
-
-```bash
-curl -sI http://127.0.0.1:3000/en | head -3                 # 200
-curl -s  http://127.0.0.1:3000/en | grep -o "<title>[^<]*"   # page title
-curl -sI http://127.0.0.1:3000/ar-EG/legal/privacy-policy | head -1
-```
-
-## 3. Switch the domain (nginx)
-
-```bash
-sudo cp /etc/nginx/sites-available/genudo.ai /etc/nginx/sites-available/genudo.ai.old-site.bak   # keep the old config
+# 3. nginx: real visitor IP from Cloudflare + proxy snippet
+bash deploy/nginx/install-cloudflare-realip.sh
 sudo cp deploy/nginx/genudo-proxy.conf /etc/nginx/snippets/genudo-proxy.conf
-sudo cp deploy/nginx/genudo.ai.conf /etc/nginx/sites-available/genudo.ai
-#   edit the ssl_certificate lines to match the paths in the old config
-sudo nginx -t && sudo systemctl reload nginx
-curl -sI https://genudo.ai | head -5                        # served by the new site
+sudo nginx -t
 ```
 
-## 4. Rollback (one minute)
+If the image pull is denied, the GHCR package is still private: GitHub → your profile → Packages → `genudo-website` → Package settings → Change visibility → Public (the repo is already public), or `docker login ghcr.io -u ahmedtawfeeq1` with a token that has `read:packages`.
+
+## Switch genudo.ai to the new site
 
 ```bash
-sudo cp /etc/nginx/sites-available/genudo.ai.old-site.bak /etc/nginx/sites-available/genudo.ai
+sudo cp /etc/nginx/sites-available/genudo.ai ~/genudo.ai.nginx.old-site.bak
+sudo cp ~/genudo-website/deploy/nginx/genudo.ai.cloudflare.conf /etc/nginx/sites-available/genudo.ai
+sudo nginx -t && sudo systemctl reload nginx
+curl -s -H "Host: genudo.ai" http://127.0.0.1/en | grep -o "<title>[^<]*"   # new site via nginx
+curl -sI https://genudo.ai/en | head -3                                      # via Cloudflare
+```
+
+Then purge the Cloudflare cache (Caching → Configuration → Purge Everything).
+
+## Rollback (about a minute)
+
+```bash
+sudo cp ~/genudo.ai.nginx.old-site.bak /etc/nginx/sites-available/genudo.ai
 sudo nginx -t && sudo systemctl reload nginx
 ```
 
-The old site files are not touched, so rollback is just the config.
+## Deploy updates
 
-## 5. Updates later
+Push to the branch → GitHub Actions publishes a new image (about 3 minutes) → on the server:
 
 ```bash
-cd /opt/genudo-website && git pull && docker compose build && docker compose up -d
-docker image prune -f
+cd ~/genudo-website && git pull && docker compose pull && docker compose up -d && docker image prune -f
 ```
+
+Pin a version instead with `IMAGE_TAG=sha-<commit>` in `.env`.
+
+## Cloudflare settings to confirm
+
+- SSL/TLS mode: **Flexible** works with this origin (port 80 only). Full/Strict would need an origin certificate on nginx.
+- "Always Use HTTPS": on. nginx must NOT redirect http→https itself (loop under Flexible).
+- Optional: block direct access to the origin by allowing only Cloudflare IPs on port 80 (security group).
 
 ## After go-live
 
 - Submit `https://genudo.ai/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
-- Re-share a link in the Facebook Sharing Debugger and LinkedIn Post Inspector to refresh previews.
-- Set `FORMS_WEBHOOK_SECRET` in `.env` and check `X-GenuDo-Signature` in n8n.
+- Refresh link previews (Facebook Sharing Debugger, LinkedIn Post Inspector).
 - Logs: `docker compose logs -f web`.

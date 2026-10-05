@@ -6,7 +6,8 @@ services:
       context: .
       args:
         NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://genudo.ai}
-    image: genudo-website:latest
+    # Production pulls the image GitHub Actions builds; `docker compose build` still works locally.
+    image: ghcr.io/ahmedtawfeeq1/genudo-website:${IMAGE_TAG:-latest}
     container_name: genudo-website
     restart: unless-stopped
     ports:
