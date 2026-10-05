@@ -13,6 +13,8 @@ const FOLDED = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Self-contained server bundle for the Docker image (see Dockerfile).
+  output: 'standalone',
   // Separate output for verification builds (NEXT_DIST_DIR=.next-verify) so they
   // never clobber a running `next dev`, which owns .next.
   distDir: process.env.NEXT_DIST_DIR || '.next',
