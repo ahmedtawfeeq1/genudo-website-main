@@ -102,49 +102,31 @@ curl -X POST https://genudo.ai/api/forms -H 'Content-Type: application/json' \
 
 ## n8n: WhatsApp notification text (all forms)
 
-Add a **Code** node ("Format WhatsApp message", mode *Run Once for All Items*, JavaScript) between the webhook and the WhatsApp node, then set the WhatsApp `text` field to the expression `{{ $json.message }}`. The code is pure ASCII (Arabic and emojis as `\u` escapes) so copy-paste cannot corrupt it; a Code node also avoids expression-editor parsing limits; the original `body` is passed through for later nodes.
+Add a **Code** node ("Format WhatsApp message", mode *Run Once for All Items*, JavaScript) between the webhook and the WhatsApp node, then set the WhatsApp `text` field to the expression `{{ $json.message }}`. The code is pure ASCII (emojis as `\u` escapes); labels are in English so copy-paste cannot corrupt it; a Code node also avoids expression-editor parsing limits; the original `body` is passed through for later nodes.
 
 ```javascript
 // Format WhatsApp message (Run Once for All Items, JavaScript).
-// Arabic text and emojis are written as \u escapes so copy-paste can't corrupt them;
-// n8n still sends real Arabic. Labels: name=Name, company=Company, email=Email, etc.
+// Emojis are \u escapes so copy-paste can't corrupt them.
 const TITLES = {
-  demo_request: '\u{1f7e3} \u0637\u0644\u0628 \u062f\u064a\u0645\u0648 \u062c\u062f\u064a\u062f \u0645\u0646 \u0627\u0644\u0645\u0648\u0642\u0639',
-  privacy_request: '\u{1f512} \u0637\u0644\u0628 \u062e\u0635\u0648\u0635\u064a\u0629 (\u0635\u0627\u062d\u0628 \u0628\u064a\u0627\u0646\u0627\u062a) - \u064a\u062d\u062a\u0627\u062c \u0631\u062f',
-  document_request: '\u{1f4c4} \u0637\u0644\u0628 \u0648\u062b\u064a\u0642\u0629 (DPA / Security)'
+  demo_request: '\u{1f7e3} New demo request from the website',
+  privacy_request: '\u{1f512} Privacy request (data subject) - needs a reply',
+  document_request: '\u{1f4c4} Document request (DPA / Security)'
 };
-const LABELS = {
-  name: '\u0627\u0644\u0627\u0633\u0645', full_name: '\u0627\u0644\u0627\u0633\u0645', company: '\u0627\u0644\u0634\u0631\u0643\u0629', email: '\u0627\u0644\u0625\u064a\u0645\u064a\u0644', work_email: '\u0625\u064a\u0645\u064a\u0644 \u0627\u0644\u0639\u0645\u0644',
-  phone: '\u0627\u0644\u0645\u0648\u0628\u0627\u064a\u0644', topic: '\u0627\u0644\u0645\u0648\u0636\u0648\u0639', message: '\u0627\u0644\u0631\u0633\u0627\u0644\u0629', request_type: '\u0646\u0648\u0639 \u0627\u0644\u0637\u0644\u0628',
-  relationship: '\u0627\u0644\u0639\u0644\u0627\u0642\u0629', country: '\u0627\u0644\u062f\u0648\u0644\u0629', details: '\u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644', document: '\u0627\u0644\u0648\u062b\u064a\u0642\u0629',
-  role: '\u0627\u0644\u0648\u0638\u064a\u0641\u0629', confirmed: '\u0623\u0643\u0651\u062f \u0635\u062d\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a'
-};
-
+const LABELS = { name: 'Name', full_name: 'Name', company: 'Company', email: 'Email', work_email: 'Work email', phone: 'Phone', topic: 'Topic', message: 'Message', request_type: 'Request type', relationship: 'Relationship', country: 'Country', details: 'Details', document: 'Document', role: 'Role', confirmed: 'Confirmed accuracy' };
 return $input.all().map((item) => {
-  const body = item.json.body || {};
-  const data = body.data || {};
-  const meta = body.meta || {};
-
-  const fields = Object.entries(data)
-    .filter(([, value]) => value !== '' && value != null)
-    .map(([key, value]) => `*${LABELS[key] || key}:* ${Array.isArray(value) ? value.join(', ') : value}`)
-    .join('\n');
-
-  const when = meta.submittedAt
-    ? DateTime.fromISO(meta.submittedAt).setZone('Africa/Cairo').toFormat('dd LLL yyyy, HH:mm')
-    : '-';
+  const body = item.json.body || {}; const data = body.data || {}; const meta = body.meta || {};
+  const fields = Object.entries(data).filter(([, value]) => value !== '' && value != null)
+    .map(([key, value]) => `*${LABELS[key] || key}:* ${Array.isArray(value) ? value.join(', ') : value}`).join('\n');
+  const when = meta.submittedAt ? DateTime.fromISO(meta.submittedAt).setZone('Africa/Cairo').toFormat('dd LLL yyyy, HH:mm') : '-';
   const utm = Object.entries(meta.utm || {}).map(([k, v]) => `${k}=${v}`).join(' | ');
-
   const info = [
-    `\u{1f310} *\u0627\u0644\u0635\u0641\u062d\u0629:* ${meta.page || '-'} (${meta.locale || '-'})`,
-    `\u{1f552} *\u0627\u0644\u0648\u0642\u062a (\u0627\u0644\u0642\u0627\u0647\u0631\u0629):* ${when}`,
-    `\u{1f4cd} *\u0627\u0644\u062f\u0648\u0644\u0629:* ${meta.country || '-'}`,
-    meta.referrer ? `\u21a9\ufe0f *\u062c\u0627\u064a \u0645\u0646:* ${meta.referrer}` : '',
-    utm ? `\u{1f4e3} *\u0627\u0644\u062d\u0645\u0644\u0629:* ${utm}` : ''
+    `\u{1f310} *Page:* ${meta.page || '-'} (${meta.locale || '-'})`,
+    `\u{1f552} *Time (Cairo):* ${when}`,
+    `\u{1f4cd} *Country:* ${meta.country || '-'}`,
+    meta.referrer ? `\u21a9\ufe0f *Came from:* ${meta.referrer}` : '',
+    utm ? `\u{1f4e3} *Campaign:* ${utm}` : ''
   ].filter(Boolean).join('\n');
-
-  const title = TITLES[body.form] || `\u{1f4dd} \u0646\u0645\u0648\u0630\u062c \u062c\u062f\u064a\u062f: ${body.form}`;
-
+  const title = TITLES[body.form] || `\u{1f4dd} New form: ${body.form}`;
   return { json: { ...item.json, message: `*${title}*\n\n${fields}\n\n${info}` } };
 });
 ```
