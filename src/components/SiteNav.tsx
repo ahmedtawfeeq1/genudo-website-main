@@ -109,6 +109,18 @@ export default function SiteNav() {
 
   const Arrow = () => <Svg name="arrow" />;
 
+  const Group = ({ title, children }: { title: string; children: React.ReactNode }) => (
+    <details className="nm-group">
+      <summary className="nm-sec">
+        <span>{title}</span>
+        <span className="nm-ind" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+        </span>
+      </summary>
+      <div className="nm-items">{children}</div>
+    </details>
+  );
+
   return (
     <header className={`nav${open ? ' mobile-open' : ''}`}>
       <div className="container nav-in">
@@ -210,32 +222,37 @@ export default function SiteNav() {
       {/* Mobile menu */}
       <div className="nav-mobile">
         <div className="container">
-          <div className="nm-sec">{t('nav.employees')}</div>
-          <M href="/sol-sales-agent" term="terms.salesAgent" sub="nav.desc.salesAgent" />
-          <M href="/sol-customer-service" term="terms.customerService" sub="nav.desc.customerService" />
-          <M href="/sol-operations" term="terms.operations" sub="nav.desc.operations" />
-          <div className="nm-sec">{t('nav.industries')}</div>
-          <M href="/ind-marketing" term="terms.marketing" />
-          <M href="/ind-elearning" term="terms.elearning" />
-          <M href="/ind-fitness" term="terms.fitness" />
-          <M href="/ind-clinics" term="terms.clinics" />
-          <M href="/ind-hospitality" term="terms.hospitality" />
-          <M href="/ind-camps-events" term="terms.campsEvents" />
-          <M href="/use-cases" term="terms.allUseCases" />
-          <div className="nm-sec">{t('nav.secExplore')}</div>
-          <M href="/how-it-works" term="nav.howItWorks" />
-          <M href="/ai-workforce" term="terms.aiWorkforce" />
-          <M href="/pricing" term="terms.pricing" />
-          <M href="/who-is-genu" term="nav.whoIsGenu" strong />
-          <div className="nm-sec">{t('nav.resources')}</div>
-          <M href="/customers" term="terms.customerStories" />
-          <M href="/blog" term="terms.blog" />
-          <M href="/changelog" term="terms.changelog" />
-          <M href="/security" term="terms.security" />
-          <M href="/integrations" term="terms.integrations" />
-          <M href="/api-mcp" term="terms.apiMcp" />
-          <M href="https://api.genudo.ai/docs" term="terms.apiDocs" />
-          <M href="/contact" term="terms.contact" />
+          {/* Collapsible sections (native <details>): a bold header with a chevron box. */}
+          <Group title={t('nav.employees')}>
+            <M href="/sol-sales-agent" term="terms.salesAgent" sub="nav.desc.salesAgent" />
+            <M href="/sol-customer-service" term="terms.customerService" sub="nav.desc.customerService" />
+            <M href="/sol-operations" term="terms.operations" sub="nav.desc.operations" />
+          </Group>
+          <Group title={t('nav.industries')}>
+            <M href="/ind-marketing" term="terms.marketing" />
+            <M href="/ind-elearning" term="terms.elearning" />
+            <M href="/ind-fitness" term="terms.fitness" />
+            <M href="/ind-clinics" term="terms.clinics" />
+            <M href="/ind-hospitality" term="terms.hospitality" />
+            <M href="/ind-camps-events" term="terms.campsEvents" />
+            <M href="/use-cases" term="terms.allUseCases" />
+          </Group>
+          <Group title={t('nav.secExplore')}>
+            <M href="/how-it-works" term="nav.howItWorks" />
+            <M href="/ai-workforce" term="terms.aiWorkforce" />
+            <M href="/pricing" term="terms.pricing" />
+            <M href="/who-is-genu" term="nav.whoIsGenu" strong />
+          </Group>
+          <Group title={t('nav.resources')}>
+            <M href="/customers" term="terms.customerStories" />
+            <M href="/blog" term="terms.blog" />
+            <M href="/changelog" term="terms.changelog" />
+            <M href="/security" term="terms.security" />
+            <M href="/integrations" term="terms.integrations" />
+            <M href="/api-mcp" term="terms.apiMcp" />
+            <M href="https://api.genudo.ai/docs" term="terms.apiDocs" />
+            <M href="/contact" term="terms.contact" />
+          </Group>
           <a href="https://app.genudo.ai/auth/login" className="btn" style={{ marginTop: 14, justifyContent: 'center', minHeight: 44, border: '1px solid var(--border)', color: 'var(--ink)' }}>
             {t('nav.signIn')}
           </a>
