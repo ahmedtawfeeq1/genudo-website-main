@@ -17,8 +17,9 @@ EYEBROW = {
     'en': {'emp': 'AI employee', 'ind': 'Industries', 'blog': 'GenuDo blog', 'site': 'AI employees for WhatsApp & beyond'},
     'ar-EG': {'emp': 'موظف بالذكاء الاصطناعي', 'ind': 'المجالات', 'blog': 'مدونة جينـو دو', 'site': 'موظفين بالذكاء الاصطناعي على WhatsApp وأكتر'},
 }
-NAMES = {'en': {'aaref': 'Aaref · Sales', 'adnan': 'Adnan · Support', 'roz': 'ROZ · Quality'},
-         'ar-EG': {'aaref': 'عارف · المبيعات', 'adnan': 'عدنان · خدمة العملاء', 'roz': 'روز · الجودة'}}
+AVATAR = {'aaref': 'aaref', 'adnan': 'adnan', 'roz': 'roz-v2'}   # roz.svg was replaced by roz-v2.svg (new look, 7 Oct 2026)
+NAMES = {'en': {'aaref': 'Aaref · Sales', 'adnan': 'Adnan · Service & success', 'roz': 'Roz · Quality control'},
+         'ar-EG': {'aaref': 'عارف · المبيعات', 'adnan': 'عدنان · خدمة ونجاح العملاء', 'roz': 'روز · مراقبة الجودة'}}
 
 
 def routes():
@@ -39,11 +40,11 @@ def card(locale, route, title, desc):
     eyebrow = EYEBROW[locale][kind]
     if route in EMP:
         e = EMP[route]
-        art = (f'<img class="hero-av" src="file://{ROOT}/public/media/img/{e}.svg">'
+        art = (f'<img class="hero-av" src="file://{ROOT}/public/media/img/{AVATAR[e]}.svg">'
                f'<div class="tag">{html.escape(NAMES[locale][e])}</div>')
     else:
         art = (f'<img class="genu" src="file://{ROOT}/public/media/img/genu.svg"><div class="team">'
-               + ''.join(f'<img src="file://{ROOT}/public/media/img/{e}.svg">' for e in ('aaref', 'adnan', 'roz')) + '</div>')
+               + ''.join(f'<img src="file://{ROOT}/public/media/img/{AVATAR[e]}.svg">' for e in ('aaref', 'adnan', 'roz')) + '</div>')
     return f'''<!doctype html><html lang="{locale}" dir="{d}"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Tajawal:wght@500;700;800&display=block" rel="stylesheet">
 <style>
