@@ -27,6 +27,9 @@ const I: Record<string, string> = {
   travel: '<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3s-3-.5-4.5 1L13 7.5 4.8 5.7c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
   mkt: '<path d="m3 11 15-5v12L3 13z"/><path d="M18 8a3 3 0 0 1 0 6"/><path d="M7 13v4a2 2 0 0 0 2 2h1"/>',
   camp: '<path d="M3.5 21 12 4l8.5 17"/><path d="M12 13 7.5 21M12 13l4.5 8"/>',
+  estate: '<path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/>',
+  shop: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>',
+  car: '<path d="M3 13l2-6h14l2 6v5H3z"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/>',
   docs: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/>',
   change: '<path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/>',
   blog: '<path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/>',
@@ -155,6 +158,9 @@ export default function SiteNav() {
                 <IL href="/ind-clinics" name="clinic" bg="#06b6d4" term="terms.clinics" />
                 <IL href="/ind-hospitality" name="travel" bg="#a855f7" term="terms.hospitality" />
                 <IL href="/ind-camps-events" name="camp" bg="#f59e0b" term="terms.campsEvents" />
+                <IL href="/ind-real-estate" name="estate" bg="#14b8a6" term="terms.realEstate" />
+                <IL href="/ind-ecommerce" name="shop" bg="#ec4899" term="terms.ecommerce" />
+                <IL href="/ind-automotive" name="car" bg="#64748b" term="terms.automotive" />
               </div>
               <div className="mega-foot">
                 <Link href="/use-cases" onClick={() => setOpen(false)}>
@@ -235,6 +241,9 @@ export default function SiteNav() {
             <M href="/ind-clinics" term="terms.clinics" />
             <M href="/ind-hospitality" term="terms.hospitality" />
             <M href="/ind-camps-events" term="terms.campsEvents" />
+            <M href="/ind-real-estate" term="terms.realEstate" />
+            <M href="/ind-ecommerce" term="terms.ecommerce" />
+            <M href="/ind-automotive" term="terms.automotive" />
             <M href="/use-cases" term="terms.allUseCases" />
           </Group>
           <Group title={t('nav.secExplore')}>

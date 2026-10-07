@@ -66,6 +66,9 @@ export default function SiteFooter() {
             <Link href="/ind-clinics">{t('terms.clinics')}</Link>
             <Link href="/ind-hospitality">{t('terms.hospitality')}</Link>
             <Link href="/ind-camps-events">{t('terms.campsEvents')}</Link>
+            <Link href="/ind-real-estate">{t('terms.realEstate')}</Link>
+            <Link href="/ind-ecommerce">{t('terms.ecommerce')}</Link>
+            <Link href="/ind-automotive">{t('terms.automotive')}</Link>
           </div>
 
           <div className="foot-col">

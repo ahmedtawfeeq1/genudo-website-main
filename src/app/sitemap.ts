@@ -22,6 +22,9 @@ export const ROUTES = [
   '/ind-clinics',
   '/ind-hospitality',
   '/ind-camps-events',
+  '/ind-real-estate',
+  '/ind-ecommerce',
+  '/ind-automotive',
   '/use-cases',
   '/customers',
   '/pricing',
@@ -47,7 +50,7 @@ export const ROUTES = [
 ];
 
 /** Last substantive content release. Bump when page copy changes; crawlers use it to schedule recrawls. */
-const LAST_MODIFIED = new Date('2026-10-05');
+const LAST_MODIFIED = new Date('2026-10-07');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.map((route) => ({
