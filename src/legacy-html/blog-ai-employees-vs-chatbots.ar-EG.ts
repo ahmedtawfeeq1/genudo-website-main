@@ -9,33 +9,33 @@ const html = `<div class="pg-post">
 <p><strong>موظف الذكاء الاصطناعي</strong> حاجة تانية خالص. هو مش بس بيرد، هو بيمسك نتيجة لحد ما تتحقق. والفرق ده بيغيّر إنت تقدر تسلّم إيه فعلًا.</p>
 <h2>الشات بوت بيرد. الموظف بيخلّص الشغل.</h2>
 <p>اسأل الشات بوت «عندكم ميعاد بكرة بالليل؟» وفي يوم حظه حلو هيلاقي السؤال في الأسئلة الشائعة. اسأل موظف الذكاء الاصطناعي نفس السؤال: بيشوف المواعيد الفاضية، وبيحجز الميعاد، وبيحدّث الـ <bdi>CRM</bdi>، وبينقل العميل للمرحلة اللي بعدها، قبل ما حد من فريقك يفتح الرسالة.</p>
-<figure class="post-fig"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp يرد عليها الوكيل">
+<figure class="post-fig"><div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp بيرد عليها الموظف الذكي">
   <div class="mk-phone__screen">
     <div class="mk-phone__status"><span>9:41</span></div>
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">م</span><div class="mk-phone__who"><b>منى عادل</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
-    <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
+    <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الموظف الذكي ماسك المحادثة دي</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
     <div class="mk-chat">
       <span class="mk-chat__day">اليوم</span>
       <div class="mk-msg mk-msg--in">أهلًا، التبييض بكام؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص</span></div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>أهلًا يا منى! التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة. تحبي نحجزلك ميعاد الأسبوع ده؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>أهلًا يا منى! التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة. تحبي نحجزلك ميعاد الأسبوع ده؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-msg mk-msg--in mk-voice">
         <div class="mk-voice__row"><span class="mk-voice__play"><i class="mk-ic mk-ic--play"></i></span><span class="mk-voice__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="mk-voice__len">0:09</span></div>
-        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>تم تفريغ الرسالة الصوتية</b>أيوه ياريت، يوم الخميس بعد الساعة 6 لو ينفع.</div>
+        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>الرسالة الصوتية اتحوّلت لنص</b>أيوه ياريت، يوم الخميس بعد الساعة 6 لو ينفع.</div>
         <span class="mk-msg__meta"><bdi>2:15</bdi> ص</span>
       </div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>تمام! حجزتلك يوم الخميس الساعة <bdi>6:30</bdi> مساءً.<span class="mk-msg__meta"><bdi>2:15</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>تمام! حجزتلك يوم الخميس الساعة <bdi>6:30</bdi> مساءً.<span class="mk-msg__meta"><bdi>2:15</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-meeting">
-        <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">تم تأكيد الموعد</div><div class="mk-meeting__when">الخميس 14 يناير · <bdi>6:30</bdi> م</div></div></div>
+        <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">الميعاد اتأكّد</div><div class="mk-meeting__when">الخميس 14 يناير · <bdi>6:30</bdi> م</div></div></div>
         <div class="mk-meeting__rows"><span><i class="mk-ic mk-ic--check"></i>أُضيف إلى <bdi>Google Calendar</bdi></span><span><i class="mk-ic mk-ic--check"></i>أُرسل رابط الاجتماع عبر <bdi>WhatsApp</bdi></span></div>
       </div>
       <div class="mk-typing mk-typing--in"><i></i><i></i><i></i></div>
     </div>
-    <div class="mk-phone__compose">الوكيل يتولّى هذه المحادثة. اختر «تدخّل بشري» للرد بنفسك.</div>
+    <div class="mk-phone__compose">الموظف الذكي ماسك المحادثة دي. اختار «تدخّل بشري» لو عايز تردّ بنفسك.</div>
   </div>
 </div><figcaption>محادثة توضيحية. العميل شخصية خيالية.</figcaption></figure>
 <blockquote>الاختبار مش «هل بيعرف يرد؟». الاختبار «هل ينفع نحاسبه على نتيجة؟»</blockquote>
 <h2>إيه اللي بيعمل الفرق</h2>
-<p>أربع حاجات بتحوّل الوكيل لموظف، وجينـو دو متبني عليهم بالظبط:</p>
+<p>أربع حاجات بتحوّل الأداة لموظف، وجينـو دو متبني عليهم بالظبط:</p>
 <ul>
 <li><strong>معلوماتك إنت.</strong> بيرد من قاعدة المعرفة بتاعتك (الأسعار والسياسات والمواعيد)، مش من الإنترنت المفتوح.</li>
 <li><strong>إجراءات فعلية.</strong> بيشوف المواعيد الفاضية، وبيحجز اجتماع، وبيحدّث الـ <bdi>CRM</bdi>.</li>
@@ -43,7 +43,7 @@ const html = `<div class="pg-post">
 <li><strong>مكانه في سير الشغل.</strong> مسار بيخلّي كل محادثة تتحرك من مرحلة للي بعدها، وإنت شايف هي واقفة فين.</li>
 </ul>
 <h2>ليه «بيمسك نتيجة» هي أهم نقطة</h2>
-<p>لما الوكيل يمسك نتيجة، تقدر تقيسه زي ما بتقيس إنسان: كام عميل اتأهّل، وكام اجتماع اتحجز، وكام مشكلة وصلت للشخص الصح في فريقك، وكل نتيجة كلّفتك كام. ده اللي بيخليه موظف مش مجرد أداة. وساعتها الفريق يبطّل يسأل «البوت جاوب السؤال؟» ويبدأ يسأل «قفلنا الصفقة؟»</p>
+<p>لما الموظف الذكي يمسك نتيجة، تقدر تقيسه زي ما بتقيس إنسان: كام عميل اتأهّل، وكام اجتماع اتحجز، وكام مشكلة وصلت للشخص الصح في فريقك، وكل نتيجة كلّفتك كام. ده اللي بيخليه موظف مش مجرد أداة. وساعتها الفريق يبطّل يسأل «البوت جاوب السؤال؟» ويبدأ يسأل «قفلنا الصفقة؟»</p>
 <p>لو جرّبت شات بوتس قبل كده وخرجت مش مقتنع، إحساسك في محله. بص على موظفين، مش شات بوتس. <a href="/how-it-works#employees">اعرف الموظفين بيشتغلوا إزاي</a>، أو اتعرّف على <a href="/sol-sales-agent">عارف</a>، اللي بيرد على عملائك وبيأهّلهم.</p></div>
   <div class="post-cta"><h3>ابدأ بأول موظف ذكاء اصطناعي عندك</h3><p>اختار النتيجة اللي عايزها، واربط قناة، وسيبه يبدأ يرد على عملائك.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ دلوقتي</a><a href="/contact" class="post-cta-sec">احجز ديمو</a></div></div>
 </div></article>

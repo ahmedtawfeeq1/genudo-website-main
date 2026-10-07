@@ -11,7 +11,7 @@ const html = `<div class="pg-post">
 <ul>
 <li>المحادثات الجديدة <strong>بتدخل مرحلة</strong> حسب شروط إنت بتحددها.</li>
 <li>كل مرحلة ممكن <strong>تشغّل إجراءات</strong>، زي حجز اجتماع أو تحديث الـ <bdi>CRM</bdi> في اللحظة اللي العميل يبقى فيها جاهز.</li>
-<li>العملاء اللي سكتوا <strong>بيتابعهم الوكيل</strong>، ولو خلص تسلسل المتابعات من غير رد بتتسجّل الفرصة «ضائعة» بدل ما تتنسى.</li>
+<li>العملاء اللي سكتوا <strong>بيتابعهم الموظف الذكي</strong>، ولو خلص تسلسل المتابعات من غير رد بتتسجّل الفرصة «ضائعة» بدل ما تتنسى.</li>
 <li>بتشوف <strong>التكلفة والنتايج لكل مرحلة</strong>، مش مجرد كومة محادثات.</li>
 </ul>
 <figure class="post-fig"><div class="mk mk-board" dir="rtl" lang="ar" role="img" aria-label="لوحة المسار بأربع مراحل">
@@ -48,7 +48,7 @@ const html = `<div class="pg-post">
       <div class="mk-opp">
         <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--violet">ن</span><div class="mk-opp__who"><b>نور إيهاب</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">الاثنين</span></div>
         <p class="mk-opp__msg">نشوفكم يوم الاتنين!</p>
-        <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>تم حجز الموعد</span></div>
+        <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>الميعاد اتحجز</span></div>
       </div>
     </div>
   </div>

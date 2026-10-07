@@ -35,7 +35,7 @@ const html = `<div class="pg-post">
 </div><figcaption>Illustrative chat. The customer is fictional.</figcaption></figure>
 <blockquote>The test isn’t “can it reply?” It’s “can it be held responsible for a result?”</blockquote>
 <h2>What makes the difference</h2>
-<p>Four things turn an agent into an employee, and GenuDo is built around exactly these:</p>
+<p>Four things turn a tool into an employee, and GenuDo is built around exactly these:</p>
 <ul>
 <li><strong>Your own facts.</strong> It answers from your knowledge base (prices, policies, schedules), not from the open internet.</li>
 <li><strong>Actions.</strong> It can look up free slots, book a meeting and update your CRM.</li>
@@ -43,7 +43,7 @@ const html = `<div class="pg-post">
 <li><strong>A place in your process.</strong> A pipeline, so every conversation moves through stages and you can see where it stands.</li>
 </ul>
 <h2>Why “owns an outcome” is the whole point</h2>
-<p>When an agent owns an outcome, you can measure it the way you’d measure a person: leads qualified, meetings booked, issues routed to the right teammate, and what each outcome cost. That is what makes it a hire, not a widget. Teams stop asking “did the bot deflect the question?” and start asking “did we win the deal?”</p>
+<p>When an AI employee owns an outcome, you can measure it the way you’d measure a person: leads qualified, meetings booked, issues routed to the right teammate, and what each outcome cost. That is what makes it a hire, not a widget. Teams stop asking “did the bot deflect the question?” and start asking “did we win the deal?”</p>
 <p>If you’ve been evaluating chatbots and coming away underwhelmed, that instinct is right. Evaluate employees instead. <a href="/how-it-works#employees">See how the AI employees work</a>, or meet <a href="/sol-sales-agent">Aaref</a>, the one who answers and qualifies your leads.</p></div>
   <div class="post-cta"><h3>Build your first AI employee</h3><p>Pick the outcome you want, connect a channel, and let it start answering your customers.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">Start free</a><a href="/contact" class="post-cta-sec">Book a demo</a></div></div>
 </div></article>

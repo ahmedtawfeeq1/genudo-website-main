@@ -23,7 +23,7 @@ const html = `<div class="pg-post">
   </div>
 </div><figcaption>Illustrative chat. The customer is fictional.</figcaption></figure>
 <h2>3. Knowing when to stop</h2>
-<p>For a clinic, that means scheduling and admin questions only, never diagnosis. Good guardrails are as much about <em>what the agent refuses to do</em> as what it does.</p>
+<p>For a clinic, that means scheduling and admin questions only, never diagnosis. Good guardrails are as much about <em>what the AI employee refuses to do</em> as what it does.</p>
 <ul>
 <li>Write down what the AI should <strong>never</strong> answer, and when it should hand over.</li>
 <li>Set a <strong>spend cap per conversation</strong>, so the AI pauses and alerts your team at the limit.</li>

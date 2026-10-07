@@ -21,7 +21,7 @@ The look is ported from the rebuilt product UI in the video project (`src/ui/kit
 1. **Copy, don't restyle.** Paste the snippet into your body file. Don't override `mk-` classes in page CSS. If you need a variant, ask for it in the kit.
 2. **Every component root carries `mk`** (for example `class="mk mk-phone"`). That class holds the app tokens, scoped so they don't leak into the marketing page.
 3. **EN pages use the English snippet. AR pages use the Arabic snippet**, which puts `dir="rtl" lang="ar"` on its root. Never add `dir="ltr"` to an Arabic mockup (the old bridge rule is retired). The same classes mirror automatically: the CSS uses logical properties only.
-4. **Arabic product labels come from the `genudo-arabic-localization` glossary, in MSA.** Examples: المسارات، المرحلة، الفرص المكتسبة / الضائعة، المتابعات (مُرسلة / مجدولة / متأخرة)، حالة المتابعات، قاعدة المعرفة، صندوق الوارد، جهات الاتصال، اختبار الوكيل، تدخّل بشري، مسار التحويل، تسرّب، لوحة التحكم. Customer and AI chat messages are content, so they stay Egyptian. Employee-card bullets are marketing copy, so they are Egyptian too.
+4. **Arabic mockup text is Egyptian with business vocabulary.** Product words stay English with الـ: الـ inbox، الـ dashboard، الـ CRM، الـ calendar، الـ knowledge base. Keep the Egyptian forms for the rest: المسارات، المرحلة، الفرص المكتسبة / الضائعة، المتابعات (اتبعتت / مجدولة / متأخرة)، تدخّل بشري، مسار التحويل. Never write «الوكيل» or «روبوت» for our employees: write «الموظف الذكي» or the employee's name (عارف · موظف ذكي). No MSA fragments inside mockups («الميعاد اتأكّد»، «هذه المحادثة»، «اختر»): write them Egyptian («الميعاد اتأكّد»، «المحادثة دي»، «اختار»). Customer and employee chat messages are content, so they stay Egyptian. Employee-card bullets are marketing copy, so they are Egyptian too.
 5. **Numbers:** Western digits only. Wrap mixed Arabic + Latin/number runs in `<bdi>` (`<bdi>$0.01</bdi> / رسالة`, `<bdi>WhatsApp</bdi>`, `<bdi>6:30</bdi> م`).
 6. **Fictional data only:** منى عادل / Mona Adel, كريم سعيد / Karim Saeed, phones `+20 100 000 0000`, the demo clinic "Bright Smile" / «عيادة برايت سمايل». Every number in a mockup is illustrative. Never quote one as a result in your copy.
 7. **Accessibility:** each snippet root has `role="img"` and an `aria-label` that sums up the picture, so screen readers hear one sentence instead of UI fragments. Update the label if you change the story. Buttons are `<span class="mk-btn">`, never real `<button>`s, because nothing in a mockup is clickable.
@@ -138,18 +138,18 @@ Frame for any app screen. Put another component (board, KPIs, card) inside .mk-m
   <div class="mk-app__body">
     <div class="mk-side">
       <div class="mk-side__logo"><img src="/media/img/genu-avatar.svg" alt="" width="26" height="26"><span>GenuDo</span></div>
-      <div class="mk-side__item"><i class="mk-ic mk-ic--grid"></i><span>لوحة التحكم</span></div>
+      <div class="mk-side__item"><i class="mk-ic mk-ic--grid"></i><span>الـ dashboard</span></div>
       <div class="mk-side__label">البناء</div>
       <div class="mk-side__item is-active"><i class="mk-ic mk-ic--pipeline"></i><span>المسارات</span></div>
       <div class="mk-side__item"><i class="mk-ic mk-ic--book"></i><span>قاعدة المعرفة</span></div>
       <div class="mk-side__label">التفاعل</div>
-      <div class="mk-side__item"><i class="mk-ic mk-ic--inbox"></i><span>صندوق الوارد</span></div>
+      <div class="mk-side__item"><i class="mk-ic mk-ic--inbox"></i><span>الـ inbox</span></div>
       <div class="mk-side__item"><i class="mk-ic mk-ic--users"></i><span>جهات الاتصال</span></div>
     </div>
     <div class="mk-main">
       <div class="mk-main__head">
-        <div><div class="mk-main__title">عيادة برايت سمايل · مبيعات <bdi>WhatsApp</bdi></div><div class="mk-main__sub">ينقل الوكيل كل فرصة إلى المرحلة التالية.</div></div>
-        <div class="mk-main__actions"><span class="mk-chip mk-chip--green"><i class="mk-dot mk-dot--live"></i>منشور</span><span class="mk-btn mk-btn--soft"><i class="mk-ic mk-ic--sparkle"></i>اختبار الوكيل</span></div>
+        <div><div class="mk-main__title">عيادة برايت سمايل · مبيعات <bdi>WhatsApp</bdi></div><div class="mk-main__sub">الموظف الذكي بينقل كل فرصة للمرحلة اللي بعدها.</div></div>
+        <div class="mk-main__actions"><span class="mk-chip mk-chip--green"><i class="mk-dot mk-dot--live"></i>منشور</span><span class="mk-btn mk-btn--soft"><i class="mk-ic mk-ic--sparkle"></i>جرّب الموظف الذكي</span></div>
       </div>
       <div class="mk-kpis">
         <div class="mk-kpi"><span class="mk-kpi__label">الفرص النشطة</span><span class="mk-kpi__value">412</span></div>
@@ -245,7 +245,7 @@ Stage columns with opportunity cards. The ONLY mockup that scrolls sideways (ins
       <div class="mk-opp">
         <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--violet">ن</span><div class="mk-opp__who"><b>نور إيهاب</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">الاثنين</span></div>
         <p class="mk-opp__msg">نشوفكم يوم الاتنين!</p>
-        <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>تم حجز الموعد</span></div>
+        <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>الميعاد اتحجز</span></div>
       </div>
     </div>
   </div>
@@ -288,28 +288,28 @@ Phone frame (max 340px, centred) with the takeover banner, customer and AI bubbl
 **Arabic (RTL)**
 
 ```html
-<div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp يرد عليها الوكيل">
+<div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp بيرد عليها الموظف الذكي">
   <div class="mk-phone__screen">
     <div class="mk-phone__status"><span>9:41</span></div>
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">م</span><div class="mk-phone__who"><b>منى عادل</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
-    <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
+    <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الموظف الذكي ماسك المحادثة دي</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
     <div class="mk-chat">
       <span class="mk-chat__day">اليوم</span>
       <div class="mk-msg mk-msg--in">أهلًا، التبييض بكام؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص</span></div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>أهلًا يا منى! التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة. تحبي نحجزلك ميعاد الأسبوع ده؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>أهلًا يا منى! التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة. تحبي نحجزلك ميعاد الأسبوع ده؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-msg mk-msg--in mk-voice">
         <div class="mk-voice__row"><span class="mk-voice__play"><i class="mk-ic mk-ic--play"></i></span><span class="mk-voice__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="mk-voice__len">0:09</span></div>
-        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>تم تفريغ الرسالة الصوتية</b>أيوه ياريت، يوم الخميس بعد الساعة 6 لو ينفع.</div>
+        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>الرسالة الصوتية اتحوّلت لنص</b>أيوه ياريت، يوم الخميس بعد الساعة 6 لو ينفع.</div>
         <span class="mk-msg__meta"><bdi>2:15</bdi> ص</span>
       </div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>تمام! حجزتلك يوم الخميس الساعة <bdi>6:30</bdi> مساءً.<span class="mk-msg__meta"><bdi>2:15</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>تمام! حجزتلك يوم الخميس الساعة <bdi>6:30</bdi> مساءً.<span class="mk-msg__meta"><bdi>2:15</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-meeting">
-        <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">تم تأكيد الموعد</div><div class="mk-meeting__when">الخميس 14 يناير · <bdi>6:30</bdi> م</div></div></div>
+        <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">الميعاد اتأكّد</div><div class="mk-meeting__when">الخميس 14 يناير · <bdi>6:30</bdi> م</div></div></div>
         <div class="mk-meeting__rows"><span><i class="mk-ic mk-ic--check"></i>أُضيف إلى <bdi>Google Calendar</bdi></span><span><i class="mk-ic mk-ic--check"></i>أُرسل رابط الاجتماع عبر <bdi>WhatsApp</bdi></span></div>
       </div>
       <div class="mk-typing mk-typing--in"><i></i><i></i><i></i></div>
     </div>
-    <div class="mk-phone__compose">الوكيل يتولّى هذه المحادثة. اختر «تدخّل بشري» للرد بنفسك.</div>
+    <div class="mk-phone__compose">الموظف الذكي ماسك المحادثة دي. اختار «تدخّل بشري» لو عايز تردّ بنفسك.</div>
   </div>
 </div>
 ```
@@ -342,7 +342,7 @@ The other takeover state: a person has taken over, the AI is paused for this cha
   <div class="mk-phone__screen">
     <div class="mk-phone__status"><span>9:41</span></div>
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--amber">ك</span><div class="mk-phone__who"><b>كريم سعيد</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
-    <div class="mk-takeover mk-takeover--human"><span class="mk-takeover__state"><i class="mk-ic mk-ic--user"></i>أنت تتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--sparkle"></i>إعادة إلى الوكيل</span></div>
+    <div class="mk-takeover mk-takeover--human"><span class="mk-takeover__state"><i class="mk-ic mk-ic--user"></i>إنت ماسك المحادثة دي</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--sparkle"></i>رجّعها للموظف الذكي</span></div>
     <div class="mk-chat">
       <div class="mk-msg mk-msg--in">ينفع آخد خصم للعيلة كلها؟<span class="mk-msg__meta"><bdi>11:02</bdi> ص</span></div>
       <div class="mk-msg mk-msg--out">أكيد يا كريم! هجهزلك عرض للعيلة النهارده.<span class="mk-msg__meta"><bdi>11:04</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
@@ -383,7 +383,7 @@ Unified inbox: conversation list + thread. Every AI reply carries chips for cost
 **Arabic (RTL)**
 
 ```html
-<div class="mk mk-inbox" dir="rtl" lang="ar" role="img" aria-label="صندوق الوارد مع رد الوكيل وتكلفته">
+<div class="mk mk-inbox" dir="rtl" lang="ar" role="img" aria-label="الـ inbox مع ردّ الموظف الذكي وتكلفته">
   <div class="mk-inbox__grid">
     <div class="mk-inbox__list">
       <div class="mk-inbox__search"><i class="mk-ic mk-ic--search"></i>بحث في المحادثات</div>
@@ -392,10 +392,10 @@ Unified inbox: conversation list + thread. Every AI reply carries chips for cost
       <div class="mk-convo"><span class="mk-avatar mk-avatar--sm mk-avatar--blue">ي</span><div class="mk-convo__body"><div class="mk-convo__row"><b>يوسف علي</b><span class="mk-convo__time">منذ ساعة</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--globe"></i>دردشة الموقع · قائمة الأسعار</div></div></div>
     </div>
     <div class="mk-thread">
-      <div class="mk-thread__head"><span class="mk-avatar mk-avatar--green">م</span><div class="mk-thread__who"><b>منى عادل</b><span class="mk-stage mk-stage--violet mk-stage--sm">حجز موعد</span></div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>الوكيل نشط</span></div>
+      <div class="mk-thread__head"><span class="mk-avatar mk-avatar--green">م</span><div class="mk-thread__who"><b>منى عادل</b><span class="mk-stage mk-stage--violet mk-stage--sm">حجز موعد</span></div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>الموظف الذكي شغّال</span></div>
       <div class="mk-thread__body">
         <div class="mk-msg mk-msg--in">ينفع الخميس بعد 6؟</div>
-        <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>أيوه! الخميس الساعة <bdi>6:30</bdi> فاضي. أحجزهولك؟</div>
+        <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>أيوه! الخميس الساعة <bdi>6:30</bdi> فاضي. أحجزهولك؟</div>
         <div class="mk-reply-meta"><span class="mk-chip"><i class="mk-ic mk-ic--dollar"></i>التكلفة <bdi>$0.01</bdi></span><span class="mk-chip"><i class="mk-ic mk-ic--clock"></i>زمن الرد 4 ث</span><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--target"></i>الثقة <bdi>92%</bdi></span></div>
         <div class="mk-note"><b><i class="mk-ic mk-ic--note"></i>ملاحظة خاصة · دينا</b>مريضة سابقة، اعرض عليها باقة العائلة.</div>
       </div>
@@ -472,7 +472,7 @@ Dashboard tiles (the hero tile spans the full row; the rest flow 2 per row on ph
 **Arabic (RTL)**
 
 ```html
-<div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="لوحة التحكم: الفرص وتكلفة الذكاء الاصطناعي">
+<div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="الـ dashboard: الفرص وتكلفة الذكاء الاصطناعي">
   <div class="mk-kpi mk-kpi--hero"><span class="mk-kpi__label">الفرص النشطة</span><span class="mk-kpi__value">412</span><span class="mk-kpi__sub">إجمالي الفرص <bdi>1,284</bdi></span><span class="mk-kpi__badge"><bdi>32.1%</bdi> من الإجمالي</span></div>
   <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--green"><i class="mk-ic mk-ic--trophy"></i></span><span class="mk-kpi__label">الفرص المكتسبة</span><span class="mk-kpi__value">96</span><span class="mk-kpi__sub">نسبة الفوز <bdi>7.5%</bdi></span></div>
   <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--red"><i class="mk-ic mk-ic--xcircle"></i></span><span class="mk-kpi__label">الفرص الضائعة</span><span class="mk-kpi__value">318</span><span class="mk-kpi__sub">من <bdi>1,284</bdi></span></div>
@@ -514,7 +514,7 @@ A knowledge table the AI answers from, with the answer it produced. Columns mark
 **Arabic (RTL)**
 
 ```html
-<div class="mk mk-card mk-kb" dir="rtl" lang="ar" role="img" aria-label="قائمة الأسعار التي يرد منها الوكيل">
+<div class="mk mk-card mk-kb" dir="rtl" lang="ar" role="img" aria-label="قائمة الأسعار اللي بيرد منها الموظف الذكي">
   <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--book"></i>قائمة الأسعار</div><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--table"></i>جدول المعرفة · <bdi>CSV</bdi> · 24 صفًا</span></div>
   <table class="mk-table">
     <thead><tr><th>الخدمة</th><th>السعر</th><th class="mk-hide-sm">المدة</th><th class="mk-hide-sm">ملاحظات</th></tr></thead>
@@ -524,7 +524,7 @@ A knowledge table the AI answers from, with the answer it produced. Columns mark
       <tr><td>استشارة تقويم</td><td class="mk-num">مجانًا</td><td class="mk-hide-sm">20 دقيقة</td><td class="mk-hide-sm">أيام الخميس فقط</td></tr>
     </tbody>
   </table>
-  <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>رد الوكيل من هذا الجدول: «التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة.»</span></div>
+  <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>ردّ الموظف الذكي من الجدول ده: «التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة.»</span></div>
 </div>
 ```
 
@@ -566,7 +566,7 @@ Simple / Moderate / Complex tiers (stack to one column on phones) and the per-co
   <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--wallet"></i>حد الإنفاق لكل محادثة</div><span class="mk-toggle is-on"></span></div>
   <div class="mk-cap__value"><b><bdi>$0.32</bdi></b> من <bdi>$0.50</bdi> مستخدم</div>
   <div class="mk-bar mk-bar--amber"><i style="--w:64%"></i></div>
-  <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول إلى الحد: إيقاف الوكيل مؤقتًا في هذه المحادثة وتنبيه الفريق.</span></p>
+  <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول للحد: إيقاف الموظف الذكي مؤقتًا في المحادثة دي وتنبيه الفريق.</span></p>
 </div>
 ```
 
@@ -588,8 +588,8 @@ The 14 Arabic dialects plus auto multi-dialect. .is-on marks the selected one. C
 **Arabic (RTL)**
 
 ```html
-<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="اختيار اللهجة التي يتحدث بها الوكيل">
-  <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>لهجة الوكيل</div></div>
+<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="اختيار اللهجة اللي بيتكلم بيها الموظف الذكي">
+  <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>لهجة الموظف الذكي</div></div>
   <div class="mk-chips">
     <span class="mk-chip mk-chip--opt is-on"><i class="mk-ic mk-ic--check"></i>مصرية</span><span class="mk-chip mk-chip--opt">سعودية / خليجية</span><span class="mk-chip mk-chip--opt">أردنية</span><span class="mk-chip mk-chip--opt">فلسطينية</span><span class="mk-chip mk-chip--opt">لبنانية</span><span class="mk-chip mk-chip--opt">سورية</span><span class="mk-chip mk-chip--opt">عراقية</span><span class="mk-chip mk-chip--opt">يمنية</span><span class="mk-chip mk-chip--opt">سودانية</span><span class="mk-chip mk-chip--opt">ليبية</span><span class="mk-chip mk-chip--opt">تونسية</span><span class="mk-chip mk-chip--opt">جزائرية</span><span class="mk-chip mk-chip--opt">مغربية</span><span class="mk-chip mk-chip--opt">موريتانية</span><span class="mk-chip mk-chip--opt mk-chip--auto"><i class="mk-ic mk-ic--sparkle"></i>متعددة اللهجات تلقائيًا</span>
   </div>
@@ -657,7 +657,7 @@ Avatar, name, role and three outcome bullets. Hue modifiers: .mk-emp--aaref (amb
   <ul class="mk-emp__list">
     <li><i class="mk-ic mk-ic--check"></i>بيرد على كل استفسار، بالليل وبالنهار</li>
     <li><i class="mk-ic mk-ic--check"></i>بيفرز العملاء المهتمين وبيتابع اللي سكت</li>
-    <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الكالندر بتاعك</li>
+    <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الـ calendar بتاعك</li>
   </ul>
 </div>
 ```

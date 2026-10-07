@@ -41,18 +41,18 @@ const snippets = [
   <div class="mk-app__body">
     <div class="mk-side">
       <div class="mk-side__logo"><img src="/media/img/genu-avatar.svg" alt="" width="26" height="26"><span>GenuDo</span></div>
-      <div class="mk-side__item"><i class="mk-ic mk-ic--grid"></i><span>لوحة التحكم</span></div>
+      <div class="mk-side__item"><i class="mk-ic mk-ic--grid"></i><span>الـ dashboard</span></div>
       <div class="mk-side__label">البناء</div>
       <div class="mk-side__item is-active"><i class="mk-ic mk-ic--pipeline"></i><span>المسارات</span></div>
       <div class="mk-side__item"><i class="mk-ic mk-ic--book"></i><span>قاعدة المعرفة</span></div>
       <div class="mk-side__label">التفاعل</div>
-      <div class="mk-side__item"><i class="mk-ic mk-ic--inbox"></i><span>صندوق الوارد</span></div>
+      <div class="mk-side__item"><i class="mk-ic mk-ic--inbox"></i><span>الـ inbox</span></div>
       <div class="mk-side__item"><i class="mk-ic mk-ic--users"></i><span>جهات الاتصال</span></div>
     </div>
     <div class="mk-main">
       <div class="mk-main__head">
-        <div><div class="mk-main__title">عيادة برايت سمايل · مبيعات <bdi>WhatsApp</bdi></div><div class="mk-main__sub">ينقل الوكيل كل فرصة إلى المرحلة التالية.</div></div>
-        <div class="mk-main__actions"><span class="mk-chip mk-chip--green"><i class="mk-dot mk-dot--live"></i>منشور</span><span class="mk-btn mk-btn--soft"><i class="mk-ic mk-ic--sparkle"></i>اختبار الوكيل</span></div>
+        <div><div class="mk-main__title">عيادة برايت سمايل · مبيعات <bdi>WhatsApp</bdi></div><div class="mk-main__sub">الموظف الذكي بينقل كل فرصة للمرحلة اللي بعدها.</div></div>
+        <div class="mk-main__actions"><span class="mk-chip mk-chip--green"><i class="mk-dot mk-dot--live"></i>منشور</span><span class="mk-btn mk-btn--soft"><i class="mk-ic mk-ic--sparkle"></i>جرّب الموظف الذكي</span></div>
       </div>
       <div class="mk-kpis">
         <div class="mk-kpi"><span class="mk-kpi__label">الفرص النشطة</span><span class="mk-kpi__value">412</span></div>
@@ -140,7 +140,7 @@ const snippets = [
       <div class="mk-opp">
         <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--violet">ن</span><div class="mk-opp__who"><b>نور إيهاب</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">الاثنين</span></div>
         <p class="mk-opp__msg">نشوفكم يوم الاتنين!</p>
-        <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>تم حجز الموعد</span></div>
+        <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>الميعاد اتحجز</span></div>
       </div>
     </div>
   </div>
@@ -175,28 +175,28 @@ const snippets = [
     <div class="mk-phone__compose">AI is handling this chat. Take over to reply.</div>
   </div>
 </div>`,
-    ar: `<div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp يرد عليها الوكيل">
+    ar: `<div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="محادثة WhatsApp بيرد عليها الموظف الذكي">
   <div class="mk-phone__screen">
     <div class="mk-phone__status"><span>9:41</span></div>
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--green">م</span><div class="mk-phone__who"><b>منى عادل</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
-    <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الوكيل يتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
+    <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>الموظف الذكي ماسك المحادثة دي</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>تدخّل بشري</span></div>
     <div class="mk-chat">
       <span class="mk-chat__day">اليوم</span>
       <div class="mk-msg mk-msg--in">أهلًا، التبييض بكام؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص</span></div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>أهلًا يا منى! التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة. تحبي نحجزلك ميعاد الأسبوع ده؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>أهلًا يا منى! التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة. تحبي نحجزلك ميعاد الأسبوع ده؟<span class="mk-msg__meta"><bdi>2:14</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-msg mk-msg--in mk-voice">
         <div class="mk-voice__row"><span class="mk-voice__play"><i class="mk-ic mk-ic--play"></i></span><span class="mk-voice__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="mk-voice__len">0:09</span></div>
-        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>تم تفريغ الرسالة الصوتية</b>أيوه ياريت، يوم الخميس بعد الساعة 6 لو ينفع.</div>
+        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>الرسالة الصوتية اتحوّلت لنص</b>أيوه ياريت، يوم الخميس بعد الساعة 6 لو ينفع.</div>
         <span class="mk-msg__meta"><bdi>2:15</bdi> ص</span>
       </div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>تمام! حجزتلك يوم الخميس الساعة <bdi>6:30</bdi> مساءً.<span class="mk-msg__meta"><bdi>2:15</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>تمام! حجزتلك يوم الخميس الساعة <bdi>6:30</bdi> مساءً.<span class="mk-msg__meta"><bdi>2:15</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-meeting">
-        <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">تم تأكيد الموعد</div><div class="mk-meeting__when">الخميس 14 يناير · <bdi>6:30</bdi> م</div></div></div>
-        <div class="mk-meeting__rows"><span><i class="mk-ic mk-ic--check"></i>أُضيف إلى <bdi>Google Calendar</bdi></span><span><i class="mk-ic mk-ic--check"></i>أُرسل رابط الاجتماع عبر <bdi>WhatsApp</bdi></span></div>
+        <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">الميعاد اتأكّد</div><div class="mk-meeting__when">الخميس 14 يناير · <bdi>6:30</bdi> م</div></div></div>
+        <div class="mk-meeting__rows"><span><i class="mk-ic mk-ic--check"></i>اتضاف على <bdi>Google Calendar</bdi></span><span><i class="mk-ic mk-ic--check"></i>رابط الاجتماع اتبعت على <bdi>WhatsApp</bdi></span></div>
       </div>
       <div class="mk-typing mk-typing--in"><i></i><i></i><i></i></div>
     </div>
-    <div class="mk-phone__compose">الوكيل يتولّى هذه المحادثة. اختر «تدخّل بشري» للرد بنفسك.</div>
+    <div class="mk-phone__compose">الموظف الذكي ماسك المحادثة دي. اختار «تدخّل بشري» لو عايز تردّ بنفسك.</div>
   </div>
 </div>`,
   },
@@ -221,7 +221,7 @@ const snippets = [
   <div class="mk-phone__screen">
     <div class="mk-phone__status"><span>9:41</span></div>
     <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--amber">ك</span><div class="mk-phone__who"><b>كريم سعيد</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
-    <div class="mk-takeover mk-takeover--human"><span class="mk-takeover__state"><i class="mk-ic mk-ic--user"></i>أنت تتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--sparkle"></i>إعادة إلى الوكيل</span></div>
+    <div class="mk-takeover mk-takeover--human"><span class="mk-takeover__state"><i class="mk-ic mk-ic--user"></i>إنت ماسك المحادثة دي</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--sparkle"></i>رجّعها للموظف الذكي</span></div>
     <div class="mk-chat">
       <div class="mk-msg mk-msg--in">ينفع آخد خصم للعيلة كلها؟<span class="mk-msg__meta"><bdi>11:02</bdi> ص</span></div>
       <div class="mk-msg mk-msg--out">أكيد يا كريم! هجهزلك عرض للعيلة النهارده.<span class="mk-msg__meta"><bdi>11:04</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
@@ -254,7 +254,7 @@ const snippets = [
     </div>
   </div>
 </div>`,
-    ar: `<div class="mk mk-inbox" dir="rtl" lang="ar" role="img" aria-label="صندوق الوارد مع رد الوكيل وتكلفته">
+    ar: `<div class="mk mk-inbox" dir="rtl" lang="ar" role="img" aria-label="الـ inbox مع ردّ الموظف الذكي وتكلفته">
   <div class="mk-inbox__grid">
     <div class="mk-inbox__list">
       <div class="mk-inbox__search"><i class="mk-ic mk-ic--search"></i>بحث في المحادثات</div>
@@ -263,10 +263,10 @@ const snippets = [
       <div class="mk-convo"><span class="mk-avatar mk-avatar--sm mk-avatar--blue">ي</span><div class="mk-convo__body"><div class="mk-convo__row"><b>يوسف علي</b><span class="mk-convo__time">منذ ساعة</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--globe"></i>دردشة الموقع · قائمة الأسعار</div></div></div>
     </div>
     <div class="mk-thread">
-      <div class="mk-thread__head"><span class="mk-avatar mk-avatar--green">م</span><div class="mk-thread__who"><b>منى عادل</b><span class="mk-stage mk-stage--violet mk-stage--sm">حجز موعد</span></div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>الوكيل نشط</span></div>
+      <div class="mk-thread__head"><span class="mk-avatar mk-avatar--green">م</span><div class="mk-thread__who"><b>منى عادل</b><span class="mk-stage mk-stage--violet mk-stage--sm">حجز موعد</span></div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>الموظف الذكي شغّال</span></div>
       <div class="mk-thread__body">
         <div class="mk-msg mk-msg--in">ينفع الخميس بعد 6؟</div>
-        <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>أيوه! الخميس الساعة <bdi>6:30</bdi> فاضي. أحجزهولك؟</div>
+        <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · موظف ذكي</span>أيوه! الخميس الساعة <bdi>6:30</bdi> فاضي. أحجزهولك؟</div>
         <div class="mk-reply-meta"><span class="mk-chip"><i class="mk-ic mk-ic--dollar"></i>التكلفة <bdi>$0.01</bdi></span><span class="mk-chip"><i class="mk-ic mk-ic--clock"></i>زمن الرد 4 ث</span><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--target"></i>الثقة <bdi>92%</bdi></span></div>
         <div class="mk-note"><b><i class="mk-ic mk-ic--note"></i>ملاحظة خاصة · دينا</b>مريضة سابقة، اعرض عليها باقة العائلة.</div>
       </div>
@@ -327,7 +327,7 @@ const snippets = [
     <div class="mk-funnel__row"><div class="mk-funnel__top"><span>Won</span><b>96</b></div><div class="mk-funnel__bar"><i style="--w:7.5%"></i></div><div class="mk-funnel__drop"><span>7.5%</span><span>Drop off 58%</span></div></div>
   </div>
 </div>`,
-    ar: `<div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="لوحة التحكم: الفرص وتكلفة الذكاء الاصطناعي">
+    ar: `<div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="الـ dashboard: الفرص وتكلفة الذكاء الاصطناعي">
   <div class="mk-kpi mk-kpi--hero"><span class="mk-kpi__label">الفرص النشطة</span><span class="mk-kpi__value">412</span><span class="mk-kpi__sub">إجمالي الفرص <bdi>1,284</bdi></span><span class="mk-kpi__badge"><bdi>32.1%</bdi> من الإجمالي</span></div>
   <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--green"><i class="mk-ic mk-ic--trophy"></i></span><span class="mk-kpi__label">الفرص المكتسبة</span><span class="mk-kpi__value">96</span><span class="mk-kpi__sub">نسبة الفوز <bdi>7.5%</bdi></span></div>
   <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--red"><i class="mk-ic mk-ic--xcircle"></i></span><span class="mk-kpi__label">الفرص الضائعة</span><span class="mk-kpi__value">318</span><span class="mk-kpi__sub">من <bdi>1,284</bdi></span></div>
@@ -361,7 +361,7 @@ const snippets = [
   </table>
   <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>Answered from this table: “Whitening is EGP 3,500 and takes about an hour.”</span></div>
 </div>`,
-    ar: `<div class="mk mk-card mk-kb" dir="rtl" lang="ar" role="img" aria-label="قائمة الأسعار التي يرد منها الوكيل">
+    ar: `<div class="mk mk-card mk-kb" dir="rtl" lang="ar" role="img" aria-label="قائمة الأسعار اللي بيرد منها الموظف الذكي">
   <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--book"></i>قائمة الأسعار</div><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--table"></i>جدول المعرفة · <bdi>CSV</bdi> · 24 صفًا</span></div>
   <table class="mk-table">
     <thead><tr><th>الخدمة</th><th>السعر</th><th class="mk-hide-sm">المدة</th><th class="mk-hide-sm">ملاحظات</th></tr></thead>
@@ -371,7 +371,7 @@ const snippets = [
       <tr><td>استشارة تقويم</td><td class="mk-num">مجانًا</td><td class="mk-hide-sm">20 دقيقة</td><td class="mk-hide-sm">أيام الخميس فقط</td></tr>
     </tbody>
   </table>
-  <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>رد الوكيل من هذا الجدول: «التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة.»</span></div>
+  <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>ردّ الموظف الذكي من الجدول ده: «التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة.»</span></div>
 </div>`,
   },
   {
@@ -403,9 +403,9 @@ const snippets = [
 </div>
 <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="حد الإنفاق لكل محادثة">
   <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--wallet"></i>حد الإنفاق لكل محادثة</div><span class="mk-toggle is-on"></span></div>
-  <div class="mk-cap__value"><b><bdi>$0.32</bdi></b> من <bdi>$0.50</bdi> مستخدم</div>
+  <div class="mk-cap__value"><b><bdi>$0.32</bdi></b> من <bdi>$0.50</bdi> </div>
   <div class="mk-bar mk-bar--amber"><i style="--w:64%"></i></div>
-  <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول إلى الحد: إيقاف الوكيل مؤقتًا في هذه المحادثة وتنبيه الفريق.</span></p>
+  <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول للحد: إيقاف الموظف الذكي مؤقتًا في المحادثة دي وتنبيه الفريق.</span></p>
 </div>`,
   },
   {
@@ -419,8 +419,8 @@ const snippets = [
     <span class="mk-chip mk-chip--opt is-on"><i class="mk-ic mk-ic--check"></i>Egyptian</span><span class="mk-chip mk-chip--opt">Saudi / Gulf</span><span class="mk-chip mk-chip--opt">Jordanian</span><span class="mk-chip mk-chip--opt">Palestinian</span><span class="mk-chip mk-chip--opt">Lebanese</span><span class="mk-chip mk-chip--opt">Syrian</span><span class="mk-chip mk-chip--opt">Iraqi</span><span class="mk-chip mk-chip--opt">Yemeni</span><span class="mk-chip mk-chip--opt">Sudanese</span><span class="mk-chip mk-chip--opt">Libyan</span><span class="mk-chip mk-chip--opt">Tunisian</span><span class="mk-chip mk-chip--opt">Algerian</span><span class="mk-chip mk-chip--opt">Moroccan</span><span class="mk-chip mk-chip--opt">Mauritanian</span><span class="mk-chip mk-chip--opt mk-chip--auto"><i class="mk-ic mk-ic--sparkle"></i>Auto multi-dialect</span>
   </div>
 </div>`,
-    ar: `<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="اختيار اللهجة التي يتحدث بها الوكيل">
-  <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>لهجة الوكيل</div></div>
+    ar: `<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="اختيار اللهجة اللي بيتكلم بيها الموظف الذكي">
+  <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>لهجة الموظف الذكي</div></div>
   <div class="mk-chips">
     <span class="mk-chip mk-chip--opt is-on"><i class="mk-ic mk-ic--check"></i>مصرية</span><span class="mk-chip mk-chip--opt">سعودية / خليجية</span><span class="mk-chip mk-chip--opt">أردنية</span><span class="mk-chip mk-chip--opt">فلسطينية</span><span class="mk-chip mk-chip--opt">لبنانية</span><span class="mk-chip mk-chip--opt">سورية</span><span class="mk-chip mk-chip--opt">عراقية</span><span class="mk-chip mk-chip--opt">يمنية</span><span class="mk-chip mk-chip--opt">سودانية</span><span class="mk-chip mk-chip--opt">ليبية</span><span class="mk-chip mk-chip--opt">تونسية</span><span class="mk-chip mk-chip--opt">جزائرية</span><span class="mk-chip mk-chip--opt">مغربية</span><span class="mk-chip mk-chip--opt">موريتانية</span><span class="mk-chip mk-chip--opt mk-chip--auto"><i class="mk-ic mk-ic--sparkle"></i>متعددة اللهجات تلقائيًا</span>
   </div>
@@ -428,26 +428,26 @@ const snippets = [
   },
   {
     id: 'roz-review',
-    title: 'ROZ quality-review card',
+    title: 'Roz scheduled-report card',
     note:
-      'ROZ reviews the human team\'s WhatsApp chats on company lines and flags slow replies, missed opportunities and stalled deals. Names are fictional team members.',
-    en: `<div class="mk mk-card" role="img" aria-label="ROZ flags three conversations from your team">
-  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality review</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
+      'A report Roz sends on the schedule the owner sets, built from the team\'s WhatsApp chats on company lines: who waited, which booking request went unanswered, what stalled. Roz never sends live alerts. Names are fictional team members (invented example).',
+    en: `<div class="mk mk-card" role="img" aria-label="Roz’s scheduled report on three conversations from your team">
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>Roz · Daily report</b><span>WhatsApp · Sales line · Scheduled 9:00 AM</span></div><span class="mk-chip mk-chip--pink">3 findings</span></div>
   <ul class="mk-flags">
-    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Slow reply<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
-    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>Missed opportunity<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
-    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>Stalled deal<span>Ahmed · 4 days</span></b><p>Quote sent, no follow-up since.</p></div></li>
+    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Longest wait<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
+    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--calendar"></i></span><div class="mk-flag__body"><b>Booking request unanswered<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
+    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>Stalled for 4 days<span>Ahmed</span></b><p>Quote sent, no follow-up since.</p></div></li>
   </ul>
-  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 voice notes transcribed today</div>
+  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 voice notes in writing today</div>
 </div>`,
-    ar: `<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="روز ترصد ثلاث محادثات من فريقك">
-  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
+    ar: `<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="تقرير روز في ميعاده عن تلات محادثات من فريقك">
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · تقرير يومي</b><span><bdi>WhatsApp</bdi> · خط المبيعات · الساعة <bdi>9:00</bdi> ص</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
   <ul class="mk-flags">
-    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>رد متأخر<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>انتظر العميل ساعتين ليعرف السعر.</p></div></li>
-    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>فرصة ضائعة<span>سلمى · <bdi>1:15</bdi> م</span></b><p>طلب العميل الحجز ولم يقترح عليه أحد موعدًا.</p></div></li>
-    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>فرصة متوقفة<span>أحمد · 4 أيام</span></b><p>أُرسل عرض السعر ولا توجد متابعة منذ ذلك الحين.</p></div></li>
+    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>أطول انتظار<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>العميل استنى ساعتين علشان يعرف السعر.</p></div></li>
+    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--calendar"></i></span><div class="mk-flag__body"><b>طلب حجز من غير رد<span>سلمى · <bdi>1:15</bdi> م</span></b><p>العميل طلب يحجز ومحدّش اقترح عليه ميعاد.</p></div></li>
+    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>صفقة واقفة بقالها 4 أيام<span>أحمد</span></b><p>عرض السعر اتبعت ومحدّش تابع من وقتها.</p></div></li>
   </ul>
-  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>تم تفريغ 6 رسائل صوتية اليوم</div>
+  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 فويس نوتس اتكتبت النهارده</div>
 </div>`,
   },
   {
@@ -472,7 +472,7 @@ const snippets = [
   <ul class="mk-emp__list">
     <li><i class="mk-ic mk-ic--check"></i>بيرد على كل استفسار، بالليل وبالنهار</li>
     <li><i class="mk-ic mk-ic--check"></i>بيفرز العملاء المهتمين وبيتابع اللي سكت</li>
-    <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الكالندر بتاعك</li>
+    <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الـ calendar بتاعك</li>
   </ul>
 </div>`,
   },
@@ -498,10 +498,10 @@ const snippets = [
   <div class="mk-wizard__steps"><i class="is-on"></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="mk-q">
     <div class="mk-q__top"><span class="mk-chip mk-chip--indigo">السؤال 1 من 6</span><span class="mk-q__count">تمت الإجابة عن 0 من 6</span></div>
-    <div class="mk-q__title">ما اسم شركتك أو علامتك التجارية؟</div>
-    <p class="mk-q__hint">اكتب الاسم الذي يعرفك به عملاؤك.</p>
+    <div class="mk-q__title">اسم شركتك أو علامتك التجارية إيه؟</div>
+    <p class="mk-q__hint">اكتب الاسم اللي عملاءك بيعرفوك بيه.</p>
     <div class="mk-input">عيادة برايت سمايل للأسنان<span class="mk-caret"></span></div>
-    <div class="mk-q__mic"><span class="mk-q__micbtn"><i class="mk-ic mk-ic--mic"></i></span>اكتب إجابتك، أو اضغط على الميكروفون للتحدث.</div>
+    <div class="mk-q__mic"><span class="mk-q__micbtn"><i class="mk-ic mk-ic--mic"></i></span>اكتب إجابتك، أو دوس على الميكروفون وتكلّم.</div>
     <div class="mk-q__foot"><span class="mk-btn mk-btn--ghost"><i class="mk-ic mk-ic--back"></i>رجوع</span><span class="mk-btn mk-btn--primary">السؤال التالي<i class="mk-ic mk-ic--arrow"></i></span></div>
   </div>
 </div>`,

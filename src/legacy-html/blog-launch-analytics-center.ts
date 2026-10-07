@@ -6,7 +6,7 @@ const html = `<div class="pg-post">
   <div class="p-meta"><span class="av">YE</span>Yasser El-Sayed<span class="dot"></span>May 30, 2026<span class="dot"></span>4 min read</div>
   <div class="post-cover" style="background:linear-gradient(135deg,#1e293b,#4338ca)"><span class="pc-title">New: <span class="a">Analytics Center</span></span></div>
   <div class="post-body"><p>Today we’re shipping the <strong>Analytics Center</strong>: one place to see what your entire AI workforce is producing.</p>
-<p>As teams add employees (Aaref for sales, Adnan for support, ROZ for quality), the question shifts from “does it reply?” to “what is it producing, and what does it cost?” The Analytics Center answers that.</p>
+<p>As teams add employees (Aaref for sales, Adnan for customer service &amp; success, Roz for quality control), the question shifts from “does it reply?” to “what is it producing, and what does it cost?” The Analytics Center answers that.</p>
 <h2>What you can see</h2>
 <ul>
 <li><strong>Outcomes.</strong> Opportunities won, and where the others dropped off, stage by stage.</li>

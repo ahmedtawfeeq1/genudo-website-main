@@ -27,7 +27,7 @@ const html = `<div class="pg-customers">
       </div>
     </div>
     <h2 class="st-head">إزاي <bdi>Wellspring</bdi> تعاملت مع <bdi>6,000</bdi> عميل محتمل في <bdi>12</bdi> يوم، وكل واحد بلغته.</h2>
-    <p class="st-quote">«في حوالي <bdi>12</bdi> يوم وصلنا لـ<span class="qhl"><bdi>6,000</bdi> عميل محتمل</span> تقريبًا، كلهم اتعاملوا معاهم بـ <bdi>GenuDo</bdi>. وأحلى حاجة إني مش بردّ على الكمية دي بنفسي. الوكيل بيأهّل العملاء، فأنا بتدخّل بس مع اللي <span class="qhl">جاهز يحجز فعلًا</span>، وبيكلّم كل واحد بلغته.»</p>
+    <p class="st-quote">«في حوالي <bdi>12</bdi> يوم وصلنا لـ<span class="qhl"><bdi>6,000</bdi> عميل محتمل</span> تقريبًا، كلهم اتعاملوا معاهم بـ <bdi>GenuDo</bdi>. وأحلى حاجة إني مش بردّ على الكمية دي بنفسي. الموظف الذكي بيأهّل العملاء، فأنا بتدخّل بس مع اللي <span class="qhl">جاهز يحجز فعلًا</span>، وبيكلّم كل واحد بلغته.»</p>
     <div class="st-attr"><b>مارك صمويل</b> · رئيس القطاع التجاري، <bdi>Wellspring</bdi><span class="tr">صياغة مختصرة لكلامه في الريل. اتفرّج على الريل علشان تسمع كلامه بنصّه.</span></div>
     <div class="st-chips">
       <div class="st-chip"><div class="cn"><bdi>6,000</bdi></div><div class="cl">عميل محتمل في حوالي <bdi>12</bdi> يوم، حسب مارك صمويل</div></div>
@@ -58,7 +58,7 @@ const html = `<div class="pg-customers">
       </div>
     </div>
     <h2 class="st-head">إزاي <bdi>TIQNIAT</bdi> حوّلت عملاء الإعلانات لمواعيد ديمو محجوزة، بموظف مبيعات شغّال طول الوقت.</h2>
-    <p class="st-quote">«وكيل <bdi>GenuDo</bdi> بيرد على العملاء الجداد <span class="qhl">فورًا</span>، وبيتابع، وبيحجز الاجتماع، وبيتصرّف زي شخص حقيقي مش روبوت. <span class="qhl">المتابعة هي اللي بتفرّقه</span> عن أي وكيل شُفناه. نسبة تحويل الاجتماعات عندنا زادت وجودة العملاء المحتملين بتتحسّن.»</p>
+    <p class="st-quote">«موظف <bdi>GenuDo</bdi> الذكي بيرد على العملاء الجداد <span class="qhl">فورًا</span>، وبيتابع، وبيحجز الاجتماع، وبيتصرّف زي شخص حقيقي مش أداة جاهزة. <span class="qhl">المتابعة هي اللي بتفرّقه</span> عن أي أداة شُفناها. نسبة تحويل الاجتماعات عندنا زادت وجودة العملاء المحتملين بتتحسّن.»</p>
     <div class="st-attr"><b>م. عبدالله الشيخ</b> · الرئيس التنفيذي، <bdi>TIQNIAT</bdi><span class="tr">صياغة مختصرة لكلامه في الريل. اتفرّج على الريل علشان تسمع كلامه بنصّه.</span></div>
     <div class="st-chips">
       <div class="st-chip"><div class="cn">فورًا</div><div class="cl">أول ردّ على كل عميل محتمل، حسب م. عبدالله</div></div>

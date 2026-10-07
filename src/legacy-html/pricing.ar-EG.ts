@@ -41,9 +41,9 @@ const html = `<div class="pg-pricing">
 <section class="s ctaf"><div class="container"><div class="ctaf-card">
 <div class="ctaf-genu genu" data-genu data-expr="happy" data-liven style="--w:86px;--h:98px;--ospeed:7s"></div>
 <div class="eyebrow ctaf-eyebrow">ابدأ دلوقتي</div>
-<h2 style="margin-top:12px;">ابدأ ببلاش. وكبّر لما تحس إنه بيرجّع تكلفته.</h2>
+<h2 style="margin-top:12px;">ابدأ مجانًا. وكبّر لما تحس إنه بيرجّع تكلفته.</h2>
 <p class="lead">ابني أول موظف ذكاء اصطناعي ليك النهارده من غير كارت، وزوّد موظفين كل ما ياخدوا شغل أكتر.</p>
-<div class="ctaf-cta"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ ببلاش</a><a href="/contact" class="ctaf-sec">أو كلّم المبيعات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="ctaf-cta"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ مجانًا</a><a href="/contact" class="ctaf-sec">أو كلّم المبيعات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 <div class="ctaf-trust"><span class="live-dot"></span>باقة مجانية على طول<span class="sep"></span>من غير كارت<span class="sep"></span>تشتغل في يوم</div>
 </div></div></section>
 </div>`;

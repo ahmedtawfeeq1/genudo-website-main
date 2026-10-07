@@ -25,14 +25,14 @@ const html = `<div class="pg-post">
 </div>
 <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="حد الإنفاق لكل محادثة">
   <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--wallet"></i>حد الإنفاق لكل محادثة</div><span class="mk-toggle is-on"></span></div>
-  <div class="mk-cap__value">تم استخدام <b><bdi>$0.32</bdi></b> من <bdi>$0.50</bdi></div>
+  <div class="mk-cap__value">استخدمت <b><bdi>$0.32</bdi></b> من <bdi>$0.50</bdi></div>
   <div class="mk-bar mk-bar--amber"><i style="--w:64%"></i></div>
-  <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول إلى الحد: إيقاف الوكيل مؤقتًا في هذه المحادثة وتنبيه الفريق.</span></p>
+  <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول إلى الحد: إيقاف الموظف الذكي مؤقتًا في المحادثة دي وتنبيه الفريق.</span></p>
 </div><figcaption>مثال توضيحي للتوجيه وحد الإنفاق. الأرقام للتوضيح بس، ومش أسعار جينـو دو.</figcaption></figure>
 <blockquote>حسّن المتوسط، مش النموذج.</blockquote>
 <h2>إيه اللي تتابعه فعلًا</h2>
 <p>علّق قدّام عينك تلات حاجات: المحادثة الواحدة اللي اتحلّت كلّفت كام، وكام محادثة وصلت لنتيجة، ونسبة الرسائل اللي احتاجت النموذج الأقوى. لما التوجيه يشتغل صح، أول رقمين بيتحسنوا والتالت بيفضل صغير.</p>
-<p>وخلّي معاك شبكة أمان: حدّد حد إنفاق لكل محادثة، علشان أي محادثة خارجة عن السيطرة توقّف الوكيل وتنبّه فريقك، بدل ما الميزانية تتصرف من غير ما تحس. <a href="/how-it-works#models">اعرف التوجيه الذكي بيشتغل إزاي</a>.</p></div>
+<p>وخلّي معاك شبكة أمان: حدّد حد إنفاق لكل محادثة، علشان أي محادثة خارجة عن السيطرة توقّف الموظف الذكي وتنبّه فريقك، بدل ما الميزانية تتصرف من غير ما تحس. <a href="/how-it-works#models">اعرف التوجيه الذكي بيشتغل إزاي</a>.</p></div>
   <div class="post-cta"><h3>ابدأ بأول موظف ذكاء اصطناعي عندك</h3><p>اختار النتيجة اللي عايزها، واربط قناة، وسيبه يبدأ يرد على عملائك.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ دلوقتي</a><a href="/contact" class="post-cta-sec">احجز ديمو</a></div></div>
 </div></article>
 

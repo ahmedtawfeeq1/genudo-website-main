@@ -28,10 +28,10 @@ const html = `<div class="pg-blog pg-resources">
   <ul class="mk-emp__list">
     <li><i class="mk-ic mk-ic--check"></i>بيرد على كل استفسار، بالليل وبالنهار</li>
     <li><i class="mk-ic mk-ic--check"></i>بيفرز العملاء المهتمين وبيتابع اللي سكت</li>
-    <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الكالندر بتاعك</li>
+    <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الـ calendar بتاعك</li>
   </ul>
 </div></div>
-  <div class="rs-links"><a href="/sol-sales-agent" class="rs-link">عارف، المبيعات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/sol-customer-service" class="rs-link">عدنان، خدمة العملاء <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/sol-operations" class="rs-link">روز، الجودة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="rs-links"><a href="/sol-sales-agent" class="rs-link">عارف، المبيعات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/sol-customer-service" class="rs-link">عدنان، خدمة ونجاح العملاء <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/sol-operations" class="rs-link">روز، مراقبة الجودة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </div></section>
 
 <section class="s white-bg"><div class="container">

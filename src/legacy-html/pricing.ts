@@ -14,9 +14,9 @@ const html = `<div class="pg-pricing">
     <a href="/contact" class="btn btn-primary btn-lg">Talk to sales</a>
   </div>
   <a class="rozcall" href="/sol-operations#pricing">
-    <img src="/media/img/roz-v2.svg" alt="ROZ" width="56" height="60" loading="lazy">
-    <span><b>Looking for ROZ?</b><span>ROZ, our AI quality control employee, has her own plans, priced by the WhatsApp numbers she follows. You will find them on her page.</span></span>
-    <span class="rozgo">See ROZ’s plans →</span>
+    <img src="/media/img/roz-v2.svg" alt="Roz" width="56" height="60" loading="lazy">
+    <span><b>Looking for Roz?</b><span>Roz, our AI quality control employee, has her own plans, priced by the WhatsApp numbers she follows. You will find them on her page.</span></span>
+    <span class="rozgo">See Roz’s plans →</span>
   </a>
 </div></section>
 

@@ -27,7 +27,7 @@ const html = `<div class="pg-customers">
       </div>
     </div>
     <h2 class="st-head">How Wellspring handled 6,000 leads in 12 days, each in their own language.</h2>
-    <p class="st-quote">“In about 12 days we reached nearly <span class="qhl">6,000 leads</span>, all handled with GenuDo. The best part? I don't answer that volume myself. The agent qualifies them, so I only step in for the customers who are <span class="qhl">already ready to book</span>, and it talks to each one in their own language.”</p>
+    <p class="st-quote">“In about 12 days we reached nearly <span class="qhl">6,000 leads</span>, all handled with GenuDo. The best part? I don't answer that volume myself. The AI employee qualifies them, so I only step in for the customers who are <span class="qhl">already ready to book</span>, and it talks to each one in their own language.”</p>
     <div class="st-attr"><b>Mark Samuel</b> · Head of Commercial, Wellspring<span class="tr">Translated from Arabic. Watch the full reel for his own words.</span></div>
     <div class="st-chips">
       <div class="st-chip"><div class="cn">6,000</div><div class="cl">leads in about 12 days, per Mark Samuel</div></div>
@@ -58,7 +58,7 @@ const html = `<div class="pg-customers">
       </div>
     </div>
     <h2 class="st-head">How TIQNIAT turned ad leads into booked demos with an always-on sales employee.</h2>
-    <p class="st-quote">“GenuDo's agent replies to new leads <span class="qhl">instantly</span>, follows up, and books the meeting, and it behaves like a real person, not a bot. The <span class="qhl">follow-up is what sets it apart</span> from every other agent we've seen. Our meeting conversion is up and our lead quality keeps improving.”</p>
+    <p class="st-quote">“GenuDo's agent replies to new leads <span class="qhl">instantly</span>, follows up, and books the meeting, and it behaves like a real person, not a script. The <span class="qhl">follow-up is what sets it apart</span> from every other agent we've seen. Our meeting conversion is up and our lead quality keeps improving.”</p>
     <div class="st-attr"><b>Eng. Abdullah El-Sheikh</b> · CEO, TIQNIAT<span class="tr">Translated from Arabic. Watch the full reel for his own words.</span></div>
     <div class="st-chips">
       <div class="st-chip"><div class="cn">Instant</div><div class="cl">first reply on every lead, per Eng. Abdullah</div></div>
