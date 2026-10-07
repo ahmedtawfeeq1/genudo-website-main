@@ -1,0 +1,508 @@
+[
+ {
+  "id": 20,
+  "type": "topup",
+  "is_active": true,
+  "order": 1,
+  "price": "25500",
+  "currency_code": "EGP",
+  "title": "Wallet Topup",
+  "description": "Wallet Topup",
+  "benefits": [
+   {
+    "benefit": "credit",
+    "value": 500
+   }
+  ],
+  "features": [
+   {
+    "name": "500$ Topup",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "500$ Topup"
+     },
+     {
+      "language_id": 2,
+      "name": "شحن ٥٠٠ دولار"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "type": "topup",
+  "is_active": true,
+  "order": 2,
+  "price": "10200",
+  "currency_code": "EGP",
+  "title": "Wallet Topup",
+  "description": "Wallet Topup",
+  "benefits": [
+   {
+    "benefit": "credit",
+    "value": 200
+   }
+  ],
+  "features": [
+   {
+    "name": "Topup",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Topup"
+     },
+     {
+      "language_id": 2,
+      "name": "رصيد"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "type": "subscription",
+  "is_active": true,
+  "order": 3,
+  "price": "35999",
+  "currency_code": "EGP",
+  "title": "Half-Yearly Package",
+  "description": "Perfect for businesses getting started with AI employees.",
+  "benefits": [
+   {
+    "benefit": "subscription",
+    "value": 6
+   },
+   {
+    "benefit": "credit",
+    "value": 200
+   },
+   {
+    "benefit": "support",
+    "value": 15
+   },
+   {
+    "benefit": "pipelines",
+    "value": 3
+   }
+  ],
+  "features": [
+   {
+    "name": "3 Pipelines",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "3 Pipelines"
+     },
+     {
+      "language_id": 2,
+      "name": "3 مسارات"
+     }
+    ]
+   },
+   {
+    "name": "Up to 3 AI Employees!",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Up to 3 AI Employees!"
+     },
+     {
+      "language_id": 2,
+      "name": "حتى 3 موظفين ذكاء اصطناعي"
+     }
+    ]
+   },
+   {
+    "name": "Up to 15 hrs of technical support!",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Up to 15 hrs of technical support!"
+     },
+     {
+      "language_id": 2,
+      "name": "حتى 15 ساعة دعم فني"
+     }
+    ]
+   },
+   {
+    "name": "Up to 140,000 credits / 6 months",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Up to 140,000 credits / 6 months"
+     },
+     {
+      "language_id": 2,
+      "name": "حتى 140,000 رصيد لمدة 6 أشهر"
+     }
+    ]
+   },
+   {
+    "name": "10,000 Excel rows of knowledge",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "10,000 Excel rows of knowledge"
+     },
+     {
+      "language_id": 2,
+      "name": "10,000 صف إكسل في قاعدة المعرفة"
+     }
+    ]
+   },
+   {
+    "name": "500 automation tasks / month",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "500 automation tasks / month"
+     },
+     {
+      "language_id": 2,
+      "name": "500 مهمة أتمتة شهريًا"
+     }
+    ]
+   },
+   {
+    "name": "3 active automated workflows",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "3 active automated workflows"
+     },
+     {
+      "language_id": 2,
+      "name": "3 مهام سير عمل آلية نشطة"
+     }
+    ]
+   },
+   {
+    "name": "Add to unlimited number of websites",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Add to unlimited number of websites"
+     },
+     {
+      "language_id": 2,
+      "name": "إضافة إلى عدد غير محدود من المواقع"
+     }
+    ]
+   },
+   {
+    "name": "Integration with WhatsApp",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Integration with WhatsApp"
+     },
+     {
+      "language_id": 2,
+      "name": "تكامل مع واتساب"
+     }
+    ]
+   },
+   {
+    "name": "Integration with Messenger",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Integration with Messenger"
+     },
+     {
+      "language_id": 2,
+      "name": "تكامل مع ماسنجر"
+     }
+    ]
+   },
+   {
+    "name": "API or SDK integration",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "API or SDK integration"
+     },
+     {
+      "language_id": 2,
+      "name": "تكامل API أو SDK"
+     }
+    ]
+   },
+   {
+    "name": "Integration with Instagram",
+    "translations": [
+     {
+      "language_id": 2,
+      "name": "تكامل مع تيليجرام"
+     },
+     {
+      "language_id": 1,
+      "name": "Integration with Instagram"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "type": "topup",
+  "is_active": true,
+  "order": 3,
+  "price": "7650",
+  "currency_code": "EGP",
+  "title": "Wallet Topup",
+  "description": "Wallet Topup",
+  "benefits": [
+   {
+    "benefit": "credit",
+    "value": 150
+   }
+  ],
+  "features": [
+   {
+    "name": "150$ Topup",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "150$ Topup"
+     },
+     {
+      "language_id": 2,
+      "name": "شحن ١٥٠ دولار"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "type": "topup",
+  "is_active": true,
+  "order": 4,
+  "price": "5100",
+  "currency_code": "EGP",
+  "title": "Wallet Topup",
+  "description": "Wallet Topup",
+  "benefits": [
+   {
+    "benefit": "credit",
+    "value": 100
+   }
+  ],
+  "features": [
+   {
+    "name": "100$ Topup",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "100$ Topup"
+     },
+     {
+      "language_id": 2,
+      "name": "شحن ١٠٠ دولار"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "type": "topup",
+  "is_active": true,
+  "order": 5,
+  "price": "2600",
+  "currency_code": "EGP",
+  "title": "Wallet Topup",
+  "description": "Wallet Topup",
+  "benefits": [
+   {
+    "benefit": "credit",
+    "value": 50
+   }
+  ],
+  "features": [
+   {
+    "name": "50$ Topup",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "50$ Topup"
+     },
+     {
+      "language_id": 2,
+      "name": "شحن ٥٠ دولار"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "type": "topup",
+  "is_active": true,
+  "order": 6,
+  "price": "11400",
+  "currency_code": "EGP",
+  "title": "Add Pipeline",
+  "description": "Add Pipeline",
+  "benefits": [
+   {
+    "benefit": "pipelines",
+    "value": 1
+   }
+  ],
+  "features": [
+   {
+    "name": "Add extra agent",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Add extra agent"
+     },
+     {
+      "language_id": 2,
+      "name": "إضافة وكيل إضافي"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "type": "subscription",
+  "is_active": true,
+  "order": 7,
+  "price": "66999",
+  "currency_code": "EGP",
+  "title": "Annual Package",
+  "description": "Ideal for growing businesses that need more advanced capabilities.",
+  "benefits": [
+   {
+    "benefit": "subscription",
+    "value": 12
+   },
+   {
+    "benefit": "credit",
+    "value": 400
+   },
+   {
+    "benefit": "support",
+    "value": 30
+   },
+   {
+    "benefit": "pipelines",
+    "value": 5
+   }
+  ],
+  "features": [
+   {
+    "name": "Up to 5 AI Employees!",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Up to 5 AI Employees!"
+     },
+     {
+      "language_id": 2,
+      "name": "حتى 5 موظفين ذكاء اصطناعي"
+     }
+    ]
+   },
+   {
+    "name": "Up to 30 hrs of technical support!",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Up to 30 hrs of technical support!"
+     },
+     {
+      "language_id": 2,
+      "name": "حتى 30 ساعة دعم فني"
+     }
+    ]
+   },
+   {
+    "name": "Up to 280,000 credits / 12 months",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Up to 280,000 credits / 12 months"
+     },
+     {
+      "language_id": 2,
+      "name": "حتى 280,000 رصيد لمدة 12 شهرًا"
+     }
+    ]
+   },
+   {
+    "name": "+10,000 Excel rows of knowledge",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "+10,000 Excel rows of knowledge"
+     },
+     {
+      "language_id": 2,
+      "name": "+10,000 صف إكسل في قاعدة المعرفة"
+     }
+    ]
+   },
+   {
+    "name": "1,000 automation tasks / month",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "1,000 automation tasks / month"
+     },
+     {
+      "language_id": 2,
+      "name": "1,000 مهمة أتمتة شهريًا"
+     }
+    ]
+   },
+   {
+    "name": "15 active automated workflows",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "15 active automated workflows"
+     },
+     {
+      "language_id": 2,
+      "name": "15 مهمة سير عمل آلية نشطة"
+     }
+    ]
+   },
+   {
+    "name": "Ability to add extra employees",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Ability to add extra employees"
+     },
+     {
+      "language_id": 2,
+      "name": "إمكانية إضافة موظفين إضافيين"
+     }
+    ]
+   },
+   {
+    "name": "Multi-Employees Teamwork System",
+    "translations": [
+     {
+      "language_id": 1,
+      "name": "Multi-Employees Teamwork System"
+     },
+     {
+      "language_id": 2,
+      "name": "نظام عمل جماعي متعدد الموظفين"
+     }
+    ]
+   }
+  ]
+ }
+]

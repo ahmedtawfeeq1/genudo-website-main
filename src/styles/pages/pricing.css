@@ -48,8 +48,8 @@
 .pg-pricing .ctaf-cta .btn { min-block-size: 48px; }
 .pg-pricing .ctaf-sec { min-block-size: 44px; display: inline-flex; align-items: center; gap: 6px; }
 .legacy-rtl .pg-pricing .ctaf-sec svg { transform: scaleX(-1); }
-@media (min-width: 640px) { .pg-pricing .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1080px) { .pg-pricing .plans { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } .pg-pricing .cmpbox { padding-inline: 20px; } .pg-pricing .prhead { padding-block-start: 64px; } }
+@media (min-width: 640px) { .pg-pricing .plans { grid-template-columns: repeat(auto-fit, minmax(260px, 380px)); justify-content: center; } }
+@media (min-width: 1080px) { .pg-pricing .plans { gap: 18px; } .pg-pricing .cmpbox { padding-inline: 20px; } .pg-pricing .prhead { padding-block-start: 64px; } }
 @media (max-width: 720px) { .pg-pricing .ent .btn { inline-size: 100%; justify-content: center; } }
 /* Arabic: no tracking/uppercase/mono on labels. Kept last and as specific as the base rules so it wins. */
 .legacy-rtl .pg-pricing .prhead .pill, .legacy-rtl .pg-pricing .plan .inc, .legacy-rtl .pg-pricing .cmp .grouprow td, .legacy-rtl .pg-pricing .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13px; }
@@ -62,3 +62,13 @@
 .pg-pricing .rozcall b { font-size: 18px; }
 .pg-pricing .rozcall > span:nth-of-type(1) span { font-size: 15px; line-height: 1.6; color: var(--ink-2); }
 .pg-pricing .rozcall .rozgo { font-weight: 700; color: #c2417e; white-space: nowrap; }
+
+/* Add-ons from the admin API (src/lib/packages.ts): extra pipeline and AI credit top-ups. */
+.pg-pricing .addons { margin-block-start: 22px; background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 22px; box-shadow: var(--shadow-sm); }
+.pg-pricing .addons-head h3 { font-size: 19px; }
+.pg-pricing .addons-head p { margin: 6px 0 0; color: var(--ink-3); font-size: 14.5px; line-height: 1.6; }
+.pg-pricing .addon-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-block-start: 16px; }
+@media (min-width: 860px) { .pg-pricing .addon-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.pg-pricing .addon { display: flex; flex-direction: column; gap: 6px; background: var(--tint); border-radius: 14px; padding: 14px 16px; }
+.pg-pricing .addon span { font-size: 14px; color: var(--ink-2); }
+.pg-pricing .addon b { font-size: 18px; color: var(--ink); }
