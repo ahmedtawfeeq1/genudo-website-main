@@ -11,7 +11,7 @@ const html = `<div class="pg-pricing">
     <div class="plan">
       <div class="pn">Free</div>
       <div class="pd">Build your first AI sales agent and pipeline.</div>
-      <div class="price"><span class="cur">£</span><span class="amt"><bdi>0</bdi></span></div>
+      <div class="price"><span class="amt"><bdi>0</bdi></span><span class="cur">EGP</span></div>
       <div class="bill">Free forever</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">Get started</a>
       <div class="inc">What's included</div>
@@ -25,7 +25,7 @@ const html = `<div class="pg-pricing">
     <div class="plan">
       <div class="pn">Starter</div>
       <div class="pd">For a small team launching its first employee.</div>
-      <div class="price"><span class="cur">£</span><span class="amt"><bdi>20,999</bdi></span></div>
+      <div class="price"><span class="amt"><bdi>20,999</bdi></span><span class="cur">EGP</span></div>
       <div class="bill">billed for 3 months</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">Get started</a>
       <div class="inc">Everything in Free, plus</div>
@@ -41,7 +41,7 @@ const html = `<div class="pg-pricing">
       <div class="badge">Most popular</div>
       <div class="pn">Growth</div>
       <div class="pd">For teams running a small AI workforce.</div>
-      <div class="price"><span class="cur">£</span><span class="amt"><bdi>37,999</bdi></span></div>
+      <div class="price"><span class="amt"><bdi>37,999</bdi></span><span class="cur">EGP</span></div>
       <div class="bill">billed for 6 months</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn solid">Get started</a>
       <div class="inc">Everything in Starter, plus</div>
@@ -56,7 +56,7 @@ const html = `<div class="pg-pricing">
     <div class="plan">
       <div class="pn">Scale</div>
       <div class="pd">For a full, collaborating AI workforce.</div>
-      <div class="price"><span class="cur">£</span><span class="amt"><bdi>69,999</bdi></span></div>
+      <div class="price"><span class="amt"><bdi>69,999</bdi></span><span class="cur">EGP</span></div>
       <div class="bill">billed annually</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">Get started</a>
       <div class="inc">Everything in Growth, plus</div>
@@ -87,10 +87,10 @@ const html = `<div class="pg-pricing">
   <table class="cmp">
     <thead><tr>
       <th class="feat"></th>
-      <th><div class="pn">Free</div><div class="pp"><bdi>£0</bdi></div></th>
-      <th><div class="pn">Starter</div><div class="pp"><bdi>£20,999</bdi> · 3 mo</div></th>
-      <th class="pop"><div class="pn">Growth</div><div class="pp"><bdi>£37,999</bdi> · 6 mo</div></th>
-      <th><div class="pn">Scale</div><div class="pp"><bdi>£69,999</bdi> · yr</div></th>
+      <th><div class="pn">Free</div><div class="pp"><bdi>0</bdi> EGP</div></th>
+      <th><div class="pn">Starter</div><div class="pp"><bdi>20,999</bdi> EGP · 3 mo</div></th>
+      <th class="pop"><div class="pn">Growth</div><div class="pp"><bdi>37,999</bdi> EGP · 6 mo</div></th>
+      <th><div class="pn">Scale</div><div class="pp"><bdi>69,999</bdi> EGP · yr</div></th>
     </tr></thead>
     <tbody>
       <tr class="grouprow"><td colspan="5">Employees &amp; pipelines</td></tr>

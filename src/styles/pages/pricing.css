@@ -4,15 +4,14 @@
 .pg-pricing .prhead h1 { font-size: clamp(30px, 8vw, 52px); line-height: 1.15; text-wrap: balance; }
 .pg-pricing .prhead p { color: var(--ink-2); font-size: 16px; margin: 14px auto 0; max-inline-size: 560px; line-height: 1.65; }
 .pg-pricing .prhead .pill { display: inline-flex; align-items: center; gap: 7px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); background: var(--tint); border: 1px solid var(--tint-2); border-radius: 999px; padding: 6px 13px; margin-block-end: 16px; }
-.legacy-rtl .pg-pricing .plan .price { direction: ltr; justify-content: flex-end; }
 .pg-pricing .plans { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; margin-block-start: -30px; }
 .pg-pricing .plan { position: relative; display: flex; flex-direction: column; min-inline-size: 0; background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 26px 22px; box-shadow: var(--shadow-sm); }
 .pg-pricing .plan.pop { border-color: var(--primary); box-shadow: 0 20px 50px -20px rgba(100,104,240,.45); }
 .pg-pricing .plan .badge { position: absolute; inset-block-start: -12px; inset-inline: 0; margin-inline: auto; inline-size: max-content; font-size: 12px; font-weight: 700; color: #fff; background: var(--primary); border-radius: 999px; padding: 4px 13px; white-space: nowrap; }
 .pg-pricing .plan .pn { font-size: 18px; font-weight: 680; }
 .pg-pricing .plan .pd { font-size: 14px; color: var(--ink-3); margin-block: 5px 16px; line-height: 1.5; }
-.pg-pricing .plan .price { display: flex; align-items: baseline; gap: 4px; }
-.pg-pricing .plan .price .cur { font-size: 20px; font-weight: 640; color: var(--ink); align-self: flex-start; margin-block-start: 6px; }
+.pg-pricing .plan .price { display: flex; align-items: baseline; gap: 6px; }
+.pg-pricing .plan .price .cur { font-size: 17px; font-weight: 640; color: var(--ink-2); }
 .pg-pricing .plan .price .amt { font-size: 38px; font-weight: 760; color: var(--ink); line-height: 1; }
 .pg-pricing .plan .bill { font-size: 13px; color: var(--ink-3); margin-block: 6px 18px; }
 .pg-pricing .plan .pbtn { display: flex; align-items: center; justify-content: center; min-block-size: 46px; border-radius: 11px; padding: 11px; font-weight: 640; font-size: 15px; text-decoration: none; transition: .15s; }

@@ -11,7 +11,7 @@ const html = `<div class="pg-pricing">
 <div class="plan">
 <div class="pn">مجانية</div>
 <div class="pd">ابني أول وكيل مبيعات وأول مسار ليك.</div>
-<div class="price"><span class="cur">£</span><span class="amt"><bdi>0</bdi></span></div>
+<div class="price"><span class="amt"><bdi>0</bdi></span><span class="cur">جنيه</span></div>
 <div class="bill">مجانية على طول</div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">ابدأ دلوقتي</a>
 <div class="inc">اللي فيها</div>
@@ -23,7 +23,7 @@ const html = `<div class="pg-pricing">
 <div class="plan">
 <div class="pn">البداية</div>
 <div class="pd">لفريق صغير بيبدأ بأول موظف.</div>
-<div class="price"><span class="cur">£</span><span class="amt"><bdi>20,999</bdi></span></div>
+<div class="price"><span class="amt"><bdi>20,999</bdi></span><span class="cur">جنيه</span></div>
 <div class="bill">بتتدفع عن 3 شهور</div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">ابدأ دلوقتي</a>
 <div class="inc">كل اللي في المجانية، وكمان</div>
@@ -36,7 +36,7 @@ const html = `<div class="pg-pricing">
 <div class="plan pop">
 <div class="badge">الأكتر طلبًا</div><div class="pn">النمو</div>
 <div class="pd">للفرق اللي بتشغّل كذا موظف ذكاء اصطناعي.</div>
-<div class="price"><span class="cur">£</span><span class="amt"><bdi>37,999</bdi></span></div>
+<div class="price"><span class="amt"><bdi>37,999</bdi></span><span class="cur">جنيه</span></div>
 <div class="bill">بتتدفع عن 6 شهور</div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn solid">ابدأ دلوقتي</a>
 <div class="inc">كل اللي في البداية، وكمان</div>
@@ -49,7 +49,7 @@ const html = `<div class="pg-pricing">
 <div class="plan">
 <div class="pn">التوسّع</div>
 <div class="pd">لفريق كامل من موظفين الذكاء الاصطناعي بيشتغلوا مع بعض.</div>
-<div class="price"><span class="cur">£</span><span class="amt"><bdi>69,999</bdi></span></div>
+<div class="price"><span class="amt"><bdi>69,999</bdi></span><span class="cur">جنيه</span></div>
 <div class="bill">بتتدفع سنويًا</div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">ابدأ دلوقتي</a>
 <div class="inc">كل اللي في النمو، وكمان</div>
@@ -76,7 +76,7 @@ const html = `<div class="pg-pricing">
 <div class="cmpbox">
 <table class="cmp">
 <thead><tr><th class="feat"></th>
-<th><div class="pn">مجانية</div><div class="pp"><bdi>£0</bdi></div></th><th><div class="pn">البداية</div><div class="pp"><bdi>£20,999</bdi> · 3 شهور</div></th><th class="pop"><div class="pn">النمو</div><div class="pp"><bdi>£37,999</bdi> · 6 شهور</div></th><th><div class="pn">التوسّع</div><div class="pp"><bdi>£69,999</bdi> · سنة</div></th></tr></thead>
+<th><div class="pn">مجانية</div><div class="pp"><bdi>0</bdi> جنيه</div></th><th><div class="pn">البداية</div><div class="pp"><bdi>20,999</bdi> جنيه · 3 شهور</div></th><th class="pop"><div class="pn">النمو</div><div class="pp"><bdi>37,999</bdi> جنيه · 6 شهور</div></th><th><div class="pn">التوسّع</div><div class="pp"><bdi>69,999</bdi> جنيه · سنة</div></th></tr></thead>
 <tbody>
 <tr class="grouprow"><td colspan="5">الموظفين والمسارات</td></tr>
 <tr><td class="feat">موظفين الذكاء الاصطناعي</td><td class="no">—</td><td><b>1</b></td><td class="pop"><b>3</b></td><td><b>5+</b></td></tr>
