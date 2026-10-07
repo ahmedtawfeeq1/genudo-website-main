@@ -11,18 +11,18 @@ const html = `<div class="pg-post">
 <p>We think about WhatsApp work in three lanes, and each one has a distinct purpose:</p>
 <ul>
 <li><strong>The customer chat.</strong> The AI answers first, at any hour. Anyone on your team can take over in one tap, and hand the chat back to the AI when they’re done.</li>
-<li><strong>Your team’s own chats.</strong> ROZ reviews the WhatsApp conversations on your company lines and flags slow replies, stalled deals and missed opportunities. You connect it by scanning a QR code.</li>
+<li><strong>Your team’s own chats.</strong> Roz is linked to your company WhatsApp numbers with one QR scan. Ask her in Claude or ChatGPT who waited and what stalled, or schedule a report. She never replies to customers or steps into a chat.</li>
 <li><strong>You.</strong> Leave private notes on any conversation, and step in from the mobile app wherever you are.</li>
 </ul>
-<figure class="post-fig"><div class="mk mk-card" role="img" aria-label="ROZ flags three conversations from your team">
-  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality review</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
+<figure class="post-fig"><div class="mk mk-card" role="img" aria-label="Roz’s scheduled report on three conversations from your team">
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>Roz · Daily report</b><span>WhatsApp · Sales line · Scheduled 9:00 AM</span></div><span class="mk-chip mk-chip--pink">3 findings</span></div>
   <ul class="mk-flags">
-    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Slow reply<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
-    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>Missed opportunity<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
-    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>Stalled deal<span>Ahmed · 4 days</span></b><p>Quote sent, no follow-up since.</p></div></li>
+    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Longest wait<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
+    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--calendar"></i></span><div class="mk-flag__body"><b>Booking request unanswered<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
+    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>Stalled for 4 days<span>Ahmed · 4 days</span></b><p>Quote sent, no follow-up since.</p></div></li>
   </ul>
-  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 voice notes transcribed today</div>
-</div><figcaption>Illustrative review. Names and chats are fictional.</figcaption></figure>
+  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 voice notes in writing today</div>
+</div><figcaption>Illustrative report. Names and chats are fictional (invented example).</figcaption></figure>
 <h2>How to avoid the chaos</h2>
 <p>Letting everything ping everyone is how you train a team to mute it. The trick is restraint:</p>
 <ul>
@@ -32,8 +32,8 @@ const html = `<div class="pg-post">
 <li>Review quality every day, not the day a customer complains.</li>
 </ul>
 <blockquote>The goal isn’t more dashboards. It’s a team that never misses a customer.</blockquote>
-<p>Done well, the team barely notices the tool and never misses a beat. That’s the bar. <a href="/sol-operations">Meet ROZ</a>, or see <a href="/how-it-works#channels">how the channels fit together</a>.</p></div>
-  <div class="post-cta"><h3>Build your first AI employee</h3><p>Pick the outcome you want, connect a channel, and let it start answering your customers.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">Start free</a><a href="/contact" class="post-cta-sec">Book a demo</a></div></div>
+<p>Done well, the team barely notices the tool and never misses a beat. That’s the bar. <a href="/sol-operations">Meet Roz</a>, or see <a href="/how-it-works#channels">how the channels fit together</a>.</p></div>
+  <div class="post-cta"><h3>Build your first AI employee</h3><p>Tell us the outcome you want and we will plan your first employee together, or start free and try it yourself.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">Start free</a><a href="/contact" class="post-cta-sec">Book a planning session</a></div></div>
 </div></article>
 
 <section class="s white-bg"><div class="container">

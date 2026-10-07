@@ -47,11 +47,19 @@
 .legacy-rtl .pg-use-cases .eyebrow { font-family: inherit; letter-spacing: 0; text-transform: none; font-size: 14px; }
 .legacy-rtl .pg-use-cases :is(.crumb svg, .ggo svg, .xcard .go svg, .ctaf-sec svg) { transform: scaleX(-1); }
 @media (max-width: 960px) {
-  .pg-use-cases .pg-ogrid, .pg-use-cases .gal, .pg-use-cases .xnav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-use-cases .pg-ogrid, .pg-use-cases .xnav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Galleries hold 3 or 9 cards: stay 3-up on tablets so there is never a lone orphan card. */
+  .pg-use-cases .gal { gap: 14px; }
+  .pg-use-cases .gal .gtop { padding: 18px; }
+  .pg-use-cases .gal .gname { font-size: 19px; }
+  .pg-use-cases .gal .gbody { padding: 16px 18px 18px; }
 }
 @media (max-width: 720px) {
   .pg-use-cases .s { padding-block: 52px; }
   .pg-use-cases .pg-ogrid, .pg-use-cases .gal, .pg-use-cases .xnav { grid-template-columns: minmax(0, 1fr); }
+  .pg-use-cases .gal .gtop { padding: 22px; }
+  .pg-use-cases .gal .gname { font-size: 22px; }
+  .pg-use-cases .gal .gbody { padding: 18px 22px 22px; }
   .pg-use-cases .phero { padding-block: 40px 48px; }
   .pg-use-cases .phero h1 { font-size: clamp(28px, 8vw, 36px); }
   .pg-use-cases .heroc-cta .btn { inline-size: 100%; justify-content: center; }

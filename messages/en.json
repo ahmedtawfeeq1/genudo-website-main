@@ -1,6 +1,6 @@
 {
   "terms": {
-    "agent": "AI Agent",
+    "agent": "AI employee",
     "knowledge": "Knowledge Base",
     "models": "Smart Models Selection",
     "pipeline": "Pipeline",
@@ -12,14 +12,17 @@
     "integrations": "Integrations",
     "apiMcp": "API & MCP",
     "salesAgent": "Aaref — Sales",
-    "customerService": "Adnan — Support",
-    "operations": "ROZ — Quality & operations",
+    "customerService": "Adnan — Customer service & success",
+    "operations": "Roz — Quality control",
     "marketing": "Marketing Agencies",
     "elearning": "E-learning & Academies",
     "fitness": "Fitness Centres",
     "clinics": "Clinics & Healthcare",
     "hospitality": "Hospitality & Tourism",
     "campsEvents": "Camps & Events",
+    "realEstate": "Real estate",
+    "ecommerce": "E-commerce & retail",
+    "automotive": "Automotive",
     "apiDocs": "API Documentation",
     "changelog": "Changelog",
     "blog": "Blog",
@@ -45,9 +48,9 @@
     "secDevelopers": "Trust & build",
     "everyUseCase": "See every use case",
     "desc": {
-      "salesAgent": "Every lead answered, followed up and moved toward a booked meeting",
-      "customerService": "Customers get a right answer at 2 a.m., not tomorrow",
-      "operations": "See every slow reply and stalled deal on your team's WhatsApp",
+      "salesAgent": "Every lead answered in seconds and followed up until it becomes a sale",
+      "customerService": "Instant answers, routine requests handled, every new customer set up to succeed",
+      "operations": "Ask Roz about your team's WhatsApp chats, or get a report on schedule",
       "customers": "Real teams, real results",
       "useCases": "One GENU for every job on your team",
       "blog": "Playbooks for winning more conversations",
@@ -74,7 +77,7 @@
   "common": {
     "getStarted": "Start free",
     "talkToSales": "Talk to us",
-    "bookDemo": "Book a demo",
+    "bookDemo": "Book a planning session",
     "learnMore": "Learn more",
     "seeAll": "See all",
     "readMore": "Read more"
@@ -100,19 +103,19 @@
   "seo": {
     "default": {
       "title": "GenuDo: AI employees for WhatsApp, sales and support",
-      "description": "GenuDo gives your business AI employees that answer customers on WhatsApp, Instagram, Messenger and web chat, follow up, book meetings and update your CRM."
+      "description": "GenuDo gives your business AI employees that answer customers on WhatsApp, Instagram, Messenger and web chat, follow up, close the next step and keep your records current."
     },
     "home": {
       "title": "AI employees that answer every customer, day and night",
-      "description": "AI employees that answer on WhatsApp, Instagram, Messenger and web chat, follow up with silent leads and book meetings, with capped AI cost."
+      "description": "AI employees that answer on WhatsApp, Instagram, Messenger and web chat, follow up with silent leads and turn them into bookings, orders and registrations, with capped AI cost."
     },
     "whoIsGenu": {
       "title": "Meet GENU, the guide to your AI workforce",
-      "description": "GENU introduces your AI team: Aaref for sales, Adnan for support, ROZ for quality. They answer customers day and night while you stay in control."
+      "description": "GENU introduces your AI team: Aaref for sales, Adnan for customer service and success, Roz for quality control. They work day and night while you stay in control."
     },
     "howItWorks": {
       "title": "How GenuDo works: from first message to sale",
-      "description": "Hire AI employees that answer every chat, move leads to a decision, chase the quiet ones and keep AI cost capped. See how it works."
+      "description": "Hire AI employees that answer every chat, move leads to a decision, chase the quiet ones and keep AI cost capped. See how we hire and launch them."
     },
     "integrations": {
       "title": "Integrations with the tools you already use",
@@ -123,16 +126,16 @@
       "description": "Set up and coach your AI employees in plain language from Claude or ChatGPT. Every change is shown as a diff and confirmed first. Setup takes about 3 minutes."
     },
     "solSalesAgent": {
-      "title": "Aaref: AI sales agent for WhatsApp that follows up",
-      "description": "Aaref answers every inquiry instantly, qualifies leads, follows up with quiet ones, books meetings and updates your CRM, on WhatsApp, Instagram and web chat."
+      "title": "Aaref: AI sales employee for WhatsApp that follows up",
+      "description": "Aaref answers every inquiry in seconds and follows up until it becomes a sale: a booking, a registration, a store order or a request for your team. On WhatsApp, Instagram and web chat."
     },
     "solCustomerService": {
-      "title": "Adnan: AI customer service agent for WhatsApp and web",
-      "description": "Adnan answers customers instantly from your own policies, any hour, and hands the rest to your team, with Zoho Desk and Zendesk. Start free."
+      "title": "Adnan: AI customer service & success employee",
+      "description": "Adnan answers customers instantly from your own information, handles routine requests by your policy, sets up new customers and hands over to your team with context."
     },
     "solOperations": {
-      "title": "ROZ: AI quality control for your team's WhatsApp chats",
-      "description": "ROZ reviews your team's company WhatsApp chats and flags slow replies, stalled deals and missed opportunities, so you see everything without reading every chat."
+      "title": "Roz: AI quality control employee for your team's WhatsApp",
+      "description": "Roz is linked to your company WhatsApp with one QR scan. Ask her about any chat in Claude or ChatGPT, get scheduled reports, see who waited and what stalled. No setup."
     },
     "indMarketing": {
       "title": "Marketing agencies: answer every paid lead",
@@ -144,7 +147,7 @@
     },
     "indFitness": {
       "title": "Trial classes booked, members looked after",
-      "description": "Book trial classes, answer plan questions and collect freeze requests over WhatsApp, so your front desk can focus on the members in the gym."
+      "description": "Book trial classes, answer plan and schedule questions and welcome new members over WhatsApp, so your front desk can focus on the members in the gym."
     },
     "indClinics": {
       "title": "Clinics: fill appointment slots, answer any hour",
@@ -157,6 +160,18 @@
     "indCampsEvents": {
       "title": "AI for Camps & Events: Absorb Registration Rushes",
       "description": "Answer every parent in seconds when registration opens, calm safety worries, and collect details without temporary staff. WhatsApp, Instagram and web chat."
+    },
+    "indRealEstate": {
+      "title": "Real estate: answer every property inquiry in seconds",
+      "description": "An AI employee answers every portal and ad inquiry, qualifies budget and area, books viewings and follows up with the quiet ones, so your brokers spend time on viewings."
+    },
+    "indEcommerce": {
+      "title": "E-commerce and retail: orders answered, customers kept",
+      "description": "An AI employee answers product, delivery and order questions on WhatsApp, turns chats into store orders and handles routine requests by your policy, day and night."
+    },
+    "indAutomotive": {
+      "title": "Automotive: every inquiry answered, every test drive booked",
+      "description": "An AI employee answers model, finance and availability questions, books test drives and service visits and follows up, so your sales and service teams meet ready customers."
     },
     "useCases": {
       "title": "Use cases by outcome, team and industry",
@@ -171,7 +186,7 @@
       "description": "GenuDo's half-yearly and annual plans: AI employees, pipelines, AI credits and support hours, priced in EGP. Add an AI employee or top up AI credits any time."
     },
     "contact": {
-      "title": "Book a demo: see an AI employee answer your customers",
+      "title": "Book a planning session: see an AI employee answer your customers",
       "description": "In one call we set up a working AI employee on your own channels. No slides, no pitch. Reply within one business day, no card required."
     },
     "security": {
@@ -216,7 +231,7 @@
     },
     "aiWorkforce": {
       "title": "What is an AI workforce? AI employees explained",
-      "description": "An AI workforce is a team of AI employees that answer customers on WhatsApp, follow up, book meetings and update your CRM. See how they differ from chatbots."
+      "description": "An AI workforce is a team of AI employees: Aaref sells, Adnan serves and keeps customers, Roz checks quality. See how they differ from chatbots."
     },
     "privacyPolicy": {
       "title": "Privacy Policy",

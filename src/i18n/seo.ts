@@ -22,9 +22,11 @@ export const ogLocale = (locale: string) => OG_LOCALE[locale] ?? locale;
  * scripts/brand/og.py into public/og/<locale>/<slug>.jpg. Relative URL; metadataBase
  * in the layout makes it absolute, which WhatsApp/LinkedIn require.
  */
+// Bump when the cards are re-rendered (og.py --all): Cloudflare and social networks cache images for months.
+const OG_VERSION = '20261007';
 export function ogImage(locale: string, route: string, alt: string) {
   const slug = route === '/' || route === '' ? 'home' : route.replace(/^\//, '').replace(/\//g, '-');
-  return { url: `/og/${locale}/${slug}.jpg`, width: 1200, height: 630, type: 'image/jpeg', alt };
+  return { url: `/og/${locale}/${slug}.jpg?v=${OG_VERSION}`, width: 1200, height: 630, type: 'image/jpeg', alt };
 }
 
 /** { en: "/en{path}", ar: "/ar{path}", "x-default": "/en{path}" } — for alternates.languages. */
@@ -84,8 +86,8 @@ export function pageMetadata({ route, seoKey }: { route: string; seoKey: string 
  * the brand entity from repeated, consistent descriptions.
  */
 export const ENTITY = {
-  en: 'GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref for sales, Adnan for customer support and ROZ for WhatsApp quality control) that answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up, book meetings and update your CRM, while your team stays in control.',
-  ar: 'جينـو دو منصة فريق عمل بالذكاء الاصطناعي للشركات في مصر والشرق الأوسط. بتديك موظفين بالذكاء الاصطناعي: عارف للمبيعات، وعدنان لخدمة العملاء، وروز لمراجعة جودة محادثات WhatsApp. بيردوا على عملائك على WhatsApp و Instagram و Messenger وشات الموقع بلهجتهم، ويتابعوا ويحجزوا المواعيد ويحدّثوا الـ CRM، وإنت متحكم في كل حاجة.'
+  en: 'GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref, the AI sales employee; Adnan, the AI customer service and success employee; and Roz, the AI quality control employee). Aaref and Adnan answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up and keep your records current. Roz is linked to your company WhatsApp with one QR scan and answers your questions about your team’s chats through Claude or ChatGPT. Your team stays in control.',
+  ar: 'جينـو دو منصة فريق عمل بالذكاء الاصطناعي للشركات في مصر والشرق الأوسط. بتديك موظفين بالذكاء الاصطناعي: عارف موظف المبيعات، وعدنان موظف خدمة ونجاح العملاء، وروز موظفة مراقبة الجودة. عارف وعدنان بيردوا على عملائك على WhatsApp و Instagram و Messenger وشات الموقع بلهجتهم، ويتابعوا ويحدّثوا الـ CRM. وروز بتتربط بـ WhatsApp الشركة بمسح كود QR واحد وبتجاوب على أسئلتك عن محادثات فريقك من Claude أو ChatGPT. وإنت متحكم في كل حاجة.'
 };
 
 export const ORG = {
@@ -99,9 +101,9 @@ export const ORG = {
     'AI workforce',
     'AI employees',
     'AI agents for business',
-    'AI sales agent',
-    'AI customer service',
-    'WhatsApp AI agent',
+    'AI sales employee',
+    'AI customer service and success',
+    'WhatsApp AI employee',
     'WhatsApp quality control',
     'Conversational AI in Arabic',
     'موظفين بالذكاء الاصطناعي',

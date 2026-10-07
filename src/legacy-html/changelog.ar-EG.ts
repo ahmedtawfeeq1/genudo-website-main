@@ -18,14 +18,20 @@ const html = `<div class="pg-changelog">
           <a href="https://www.tiktok.com/@genudo.official" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.3 1.7 3.9 4 4.2v2.7c-1.5.1-2.9-.3-4-1.1v5.9c0 3.4-2.6 5.8-5.8 5.8A5.5 5.5 0 0 1 5 15.2c0-3.2 2.9-5.6 6.3-5v2.9c-.4-.1-.9-.2-1.3-.2-1.5 0-2.6 1-2.6 2.4a2.5 2.5 0 0 0 5 .1V3z"/></svg></a>
         </div>
       </div>
-      <nav class="clog-filters" aria-label="انتقل إلى تحديث"><a class="clog-filter" href="#analytics-center-is-now-live">مركز التحليلات</a><a class="clog-filter" href="#meet-roz">قابل روز</a><a class="clog-filter" href="#per-task-model-routing">التوجيه الذكي</a></nav>
+      <nav class="clog-filters" aria-label="انتقل إلى تحديث"><a class="clog-filter" href="#roz-claude-chatgpt">روز في Claude و ChatGPT</a><a class="clog-filter" href="#analytics-center-is-now-live">مركز التحليلات</a><a class="clog-filter" href="#meet-roz">قابل روز</a><a class="clog-filter" href="#per-task-model-routing">التوجيه الذكي</a></nav>
     </aside>
     <div class="clog-list">
+    <article class="clog-item" id="roz-claude-chatgpt">
+      <div class="clog-date">6 أكتوبر 2026</div>
+      <div class="clog-cover" style="background:linear-gradient(135deg,#db2777,#f472b6)"><span class="cc-tag">الموظفين</span><span class="cc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="cc-h">روز في Claude و ChatGPT</span></div>
+      <div class="clog-tags"><span class="clog-tag feature">ميزة جديدة</span></div>
+      <h3>روز بقت بتشتغل من خلال Claude و ChatGPT</h3><p>اسأل روز أي سؤال عن محادثات فريقك على <bdi>WhatsApp</bdi>، وحدّد تقارير بمواعيد، واعمل الـ dashboard اللي شغلك محتاجه، كله من Claude أو ChatGPT. مسح كود QR واحد بيربط أرقام شركتك، وبتبدأ في نفس اليوم.</p><ul><li>اسأل بكلامك العادي: مين استنى، وإيه اللي وقف، واليوم عدّى إزاي</li><li>حدّد تقارير يومية أو أسبوعية تروح للناس اللي محتاجاها</li><li>ابني الـ dashboard اللي شغلك محتاجه</li><li>بتغطّي المحادثات الفردية والجروبات على الأرقام اللي بتربطها</li></ul>
+    </article>
     <article class="clog-item" id="analytics-center-is-now-live">
       <div class="clog-date">9 يوليو 2026</div>
       <div class="clog-cover" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><span class="cc-tag">التحليلات</span><span class="cc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 4-5"/></svg></span><span class="cc-h">مركز التحليلات الجديد</span></div>
       <div class="clog-tags"><span class="clog-tag feature">ميزة جديدة</span></div>
-      <h3>مركز التحليلات بقى متاح</h3><p>مكان واحد تشوف فيه فريق الذكاء الاصطناعي بتاعك بيحقق إيه: العملاء واقفين فين في مسار التحويل، والمتابعات ماشية إزاي، وكل محادثة بتكلّف كام.</p><ul><li>مسار التحويل واتجاهات الفرص</li><li>حالة المتابعات والتكلفة على مدار الوقت</li><li>التكلفة حسب المرحلة، علشان تعرف الفلوس رايحة فين</li><li>اختار المسار والفترة: <bdi>7</bdi> أو <bdi>30</bdi> أو <bdi>90</bdi> يوم، أو فترة مخصصة</li></ul>
+      <h3>مركز التحليلات بقى متاح</h3><p>مكان واحد تشوف فيه فريق الذكاء الاصطناعي بتاعك بيحقق إيه: العملاء واقفين فين في مسار التحويل، والمتابعات ماشية إزاي، وكل محادثة بتكلّف كام.</p><ul><li>مسار التحويل واتجاهات الفرص</li><li>حالة المتابعات والتكلفة على مدار الوقت</li><li>التكلفة حسب المرحلة، علشان تعرف الإنفاق رايح فين</li><li>اختار المسار والفترة: <bdi>7</bdi> أو <bdi>30</bdi> أو <bdi>90</bdi> يوم، أو فترة مخصصة</li></ul>
     </article>
     <article class="clog-item" id="meet-roz">
       <div class="clog-date">24 يونيو 2026</div>

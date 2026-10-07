@@ -31,21 +31,24 @@ export function faqs(html: string): { q: string; a: string }[] {
 
 const h1 = (html: string) => strip(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? '');
 
-const EMPLOYEES: Record<string, { en: [string, string]; ar: [string, string]; type: string }> = {
+const EMPLOYEES: Record<string, { en: [string, string]; ar: [string, string]; type: string; channels: string[] }> = {
   '/sol-sales-agent': {
-    type: 'AI sales agent',
-    en: ['Aaref, AI sales employee', 'Answers every inquiry on WhatsApp, Instagram, Messenger and website chat, qualifies leads, follows up with quiet ones, books meetings and updates your CRM.'],
-    ar: ['عارف، موظف مبيعات بالذكاء الاصطناعي', 'بيرد على كل استفسار على WhatsApp و Instagram و Messenger وشات الموقع، ويسأل الأسئلة الصح، ويتابع اللي سكت، ويحجز المواعيد ويحدّث الـ CRM.']
+    type: 'AI sales employee',
+    channels: ['WhatsApp', 'Instagram', 'Messenger', 'Website chat'],
+    en: ['Aaref, AI sales employee', 'Answers every lead in seconds and follows up until it becomes a sale: a booking, a registration, a store order, a request for your team or a qualified lead. Stages move by the rules you set.'],
+    ar: ['عارف، موظف مبيعات بالذكاء الاصطناعي', 'بيرد على كل عميل محتمل في ثواني، ويتابع معاه لحد ما يتحوّل لبيع: حجز أو تسجيل أو أوردر في متجرك أو طلب لفريقك أو عميل مؤهَّل. والمراحل بتتحرك حسب القواعد اللي إنت حددتها.']
   },
   '/sol-customer-service': {
-    type: 'AI customer service agent',
-    en: ['Adnan, AI customer support employee', 'Answers customers from your own knowledge and policies at any hour, understands voice notes and images, and hands complex cases to your team or helpdesk.'],
-    ar: ['عدنان، موظف خدمة عملاء بالذكاء الاصطناعي', 'بيرد على عملائك من معلوماتك وسياساتك في أي ساعة، وبيفهم الفويس نوت والصور، وبيحوّل الحالات المعقدة لفريقك.']
+    type: 'AI customer service and success employee',
+    channels: ['WhatsApp', 'Instagram', 'Messenger', 'Website chat'],
+    en: ['Adnan, AI customer service & success employee', 'Answers customers instantly from your own information, handles routine requests by your policy, sets up new customers, keeps them, and hands over to your team with context.'],
+    ar: ['عدنان، موظف خدمة ونجاح العملاء بالذكاء الاصطناعي', 'بيرد على عملائك فورًا من معلومات شركتك، وبينفّذ الطلبات الروتينية حسب سياستك، وبيستقبل العملاء الجدد ويحافظ عليهم، وبيحوّل لفريقك ومعاه السياق.']
   },
   '/sol-operations': {
-    type: 'WhatsApp conversation quality control',
-    en: ['ROZ, AI quality control for WhatsApp', "Reviews your team's WhatsApp conversations on company lines, flags slow replies, stalled deals and missed opportunities, and transcribes voice notes."],
-    ar: ['روز، مراجعة جودة محادثات WhatsApp بالذكاء الاصطناعي', 'بتراجع محادثات فريقك على خطوط WhatsApp الشركة، وتنبّهك للرد المتأخر والصفقة الواقفة والفرصة الضايعة، وبتفرّغ الفويس نوتس.']
+    type: 'AI quality control employee',
+    channels: ['WhatsApp'],
+    en: ['Roz, AI quality control employee', "Linked to your company WhatsApp numbers with one QR scan, covering chats and groups. Ask her about any conversation in Claude or ChatGPT, get scheduled reports, and see who waited and what stalled. She never replies to customers."],
+    ar: ['روز، موظفة مراقبة الجودة بالذكاء الاصطناعي', 'متربطة بأرقام WhatsApp الشركة بمسح كود QR واحد، للمحادثات والجروبات. اسألها عن أي محادثة من Claude أو ChatGPT، واستلم تقارير في مواعيدها، واعرف مين استنى وإيه اللي وقف. ومبتردش على العملاء.']
   }
 };
 
@@ -107,7 +110,7 @@ export function pageJsonLd({ locale, route, html, en }: { locale: string; route:
       url,
       inLanguage: locale,
       areaServed: [{ '@type': 'Place', name: 'Middle East and North Africa' }],
-      availableChannel: ['WhatsApp', 'Instagram', 'Messenger', 'Website chat'].map((n) => ({ '@type': 'ServiceChannel', name: n })),
+      availableChannel: emp.channels.map((n) => ({ '@type': 'ServiceChannel', name: n })),
       provider: { '@id': `${SITE_URL}/#organization` }
     });
   }
@@ -123,7 +126,7 @@ export function pageJsonLd({ locale, route, html, en }: { locale: string; route:
       headline: title,
       inLanguage: locale,
       mainEntityOfPage: url,
-      image: `${SITE_URL}/og/${locale}/${route.slice(1).replace(/\//g, '-')}.jpg`,
+      image: `${SITE_URL}/og/${locale}/${route.slice(1).replace(/\//g, '-')}.jpg?v=20261007`,
       ...(published ? { datePublished: published, dateModified: published } : {}),
       ...(author ? { author: { '@type': 'Person', name: author } } : {}),
       publisher: { '@id': `${SITE_URL}/#organization` }

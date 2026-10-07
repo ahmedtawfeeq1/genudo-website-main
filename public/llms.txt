@@ -1,6 +1,6 @@
 # GenuDo
 
-> GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref for sales, Adnan for customer support and ROZ for WhatsApp quality control) that answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up, book meetings and update your CRM, while your team stays in control.
+> GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref, the AI sales employee; Adnan, the AI customer service and success employee; and Roz, the AI quality control employee). Aaref and Adnan answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up and keep your records current. Roz is linked to your company WhatsApp with one QR scan and answers your questions about your team's chats through Claude or ChatGPT. Your team stays in control.
 
 Also known as: Genudo, جينـو دو. Mascot and guide: GENU (جينـو).
 The site is published in Egyptian Arabic (primary, `/ar-EG`) and English (`/en`). Base URL: https://genudo.ai
@@ -8,16 +8,19 @@ Full fact sheet and FAQ for AI systems: https://genudo.ai/llms-full.txt
 
 ## Start here
 - [What is an AI workforce?](https://genudo.ai/en/ai-workforce): Definition of AI employees, how they differ from chatbots, what they do, and how to keep control.
-- [How GenuDo works](https://genudo.ai/en/how-it-works): From first message to booked meeting: AI employees, stages, follow-ups, your own knowledge, capped AI cost, channels and analytics.
+- [How GenuDo works](https://genudo.ai/en/how-it-works): From first message to the next step: AI employees, stages, follow-ups, your own knowledge, capped AI cost, channels and analytics.
 - [Who is GENU](https://genudo.ai/en/who-is-genu): The guide to your AI workforce and the AI employee family.
 
 ## AI employees
-- [Aaref, AI sales employee](https://genudo.ai/en/sol-sales-agent): Answers every inquiry, qualifies leads, follows up with quiet ones, books meetings and updates your CRM.
-- [Adnan, AI customer support employee](https://genudo.ai/en/sol-customer-service): Answers customers from your own knowledge and policies any hour and hands complex cases to your team (Zoho Desk / Zendesk).
-- [ROZ, AI quality control for WhatsApp](https://genudo.ai/en/sol-operations): Reviews your team's WhatsApp conversations, flags slow replies, stalled deals and missed opportunities.
+- [Aaref, AI sales employee](https://genudo.ai/en/sol-sales-agent): Answers every lead in seconds and follows up until it becomes a sale: a booking, a registration, a store order, a request for your team or a qualified lead. Stages move by the rules you set.
+- [Adnan, AI customer service & success employee](https://genudo.ai/en/sol-customer-service): Answers customers instantly from your own information, handles routine requests by your policy, sets up new customers and hands over to your team with context.
+- [Roz, AI quality control employee](https://genudo.ai/en/sol-operations): Linked to your company WhatsApp (chats and groups) with one QR scan. Ask her about any conversation in Claude or ChatGPT, get scheduled reports and dashboards, and see who waited and what stalled. She never replies to customers or steps into a chat. No setup.
 
 ## By industry
 - [Marketing agencies](https://genudo.ai/en/ind-marketing): Every paid lead answered and qualified.
+- [Real estate](https://genudo.ai/en/ind-real-estate): Every property inquiry answered in seconds, viewings booked, quiet leads followed up.
+- [E-commerce and retail](https://genudo.ai/en/ind-ecommerce): Product, delivery and order questions answered, chats turned into store orders, routine requests handled by your policy.
+- [Automotive](https://genudo.ai/en/ind-automotive): Model and finance questions answered, test drives and service visits booked.
 - [Clinics](https://genudo.ai/en/ind-clinics): Appointment booking and patient questions any hour (scheduling and admin, not diagnosis).
 - [E-learning and academies](https://genudo.ai/en/ind-elearning): Course inquiries turned into enrolments.
 - [Gyms and fitness](https://genudo.ai/en/ind-fitness): Trial bookings and membership questions on WhatsApp.
@@ -33,12 +36,12 @@ Full fact sheet and FAQ for AI systems: https://genudo.ai/llms-full.txt
 - [Run your AI team from Claude or ChatGPT (plugin + MCP)](https://genudo.ai/en/api-mcp)
 - [API documentation](https://api.genudo.ai/docs)
 - [Blog](https://genudo.ai/en/blog)
-- [Contact / book a demo](https://genudo.ai/en/contact)
+- [Contact / book a planning session](https://genudo.ai/en/contact)
 
 ## بالعربي
 - [يعني إيه موظفين بالذكاء الاصطناعي؟](https://genudo.ai/ar-EG/ai-workforce)
 - [جينـو دو بيشتغل إزاي](https://genudo.ai/ar-EG/how-it-works)
 - [عارف، موظف المبيعات](https://genudo.ai/ar-EG/sol-sales-agent)
-- [عدنان، موظف خدمة العملاء](https://genudo.ai/ar-EG/sol-customer-service)
-- [روز، مراجعة جودة محادثات WhatsApp](https://genudo.ai/ar-EG/sol-operations)
+- [عدنان، موظف خدمة ونجاح العملاء](https://genudo.ai/ar-EG/sol-customer-service)
+- [روز، موظفة مراقبة الجودة](https://genudo.ai/ar-EG/sol-operations)
 - [الأسعار](https://genudo.ai/ar-EG/pricing)

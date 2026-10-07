@@ -2,22 +2,22 @@
 const html = `<div class="pg-contact">
 <section class="cxhead">
   <div class="container">
-    <span class="pill">Book a demo</span>
-    <h1>See an AI employee answer your customers, live.</h1>
-    <p>In one call you see a working AI employee on your own channels, answering your own customers' questions. No slides, no sales pitch.</p>
-    <div class="cx-cta"><a href="#cx-form" class="btn btn-primary btn-lg">Book your demo</a><a href="https://wa.me/12513732044" target="_blank" rel="noopener" class="btn btn-lg cx-wa-sec">Chat on WhatsApp now</a></div>
-    <ul class="cx-trust"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Reply within one business day</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>No card required</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Live in a day</li></ul>
+    <span class="pill">Book a planning session</span>
+    <h1>Plan your first AI employee with us.</h1>
+    <p>In one planning session we listen to where customers wait or get missed, plan your first AI employee together, and show you how it would work on your own channels. No slides, no sales pitch.</p>
+    <div class="cx-cta"><a href="#cx-form" class="btn btn-primary btn-lg">Book your planning session</a><a href="https://wa.me/12513732044" target="_blank" rel="noopener" class="btn btn-lg cx-wa-sec">Chat on WhatsApp now</a></div>
+    <ul class="cx-trust"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Reply within one business day</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>No card required</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Build time agreed together</li></ul>
   </div>
 </section>
 
 <section class="s white-bg"><div class="container">
   <div class="cx-get">
     <div class="cx-get-copy">
-      <span class="eyebrow" style="color:var(--primary)">The demo</span>
-      <h2>What you get in the call</h2>
-      <ol class="cx-steps"><li><span class="cx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><div><b>Your real situation</b><p>You tell us where customers wait, drop off or get missed. We pick the first job for your AI employee.</p></div></li>
-<li><span class="cx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>A working employee, live</b><p>Aaref or Adnan answers on WhatsApp, Instagram or your website, using your own prices and answers. If your team already sells on WhatsApp, we show how ROZ reviews their chats.</p></div></li>
-<li><span class="cx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span><div><b>A clear next step</b><p>We show you what it takes to go live, what it costs per conversation, and where your team stays in control.</p></div></li></ol>
+      <span class="eyebrow" style="color:var(--primary)">The planning session</span>
+      <h2>What you get from the session</h2>
+      <ol class="cx-steps"><li><span class="cx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><div><b>Your real situation</b><p>You tell us where customers wait, drop off or get missed. We plan the first job for your AI employee together.</p></div></li>
+<li><span class="cx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>How it would work for you</b><p>We show Aaref or Adnan on WhatsApp, Instagram or your website, answering from your own information. If your team already sells on WhatsApp, we show how Roz answers your questions about their chats.</p></div></li>
+<li><span class="cx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span><div><b>A clear next step</b><p>We agree who builds it and when it launches (the build time is set in the planning session), and where your team stays in control.</p></div></li></ol>
     </div>
     <div class="cx-phone">
 <div class="mk mk-phone" role="img" aria-label="WhatsApp chat where the AI employee books a meeting">
@@ -55,7 +55,7 @@ const html = `<div class="pg-contact">
     <h2>No pressure, no surprises</h2>
     <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>You decide what the AI says and what it never touches.</span></li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Take over any chat in one tap, any time.</span></li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Prefer to start alone? Create a free account and build your first employee today.</span></li></ul>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Prefer to start on your own? Create a free account today.</span></li></ul>
     <a href="https://app.genudo.ai/auth/register" class="btn btn-lg cx-wa-sec">Start free</a>
   </div>
 </div></section>
@@ -63,8 +63,8 @@ const html = `<div class="pg-contact">
 <section class="s-sm" id="cx-form"><div class="container">
   <div class="cxwrap">
     <div class="cxform">
-      <h2>Book a demo</h2>
-      <p class="sub">Tell us the job you want done and we will reply within one business day. Prefer to chat now? Message our AI on WhatsApp, it is live 24/7.</p>
+      <h2>Book a planning session</h2>
+      <p class="sub">Tell us the job you want done and we will reply within one business day. Prefer to chat now? Message our AI employee on WhatsApp, it is live 24/7.</p>
       <form class="cxf" id="cxForm" action="/api/forms" method="post" data-form="demo_request" data-sending="Sending…" data-ok="Thanks! We got your request and will reply within one business day." data-err="Sorry, that didn't go through. Please try again or email info@genudo.ai."><div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="cxrow">
           <div class="cxfield"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
@@ -76,15 +76,15 @@ const html = `<div class="pg-contact">
         </div>
         <div class="cxfield"><label for="f-topic">I'm interested in</label>
           <select id="f-topic" name="topic">
-            <option>A product demo</option>
-            <option>Building an AI employee</option>
+            <option>A planning session</option>
+            <option>Hiring an AI employee</option>
             <option>Sales &amp; pricing questions</option>
             <option>Partnerships</option>
             <option>Support for an existing account</option>
           </select>
         </div>
         <div class="cxfield"><label for="f-msg">What do you want to automate?</label><textarea id="f-msg" name="message" placeholder="e.g. Answer clinic inquiries on WhatsApp at night and book the first consultation." required></textarea></div>
-        <button type="submit" class="btn btn-primary btn-lg cxsubmit">Request my demo <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button type="submit" class="btn btn-primary btn-lg cxsubmit">Request my planning session <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         <div class="cxnote"><span class="live-dot"></span>Typical reply within one business day.</div>
       </form>
@@ -95,7 +95,7 @@ const html = `<div class="pg-contact">
         <span class="wa-badge">24/7</span>
         <div class="wa-ic"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.24-3.66-.77-3.08-1.24-5.05-4.4-5.2-4.6-.15-.2-1.24-1.65-1.24-3.15s.79-2.24 1.07-2.54c.28-.3.61-.38.81-.38.2 0 .4 0 .58.01.19.01.44-.07.68.52.24.6.83 2.07.9 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.28.1 1.74.82 2.04.97.3.15.5.22.57.35.07.12.07.72-.17 1.4z"/></svg></div>
         <h3>Chat with our AI now</h3>
-        <p>Our AI agents answer instantly on WhatsApp, around the clock. Ask anything about GenuDo.</p>
+        <p>Our AI employee answers instantly on WhatsApp, around the clock. Ask anything about GenuDo.</p>
         <a class="wa-btn" href="https://wa.me/12513732044" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
 

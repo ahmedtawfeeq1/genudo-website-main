@@ -10,30 +10,30 @@ const html = `<div class="pg-post">
 <h2>تلات حتت، وكل حتة ليها شغلة</h2>
 <p>إحنا بنقسّم الشغل على <bdi>WhatsApp</bdi> لتلات حتت، وكل حتة ليها هدف مختلف:</p>
 <ul>
-<li><strong>محادثة العميل.</strong> الذكاء الاصطناعي بيرد الأول، في أي ساعة. أي حد من فريقك يقدر يتدخّل بضغطة واحدة، ولما يخلّص يرجّع المحادثة للوكيل.</li>
-<li><strong>محادثات فريقك.</strong> روز بتراجع محادثات <bdi>WhatsApp</bdi> على خطوط الشركة، وبتنبّهك للردود المتأخرة والصفقات الواقفة والفرص اللي بتضيع. بتربطها بمسح كود <bdi>QR</bdi>.</li>
+<li><strong>محادثة العميل.</strong> الذكاء الاصطناعي بيرد الأول، في أي ساعة. أي حد من فريقك يقدر يتدخّل بضغطة واحدة، ولما يخلّص يرجّع المحادثة للذكاء الاصطناعي.</li>
+<li><strong>محادثات فريقك.</strong> روز بتتربط بأرقام <bdi>WhatsApp</bdi> الشركة بمسح كود <bdi>QR</bdi> واحد. اسألها من Claude أو ChatGPT مين استنى وإيه اللي وقف، أو حدّد تقرير بميعاد. ومبتردش على العملاء ومبتدخلش في المحادثة.</li>
 <li><strong>إنت.</strong> سيب ملاحظة خاصة على أي محادثة، وادخل من تطبيق الموبايل في أي مكان.</li>
 </ul>
-<figure class="post-fig"><div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="روز ترصد ثلاث محادثات من فريقك">
-  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
+<figure class="post-fig"><div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="تقرير روز في ميعاده عن تلات محادثات من فريقك">
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · تقرير يومي</b><span><bdi>WhatsApp</bdi> · خط المبيعات · الساعة <bdi>9:00</bdi> ص</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
   <ul class="mk-flags">
-    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>رد متأخر<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>انتظر العميل ساعتين ليعرف السعر.</p></div></li>
-    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>فرصة ضائعة<span>سلمى · <bdi>1:15</bdi> م</span></b><p>طلب العميل الحجز ولم يقترح عليه أحد موعدًا.</p></div></li>
-    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>فرصة متوقفة<span>أحمد · 4 أيام</span></b><p>أُرسل عرض السعر ولا توجد متابعة منذ ذلك الحين.</p></div></li>
+    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>أطول انتظار<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>العميل استنى ساعتين علشان يعرف السعر.</p></div></li>
+    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--calendar"></i></span><div class="mk-flag__body"><b>طلب حجز من غير رد<span>سلمى · <bdi>1:15</bdi> م</span></b><p>العميل طلب يحجز ومحدّش اقترح عليه ميعاد.</p></div></li>
+    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>صفقة واقفة بقالها 4 أيام<span>أحمد</span></b><p>عرض السعر اتبعت ومحدّش تابع من وقتها.</p></div></li>
   </ul>
-  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>تم تفريغ 6 رسائل صوتية اليوم</div>
-</div><figcaption>مراجعة توضيحية. الأسماء والمحادثات خيالية.</figcaption></figure>
+  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 فويس نوتس اتكتبت النهارده</div>
+</div><figcaption>تقرير توضيحي. الأسماء والمحادثات خيالية (مثال افتراضي).</figcaption></figure>
 <h2>إزاي تتجنب الفوضى</h2>
 <p>لما كل حاجة تبعت إشعار لكل الناس، فريقك هيكتّم الإشعارات. السر في الاعتدال:</p>
 <ul>
 <li>سيب الذكاء الاصطناعي يتعامل مع الروتين، وسيب لفريقك الاستثناءات بس.</li>
-<li><strong>مسؤول واحد في كل مرة.</strong> كل محادثة يا مع الوكيل يا مع إنسان، وبتشغّل أو توقّف الوكيل لكل محادثة لوحدها.</li>
+<li><strong>مسؤول واحد في كل مرة.</strong> كل محادثة يا مع الذكاء الاصطناعي يا مع حد من فريقك، وبتشغّل أو توقّف الذكاء الاصطناعي لكل محادثة لوحدها.</li>
 <li>سيب <strong>ملاحظة خاصة</strong> لما تتدخّل، علشان اللي بعدك ما يسألش العميل نفس السؤال تاني.</li>
 <li>راجع الجودة كل يوم، مش يوم ما عميل يشتكي.</li>
 </ul>
 <blockquote>الهدف مش لوحات تحكم أكتر. الهدف فريق مفيش عميل بيفوته.</blockquote>
 <p>لما الموضوع يتظبط، الفريق بيحس إن الأداة مش موجودة، وبرضه مفيش حاجة بتفوتهم. ده المعيار. <a href="/sol-operations">اتعرّف على روز</a>، أو شوف <a href="/how-it-works#channels">القنوات بتتكامل إزاي</a>.</p></div>
-  <div class="post-cta"><h3>ابدأ بأول موظف ذكاء اصطناعي عندك</h3><p>اختار النتيجة اللي عايزها، واربط قناة، وسيبه يبدأ يرد على عملائك.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ دلوقتي</a><a href="/contact" class="post-cta-sec">احجز ديمو</a></div></div>
+  <div class="post-cta"><h3>ابدأ بأول موظف ذكاء اصطناعي عندك</h3><p>قولنا النتيجة اللي عايزها ونخطّط لأول موظف معاك في جلسة تخطيط، أو ابدأ مجانًا وجرّب بنفسك.</p><div class="post-cta-row"><a href="https://app.genudo.ai/auth/register" class="btn btn-primary btn-lg">ابدأ مجانًا</a><a href="/contact" class="post-cta-sec">احجز جلسة تخطيط</a></div></div>
 </div></article>
 
 <section class="s white-bg"><div class="container">

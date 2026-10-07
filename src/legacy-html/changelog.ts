@@ -18,9 +18,15 @@ const html = `<div class="pg-changelog">
           <a href="https://www.tiktok.com/@genudo.official" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.3 1.7 3.9 4 4.2v2.7c-1.5.1-2.9-.3-4-1.1v5.9c0 3.4-2.6 5.8-5.8 5.8A5.5 5.5 0 0 1 5 15.2c0-3.2 2.9-5.6 6.3-5v2.9c-.4-.1-.9-.2-1.3-.2-1.5 0-2.6 1-2.6 2.4a2.5 2.5 0 0 0 5 .1V3z"/></svg></a>
         </div>
       </div>
-      <nav class="clog-filters" aria-label="Jump to an update"><a class="clog-filter" href="#analytics-center-is-now-live">Analytics Center</a><a class="clog-filter" href="#meet-roz">Meet ROZ</a><a class="clog-filter" href="#per-task-model-routing">Smart routing</a></nav>
+      <nav class="clog-filters" aria-label="Jump to an update"><a class="clog-filter" href="#roz-claude-chatgpt">Roz in Claude &amp; ChatGPT</a><a class="clog-filter" href="#analytics-center-is-now-live">Analytics Center</a><a class="clog-filter" href="#meet-roz">Meet ROZ</a><a class="clog-filter" href="#per-task-model-routing">Smart routing</a></nav>
     </aside>
     <div class="clog-list">
+    <article class="clog-item" id="roz-claude-chatgpt">
+      <div class="clog-date">October 6, 2026</div>
+      <div class="clog-cover" style="background:linear-gradient(135deg,#db2777,#f472b6)"><span class="cc-tag">Employees</span><span class="cc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="cc-h">Roz in Claude and ChatGPT</span></div>
+      <div class="clog-tags"><span class="clog-tag feature">Feature</span></div>
+      <h3>Roz now works through Claude and ChatGPT</h3><p>Ask Roz anything about your team&rsquo;s WhatsApp chats, schedule reports and build dashboards, all from Claude or ChatGPT. One QR scan links your company numbers, and she starts the same day.</p><ul><li>Ask in plain language: who waited, what stalled, how a day went</li><li>Schedule daily or weekly reports to the people who need them</li><li>Build the dashboard your business needs</li><li>Covers one-to-one chats and groups on the numbers you link</li></ul>
+    </article>
     <article class="clog-item" id="analytics-center-is-now-live">
       <div class="clog-date">July 9, 2026</div>
       <div class="clog-cover" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><span class="cc-tag">Analytics</span><span class="cc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 4-5"/></svg></span><span class="cc-h">New Analytics Center</span></div>
