@@ -23,7 +23,7 @@ const html = `<div class="pg-pricing">
 <div class="plan">
 <div class="pn">البداية</div>
 <div class="pd">لفريق صغير بيبدأ بأول موظف.</div>
-<div class="price"><span class="amt"><bdi>20,999</bdi></span><span class="cur">جنيه</span></div>
+<div class="price"><span class="amt"><bdi>21,000</bdi></span><span class="cur">جنيه</span></div>
 <div class="bill">بتتدفع عن 3 شهور</div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">ابدأ دلوقتي</a>
 <div class="inc">كل اللي في المجانية، وكمان</div>
@@ -36,25 +36,27 @@ const html = `<div class="pg-pricing">
 <div class="plan pop">
 <div class="badge">الأكتر طلبًا</div><div class="pn">النمو</div>
 <div class="pd">للفرق اللي بتشغّل كذا موظف ذكاء اصطناعي.</div>
-<div class="price"><span class="amt"><bdi>37,999</bdi></span><span class="cur">جنيه</span></div>
-<div class="bill">بتتدفع عن 6 شهور</div>
+<div class="price"><span class="amt"><bdi>35,999</bdi></span><span class="cur">جنيه</span></div>
+<div class="bill">بتتدفع عن 6 شهور · بالإضافة لضريبة القيمة المضافة <bdi>14%</bdi></div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn solid">ابدأ دلوقتي</a>
 <div class="inc">كل اللي في البداية، وكمان</div>
 <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>3</b> موظفين ذكاء اصطناعي ومسارات</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>10,000</b> صف في قاعدة المعرفة</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>500</b> مهمة أتمتة في الشهر</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>140,000</b> رصيد ذكاء اصطناعي لـ 6 شهور</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>وصول لـ<b><bdi>API</bdi> و <bdi>SDK</bdi></b></li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>15</b> ساعة دعم فني</li></ul>
 </div>
 <div class="plan">
 <div class="pn">التوسّع</div>
 <div class="pd">لفريق كامل من موظفين الذكاء الاصطناعي بيشتغلوا مع بعض.</div>
-<div class="price"><span class="amt"><bdi>69,999</bdi></span><span class="cur">جنيه</span></div>
-<div class="bill">بتتدفع سنويًا</div>
+<div class="price"><span class="amt"><bdi>66,999</bdi></span><span class="cur">جنيه</span></div>
+<div class="bill">بتتدفع سنويًا · بالإضافة لضريبة القيمة المضافة <bdi>14%</bdi></div>
 <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">ابدأ دلوقتي</a>
 <div class="inc">كل اللي في النمو، وكمان</div>
 <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>5</b> موظفين ذكاء اصطناعي (وتقدر تزوّد)</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>1,000</b> مهمة أتمتة في الشهر</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>280,000</b> رصيد ذكاء اصطناعي لـ 12 شهر</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>15</b> سير عمل نشط</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>شغل جماعي بين الموظفين</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>30</b> ساعة دعم بأولوية</li></ul>
@@ -76,7 +78,7 @@ const html = `<div class="pg-pricing">
 <div class="cmpbox">
 <table class="cmp">
 <thead><tr><th class="feat"></th>
-<th><div class="pn">مجانية</div><div class="pp"><bdi>0</bdi> جنيه</div></th><th><div class="pn">البداية</div><div class="pp"><bdi>20,999</bdi> جنيه · 3 شهور</div></th><th class="pop"><div class="pn">النمو</div><div class="pp"><bdi>37,999</bdi> جنيه · 6 شهور</div></th><th><div class="pn">التوسّع</div><div class="pp"><bdi>69,999</bdi> جنيه · سنة</div></th></tr></thead>
+<th><div class="pn">مجانية</div><div class="pp"><bdi>0</bdi> جنيه</div></th><th><div class="pn">البداية</div><div class="pp"><bdi>21,000</bdi> جنيه · 3 شهور</div></th><th class="pop"><div class="pn">النمو</div><div class="pp"><bdi>35,999</bdi> جنيه · 6 شهور</div></th><th><div class="pn">التوسّع</div><div class="pp"><bdi>66,999</bdi> جنيه · سنة</div></th></tr></thead>
 <tbody>
 <tr class="grouprow"><td colspan="5">الموظفين والمسارات</td></tr>
 <tr><td class="feat">موظفين الذكاء الاصطناعي</td><td class="no">—</td><td><b>1</b></td><td class="pop"><b>3</b></td><td><b>5+</b></td></tr>
@@ -87,7 +89,7 @@ const html = `<div class="pg-pricing">
 <tr><td class="feat">صفوف قاعدة المعرفة</td><td class="no">—</td><td><b>5,000</b></td><td class="pop"><b>10,000</b></td><td><b>20,000</b></td></tr>
 <tr><td class="feat">مهام الأتمتة في الشهر</td><td class="no">—</td><td><b>100</b></td><td class="pop"><b>500</b></td><td><b>1,000</b></td></tr>
 <tr><td class="feat">سير العمل النشط</td><td class="no">—</td><td><b>1</b></td><td class="pop"><b>3</b></td><td><b>15</b></td></tr>
-<tr><td class="feat">رصيد الذكاء الاصطناعي</td><td><b><bdi>$2</bdi></b></td><td>رصيد 3 شهور</td><td class="pop">رصيد 6 شهور</td><td>رصيد سنة</td></tr>
+<tr><td class="feat">رصيد الذكاء الاصطناعي</td><td><b><bdi>$2</bdi></b></td><td>رصيد 3 شهور</td><td class="pop"><b>140,000</b> لـ 6 شهور</td><td><b>280,000</b> لـ 12 شهر</td></tr>
 <tr class="grouprow"><td colspan="5">القنوات والتكاملات</td></tr>
 <tr><td class="feat"><bdi>WhatsApp</bdi> و <bdi>Messenger</bdi> و <bdi>Instagram</bdi></td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td class="pop"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td></tr>
 <tr><td class="feat"><bdi>Telegram</bdi></td><td class="no">—</td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td class="pop"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td></tr>

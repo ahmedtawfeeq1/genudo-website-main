@@ -25,7 +25,7 @@ const html = `<div class="pg-pricing">
     <div class="plan">
       <div class="pn">Starter</div>
       <div class="pd">For a small team launching its first employee.</div>
-      <div class="price"><span class="amt"><bdi>20,999</bdi></span><span class="cur">EGP</span></div>
+      <div class="price"><span class="amt"><bdi>21,000</bdi></span><span class="cur">EGP</span></div>
       <div class="bill">billed for 3 months</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">Get started</a>
       <div class="inc">Everything in Free, plus</div>
@@ -41,14 +41,15 @@ const html = `<div class="pg-pricing">
       <div class="badge">Most popular</div>
       <div class="pn">Growth</div>
       <div class="pd">For teams running a small AI workforce.</div>
-      <div class="price"><span class="amt"><bdi>37,999</bdi></span><span class="cur">EGP</span></div>
-      <div class="bill">billed for 6 months</div>
+      <div class="price"><span class="amt"><bdi>35,999</bdi></span><span class="cur">EGP</span></div>
+      <div class="bill">billed for 6 months · <bdi>+ 14%</bdi> VAT</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn solid">Get started</a>
       <div class="inc">Everything in Starter, plus</div>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>3</b> AI employees &amp; pipelines</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>10,000</b> knowledge rows</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>500</b> automation tasks / mo</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>140,000</b> AI credits / 6 months</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>API &amp; SDK</b> access</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>15 hrs</b> technical support</li>
       </ul>
@@ -56,13 +57,14 @@ const html = `<div class="pg-pricing">
     <div class="plan">
       <div class="pn">Scale</div>
       <div class="pd">For a full, collaborating AI workforce.</div>
-      <div class="price"><span class="amt"><bdi>69,999</bdi></span><span class="cur">EGP</span></div>
-      <div class="bill">billed annually</div>
+      <div class="price"><span class="amt"><bdi>66,999</bdi></span><span class="cur">EGP</span></div>
+      <div class="bill">billed annually · <bdi>+ 14%</bdi> VAT</div>
       <a href="https://app.genudo.ai/auth/register" class="pbtn ghost">Get started</a>
       <div class="inc">Everything in Growth, plus</div>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>5</b> AI employees (add more)</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>1,000</b> automation tasks / mo</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>280,000</b> AI credits / 12 months</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>15</b> active workflows</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Multi-employee teamwork</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>30 hrs</b> priority support</li>
@@ -88,9 +90,9 @@ const html = `<div class="pg-pricing">
     <thead><tr>
       <th class="feat"></th>
       <th><div class="pn">Free</div><div class="pp"><bdi>0</bdi> EGP</div></th>
-      <th><div class="pn">Starter</div><div class="pp"><bdi>20,999</bdi> EGP · 3 mo</div></th>
-      <th class="pop"><div class="pn">Growth</div><div class="pp"><bdi>37,999</bdi> EGP · 6 mo</div></th>
-      <th><div class="pn">Scale</div><div class="pp"><bdi>69,999</bdi> EGP · yr</div></th>
+      <th><div class="pn">Starter</div><div class="pp"><bdi>21,000</bdi> EGP · 3 mo</div></th>
+      <th class="pop"><div class="pn">Growth</div><div class="pp"><bdi>35,999</bdi> EGP · 6 mo</div></th>
+      <th><div class="pn">Scale</div><div class="pp"><bdi>66,999</bdi> EGP · yr</div></th>
     </tr></thead>
     <tbody>
       <tr class="grouprow"><td colspan="5">Employees &amp; pipelines</td></tr>
@@ -103,7 +105,7 @@ const html = `<div class="pg-pricing">
       <tr><td class="feat">Knowledge rows</td><td>—</td><td><b>5,000</b></td><td class="pop"><b>10,000</b></td><td><b>20,000</b></td></tr>
       <tr><td class="feat">Automation tasks / month</td><td>—</td><td><b>100</b></td><td class="pop"><b>500</b></td><td><b>1,000</b></td></tr>
       <tr><td class="feat">Active workflows</td><td>—</td><td><b>1</b></td><td class="pop"><b>3</b></td><td><b>15</b></td></tr>
-      <tr><td class="feat">AI credits</td><td><b>$2</b></td><td>3-month pack</td><td class="pop">6-month pack</td><td>12-month pack</td></tr>
+      <tr><td class="feat">AI credits</td><td><b>$2</b></td><td>3-month pack</td><td class="pop"><b>140,000</b> / 6 mo</td><td><b>280,000</b> / 12 mo</td></tr>
 
       <tr class="grouprow"><td colspan="5">Channels &amp; integrations</td></tr>
       <tr><td class="feat">WhatsApp, Messenger, Instagram</td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td class="pop"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td><td><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span></td></tr>
