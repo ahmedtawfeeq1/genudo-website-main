@@ -1,58 +1,180 @@
-/* /sol-operations page styles. Every selector is scoped to .pg-sol-operations. */
-.pg-sol-operations .pg-hero-card { display: block; min-width: 0; }
-.pg-sol-operations .pg-hero-card .mk { max-width: 100%; }
+/* /sol-operations: Roz, the AI quality control employee (web version of her business profile).
+   Every selector is scoped to .pg-sol-operations. Colours: site tokens + Roz's colour #e86fa6. */
+.pg-sol-operations { overflow-x: clip; }
+.pg-sol-operations .btn { min-block-size: 44px; }
 .pg-sol-operations .pg-cap { display: block; margin-block-start: 8px; font-size: 13px; opacity: .72; text-align: center; }
-.pg-sol-operations .pg-hero-card .mk-card { max-inline-size: 440px; margin-inline: auto; }
+.pg-sol-operations .pg-gap { margin-block-start: 34px; }
+.pg-sol-operations .pg-gap-sm { margin-block-start: 24px; }
+.pg-sol-operations .pg-sub { margin-block: 52px 20px; font-size: 22px; letter-spacing: -.01em; }
 
-.pg-sol-operations .pg-meet { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
-.pg-sol-operations .pg-roz-fig { display: flex; justify-content: center; }
-.pg-sol-operations .pg-roz-fig img { width: min(240px, 70%); height: auto; max-width: 100%; display: block; }
-@media (min-width: 720px) {
-  .pg-sol-operations .pg-meet { grid-template-columns: 280px 1fr; gap: 48px; }
-}
-
-.pg-sol-operations .pg-connect { display: grid; grid-template-columns: 1fr; gap: 28px; margin-block-start: 30px; align-items: center; }
-@media (min-width: 720px) {
-  .pg-sol-operations .pg-connect { grid-template-columns: 260px 1fr; gap: 48px; }
-}
-.pg-sol-operations .pg-qr {
-  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
-  padding: 18px; border: 1px solid #e5e7eb; border-radius: 18px; background: #fff;
-  box-shadow: 0 8px 28px rgba(17, 24, 39, .08); max-inline-size: 280px; inline-size: 100%; margin-inline: auto;
-}
-.pg-sol-operations .pg-qr-title { font-size: 15px; }
-.pg-sol-operations .pg-qr small { font-size: 14px; color: #6b7280; }
-/* Deliberately fake: a plain checkerboard with a "placeholder" label, never a scannable code. */
-.pg-sol-operations .pg-qr-box {
-  position: relative; inline-size: 168px; max-inline-size: 100%; aspect-ratio: 1; border-radius: 10px;
-  border: 8px solid #fff; outline: 1px solid #e5e7eb;
-  background: repeating-conic-gradient(#d1d5db 0 25%, #f3f4f6 0 50%) 0 0 / 28px 28px;
-}
-.pg-sol-operations .pg-qr-tag {
-  position: absolute; inset-inline: 10%; inset-block-start: 50%; transform: translateY(-50%);
-  background: #111827; color: #fff; font-size: 14px; font-weight: 700; padding: 6px 10px;
-  border-radius: 8px; text-align: center;
+/* ---- Hero: portrait + scheduled-report mockup ---- */
+.pg-sol-operations .phero h1 { font-size: clamp(30px, 3.4vw, 44px); }
+.pg-sol-operations .phero .lead { max-inline-size: 560px; font-size: 16px; }
+.pg-sol-operations .phero-in > * { min-inline-size: 0; }
+.pg-sol-operations .heroc-cta .btn { min-block-size: 48px; }
+.pg-sol-operations .pg-hero-art { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); align-items: end; min-inline-size: 0; }
+.pg-sol-operations .pg-hero-portrait { display: block; inline-size: 100%; block-size: auto; margin-inline-end: -36px; position: relative; z-index: 0; }
+.pg-sol-operations .pg-hero-mock { position: relative; z-index: 1; min-inline-size: 0; }
+.pg-sol-operations .pg-hero-mock .mk-card { max-inline-size: 440px; margin-inline: auto; }
+.pg-sol-operations .pg-ask { display: flex; flex-direction: column; gap: 8px; margin-block-end: 12px; }
+.pg-sol-operations .pg-coach { margin-block-start: 10px; }
+@media (max-width: 599.98px) {
+  .pg-sol-operations .pg-hero-art { grid-template-columns: minmax(0, 1fr); }
+  .pg-sol-operations .pg-hero-portrait { inline-size: 150px; justify-self: center; margin-inline-end: 0; margin-block-end: -28px; }
 }
 
-.pg-sol-operations .pg-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+/* ---- Two-column copy + media rows ---- */
+.pg-sol-operations .pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.pg-sol-operations .pg-split.pg-flip > .pg-fig { order: -1; }
+.pg-sol-operations .pg-split.pg-top { align-items: start; }
+.pg-sol-operations .pg-copy { min-inline-size: 0; }
+.pg-sol-operations .pg-copy .eyebrow { display: block; margin-block-end: 14px; }
+.pg-sol-operations .pg-copy h3 { margin-block-end: 12px; }
+.pg-sol-operations .pg-copy > p { color: var(--ink-2); font-size: 16px; line-height: 1.65; margin-block: 0 14px; }
+.pg-sol-operations .pg-copy .plist { margin-block: 16px 0; }
+.pg-sol-operations .pg-fig { margin: 0; display: flex; justify-content: center; min-inline-size: 0; }
+.pg-sol-operations .pg-fig img { inline-size: min(300px, 72%); block-size: auto; display: block; }
+.pg-sol-operations .pg-mock { min-inline-size: 0; display: flex; flex-direction: column; align-items: center; }
+.pg-sol-operations .pg-mock > .mk { inline-size: 100%; max-inline-size: 440px; }
+@media (max-width: 960px) {
+  .pg-sol-operations .pg-split { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pg-sol-operations .pg-split.pg-flip > .pg-fig { order: 0; }
+}
+
+/* ---- Meet Roz: profile card ---- */
+.pg-sol-operations .pg-meet { margin-block-start: 30px; align-items: start; }
+.pg-sol-operations .pg-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 20px 22px; box-shadow: var(--shadow-sm); min-inline-size: 0; }
+.pg-sol-operations .pg-card__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-block-end: 14px; border-block-end: 1px solid var(--border); }
+.pg-sol-operations .pg-card__head img { inline-size: 44px; block-size: auto; flex: none; }
+.pg-sol-operations .pg-card__head b { display: block; font-size: 17px; color: var(--ink); }
+.pg-sol-operations .pg-card__head span { display: block; font-size: 13.5px; color: var(--ink-3); }
+.pg-sol-operations .pg-card__head .pg-badge { margin-inline-start: auto; font-size: 12px; font-weight: 700; color: var(--ink); border: 1.5px solid #e86fa6; border-radius: 999px; padding: 4px 10px; }
+.pg-sol-operations .pg-card dl { margin: 0; }
+.pg-sol-operations .pg-card__row { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 12px; padding-block: 10px; border-block-end: 1px solid var(--border); }
+.pg-sol-operations .pg-card__row:last-child { border-block-end: 0; padding-block-end: 0; }
+.pg-sol-operations .pg-card dt { font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
+.pg-sol-operations .pg-card dd { margin: 0; font-size: 14.5px; color: var(--ink); line-height: 1.5; }
+@media (max-width: 420px) {
+  .pg-sol-operations .pg-card__row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+
+/* ---- Cards (feat-grid / featc) ---- */
+.pg-sol-operations .featc { min-inline-size: 0; }
+.pg-sol-operations .pg-k { display: block; font-size: 12.5px; font-weight: 650; color: var(--ink-3); margin-block-end: 4px; }
+.pg-sol-operations .pg-big { font-size: clamp(30px, 4vw, 38px); font-weight: 750; letter-spacing: -.02em; line-height: 1.1; color: var(--ink); margin-block: 2px 8px; }
+.pg-sol-operations .featc .pg-src, .pg-sol-operations .pg-src { display: block; margin-block-start: 10px; font-size: 12.5px; color: var(--ink-3); line-height: 1.5; }
+.pg-sol-operations .pg-src a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.pg-sol-operations .featc .pg-formula { margin-block-start: 12px; padding: 8px 10px; border-radius: 10px; background: var(--tint); font-size: 13px; font-weight: 600; color: var(--ink); }
+.pg-sol-operations .featc .plist { margin-block: 12px 8px; }
+.pg-sol-operations .featc .plist li { font-size: 14.5px; margin-block-end: 8px; }
+.pg-sol-operations .featc .pg-strong { margin-block-start: 6px; font-weight: 600; color: var(--ink); }
+.pg-sol-operations .pg-ba--with { border-color: #e86fa6; }
+.pg-sol-operations .pg-tag { display: inline-block; margin-block-start: 10px; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--tint); color: var(--primary); }
+.pg-sol-operations .pg-ind { display: flex; flex-direction: column; }
+.pg-sol-operations .pg-ind .plist li { font-size: 14px; }
+.pg-sol-operations .featc .pg-watch { margin-block: auto 0; padding-block-start: 6px; font-size: 13.5px; color: var(--ink-2); }
+.pg-sol-operations .pg-watch b { color: var(--ink); }
+.pg-sol-operations .pg-more { display: inline-flex; align-items: center; min-block-size: 44px; font-weight: 600; font-size: 14.5px; color: var(--primary); }
+
+/* ---- Callouts, quotes, formulas ---- */
+.pg-sol-operations .pg-callout { margin-block-start: 28px; padding: 16px 20px; border-radius: 14px; background: #fff; border: 1px solid var(--border); border-inline-start: 3px solid #e86fa6; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+.pg-sol-operations .pg-callout b { color: var(--ink); }
+.pg-sol-operations .pg-quote { margin: 18px 0 8px; padding-inline-start: 18px; border-inline-start: 3px solid #e86fa6; }
+.pg-sol-operations .pg-quote p { margin: 0 0 10px; font-size: 17px; line-height: 1.6; color: var(--ink); }
+.pg-sol-operations .pg-quote cite { font-style: normal; font-size: 14px; font-weight: 600; color: var(--ink-3); }
+.pg-sol-operations .pg-formula-box { margin-block-start: 28px; padding: 18px 22px; border-radius: 14px; border: 1px solid var(--border); background: var(--tint); font-size: 16px; line-height: 1.6; color: var(--ink); text-align: center; }
+
+/* ---- One day of reports (timeline) ---- */
+.pg-sol-operations .pg-day { list-style: none; margin: 0; padding: 0; min-inline-size: 0; }
+.pg-sol-operations .pg-day li { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 14px; padding-block: 12px; border-block-end: 1px solid var(--border); }
+.pg-sol-operations .pg-day li:last-child { border-block-end: 0; }
+.pg-sol-operations .pg-day__t { font-size: 14px; font-weight: 700; color: var(--primary); padding-block-start: 2px; }
+.pg-sol-operations .pg-day h4 { margin: 0 0 4px; font-size: 16px; }
+.pg-sol-operations .pg-day p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+
+/* ---- Review by hand: the arithmetic ---- */
+.pg-sol-operations .pg-math { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 12px; }
+.pg-sol-operations .pg-math__i { flex: 1 1 130px; max-inline-size: 200px; text-align: center; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 14px 12px; box-shadow: var(--shadow-sm); }
+.pg-sol-operations .pg-math__i b { display: block; font-size: 22px; font-weight: 750; color: var(--ink); }
+.pg-sol-operations .pg-math__i span { display: block; font-size: 13px; color: var(--ink-3); }
+.pg-sol-operations .pg-math__i--res { border-color: #e86fa6; }
+.pg-sol-operations .pg-math__op { font-size: 22px; font-weight: 600; color: var(--ink-3); }
+.pg-sol-operations .pg-cap--start { max-inline-size: 760px; margin-inline: auto; text-align: center; }
+
+/* ---- ROI worked example ---- */
+.pg-sol-operations .pg-roi { margin-block-start: 28px; align-items: start; }
+.pg-sol-operations .pg-ws { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; min-inline-size: 0; }
+.pg-sol-operations .pg-ws__head { padding: 12px 18px; font-size: 14px; font-weight: 700; color: var(--ink); background: var(--tint); }
+.pg-sol-operations .pg-ws dl { margin: 0; }
+.pg-sol-operations .pg-ws__row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 18px; border-block-start: 1px solid var(--border); }
+.pg-sol-operations .pg-ws dt { font-size: 14.5px; color: var(--ink); min-inline-size: 0; }
+.pg-sol-operations .pg-ws dt small { display: block; font-size: 12.5px; color: var(--ink-3); }
+.pg-sol-operations .pg-ws dd { margin: 0; font-weight: 700; color: var(--ink); white-space: nowrap; }
+.pg-sol-operations .pg-ws__row--res { background: var(--tint); }
+.pg-sol-operations .pg-ws__row--res dt { font-weight: 700; }
+@media (max-width: 420px) {
+  .pg-sol-operations .pg-ws__row--res { flex-wrap: wrap; }
+  .pg-sol-operations .pg-ws__row--res dd { white-space: normal; }
+}
+
+/* ---- Getting started: steps + placeholder QR ---- */
+.pg-sol-operations .pg-steps { list-style: none; margin: 0; padding: 0; gap: 18px; }
 .pg-sol-operations .pg-steps li { display: flex; gap: 14px; align-items: flex-start; }
 .pg-sol-operations .pg-steps .n {
   flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
-  background: #6468f0; color: #fff; font-weight: 700;
+  background: var(--primary); color: #fff; font-weight: 700;
 }
 .pg-sol-operations .pg-steps h4 { margin-block: 0 4px; margin-inline: 0; }
 .pg-sol-operations .pg-steps li > div { min-width: 0; }
-.pg-sol-operations .pg-steps p { margin: 0; font-size: 15px; line-height: 1.6; }
+.pg-sol-operations .pg-steps p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+.pg-sol-operations .pg-qr {
+  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+  padding: 18px; border: 1px solid var(--border); border-radius: 18px; background: #fff;
+  box-shadow: var(--shadow); max-inline-size: 280px; inline-size: 100%; margin-inline: auto;
+}
+.pg-sol-operations .pg-qr-title { font-size: 15px; }
+.pg-sol-operations .pg-qr small { font-size: 14px; color: var(--ink-3); }
+/* Deliberately fake: a plain checkerboard with a "placeholder" label, never a scannable code. */
+.pg-sol-operations .pg-qr-box {
+  position: relative; inline-size: 168px; max-inline-size: 100%; aspect-ratio: 1; border-radius: 10px;
+  border: 8px solid #fff; outline: 1px solid var(--border);
+  background: repeating-conic-gradient(var(--border-2) 0 25%, var(--bg) 0 50%) 0 0 / 28px 28px;
+}
+.pg-sol-operations .pg-qr-tag {
+  position: absolute; inset-inline: 10%; inset-block-start: 50%; transform: translateY(-50%);
+  background: var(--ink); color: #fff; font-size: 14px; font-weight: 700; padding: 6px 10px;
+  border-radius: 8px; text-align: center;
+}
+.pg-sol-operations .pg-links { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 24px; }
+.pg-sol-operations .pg-links .btn svg { inline-size: 18px; block-size: 18px; flex: none; }
 
-.pg-sol-operations .pg-phone { display: flex; flex-direction: column; align-items: center; min-width: 0; }
-.pg-sol-operations .pg-phone .mk-phone { max-inline-size: min(340px, 100%); }
-.pg-sol-operations .pg-more { margin-block-start: 26px; font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
-.pg-sol-operations .pg-more a { min-height: 44px; display: inline-flex; align-items: center; font-weight: 600; }
+/* ---- Note from Roz ---- */
+.pg-sol-operations .pg-promise li > span:last-child { min-inline-size: 0; }
+
+/* ---- FAQ, cross links, final CTA ---- */
 .pg-sol-operations .faq-item summary { min-height: 44px; }
+.pg-sol-operations .xcard { min-block-size: 64px; }
+.pg-sol-operations .xi img { inline-size: 28px; block-size: 28px; }
+.pg-sol-operations .xcard .go { margin-inline: auto 0; }
+.pg-sol-operations .pg-ctaf-img { display: block; inline-size: 116px; block-size: auto; margin: 0 auto 12px; filter: drop-shadow(0 16px 30px rgba(0, 0, 0, .42)); }
+.pg-sol-operations .ctaf-cta .btn { min-block-size: 48px; }
+.pg-sol-operations .ctaf-sec { min-block-size: 44px; }
 
-/* Arabic: no tracking, uppercase or monospace on eyebrows (cursive script). */
-.legacy-rtl .pg-sol-operations .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }
+@media (max-width: 720px) {
+  .pg-sol-operations .s { padding-block: 56px; }
+  .pg-sol-operations .phero { padding-block: 40px 48px; }
+  .pg-sol-operations .phero h1 { font-size: clamp(28px, 8vw, 36px); }
+  .pg-sol-operations .heroc-cta .btn, .pg-sol-operations .pg-links .btn { inline-size: 100%; justify-content: center; }
+  .pg-sol-operations .pg-sub { margin-block-start: 40px; font-size: 20px; }
+  .pg-sol-operations .pg-day li { grid-template-columns: 70px minmax(0, 1fr); }
+}
 
-/* ROZ plans (#pricing): reuse the /pricing plan cards (pricing.css), so both pages look the same. */
+/* Roz plans (#pricing): reuse the /pricing plan cards (pricing.css), so both pages look the same. */
 .pg-sol-operations #pricing { scroll-margin-block-start: 80px; }
 .pg-sol-operations .pg-pricing .plans { margin-block-start: 34px; }
+
+/* Arabic: no tracking, uppercase or monospace on eyebrows (cursive script); arrows point the reading way. */
+.legacy-rtl .pg-sol-operations .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }
+.legacy-rtl .pg-sol-operations :is(.crumb svg, .xcard .go svg, .ctaf-sec svg) { transform: scaleX(-1); }
+.legacy-rtl .pg-sol-operations :is(.pg-k, .pchip, .crumb, .xcard b) { letter-spacing: 0; text-transform: none; }
+.legacy-rtl .pg-sol-operations .pg-quote p { line-height: 1.8; }
