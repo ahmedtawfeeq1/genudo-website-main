@@ -101,43 +101,38 @@ const html = `<div class="pg-sol-operations">
 
 <section class="s tint-bg" id="pricing"><div class="container">
   <div class="s-head center"><span class="eyebrow">الباقات والأسعار</span><h2>باقات روز بتتحدد بعدد أرقام الواتساب.</h2><p class="lead">اختار الباقة حسب عدد أرقام واتساب فريقك اللي روز بتتابعها. كل الأسعار بالجنيه المصري.</p></div>
-  <div class="rz-plans">
-    <div class="rz-plan" style="--pc:#586e78">
-      <div class="rz-ph"><span class="rz-pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>فريق</b><span class="rz-pn"><bdi>10</bdi> أرقام</span></div>
-      <dl>
-        <div><dt>اشتراك 6 شهور</dt><dd><bdi>20,000</bdi> جنيه</dd></div>
-        <div><dt>اشتراك سنوي</dt><dd><bdi>40,000</bdi> جنيه</dd></div>
-        <div><dt>للرقم في الشهر</dt><dd><bdi>333</bdi> جنيه</dd></div>
-        <div><dt>الفويس نوتس</dt><dd>لحد <bdi>5,000</bdi> دقيقة في الشهر</dd></div>
-        <div class="rz-best"><dt>مناسبة لـ</dt><dd>فريق مبيعات أو إدارة حسابات واحد.</dd></div>
-      </dl>
-      <a href="/contact" class="btn btn-ghost rz-btn">ابدأ مع روز</a>
+  <div class="pg-pricing">
+  <div class="plans">
+    <div class="plan">
+      <div class="pn">فريق</div>
+      <div class="pd">فريق مبيعات أو إدارة حسابات واحد.</div>
+      <div class="price"><span class="amt"><bdi>40,000</bdi></span><span class="cur">جنيه</span></div>
+      <div class="bill">بتتدفع سنويًا · أو <bdi>20,000</bdi> جنيه لـ 6 شهور</div>
+      <a href="/contact" class="pbtn solid">ابدأ مع روز</a>
+      <div class="inc">الباقة فيها</div>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>10</b> أرقام واتساب للشركة، محادثات وجروبات</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>333</b> جنيه للرقم في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>الفويس نوتس: لحد <b>5,000</b> دقيقة في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>تقارير لأي عدد من المديرين</li></ul>
     </div>
-    <div class="rz-plan" style="--pc:#3340b5">
-      <div class="rz-ph"><span class="rz-pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg></span><b>شركة</b><span class="rz-pn"><bdi>20</bdi> رقم</span></div>
-      <dl>
-        <div><dt>اشتراك 6 شهور</dt><dd><bdi>35,000</bdi> جنيه</dd></div>
-        <div><dt>اشتراك سنوي</dt><dd><bdi>70,000</bdi> جنيه</dd></div>
-        <div><dt>للرقم في الشهر</dt><dd><bdi>292</bdi> جنيه</dd></div>
-        <div><dt>الفويس نوتس</dt><dd>لحد <bdi>5,000</bdi> دقيقة في الشهر</dd></div>
-        <div class="rz-best"><dt>مناسبة لـ</dt><dd>شركة فيها أكتر من فريق أو فرع.</dd></div>
-      </dl>
-      <a href="/contact" class="btn btn-ghost rz-btn">ابدأ مع روز</a>
+    <div class="plan">
+      <div class="pn">شركة</div>
+      <div class="pd">شركة فيها أكتر من فريق أو فرع.</div>
+      <div class="price"><span class="amt"><bdi>70,000</bdi></span><span class="cur">جنيه</span></div>
+      <div class="bill">بتتدفع سنويًا · أو <bdi>35,000</bdi> جنيه لـ 6 شهور</div>
+      <a href="/contact" class="pbtn solid">ابدأ مع روز</a>
+      <div class="inc">الباقة فيها</div>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>20</b> رقم واتساب للشركة، محادثات وجروبات</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>292</b> جنيه للرقم في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>الفويس نوتس: لحد <b>5,000</b> دقيقة في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>تقارير لأي عدد من المديرين</li></ul>
     </div>
-    <div class="rz-plan" style="--pc:#3f8c7c">
-      <div class="rz-ph"><span class="rz-pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></span><b>مجموعة</b><span class="rz-pn"><bdi>50</bdi> رقم</span></div>
-      <dl>
-        <div><dt>اشتراك 6 شهور</dt><dd><bdi>75,000</bdi> جنيه</dd></div>
-        <div><dt>اشتراك سنوي</dt><dd><bdi>150,000</bdi> جنيه</dd></div>
-        <div><dt>للرقم في الشهر</dt><dd><bdi>250</bdi> جنيه</dd></div>
-        <div><dt>الفويس نوتس</dt><dd>لحد <bdi>5,000</bdi> دقيقة في الشهر</dd></div>
-        <div class="rz-best"><dt>مناسبة لـ</dt><dd>الوكالات والمجموعات اللي ليها أكتر من فرع.</dd></div>
-      </dl>
-      <a href="/contact" class="btn btn-ghost rz-btn">ابدأ مع روز</a>
+    <div class="plan">
+      <div class="pn">مجموعة</div>
+      <div class="pd">الوكالات والمجموعات اللي ليها أكتر من فرع.</div>
+      <div class="price"><span class="amt"><bdi>150,000</bdi></span><span class="cur">جنيه</span></div>
+      <div class="bill">بتتدفع سنويًا · أو <bdi>75,000</bdi> جنيه لـ 6 شهور</div>
+      <a href="/contact" class="pbtn solid">ابدأ مع روز</a>
+      <div class="inc">الباقة فيها</div>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>50</b> رقم واتساب للشركة، محادثات وجروبات</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>250</b> جنيه للرقم في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>الفويس نوتس: لحد <b>5,000</b> دقيقة في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>تقارير لأي عدد من المديرين</li></ul>
     </div>
   </div>
-  <div class="rz-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div><b>إزاي تقرا الباقات</b><p>كل ما الباقة تكبر، تكلفة الرقم بتقل. الاشتراك السنوي بيتدفع مرة واحدة ويغطي 12 شهر، واشتراك الـ 6 شهور بيغطي 6 شهور.</p></div></div>
-  <div class="rz-ban"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></svg><div><b>السعر بعدد الأرقام، مش بعدد الموظفين</b><p>بتدفع على أرقام الواتساب اللي روز بتتابعها، وأي عدد من المديرين يقدر يقرا التقارير.</p></div></div>
+  <p class="cmpnote">كل ما الباقة تكبر، تكلفة الرقم بتقل. السعر بعدد أرقام الواتساب، مش بعدد الموظفين.</p>
+  </div>
 </div></section>
 
 <section class="s white-bg"><div class="container">

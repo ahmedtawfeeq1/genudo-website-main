@@ -5,6 +5,7 @@ import LegacyBody from '@/components/LegacyBody';
 import LegacyScripts from '@/components/LegacyScripts';
 import BodyNav from '@/components/BodyNav';
 import { pageMetadata } from '@/i18n/seo';
+import '@/styles/pages/pricing.css';
 import '@/styles/pages/sol-operations.css';
 
 export const generateMetadata = pageMetadata({ route: '/sol-operations', seoKey: 'solOperations' });

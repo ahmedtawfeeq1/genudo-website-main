@@ -53,28 +53,6 @@
 /* Arabic: no tracking, uppercase or monospace on eyebrows (cursive script). */
 .legacy-rtl .pg-sol-operations .eyebrow { letter-spacing: 0; text-transform: none; font-family: inherit; font-size: 13.5px; }
 
-/* ROZ plans (#pricing): priced by WhatsApp numbers; the main /pricing page links here. */
-.pg-sol-operations .rz-plans { display: grid; grid-template-columns: 1fr; gap: 18px; margin-block-start: 34px; }
-.pg-sol-operations .rz-plan { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
-.pg-sol-operations .rz-ph { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; background: var(--pc); color: #fff; padding: 18px 20px; }
-.pg-sol-operations .rz-ph b { font-size: 19px; }
-.pg-sol-operations .rz-pi svg { inline-size: 24px; block-size: 24px; display: block; }
-.pg-sol-operations .rz-pn { margin-inline-start: auto; background: rgba(255,255,255,.18); border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 700; }
-.pg-sol-operations .rz-plan dl { margin: 0; padding: 6px 20px; flex: 1; }
-.pg-sol-operations .rz-plan dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-block: 12px; border-block-end: 1px solid var(--border); }
-.pg-sol-operations .rz-plan dl > div:last-child { border-block-end: 0; }
-.pg-sol-operations .rz-plan dt { font-size: 13px; color: var(--ink-3); }
-.pg-sol-operations .rz-plan dd { margin: 0; font-weight: 650; color: var(--ink); text-align: end; }
-.pg-sol-operations .rz-plan .rz-best { flex-direction: column; align-items: flex-start; gap: 4px; }
-.pg-sol-operations .rz-plan .rz-best dd { color: var(--pc); text-align: start; }
-.pg-sol-operations .rz-btn { margin: 4px 20px 20px; justify-content: center; }
-.pg-sol-operations .rz-note, .pg-sol-operations .rz-ban { display: flex; gap: 14px; align-items: flex-start; border-radius: 14px; padding: 18px 20px; margin-block-start: 18px; }
-.pg-sol-operations .rz-note { background: #e9e8fb; border-inline-start: 4px solid #3340b5; color: var(--ink); }
-.pg-sol-operations .rz-ban { background: #3340b5; color: #fff; }
-.pg-sol-operations .rz-note > svg, .pg-sol-operations .rz-ban > svg { inline-size: 28px; block-size: 28px; flex: none; }
-.pg-sol-operations .rz-note p, .pg-sol-operations .rz-ban p { margin: 4px 0 0; line-height: 1.6; }
-.pg-sol-operations .rz-note b { color: #3340b5; }
-@media (min-width: 860px) {
-  .pg-sol-operations .rz-plans { grid-template-columns: repeat(3, 1fr); }
-}
+/* ROZ plans (#pricing): reuse the /pricing plan cards (pricing.css), so both pages look the same. */
 .pg-sol-operations #pricing { scroll-margin-block-start: 80px; }
+.pg-sol-operations .pg-pricing .plans { margin-block-start: 34px; }
