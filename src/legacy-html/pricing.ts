@@ -74,6 +74,11 @@ const html = `<div class="pg-pricing">
     <div><h3>Enterprise</h3><p>Unlimited employees, dedicated support, SSO, data residency and a custom rollout for your whole organisation.</p></div>
     <a href="/contact" class="btn btn-primary btn-lg">Talk to sales</a>
   </div>
+  <a class="rozcall" href="/sol-operations#pricing">
+    <img src="/media/img/roz.svg" alt="ROZ" width="56" height="60" loading="lazy">
+    <span><b>Looking for ROZ?</b><span>ROZ, our AI quality control employee, has her own plans, priced by the WhatsApp numbers she follows. You will find them on her page.</span></span>
+    <span class="rozgo">See ROZ’s plans →</span>
+  </a>
 </div></section>
 
 <section class="s tint-bg"><div class="container">

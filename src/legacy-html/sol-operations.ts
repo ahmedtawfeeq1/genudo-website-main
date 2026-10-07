@@ -99,7 +99,48 @@ const html = `<div class="pg-sol-operations">
   <p class="pg-more"><a href="/how-it-works#pipelines">See how stages and actions work →</a> &nbsp; <a href="/integrations">Tools we connect with →</a></p>
 </div></section>
 
-<section class="s tint-bg"><div class="container">
+<section class="s tint-bg" id="pricing"><div class="container">
+  <div class="s-head center"><span class="eyebrow">Plans and pricing</span><h2>ROZ plans, priced by WhatsApp numbers.</h2><p class="lead">Choose the plan by how many of your team's WhatsApp numbers ROZ follows. All prices are in Egyptian pounds.</p></div>
+  <div class="rz-plans">
+    <div class="rz-plan" style="--pc:#586e78">
+      <div class="rz-ph"><span class="rz-pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>Team</b><span class="rz-pn"><bdi>10</bdi> numbers</span></div>
+      <dl>
+        <div><dt>6-month subscription</dt><dd><bdi>20,000</bdi> EGP</dd></div>
+        <div><dt>Annual subscription</dt><dd><bdi>40,000</bdi> EGP</dd></div>
+        <div><dt>Per number, per month</dt><dd><bdi>333</bdi> EGP</dd></div>
+        <div><dt>Voice notes</dt><dd>Up to <bdi>5,000</bdi> minutes a month</dd></div>
+        <div class="rz-best"><dt>Best for</dt><dd>A single sales or account-management team.</dd></div>
+      </dl>
+      <a href="/contact" class="btn btn-ghost rz-btn">Start with ROZ</a>
+    </div>
+    <div class="rz-plan" style="--pc:#3340b5">
+      <div class="rz-ph"><span class="rz-pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg></span><b>Company</b><span class="rz-pn"><bdi>20</bdi> numbers</span></div>
+      <dl>
+        <div><dt>6-month subscription</dt><dd><bdi>35,000</bdi> EGP</dd></div>
+        <div><dt>Annual subscription</dt><dd><bdi>70,000</bdi> EGP</dd></div>
+        <div><dt>Per number, per month</dt><dd><bdi>292</bdi> EGP</dd></div>
+        <div><dt>Voice notes</dt><dd>Up to <bdi>5,000</bdi> minutes a month</dd></div>
+        <div class="rz-best"><dt>Best for</dt><dd>A company with more than one team or branch.</dd></div>
+      </dl>
+      <a href="/contact" class="btn btn-ghost rz-btn">Start with ROZ</a>
+    </div>
+    <div class="rz-plan" style="--pc:#3f8c7c">
+      <div class="rz-ph"><span class="rz-pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></span><b>Group</b><span class="rz-pn"><bdi>50</bdi> numbers</span></div>
+      <dl>
+        <div><dt>6-month subscription</dt><dd><bdi>75,000</bdi> EGP</dd></div>
+        <div><dt>Annual subscription</dt><dd><bdi>150,000</bdi> EGP</dd></div>
+        <div><dt>Per number, per month</dt><dd><bdi>250</bdi> EGP</dd></div>
+        <div><dt>Voice notes</dt><dd>Up to <bdi>5,000</bdi> minutes a month</dd></div>
+        <div class="rz-best"><dt>Best for</dt><dd>Agencies and multi-branch groups.</dd></div>
+      </dl>
+      <a href="/contact" class="btn btn-ghost rz-btn">Start with ROZ</a>
+    </div>
+  </div>
+  <div class="rz-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div><b>How to read the plans</b><p>The larger the plan, the lower the cost per number. The annual subscription is paid once and covers twelve months; the 6-month subscription covers six.</p></div></div>
+  <div class="rz-ban"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></svg><div><b>Priced by numbers, not by headcount</b><p>You pay for the WhatsApp numbers ROZ follows. Any number of managers can read the reports.</p></div></div>
+</div></section>
+
+<section class="s white-bg"><div class="container">
   <div class="s-head center"><span class="eyebrow">Questions</span><h2>Good to know</h2></div>
   <div class="faq">
     <details class="faq-item"><summary>What exactly does ROZ see?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>She reviews conversations only on the company WhatsApp lines you connect.</p></details>
@@ -109,7 +150,7 @@ const html = `<div class="pg-sol-operations">
   </div>
 </div></section>
 
-<section class="s white-bg"><div class="container">
+<section class="s tint-bg"><div class="container">
   <div class="s-head"><span class="eyebrow">The rest of the team</span><h2>ROZ rounds out the team.</h2></div>
   <div class="xnav" style="margin-top:24px">
     <a class="xcard" href="/sol-sales-agent"><span class="xi" style="background:#6468f0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span><span><b>Aaref · Sales</b><span>Replies, follows up, helps book</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
