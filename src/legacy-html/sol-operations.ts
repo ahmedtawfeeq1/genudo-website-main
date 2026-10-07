@@ -131,6 +131,10 @@ const html = `<div class="pg-sol-operations">
       <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>50</b> company WhatsApp numbers, chats and groups</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>250 EGP</b> per number a month</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Voice notes: up to <b>5,000</b> minutes a month</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Reports for any number of managers</li></ul>
     </div>
   </div>
+  <div class="ent">
+    <div><h3>More than 50 numbers?</h3><p>Large groups, franchises and agencies with many branches get a custom ROZ plan, priced for their number of WhatsApp numbers.</p></div>
+    <a href="/contact" class="btn btn-primary btn-lg">Talk to sales</a>
+  </div>
   <p class="cmpnote">The larger the plan, the lower the cost per number. Priced by WhatsApp numbers, not by headcount.</p>
   </div>
 </div></section>

@@ -131,6 +131,10 @@ const html = `<div class="pg-sol-operations">
       <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>50</b> رقم واتساب للشركة، محادثات وجروبات</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>250</b> جنيه للرقم في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>الفويس نوتس: لحد <b>5,000</b> دقيقة في الشهر</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>تقارير لأي عدد من المديرين</li></ul>
     </div>
   </div>
+  <div class="ent">
+    <div><h3>أكتر من 50 رقم؟</h3><p>المجموعات الكبيرة والوكالات اللي ليها فروع كتير ليها باقة روز مخصوصة، بسعر حسب عدد أرقام الواتساب.</p></div>
+    <a href="/contact" class="btn btn-primary btn-lg">كلّم المبيعات</a>
+  </div>
   <p class="cmpnote">كل ما الباقة تكبر، تكلفة الرقم بتقل. السعر بعدد أرقام الواتساب، مش بعدد الموظفين.</p>
   </div>
 </div></section>
