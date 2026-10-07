@@ -16,7 +16,7 @@ const html = `<div class="pg-home">
         <a href="https://app.genudo.ai/auth/register" class="btn btn-ghost btn-lg">Start free</a>
       </div>
       <div class="hm-team">
-        <span class="hm-team__avs" aria-hidden="true"><img src="/media/img/aaref.svg" alt="" width="40" height="44"><img src="/media/img/adnan.svg" alt="" width="40" height="44"><img src="/media/img/roz.svg" alt="" width="40" height="44"></span>
+        <span class="hm-team__avs" aria-hidden="true"><img src="/media/img/aaref.svg" alt="" width="40" height="44"><img src="/media/img/adnan.svg" alt="" width="40" height="44"><img src="/media/img/roz-v2.svg" alt="" width="40" height="44"></span>
         <span>Aaref, Adnan and ROZ are ready to start</span>
       </div>
     </div>
@@ -350,7 +350,7 @@ const html = `<div class="pg-home">
       </a>
       <a class="hm-emp" href="/sol-operations">
         <div class="mk mk-emp mk-emp--roz">
-          <img class="mk-emp__img" src="/media/img/roz.svg" alt="" width="80" height="87" loading="lazy">
+          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="" width="80" height="87" loading="lazy">
           <div class="mk-emp__name">ROZ</div>
           <span class="mk-emp__role">Quality control</span>
           <ul class="mk-emp__list">

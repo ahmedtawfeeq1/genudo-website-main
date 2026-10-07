@@ -43,7 +43,7 @@ const html = `<div class="pg-ind-fitness">
   <span class="mk-emp__role">AI support & success</span>
   <ul class="mk-emp__list"><li><i class="mk-ic mk-ic--check"></i>Answers members from your own facts: timetable, plans, policies</li><li><i class="mk-ic mk-ic--check"></i>Collects freeze and cancellation requests and passes them to the front desk</li><li><i class="mk-ic mk-ic--check"></i>Routes anything sensitive to a person on your team</li></ul>
 </div><a class="pg-go" href="/sol-customer-service">See Adnan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="pg-emp"><span class="pg-tag">Behind the desk</span><div class="mk mk-emp mk-emp--roz">
-  <img class="mk-emp__img" src="/media/img/roz.svg" alt="" width="80" height="87">
+  <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="" width="80" height="87">
   <div class="mk-emp__name">ROZ</div>
   <span class="mk-emp__role">AI quality control</span>
   <ul class="mk-emp__list"><li><i class="mk-ic mk-ic--check"></i>Reviews your front desk's WhatsApp chats on company lines</li><li><i class="mk-ic mk-ic--check"></i>Flags slow replies and missed sign-ups</li><li><i class="mk-ic mk-ic--check"></i>Turns voice notes into text you can read</li></ul>

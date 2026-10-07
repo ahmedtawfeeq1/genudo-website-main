@@ -10,7 +10,7 @@ const html = `<div class="pg-sol-operations">
   </div>
   <div class="phero-media pg-hero-card">
     <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="روز تنبّهك لثلاث محادثات من فريقك">
-      <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> الشركة · اليوم</span></div><span class="mk-chip mk-chip--pink"><bdi>3</bdi> ملاحظات</span></div>
+      <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> الشركة · اليوم</span></div><span class="mk-chip mk-chip--pink"><bdi>3</bdi> ملاحظات</span></div>
       <ul class="mk-flags">
         <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>رد متأخر<span>خط المبيعات</span></b><p>انتظر كريم سعيد أكثر من ساعتين حتى وصله رد.</p></div></li>
         <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>فرصة ضائعة<span>خط المبيعات</span></b><p>طلبت ليلى عرض سعر ولم يُرسَل لها عرض.</p></div></li>
@@ -36,7 +36,7 @@ const html = `<div class="pg-sol-operations">
 
 <section class="s tint-bg"><div class="container">
   <div class="pg-meet">
-    <div class="pg-roz-fig"><img src="/media/img/roz.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي من جينـو دو" width="240" height="240"></div>
+    <div class="pg-roz-fig"><img src="/media/img/roz-v2.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي من جينـو دو" width="240" height="240"></div>
     <div class="prow-copy"><span class="eyebrow">قابل روز</span><h3>موظفة بتراجع الشغل اللي إنت مش فاضيله.</h3><p>روز واحدة من موظفين جينـو دو بالذكاء الاصطناعي. عارف بيرد على عملائك وعدنان بيدعمهم، وروز بتبصّ على شغل فريقك البشري نفسه، وتقولك فين الحاجة اللي محتاجة تدخّل.</p>
       <ul class="plist"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>بتراجع المحادثات على الخطوط اللي إنت بتربطها بس</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>بتنبّه للرد المتأخر والصفقة الواقفة والفرصة الضايعة</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>بتحوّل الفويس نوتس لنص تقدر تقراه</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>بتتابع سرعة الرد على مستوى الفريق</li></ul>
       <a href="/how-it-works#employees" class="btn btn-ghost">اتعرّف على باقي الموظفين ←</a>

@@ -87,7 +87,7 @@ const html = `<div class="pg-how-it-works is-ar">
           </ul>
         </div>
         <div class="mk mk-emp mk-emp--roz" dir="rtl" lang="ar">
-          <img class="mk-emp__img" src="/media/img/roz.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي" width="80" height="87">
+          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي" width="80" height="87">
           <div class="mk-emp__name">روز</div>
           <span class="mk-emp__role">مراقبة الجودة</span>
           <ul class="mk-emp__list">

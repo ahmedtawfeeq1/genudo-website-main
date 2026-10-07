@@ -16,7 +16,7 @@ const AVATARS = [
   { file: 'genu.svg', en: 'GENU · mascot', ar: 'جينـو · الشخصية' },
   { file: 'aaref.svg', en: 'Aaref · Sales', ar: 'عارف · المبيعات' },
   { file: 'adnan.svg', en: 'Adnan · Support', ar: 'عدنان · خدمة العملاء' },
-  { file: 'roz.svg', en: 'ROZ · Quality', ar: 'روز · مراقبة الجودة' },
+  { file: 'roz-v2.svg', en: 'ROZ · Quality', ar: 'روز · مراقبة الجودة' },
 ];
 
 function build(lang: 'en' | 'ar'): string {

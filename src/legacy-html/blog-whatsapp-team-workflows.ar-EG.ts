@@ -15,7 +15,7 @@ const html = `<div class="pg-post">
 <li><strong>إنت.</strong> سيب ملاحظة خاصة على أي محادثة، وادخل من تطبيق الموبايل في أي مكان.</li>
 </ul>
 <figure class="post-fig"><div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="روز ترصد ثلاث محادثات من فريقك">
-  <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
   <ul class="mk-flags">
     <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>رد متأخر<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>انتظر العميل ساعتين ليعرف السعر.</p></div></li>
     <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>فرصة ضائعة<span>سلمى · <bdi>1:15</bdi> م</span></b><p>طلب العميل الحجز ولم يقترح عليه أحد موعدًا.</p></div></li>

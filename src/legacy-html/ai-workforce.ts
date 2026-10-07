@@ -115,7 +115,7 @@ const html = `<div class="pg-ai-workforce">
     </a>
     <a class="aw-emp" href="/sol-operations">
       <div class="mk mk-emp mk-emp--roz">
-        <img class="mk-emp__img" src="/media/img/roz.svg" alt="" width="80" height="87" loading="lazy">
+        <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="" width="80" height="87" loading="lazy">
         <div class="mk-emp__name">ROZ</div>
         <span class="mk-emp__role">Quality control</span>
         <ul class="mk-emp__list">

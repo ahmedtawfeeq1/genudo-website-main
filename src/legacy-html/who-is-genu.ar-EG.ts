@@ -29,7 +29,7 @@ const html = `<div class="pg-who-is-genu is-ar">
       <ul class="wg-crew" aria-label="عيلة جينـو">
         <li><img src="/media/img/aaref.svg" alt="" width="56" height="61"><span>عارف</span></li>
         <li><img src="/media/img/adnan.svg" alt="" width="56" height="61"><span>عدنان</span></li>
-        <li><img src="/media/img/roz.svg" alt="" width="56" height="61"><span>روز</span></li>
+        <li><img src="/media/img/roz-v2.svg" alt="" width="56" height="61"><span>روز</span></li>
       </ul>
     </div>
   </div>
@@ -114,7 +114,7 @@ const html = `<div class="pg-who-is-genu is-ar">
       </div>
       <div class="wg-member wg-rv">
         <div class="mk mk-emp mk-emp--roz" dir="rtl" lang="ar">
-          <img class="mk-emp__img" src="/media/img/roz.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي" width="80" height="87">
+          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي" width="80" height="87">
           <div class="mk-emp__name">روز</div>
           <span class="mk-emp__role">مراقبة الجودة</span>
           <ul class="mk-emp__list">
@@ -267,7 +267,7 @@ const html = `<div class="pg-who-is-genu is-ar">
   </div>
 </div>
 <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="روز ترصد ثلاث محادثات من فريقك">
-  <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراقبة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراقبة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
   <ul class="mk-flags">
     <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>رد متأخر<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>انتظر العميل ساعتين ليعرف السعر.</p></div></li>
     <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>فرصة ضائعة<span>سلمى · <bdi>1:15</bdi> م</span></b><p>طلب العميل الحجز ولم يقترح عليه أحد موعدًا.</p></div></li>
@@ -324,7 +324,7 @@ const html = `<div class="pg-who-is-genu is-ar">
       <p class="lead">عملنا جينـو علشان يشرح من غير تعقيد: وشّ بالبكسل بيضحك ويفكّر، وإيدين بيشاور بيها على الحاجة اللي محتاج تشوفها.</p>
       <ul class="wg-traits">
         <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></span><div><b>تعبيرات بتقولك الحالة</b><p>لما تشوف جينـو بيفكّر، يبقى فيه شغل بيتعمل. ولما يحتفل، يبقى المهمة خلصت.</p></div></li>
-        <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="12.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-1.5 3-3 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span><div><b>لكل موظف لونه</b><p class="wg-swatches"><span><i style="--c:#6468f0"></i>جينـو نيلي</span><span><i style="--c:#e0a23a"></i>عارف كهرماني</span><span><i style="--c:#52a7cc"></i>عدنان أزرق</span><span><i style="--c:#e86fa6"></i>روز بمبي وبفيونكة</span></p></div></li>
+        <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="12.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-1.5 3-3 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span><div><b>لكل موظف لونه</b><p class="wg-swatches"><span><i style="--c:#6468f0"></i>جينـو نيلي</span><span><i style="--c:#e0a23a"></i>عارف كهرماني</span><span><i style="--c:#52a7cc"></i>عدنان أزرق</span><span><i style="--c:#e86fa6"></i>روز بمبي وعلى صدرها بادج وردة</span></p></div></li>
         <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>بيتكلم مصري</b><p>في الفيلم العربي جينـو بيحكي بالمصري، بنفس اللغة اللي عملائك بيكلّموك بيها.</p></div></li>
       </ul>
     </div>

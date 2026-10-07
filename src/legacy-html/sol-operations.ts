@@ -10,7 +10,7 @@ const html = `<div class="pg-sol-operations">
   </div>
   <div class="phero-media pg-hero-card">
     <div class="mk mk-card" role="img" aria-label="ROZ flags three chats from your team">
-      <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality review</b><span>Company WhatsApp · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
+      <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality review</b><span>Company WhatsApp · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
       <ul class="mk-flags">
         <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Slow reply<span>Sales line</span></b><p>Karim Saeed waited over 2 hours for an answer.</p></div></li>
         <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>Missed opportunity<span>Sales line</span></b><p>Laila asked for a quote; no offer was sent.</p></div></li>
@@ -36,7 +36,7 @@ const html = `<div class="pg-sol-operations">
 
 <section class="s tint-bg"><div class="container">
   <div class="pg-meet">
-    <div class="pg-roz-fig"><img src="/media/img/roz.svg" alt="ROZ, GenuDo's AI quality-control employee" width="240" height="240"></div>
+    <div class="pg-roz-fig"><img src="/media/img/roz-v2.svg" alt="ROZ, GenuDo's AI quality-control employee" width="240" height="240"></div>
     <div class="prow-copy"><span class="eyebrow">Meet ROZ</span><h3>An employee who reviews the work you do not have time to.</h3><p>ROZ is one of GenuDo's AI employees. Aaref answers your customers and Adnan supports them; ROZ looks at your human team's own work and tells you where something needs your attention.</p>
       <ul class="plist"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>Reviews conversations only on the lines you connect</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>Flags slow replies, stalled deals and missed opportunities</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>Turns voice notes into text you can read</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>Tracks reply speed across your team</li></ul>
       <a href="/how-it-works#employees" class="btn btn-ghost">Meet the other employees →</a>

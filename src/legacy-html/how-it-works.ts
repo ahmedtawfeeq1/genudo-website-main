@@ -87,7 +87,7 @@ const html = `<div class="pg-how-it-works">
           </ul>
         </div>
         <div class="mk mk-emp mk-emp--roz">
-          <img class="mk-emp__img" src="/media/img/roz.svg" alt="ROZ, the AI quality-control employee" width="80" height="87">
+          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="ROZ, the AI quality-control employee" width="80" height="87">
           <div class="mk-emp__name">ROZ</div>
           <span class="mk-emp__role">Quality control</span>
           <ul class="mk-emp__list">

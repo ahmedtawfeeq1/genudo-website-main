@@ -14,7 +14,7 @@ const html = `<div class="pg-pricing">
 <a href="/contact" class="btn btn-primary btn-lg">كلّم المبيعات</a>
 </div>
   <a class="rozcall" href="/sol-operations#pricing">
-    <img src="/media/img/roz.svg" alt="روز" width="56" height="60" loading="lazy">
+    <img src="/media/img/roz-v2.svg" alt="روز" width="56" height="60" loading="lazy">
     <span><b>بتدوّر على روز؟</b><span>روز، موظفة مراقبة الجودة بالذكاء الاصطناعي، ليها باقات خاصة بيها، سعرها بيتحدد بعدد أرقام الواتساب اللي بتتابعها. هتلاقيها في صفحتها.</span></span>
     <span class="rozgo">شوف باقات روز ←</span>
   </a>

@@ -30,7 +30,7 @@ const html = `<div class="pg-who-is-genu">
       <ul class="wg-crew" aria-label="The GENU family">
         <li><img src="/media/img/aaref.svg" alt="" width="56" height="61"><span>Aaref</span></li>
         <li><img src="/media/img/adnan.svg" alt="" width="56" height="61"><span>Adnan</span></li>
-        <li><img src="/media/img/roz.svg" alt="" width="56" height="61"><span>ROZ</span></li>
+        <li><img src="/media/img/roz-v2.svg" alt="" width="56" height="61"><span>ROZ</span></li>
       </ul>
     </div>
   </div>
@@ -115,7 +115,7 @@ const html = `<div class="pg-who-is-genu">
       </div>
       <div class="wg-member wg-rv">
         <div class="mk mk-emp mk-emp--roz">
-          <img class="mk-emp__img" src="/media/img/roz.svg" alt="ROZ, the AI quality-control employee" width="80" height="87">
+          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="ROZ, the AI quality-control employee" width="80" height="87">
           <div class="mk-emp__name">ROZ</div>
           <span class="mk-emp__role">Quality control</span>
           <ul class="mk-emp__list">
@@ -268,7 +268,7 @@ const html = `<div class="pg-who-is-genu">
   </div>
 </div>
 <div class="mk mk-card" role="img" aria-label="ROZ flags three conversations from your team">
-  <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality control</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality control</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
   <ul class="mk-flags">
     <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Slow reply<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
     <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>Missed opportunity<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
@@ -325,7 +325,7 @@ const html = `<div class="pg-who-is-genu">
       <p class="lead">We made GENU to explain things simply: a pixel face that smiles and thinks, and paddle hands that point at exactly what you need to see.</p>
       <ul class="wg-traits">
         <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></span><div><b>Faces that tell you what's happening</b><p>When GENU is thinking, work is under way. When GENU celebrates, the job is done.</p></div></li>
-        <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="12.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-1.5 3-3 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span><div><b>Every employee has its colour</b><p class="wg-swatches"><span><i style="--c:#6468f0"></i>GENU indigo</span><span><i style="--c:#e0a23a"></i>Aaref amber</span><span><i style="--c:#52a7cc"></i>Adnan blue</span><span><i style="--c:#e86fa6"></i>ROZ pink, with a bow</span></p></div></li>
+        <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="12.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-1.5 3-3 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span><div><b>Every employee has its colour</b><p class="wg-swatches"><span><i style="--c:#6468f0"></i>GENU indigo</span><span><i style="--c:#e0a23a"></i>Aaref amber</span><span><i style="--c:#52a7cc"></i>Adnan blue</span><span><i style="--c:#e86fa6"></i>ROZ pink, with a rose badge</span></p></div></li>
         <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>Speaks your customers' language</b><p>In the Arabic film, GENU speaks Egyptian Arabic, the same way your customers talk to you.</p></div></li>
       </ul>
     </div>

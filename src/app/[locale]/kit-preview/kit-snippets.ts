@@ -432,7 +432,7 @@ const snippets = [
     note:
       'ROZ reviews the human team\'s WhatsApp chats on company lines and flags slow replies, missed opportunities and stalled deals. Names are fictional team members.',
     en: `<div class="mk mk-card" role="img" aria-label="ROZ flags three conversations from your team">
-  <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality review</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality review</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
   <ul class="mk-flags">
     <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Slow reply<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
     <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>Missed opportunity<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
@@ -441,7 +441,7 @@ const snippets = [
   <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 voice notes transcribed today</div>
 </div>`,
     ar: `<div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="روز ترصد ثلاث محادثات من فريقك">
-  <div class="mk-review__head"><img src="/media/img/roz.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>روز · مراجعة الجودة</b><span><bdi>WhatsApp</bdi> · خط المبيعات · اليوم</span></div><span class="mk-chip mk-chip--pink">3 ملاحظات</span></div>
   <ul class="mk-flags">
     <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>رد متأخر<span>أحمد · <bdi>10:40</bdi> ص</span></b><p>انتظر العميل ساعتين ليعرف السعر.</p></div></li>
     <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>فرصة ضائعة<span>سلمى · <bdi>1:15</bdi> م</span></b><p>طلب العميل الحجز ولم يقترح عليه أحد موعدًا.</p></div></li>

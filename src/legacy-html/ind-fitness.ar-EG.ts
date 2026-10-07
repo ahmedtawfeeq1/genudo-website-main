@@ -43,7 +43,7 @@ const html = `<div class="pg-ind-fitness">
   <span class="mk-emp__role">خدمة ونجاح العملاء</span>
   <ul class="mk-emp__list"><li><i class="mk-ic mk-ic--check"></i>بيرد على الأعضاء من معلوماتك إنت: الجدول والباقات والسياسات</li><li><i class="mk-ic mk-ic--check"></i>بيجمّع طلبات التجميد والإلغاء ويحوّلها للريسبشن</li><li><i class="mk-ic mk-ic--check"></i>بيحوّل أي حاجة حساسة لشخص مسؤول في فريقك</li></ul>
 </div><a class="pg-go" href="/sol-customer-service">تعرّف على عدنان <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="pg-emp"><span class="pg-tag">ورا الريسبشن</span><div class="mk mk-emp mk-emp--roz" dir="rtl" lang="ar">
-  <img class="mk-emp__img" src="/media/img/roz.svg" alt="" width="80" height="87">
+  <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="" width="80" height="87">
   <div class="mk-emp__name">روز</div>
   <span class="mk-emp__role">مراقبة الجودة</span>
   <ul class="mk-emp__list"><li><i class="mk-ic mk-ic--check"></i>بتراجع محادثات الريسبشن على <bdi>WhatsApp</bdi> الشركة</li><li><i class="mk-ic mk-ic--check"></i>بتنبّهك للردود المتأخرة والاشتراكات اللي ضاعت</li><li><i class="mk-ic mk-ic--check"></i>بتحوّل الفويس نوتس لكلام مكتوب</li></ul>
