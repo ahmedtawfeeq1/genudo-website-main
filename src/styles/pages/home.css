@@ -882,3 +882,36 @@ html[dir="rtl"] .pg-home .hm-faq .faq-item p {
     font-size: 17px;
   }
 }
+
+/* =========================================================================
+   PROFILE ALIGNMENT (Oct 2026): portraits + taglines on the team cards,
+   Roz's same-day path beside the hiring steps
+   ========================================================================= */
+.pg-home .hm-emp__portrait {
+  inline-size: 112px;
+  block-size: auto;
+  aspect-ratio: 448 / 640;
+  object-fit: contain;
+}
+.pg-home .hm-emp__tag {
+  position: relative;
+  margin-block-start: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+}
+html[dir="rtl"] .pg-home .hm-emp__tag {
+  line-height: 1.7;
+}
+.pg-home .hm-steps-copy .hm-sub {
+  margin-block-start: 12px;
+}
+.pg-home .hm-roz-path {
+  max-inline-size: 420px;
+  margin-inline: auto;
+}
+.pg-home .hm-roz-path__list {
+  padding: 0;
+  list-style: none;
+}

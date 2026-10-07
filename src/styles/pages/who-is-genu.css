@@ -242,6 +242,51 @@
 .pg-who-is-genu .wg-member { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .pg-who-is-genu .wg-member .mk-emp { flex: 1; }
 .pg-who-is-genu .wg-member--genu .mk-emp { border-style: dashed; border-color: #c9cbfb; }
+.pg-who-is-genu .wg-member .wg-portrait {
+  inline-size: 112px;
+  block-size: auto;
+  aspect-ratio: 448 / 640;
+  object-fit: contain;
+  margin-block-end: 4px;
+}
+.pg-who-is-genu .wg-emp__tag {
+  position: relative;
+  margin-block-start: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.pg-who-is-genu.is-ar .wg-emp__tag { line-height: 1.7; }
+
+/* Roz's scheduled report, shown in the Claude / ChatGPT panel */
+.pg-who-is-genu .wg-assist .mk-card__title { flex-wrap: wrap; }
+.pg-who-is-genu .wg-report {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pg-who-is-genu .wg-report li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid #e86fa6;
+  background: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.pg-who-is-genu.is-ar .wg-report li { line-height: 1.7; }
+.pg-who-is-genu .wg-report b {
+  flex: none;
+  min-inline-size: 28px;
+  font-size: 16px;
+  font-weight: 750;
+  text-align: center;
+  color: color-mix(in srgb, #e86fa6 70%, var(--ink));
+}
 .pg-who-is-genu .wg-note {
   display: flex;
   align-items: flex-start;

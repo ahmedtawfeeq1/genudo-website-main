@@ -10,9 +10,9 @@ const html = `<div class="pg-who-is-genu">
     <div class="wg-hero-copy">
       <span class="eyebrow">Who is GENU?</span>
       <h1>Hi, I'm <em>GENU</em>.<br>Let me introduce your new team.</h1>
-      <p class="lead">I'm your guide at GenuDo. With me, you hire AI employees: Aaref for sales, Adnan for customer support and ROZ for quality control. They answer your customers on WhatsApp, Instagram and your website chat, day and night, while you stay in control.</p>
+      <p class="lead">I'm your guide at GenuDo. With me, you hire AI employees: Aaref for sales, Adnan for customer service and success, and Roz for quality control. Aaref and Adnan answer your customers on WhatsApp, Instagram and your website chat, day and night; Roz shows you how your own team is doing on WhatsApp. And you stay in control.</p>
       <div class="wg-cta">
-        <a href="/contact" class="btn btn-primary btn-lg">Book a demo</a>
+        <a href="/contact" class="btn btn-primary btn-lg">Book a planning session</a>
         <a href="#film" class="btn btn-ondark btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>Watch the film</a>
       </div>
       <div class="wg-chans" aria-label="Channels">
@@ -30,7 +30,7 @@ const html = `<div class="pg-who-is-genu">
       <ul class="wg-crew" aria-label="The GENU family">
         <li><img src="/media/img/aaref.svg" alt="" width="56" height="61"><span>Aaref</span></li>
         <li><img src="/media/img/adnan.svg" alt="" width="56" height="61"><span>Adnan</span></li>
-        <li><img src="/media/img/roz-v2.svg" alt="" width="56" height="61"><span>ROZ</span></li>
+        <li><img src="/media/img/roz-v2.svg" alt="" width="56" height="61"><span>Roz</span></li>
       </ul>
     </div>
   </div>
@@ -71,7 +71,7 @@ const html = `<div class="pg-who-is-genu">
     <div class="wg-head wg-rv">
       <span class="eyebrow">The GENU family</span>
       <h2>A full team, and every employee has a clear job.</h2>
-      <p class="lead">GENU isn't an employee; GENU is the guide who introduces the team. Every GenuDo employee is a character from the GENU family, with its own colour and its own job. You hire it like anyone on your team, and it works on your channels from day one.</p>
+      <p class="lead">GENU isn't an employee; GENU is the guide who introduces the team. Every GenuDo employee is a character from the GENU family, with its own colour and its own job. You hire it like anyone on your team, and it works by the rules you approve.</p>
     </div>
     <div class="wg-family">
       <div class="wg-member wg-member--genu wg-rv">
@@ -89,45 +89,48 @@ const html = `<div class="pg-who-is-genu">
       </div>
       <div class="wg-member wg-rv">
         <div class="mk mk-emp mk-emp--aaref">
-          <img class="mk-emp__img" src="/media/img/aaref.svg" alt="Aaref, the AI sales employee" width="80" height="87">
+          <img class="mk-emp__img wg-portrait" src="/media/img/portraits/aaref-hero.webp" alt="Aaref, the AI sales employee" width="448" height="640" loading="lazy">
           <div class="mk-emp__name">Aaref</div>
           <span class="mk-emp__role">Sales</span>
+          <p class="wg-emp__tag">Answers every lead in seconds and follows up until it turns into a sale</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i><span>Answers every inquiry, day and night</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Qualifies leads and follows up with the quiet ones</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Helps book meetings straight into your calendar</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Every inquiry answered, day and night, in your customer's dialect</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Qualifies and follows up until the customer decides</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Closes the next step: a booking, a registration, an order or a request to your team</span></li>
           </ul>
         </div>
         <a class="wg-more" href="/sol-sales-agent">Meet Aaref<svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="wg-member wg-rv">
         <div class="mk mk-emp mk-emp--adnan">
-          <img class="mk-emp__img" src="/media/img/adnan.svg" alt="Adnan, the AI support employee" width="80" height="87">
+          <img class="mk-emp__img wg-portrait" src="/media/img/portraits/adnan-hero.webp" alt="Adnan, the AI customer service and success employee" width="448" height="640" loading="lazy">
           <div class="mk-emp__name">Adnan</div>
-          <span class="mk-emp__role">Support &amp; success</span>
+          <span class="mk-emp__role">Customer service &amp; success</span>
+          <p class="wg-emp__tag">Instant answers, routine requests handled, every new customer set up to succeed</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i><span>Answers from your own facts: prices, policies, schedules</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Routes tricky issues to the right person on your team</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Works with Zoho Desk and Zendesk</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Answers from your own information: schedules, prices, policies</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Handles routine requests by your policy, any hour</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Hands difficult cases to your team with full context</span></li>
           </ul>
         </div>
         <a class="wg-more" href="/sol-customer-service">Meet Adnan<svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="wg-member wg-rv">
         <div class="mk mk-emp mk-emp--roz">
-          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="ROZ, the AI quality-control employee" width="80" height="87">
-          <div class="mk-emp__name">ROZ</div>
+          <img class="mk-emp__img wg-portrait" src="/media/img/portraits/roz-hero.webp" alt="Roz, the AI quality control employee" width="448" height="640" loading="lazy">
+          <div class="mk-emp__name">Roz</div>
           <span class="mk-emp__role">Quality control</span>
+          <p class="wg-emp__tag">Ask her anything in Claude or ChatGPT; reports on your schedule; ready the same day</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i><span>Reviews your team's WhatsApp chats on company lines</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Flags slow replies, stalled deals and missed opportunities</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Connects when you scan a QR code from your phone, and turns voice notes into text</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Covers the one-to-one chats and groups on your company WhatsApp numbers</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Shows who waited, what stalled and how your team can serve better</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>One QR scan per number: no setup, no build</span></li>
           </ul>
         </div>
-        <a class="wg-more" href="/sol-operations">Meet ROZ<svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="wg-more" href="/sol-operations">Meet Roz<svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
-    <p class="wg-note wg-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>You can hire more than one of each kind, for example one Aaref for WhatsApp sales and another for your website chat. And more employees are on the way.</span></p>
+    <p class="wg-note wg-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>You can hire more than one of each kind, for example one Aaref for WhatsApp sales and another for your website chat. One Roz covers every company number and group you link. And more employees are on the way.</span></p>
   </div>
 </section>
 
@@ -136,47 +139,44 @@ const html = `<div class="pg-who-is-genu">
   <div class="container">
     <div class="wg-head wg-rv">
       <span class="eyebrow">How it works with you</span>
-      <h2>From describing your business to your first booking, in five steps.</h2>
-      <p class="lead">And GENU is beside you at every step: you describe your business, then watch your employee reply and book, while you follow along from your phone.</p>
+      <h2>From the first planning session to your first booking, in five steps.</h2>
+      <p class="lead">We build your team with you: your account manager plans with you, our automation specialist builds, and you approve every step. GENU walks you through it. Every name in the examples is invented.</p>
     </div>
 
     <div class="wg-walk">
       <aside class="wg-narr" data-wg-narrator aria-hidden="true">
-        <p class="wg-bubble" data-wg-say>Tell me about your business in your own words, typed or spoken, and I'll set up the rest.</p>
+        <p class="wg-bubble" data-wg-say>First we listen. Tell us how you sell and serve, and we plan your team with you.</p>
         <img src="/media/img/genu.svg" alt="" width="216" height="236">
         <span class="wg-step">Step <b data-wg-num>1</b> of 5</span>
       </aside>
 
       <ol class="wg-beats">
-        <li class="wg-beat" data-wg-beat="1" data-say="Tell me about your business in your own words, typed or spoken, and I'll set up the rest.">
+        <li class="wg-beat" data-wg-beat="1" data-say="First we listen. Tell us how you sell and serve, and we plan your team with you.">
           <div class="wg-beat-copy">
             <span class="wg-num">1</span>
-            <h3>You describe your business</h3>
-            <p>Six quick questions: your business name, what you sell and what customers usually ask. Type or speak your answers, without writing a line of code.</p>
-            <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> Tell me about your business in your own words, typed or spoken, and I'll set up the rest.</span></p>
+            <h3>We listen and plan together</h3>
+            <p>In a planning session, your account manager learns your customers, channels and offers, and where leads and time are lost. Together you agree what each employee does, what stays with your team and the numbers we track.</p>
+            <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> First we listen. Tell us how you sell and serve, and we plan your team with you.</span></p>
           </div>
           <div class="wg-media">
-<div class="mk mk-wizard" role="img" aria-label="Business brief, question 1 of 6">
-  <span class="mk-wizard__eyebrow"><i class="mk-ic mk-ic--sparkle"></i>Business brief</span>
-  <div class="mk-wizard__steps"><i class="is-on"></i><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="mk-q">
-    <div class="mk-q__top"><span class="mk-chip mk-chip--indigo">Question 1 of 6</span><span class="mk-q__count">0/6 answered</span></div>
-    <div class="mk-q__title">What is your company or brand name?</div>
-    <p class="mk-q__hint">Write the exact name customers know you by.</p>
-    <div class="mk-input">Bright Smile Dental<span class="mk-caret"></span></div>
-    <div class="mk-q__mic"><span class="mk-q__micbtn"><i class="mk-ic mk-ic--mic"></i></span>Type your answer, or tap the mic to speak.</div>
-    <div class="mk-q__foot"><span class="mk-btn mk-btn--ghost"><i class="mk-ic mk-ic--back"></i>Back</span><span class="mk-btn mk-btn--primary">Next question<i class="mk-ic mk-ic--arrow"></i></span></div>
-  </div>
+<div class="mk mk-card" role="img" aria-label="Hiring plan: Aaref and Adnan are built with you; Roz is ready the same day">
+  <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--route"></i>Hiring plan · Aaref and Adnan</div><span class="mk-chip mk-chip--pink"><i class="mk-ic mk-ic--qr"></i>Roz: same day</span></div>
+  <ol class="mk-timeline">
+    <li class="mk-step is-sent"><div class="mk-step__head"><b>We listen</b><span class="mk-step__wait">Account manager</span><span class="mk-status mk-status--sent">Done</span></div><p class="mk-step__msg">Your customers, channels and offers, and where leads are lost.</p></li>
+    <li class="mk-step is-sent"><div class="mk-step__head"><b>We plan together</b><span class="mk-step__wait">You and your account manager</span><span class="mk-status mk-status--sent">Done</span></div><p class="mk-step__msg">What each employee does, what stays with your team, the numbers we track.</p></li>
+    <li class="mk-step is-scheduled"><div class="mk-step__head"><b>We build</b><span class="mk-step__wait">Automation specialist</span><span class="mk-status mk-status--scheduled">Next</span></div><p class="mk-step__msg">Your knowledge, your stages and your tools.</p></li>
+    <li class="mk-step mk-step--end"><div class="mk-step__head"><i class="mk-ic mk-ic--arrow"></i>Then: we launch with your approval, and improve every month</div></li>
+  </ol>
 </div>
           </div>
         </li>
 
-        <li class="wg-beat" data-wg-beat="2" data-say="Give me your prices and your common questions, and I'll teach them to your employee.">
+        <li class="wg-beat" data-wg-beat="2" data-say="Share your price lists, policies and common questions. Our specialist builds them into your employees.">
           <div class="wg-beat-copy">
             <span class="wg-num">2</span>
-            <h3>GENU sets up your employee</h3>
-            <p>Upload your prices, your common questions or your website link, and tell each stage when to start and what to do. Your employee answers from your own facts, and you can change them anytime.</p>
-            <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> Give me your prices and your common questions, and I'll teach them to your employee.</span></p>
+            <h3>We build, you approve</h3>
+            <p>Our automation specialist builds Aaref and Adnan on your information: price lists, policies, common questions and schedules, your stages and your tools. You approve the answers before anything goes live, and build time is agreed in the planning session. Roz needs no build: one QR scan per company number and she starts the same day.</p>
+            <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> Share your price lists, policies and common questions. Our specialist builds them into your employees.</span></p>
           </div>
           <div class="wg-media">
 <div class="mk mk-card mk-kb" role="img" aria-label="Common questions the AI answers from">
@@ -185,11 +185,11 @@ const html = `<div class="pg-who-is-genu">
     <thead><tr><th>Question</th><th>Answer</th><th class="mk-hide-sm">Updated</th></tr></thead>
     <tbody>
       <tr><td>What are your opening hours?</td><td>Saturday to Thursday, 10 am to 10 pm.</td><td class="mk-hide-sm">1 Jan 2029</td></tr>
-      <tr><td>Is the first consultation free?</td><td>Yes, the first consultation is free.</td><td class="mk-hide-sm">1 Jan 2029</td></tr>
-      <tr><td>Is there parking?</td><td>Yes, free parking behind the building.</td><td class="mk-hide-sm">3 Jan 2029</td></tr>
+      <tr><td>Can I book on WhatsApp?</td><td>Yes, on WhatsApp or the website chat, any hour.</td><td class="mk-hide-sm">1 Jan 2029</td></tr>
+      <tr><td>Is there parking?</td><td>Yes, parking behind the building.</td><td class="mk-hide-sm">3 Jan 2029</td></tr>
     </tbody>
   </table>
-  <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>Answered from this table: “Yes, the first consultation is free. Shall I book you in?”</span></div>
+  <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>Answered from this table: “Yes, you can book right here. Shall I find you a time?”</span></div>
 </div>
           </div>
         </li>
@@ -197,8 +197,8 @@ const html = `<div class="pg-who-is-genu">
         <li class="wg-beat" data-wg-beat="3" data-say="A customer messaged at 2 AM? Aaref answered and booked the visit.">
           <div class="wg-beat-copy">
             <span class="wg-num">3</span>
-            <h3>It answers and books, day and night</h3>
-            <p>Your employee replies instantly on WhatsApp, Instagram, Messenger and your website chat. It understands voice notes, asks the right questions and helps book the meeting into your calendar.</p>
+            <h3>We launch: it answers and books, day and night</h3>
+            <p>Your employee replies instantly on WhatsApp, Instagram, Messenger and your website chat. It understands voice notes, asks the right questions and closes the next step: a booking, a registration, an order or a request to your team.</p>
             <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> A customer messaged at 2 AM? Aaref answered and booked the visit.</span></p>
           </div>
           <div class="wg-media">
@@ -213,13 +213,13 @@ const html = `<div class="pg-who-is-genu">
       <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>Aaref · AI</span>Hi Mona! We have Thursday at 6:30 or 7:15 PM. Which suits you?<span class="mk-msg__meta">2:14 AM <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-msg mk-msg--in mk-voice">
         <div class="mk-voice__row"><span class="mk-voice__play"><i class="mk-ic mk-ic--play"></i></span><span class="mk-voice__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="mk-voice__len">0:07</span></div>
-        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>Transcribed</b>Thursday 6:30, please. Is the first consultation free?</div>
+        <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>Transcribed</b>Thursday 6:30, please.</div>
         <span class="mk-msg__meta">2:15 AM</span>
       </div>
-      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>Aaref · AI</span>Yes, it's free! You're booked for Thursday at 6:30 PM.<span class="mk-msg__meta">2:15 AM <i class="mk-ic mk-ic--checks"></i></span></div>
+      <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>Aaref · AI</span>Done! You're booked for Thursday at 6:30 PM.<span class="mk-msg__meta">2:15 AM <i class="mk-ic mk-ic--checks"></i></span></div>
       <div class="mk-meeting">
         <div class="mk-meeting__top"><span class="mk-meeting__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><div class="mk-meeting__title">Meeting confirmed</div><div class="mk-meeting__when">Thu 14 Jan · 6:30 PM</div></div></div>
-        <div class="mk-meeting__rows"><span><i class="mk-ic mk-ic--check"></i>Added to Google Calendar</span><span><i class="mk-ic mk-ic--check"></i>Meeting link sent on WhatsApp</span></div>
+        <div class="mk-meeting__rows"><span><i class="mk-ic mk-ic--check"></i>Added to Google Calendar</span><span><i class="mk-ic mk-ic--check"></i>Confirmation sent on WhatsApp</span></div>
       </div>
     </div>
     <div class="mk-phone__compose">AI is handling this chat. Take over to reply.</div>
@@ -247,12 +247,12 @@ const html = `<div class="pg-who-is-genu">
           </div>
         </li>
 
-        <li class="wg-beat" data-wg-beat="5" data-say="And you see everything, and take over any chat in one tap, even from your phone.">
+        <li class="wg-beat" data-wg-beat="5" data-say="You see every conversation and take over any chat in one tap. And your account manager reviews the results with you every month.">
           <div class="wg-beat-copy">
             <span class="wg-num">5</span>
-            <h3>And you stay in control</h3>
-            <p>Every conversation lands in one inbox. Take over any chat in one tap and hand it back afterwards, even from the mobile app. And ROZ reviews your team's chats and tells you when a customer waited too long or an opportunity slipped away.</p>
-            <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> And you see everything, and take over any chat in one tap, even from your phone.</span></p>
+            <h3>You stay in control, and we keep improving</h3>
+            <p>Every conversation lands in one inbox. Take over any chat in one tap and hand it back afterwards, even from the mobile app. Your account manager reviews the results with you every month. And Roz answers your questions about your team's WhatsApp chats and groups, and sends the reports you schedule, through Claude or ChatGPT.</p>
+            <p class="wg-says"><img src="/media/img/genu-avatar.svg" alt="" width="32" height="32"><span><b>GENU:</b> You see every conversation and take over any chat in one tap. And your account manager reviews the results with you every month.</span></p>
           </div>
           <div class="wg-media wg-media--pair">
 <div class="mk mk-phone" role="img" aria-label="A team member has taken over the chat">
@@ -267,14 +267,15 @@ const html = `<div class="pg-who-is-genu">
     <div class="mk-phone__compose mk-phone__compose--input"><span>Type a message…</span><span class="mk-phone__send"><i class="mk-ic mk-ic--send"></i></span></div>
   </div>
 </div>
-<div class="mk mk-card" role="img" aria-label="ROZ flags three conversations from your team">
-  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>ROZ · Quality control</b><span>WhatsApp · Sales line · Today</span></div><span class="mk-chip mk-chip--pink">3 flags</span></div>
-  <ul class="mk-flags">
-    <li class="mk-flag mk-flag--slow"><span class="mk-flag__ic"><i class="mk-ic mk-ic--clock"></i></span><div class="mk-flag__body"><b>Slow reply<span>Ahmed · 10:40 AM</span></b><p>Customer waited 2 hours for a price.</p></div></li>
-    <li class="mk-flag mk-flag--missed"><span class="mk-flag__ic"><i class="mk-ic mk-ic--flag"></i></span><div class="mk-flag__body"><b>Missed opportunity<span>Salma · 1:15 PM</span></b><p>Customer asked to book. Nobody offered a time.</p></div></li>
-    <li class="mk-flag mk-flag--stalled"><span class="mk-flag__ic"><i class="mk-ic mk-ic--pause"></i></span><div class="mk-flag__body"><b>Stalled deal<span>Ahmed · 4 days</span></b><p>Quote sent, no follow-up since.</p></div></li>
+<div class="mk mk-card wg-assist" role="img" aria-label="Roz's scheduled weekly report, in Claude or ChatGPT connected to GenuDo (invented example)">
+  <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--sparkle"></i>Claude or ChatGPT · connected to GenuDo</div></div>
+  <div class="mk-review__head"><img src="/media/img/roz-v2.svg" alt="" width="44" height="48"><div class="mk-review__who"><b>Roz · Weekly report</b><span>Monday 9:00 AM · 2 sales numbers and 1 customer group</span></div><span class="mk-chip mk-chip--pink"><i class="mk-ic mk-ic--clock"></i>Scheduled</span></div>
+  <ul class="wg-report">
+    <li><b>2</b><span>customers waited more than 3 hours for a reply</span></li>
+    <li><b>1</b><span>installment plan promised and not sent</span></li>
+    <li><b>14</b><span>customers asked about certificates: an answer to add to Adnan's knowledge</span></li>
   </ul>
-  <div class="mk-review__foot"><i class="mk-ic mk-ic--mic"></i>6 voice notes transcribed today</div>
+  <div class="mk-review__foot"><i class="mk-ic mk-ic--note"></i>Invented example</div>
 </div>
           </div>
         </li>
@@ -325,7 +326,7 @@ const html = `<div class="pg-who-is-genu">
       <p class="lead">We made GENU to explain things simply: a pixel face that smiles and thinks, and paddle hands that point at exactly what you need to see.</p>
       <ul class="wg-traits">
         <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></span><div><b>Faces that tell you what's happening</b><p>When GENU is thinking, work is under way. When GENU celebrates, the job is done.</p></div></li>
-        <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="12.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-1.5 3-3 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span><div><b>Every employee has its colour</b><p class="wg-swatches"><span><i style="--c:#6468f0"></i>GENU indigo</span><span><i style="--c:#e0a23a"></i>Aaref amber</span><span><i style="--c:#52a7cc"></i>Adnan blue</span><span><i style="--c:#e86fa6"></i>ROZ pink, with a rose badge</span></p></div></li>
+        <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="12.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="13.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-1.5 3-3 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span><div><b>Every employee has its colour</b><p class="wg-swatches"><span><i style="--c:#6468f0"></i>GENU indigo</span><span><i style="--c:#e0a23a"></i>Aaref amber</span><span><i style="--c:#52a7cc"></i>Adnan blue</span><span><i style="--c:#e86fa6"></i>Roz rose, with a round badge</span></p></div></li>
         <li><span class="wg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>Speaks your customers' language</b><p>In the Arabic film, GENU speaks Egyptian Arabic, the same way your customers talk to you.</p></div></li>
       </ul>
     </div>
@@ -365,8 +366,8 @@ const html = `<div class="pg-who-is-genu">
   <img class="ctaf-genu wg-final-genu" src="/media/img/genu.svg" alt="" width="96" height="105">
   <div class="eyebrow ctaf-eyebrow">Let's begin</div>
   <h2>Ready to hire the first member of your team?</h2>
-  <p class="lead">Book a demo and GENU will show you the team working on your own business, or start on your own today.</p>
-  <div class="ctaf-cta"><a href="/contact" class="btn btn-primary btn-lg">Book a demo</a><a href="https://app.genudo.ai/auth/register" class="ctaf-sec">Start free <svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <p class="lead">Book a planning session: we listen, plan your team with you and build it on your own business. Or start free on your own.</p>
+  <div class="ctaf-cta"><a href="/contact" class="btn btn-primary btn-lg">Book a planning session</a><a href="https://app.genudo.ai/auth/register" class="ctaf-sec">Start free <svg class="wg-flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   <div class="ctaf-trust"><span class="live-dot"></span>WhatsApp<span class="sep"></span>Instagram<span class="sep"></span>Messenger<span class="sep"></span>Website chat</div>
 </div></div></section>
 

@@ -10,14 +10,14 @@ const html = `<div class="pg-home">
     <div class="hm-hero__copy">
       <p class="hm-kicker"><span class="live-dot" aria-hidden="true"></span><span>AI employees for WhatsApp, Instagram, Messenger and your website</span></p>
       <h1 class="hm-h1" id="hm-hero-title">No customer left waiting.<br><span class="hm-accent">No lead left behind.</span></h1>
-      <p class="hm-lead">GenuDo gives you a team of AI employees that answer your customers the moment they write, follow up with the ones who go quiet and book the meetings, day and night. And you stay in control, right from your phone.</p>
+      <p class="hm-lead">GenuDo gives you a team of AI employees that answer your customers the moment they write, follow up with the ones who go quiet and close the next step, day and night: a booking, a registration or an order. And you stay in control, right from your phone.</p>
       <div class="hm-cta">
-        <a href="/contact" class="btn btn-primary btn-lg">Book a demo</a>
+        <a href="/contact" class="btn btn-primary btn-lg">Book a planning session</a>
         <a href="https://app.genudo.ai/auth/register" class="btn btn-ghost btn-lg">Start free</a>
       </div>
       <div class="hm-team">
         <span class="hm-team__avs" aria-hidden="true"><img src="/media/img/aaref.svg" alt="" width="40" height="44"><img src="/media/img/adnan.svg" alt="" width="40" height="44"><img src="/media/img/roz-v2.svg" alt="" width="40" height="44"></span>
-        <span>Aaref, Adnan and ROZ are ready to start</span>
+        <span>Aaref, Adnan and Roz are ready to join your team</span>
       </div>
     </div>
 
@@ -30,8 +30,8 @@ const html = `<div class="pg-home">
           <div class="mk-takeover"><span class="mk-takeover__state"><i class="mk-ic mk-ic--sparkle"></i>AI is handling this chat</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--pause"></i>Take over</span></div>
           <div class="mk-chat">
             <span class="mk-chat__day">Today</span>
-            <div class="mk-msg mk-msg--in">Hi! How much is teeth whitening?<span class="mk-msg__meta">2:14 AM</span></div>
-            <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>Aaref · AI</span>Hi Mona! Whitening is EGP 3,500 and takes about an hour. Would you like a visit this week?<span class="mk-msg__meta">2:14 AM <i class="mk-ic mk-ic--checks"></i></span></div>
+            <div class="mk-msg mk-msg--in">Hi! Do you do teeth whitening?<span class="mk-msg__meta">2:14 AM</span></div>
+            <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>Aaref · AI</span>Hi Mona! Yes, whitening takes about an hour and a follow-up visit is included. Would you like a visit this week?<span class="mk-msg__meta">2:14 AM <i class="mk-ic mk-ic--checks"></i></span></div>
             <div class="mk-msg mk-msg--in mk-voice">
               <div class="mk-voice__row"><span class="mk-voice__play"><i class="mk-ic mk-ic--play"></i></span><span class="mk-voice__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="mk-voice__len">0:09</span></div>
               <div class="mk-voice__text"><b><i class="mk-ic mk-ic--mic"></i>Transcribed</b>Yes please, Thursday after 6 if you can.</div>
@@ -47,7 +47,8 @@ const html = `<div class="pg-home">
         </div>
       </div>
       <div class="hm-float hm-float--a" aria-hidden="true"><img src="/media/img/aaref.svg" alt="" width="34" height="37"><div><b>Aaref answered Mona</b><span>at 2:14 a.m.</span></div></div>
-      <div class="hm-float hm-float--b" aria-hidden="true"><span class="hm-float__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><b>New meeting booked</b><span>while you slept</span></div></div>
+      <div class="hm-float hm-float--b" aria-hidden="true"><span class="hm-float__ic"><i class="mk-ic mk-ic--calendar"></i></span><div><b>New booking</b><span>while you slept</span></div></div>
+      <p class="hm-caption">Invented example</p>
     </div>
   </div>
 </section>
@@ -159,11 +160,11 @@ const html = `<div class="pg-home">
       <div class="hm-pillar__copy">
         <span class="hm-num">02</span>
         <h3>Conversations that move to a sale, not small talk</h3>
-        <p>Qualified leads and booked meetings, not endless chatting. Every opportunity moves from stage to stage until the customer buys, and your AI employee does the work that comes after the conversation too.</p>
+        <p>Qualified leads, bookings, registrations and orders, not endless chatting. Every opportunity moves from stage to stage by the stage rules you set, until the customer decides, and your AI employee does the work that comes after the conversation too.</p>
         <p class="hm-how">How we do it</p>
         <ul class="hm-proof">
-          <li><i class="mk-ic mk-ic--check"></i><span>Stages that move each opportunity forward: interested, booking, won</span></li>
-          <li><i class="mk-ic mk-ic--check"></i><span>Looks up free slots, books the meeting and sends the confirmation on WhatsApp</span></li>
+          <li><i class="mk-ic mk-ic--check"></i><span>Stages that move each opportunity forward by your rules: interested, booking, won</span></li>
+          <li><i class="mk-ic mk-ic--check"></i><span>Books the appointment, registers the customer or records the order, and confirms on WhatsApp</span></li>
           <li><i class="mk-ic mk-ic--check"></i><span>Updates your CRM the moment a customer is ready, with the details it collected in the chat</span></li>
         </ul>
         <a class="hm-link" href="/how-it-works#pipelines">See how a lead moves to a sale<i class="mk-ic mk-ic--arrow"></i></a>
@@ -175,7 +176,7 @@ const html = `<div class="pg-home">
               <div class="mk-col__head"><span class="mk-stage">New lead</span><span class="mk-col__count">16 deals</span></div>
               <div class="mk-opp mk-opp--new">
                 <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--green">MA</span><div class="mk-opp__who"><b>Mona Adel</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">now</span></div>
-                <p class="mk-opp__msg">Hi! How much is teeth whitening?</p>
+                <p class="mk-opp__msg">Hi! Do you do teeth whitening?</p>
               </div>
               <div class="mk-opp">
                 <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--blue">OH</span><div class="mk-opp__who"><b>Omar Hassan</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">2:14 AM</span></div>
@@ -208,7 +209,7 @@ const html = `<div class="pg-home">
             </div>
           </div>
         </div>
-        <p class="hm-caption">Illustrative data</p>
+        <p class="hm-caption">Invented example</p>
       </div>
     </article>
 
@@ -217,11 +218,11 @@ const html = `<div class="pg-home">
       <div class="hm-pillar__copy">
         <span class="hm-num">03</span>
         <h3>AI cost you can predict, with a cap</h3>
-        <p>You know what every reply and every outcome costs. Each message goes to the most affordable model that can answer it well, and you set a spending cap on every conversation… if it's reached, the AI steps back and leaves it to your team.</p>
+        <p>You know what every reply and every outcome costs. Each message goes to the most affordable model that can answer it well, and you set a spending cap on every conversation… if it's reached, the AI steps back and hands the chat to your team.</p>
         <p class="hm-how">How we do it</p>
         <ul class="hm-proof">
           <li><i class="mk-ic mk-ic--check"></i><span>Simple messages go to cheaper models; only the hard ones get the most capable model</span></li>
-          <li><i class="mk-ic mk-ic--check"></i><span>A spend cap per conversation: at the cap, the AI pauses and alerts your team</span></li>
+          <li><i class="mk-ic mk-ic--check"></i><span>A spend cap per conversation: at the cap, the AI pauses and hands the chat to your team</span></li>
           <li><i class="mk-ic mk-ic--check"></i><span>The cost of every reply and every stage, right on your dashboard</span></li>
         </ul>
         <a class="hm-link" href="/how-it-works#models">See how cost stays under control<i class="mk-ic mk-ic--arrow"></i></a>
@@ -235,13 +236,13 @@ const html = `<div class="pg-home">
             <div class="mk-tier mk-tier--complex"><div class="mk-tier__head"><span class="mk-tier__name">Complex</span></div><p class="mk-tier__eg">“Plan a 3-visit treatment around my travel dates.”</p><div class="mk-tier__model"><i class="mk-ic mk-ic--target"></i>Advanced model</div><div class="mk-bar"><i style="--w:6%"></i></div><span class="mk-tier__share">6% of messages</span></div>
           </div>
         </div>
-        <div class="mk mk-card" role="img" aria-label="Spend cap per conversation: at the cap the AI pauses and alerts the team">
+        <div class="mk mk-card" role="img" aria-label="Spend cap per conversation: at the cap the AI pauses and hands the chat to the team">
           <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--wallet"></i>Spend cap per conversation</div><span class="mk-toggle is-on"></span></div>
           <div class="mk-cap__value"><b><bdi>$0.32</bdi></b> of <bdi>$0.50</bdi> used</div>
           <div class="mk-bar mk-bar--amber"><i style="--w:64%"></i></div>
-          <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>When the cap is reached: pause the AI in this chat and alert the team.</span></p>
+          <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>When the cap is reached: pause the AI in this chat and hand it to the team.</span></p>
         </div>
-        <p class="hm-caption">Illustrative data</p>
+        <p class="hm-caption">Invented example</p>
       </div>
     </article>
 
@@ -250,33 +251,33 @@ const html = `<div class="pg-home">
       <div class="hm-pillar__copy">
         <span class="hm-num">04</span>
         <h3>Speaks like your customers, answers from your facts</h3>
-        <p>Arabic that sounds local: Egyptian, Gulf, Levantine… 14 regional dialects, or let it pick the dialect for each customer on its own. It understands voice notes and photos too. And every answer comes from your own prices, policies and schedules.</p>
+        <p>Arabic that sounds local: Egyptian, Gulf, Levantine… 14 regional dialects, or let it pick the dialect for each customer on its own. It understands voice notes and photos too. And every answer comes from your own information: services, policies and schedules.</p>
         <p class="hm-how">How we do it</p>
         <ul class="hm-proof">
           <li><i class="mk-ic mk-ic--check"></i><span>14 Arabic dialects, or automatic multi-dialect</span></li>
           <li><i class="mk-ic mk-ic--check"></i><span>Listens to voice notes and understands the photos customers send</span></li>
-          <li><i class="mk-ic mk-ic--check"></i><span>Answers from the prices, FAQs, policies and schedules you upload</span></li>
+          <li><i class="mk-ic mk-ic--check"></i><span>Answers from the price lists, FAQs, policies and schedules you share</span></li>
         </ul>
         <a class="hm-link" href="/how-it-works#knowledge">See how it learns your business<i class="mk-ic mk-ic--arrow"></i></a>
       </div>
       <div class="hm-stage hm-stage--stack">
         <div class="mk mk-card" role="img" aria-label="Choose the Arabic dialect your AI employee speaks">
-          <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>Agent dialect</div></div>
+          <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>Dialect</div></div>
           <div class="mk-chips">
             <span class="mk-chip mk-chip--opt is-on"><i class="mk-ic mk-ic--check"></i>Egyptian</span><span class="mk-chip mk-chip--opt">Saudi / Gulf</span><span class="mk-chip mk-chip--opt">Jordanian</span><span class="mk-chip mk-chip--opt">Palestinian</span><span class="mk-chip mk-chip--opt">Lebanese</span><span class="mk-chip mk-chip--opt">Syrian</span><span class="mk-chip mk-chip--opt">Iraqi</span><span class="mk-chip mk-chip--opt">Yemeni</span><span class="mk-chip mk-chip--opt">Sudanese</span><span class="mk-chip mk-chip--opt">Libyan</span><span class="mk-chip mk-chip--opt">Tunisian</span><span class="mk-chip mk-chip--opt">Algerian</span><span class="mk-chip mk-chip--opt">Moroccan</span><span class="mk-chip mk-chip--opt">Mauritanian</span><span class="mk-chip mk-chip--opt mk-chip--auto"><i class="mk-ic mk-ic--sparkle"></i>Auto multi-dialect</span>
           </div>
         </div>
-        <div class="mk mk-card mk-kb" role="img" aria-label="Price list the AI answers from">
-          <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--book"></i>Price list</div><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--table"></i>From CSV</span></div>
+        <div class="mk mk-card mk-kb" role="img" aria-label="Services table the AI answers from">
+          <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--book"></i>Services</div><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--table"></i>From CSV</span></div>
           <table class="mk-table">
-            <thead><tr><th>Service</th><th>Price</th><th class="mk-hide-sm">Duration</th><th class="mk-hide-sm">Notes</th></tr></thead>
+            <thead><tr><th>Service</th><th>Duration</th><th class="mk-hide-sm">Notes</th></tr></thead>
             <tbody>
-              <tr><td>Teeth whitening</td><td class="mk-num">EGP 3,500</td><td class="mk-hide-sm">60 min</td><td class="mk-hide-sm">Follow-up visit included</td></tr>
-              <tr><td>Check-up and cleaning</td><td class="mk-num">EGP 800</td><td class="mk-hide-sm">30 min</td><td class="mk-hide-sm">Every 6 months</td></tr>
-              <tr><td>Braces consultation</td><td class="mk-num">Free</td><td class="mk-hide-sm">20 min</td><td class="mk-hide-sm">Thursdays only</td></tr>
+              <tr><td>Teeth whitening</td><td class="mk-num">60 min</td><td class="mk-hide-sm">Follow-up visit included</td></tr>
+              <tr><td>Check-up and cleaning</td><td class="mk-num">30 min</td><td class="mk-hide-sm">Every 6 months</td></tr>
+              <tr><td>Braces consultation</td><td class="mk-num">20 min</td><td class="mk-hide-sm">Thursdays only</td></tr>
             </tbody>
           </table>
-          <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>Answered from this table: “Whitening is EGP 3,500 and takes about an hour.”</span></div>
+          <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>Answered from this table: “Whitening takes about an hour, and a follow-up visit is included.”</span></div>
         </div>
       </div>
     </article>
@@ -291,7 +292,7 @@ const html = `<div class="pg-home">
         <ul class="hm-proof">
           <li><i class="mk-ic mk-ic--check"></i><span>One inbox for every channel, with private notes for your team only</span></li>
           <li><i class="mk-ic mk-ic--check"></i><span>Turn the AI on or off for any conversation, from the mobile app</span></li>
-          <li><i class="mk-ic mk-ic--check"></i><span>ROZ reviews your team's chats on company WhatsApp lines and flags what needs you</span></li>
+          <li><i class="mk-ic mk-ic--check"></i><span>Roz answers your questions about your team's WhatsApp chats and groups, and sends the reports you schedule, through Claude or ChatGPT</span></li>
         </ul>
         <a class="hm-link" href="/how-it-works#channels">See the inbox<i class="mk-ic mk-ic--arrow"></i></a>
       </div>
@@ -318,48 +319,51 @@ const html = `<div class="pg-home">
   <div class="container">
     <div class="hm-head hm-head--center">
       <p class="hm-eyebrow">Your new team</p>
-      <h2 class="hm-h2" id="hm-team-title">Meet Aaref, Adnan and ROZ</h2>
-      <p class="hm-sub">Each employee specialises in one job, and you can hire as many as you need. Start with the one you're missing.</p>
+      <h2 class="hm-h2" id="hm-team-title">Meet Aaref, Adnan and Roz</h2>
+      <p class="hm-sub">Each one owns one part of the customer journey: Aaref brings the customer, Adnan keeps the customer, and Roz shows you your team's side. Start with the one you need most, or hire all three.</p>
     </div>
     <div class="hm-emps">
       <a class="hm-emp" href="/sol-sales-agent">
         <div class="mk mk-emp mk-emp--aaref">
-          <img class="mk-emp__img" src="/media/img/aaref.svg" alt="" width="80" height="87" loading="lazy">
+          <img class="mk-emp__img hm-emp__portrait" src="/media/img/portraits/aaref-hero.webp" alt="Aaref, the AI sales employee" width="448" height="640" loading="lazy">
           <div class="mk-emp__name">Aaref</div>
           <span class="mk-emp__role">Sales</span>
+          <p class="hm-emp__tag">Answers every lead in seconds and follows up until it turns into a sale</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i><span>Answers every inquiry, day and night</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Qualifies leads and follows up with the quiet ones</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Helps book meetings straight into your calendar</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Every inquiry answered, day and night, in your customer's dialect</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Qualifies and follows up until the customer decides</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Closes the next step: a booking, a registration, an order or a request to your team</span></li>
           </ul>
         </div>
         <span class="hm-emp__go">Meet Aaref<i class="mk-ic mk-ic--arrow"></i></span>
       </a>
       <a class="hm-emp" href="/sol-customer-service">
         <div class="mk mk-emp mk-emp--adnan">
-          <img class="mk-emp__img" src="/media/img/adnan.svg" alt="" width="80" height="87" loading="lazy">
+          <img class="mk-emp__img hm-emp__portrait" src="/media/img/portraits/adnan-hero.webp" alt="Adnan, the AI customer service and success employee" width="448" height="640" loading="lazy">
           <div class="mk-emp__name">Adnan</div>
-          <span class="mk-emp__role">Support &amp; success</span>
+          <span class="mk-emp__role">Customer service &amp; success</span>
+          <p class="hm-emp__tag">Instant answers, routine requests handled, every new customer set up to succeed</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i><span>Answers from your own facts: prices, policies, schedules</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Routes tricky issues to the right person on your team</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Works with Zoho Desk and Zendesk</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Answers from your own information: schedules, prices, policies</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Handles routine requests by your policy, any hour</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Hands difficult cases to your team with full context</span></li>
           </ul>
         </div>
         <span class="hm-emp__go">Meet Adnan<i class="mk-ic mk-ic--arrow"></i></span>
       </a>
       <a class="hm-emp" href="/sol-operations">
         <div class="mk mk-emp mk-emp--roz">
-          <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="" width="80" height="87" loading="lazy">
-          <div class="mk-emp__name">ROZ</div>
+          <img class="mk-emp__img hm-emp__portrait" src="/media/img/portraits/roz-hero.webp" alt="Roz, the AI quality control employee" width="448" height="640" loading="lazy">
+          <div class="mk-emp__name">Roz</div>
           <span class="mk-emp__role">Quality control</span>
+          <p class="hm-emp__tag">Ask her anything in Claude or ChatGPT; reports on your schedule; ready the same day</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i><span>Reviews your team's chats on company WhatsApp lines</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Flags slow replies, stalled deals and missed opportunities</span></li>
-            <li><i class="mk-ic mk-ic--check"></i><span>Turns voice notes into text, and connects by scanning a QR code from your phone</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Covers the one-to-one chats and groups on your company WhatsApp numbers</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>Shows who waited, what stalled and how your team can serve better</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>One QR scan per number: no setup, no build</span></li>
           </ul>
         </div>
-        <span class="hm-emp__go">Meet ROZ<i class="mk-ic mk-ic--arrow"></i></span>
+        <span class="hm-emp__go">Meet Roz<i class="mk-ic mk-ic--arrow"></i></span>
       </a>
     </div>
     <a class="hm-genu" href="/who-is-genu">
@@ -374,36 +378,45 @@ const html = `<div class="pg-home">
 <section class="hm-steps-sec" id="how" aria-labelledby="hm-how-title">
   <div class="container hm-steps-sec__in">
     <div class="hm-steps-copy">
-      <p class="hm-eyebrow">How you start</p>
-      <h2 class="hm-h2" id="hm-how-title">From idea to a working employee, in 3 steps</h2>
+      <p class="hm-eyebrow">How we hire them for you</p>
+      <h2 class="hm-h2" id="hm-how-title">Built with you, not set up alone</h2>
+      <p class="hm-sub">GenuDo is not software you set up alone. We work with your team, learn how your business sells and serves, and build Aaref and Adnan around it. Then we stay.</p>
       <ol class="hm-steps">
         <li class="hm-step">
           <span class="hm-step__n">1</span>
-          <div><h3>Answer a short business brief</h3><p>A few quick questions about your business, typed or spoken, so your employee sounds like you and knows what you sell.</p></div>
+          <div><h3>We listen</h3><p>A discovery session on your customers, channels, offers, and where leads and time are lost.</p></div>
         </li>
         <li class="hm-step">
           <span class="hm-step__n">2</span>
-          <div><h3>Connect your channel and knowledge</h3><p>Link WhatsApp, Instagram, Messenger or your website chat, and upload your prices and FAQs, or add your website link.</p></div>
+          <div><h3>We plan together</h3><p>We agree what each employee does, what stays with your team, and the numbers we track. Build time is agreed in this session.</p></div>
         </li>
         <li class="hm-step">
           <span class="hm-step__n">3</span>
-          <div><h3>Go live and watch the results</h3><p>Your employee starts answering, following up and booking, and the dashboard shows every stage: who converted, and what it cost you.</p></div>
+          <div><h3>We build</h3><p>Our automation specialist builds them on your knowledge, your stages and your tools.</p></div>
+        </li>
+        <li class="hm-step">
+          <span class="hm-step__n">4</span>
+          <div><h3>We launch</h3><p>We test real scenarios with your team, then switch them on. You approve each step.</p></div>
+        </li>
+        <li class="hm-step">
+          <span class="hm-step__n">5</span>
+          <div><h3>We improve</h3><p>Your account manager reviews the results with you every month and keeps them in step with your business.</p></div>
         </li>
       </ol>
-      <a class="hm-link" href="/how-it-works">Take the full tour<i class="mk-ic mk-ic--arrow"></i></a>
+      <a class="hm-link" href="/how-it-works#setup">See how we work with you<i class="mk-ic mk-ic--arrow"></i></a>
     </div>
     <div class="hm-stage">
-      <div class="mk mk-wizard" role="img" aria-label="Business brief, question 1 of 6">
-        <span class="mk-wizard__eyebrow"><i class="mk-ic mk-ic--sparkle"></i>Business brief</span>
-        <div class="mk-wizard__steps"><i class="is-on"></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="mk-q">
-          <div class="mk-q__top"><span class="mk-chip mk-chip--indigo">Question 1 of 6</span><span class="mk-q__count">0/6 answered</span></div>
-          <div class="mk-q__title">What is your company or brand name?</div>
-          <p class="mk-q__hint">Write the exact name customers know you by.</p>
-          <div class="mk-input">Bright Smile Dental<span class="mk-caret"></span></div>
-          <div class="mk-q__mic"><span class="mk-q__micbtn"><i class="mk-ic mk-ic--mic"></i></span>Type your answer, or tap the mic to speak.</div>
-          <div class="mk-q__foot"><span class="mk-btn mk-btn--ghost"><i class="mk-ic mk-ic--back"></i>Back</span><span class="mk-btn mk-btn--primary">Next question<i class="mk-ic mk-ic--arrow"></i></span></div>
-        </div>
+      <div class="mk mk-emp mk-emp--roz hm-roz-path">
+        <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="" width="80" height="87" loading="lazy">
+        <div class="mk-emp__name">Roz is ready the same day</div>
+        <span class="mk-emp__role">No build and no setup time</span>
+        <ol class="mk-emp__list hm-roz-path__list">
+          <li><i class="mk-ic mk-ic--user"></i><span>Log in to your GenuDo account</span></li>
+          <li><i class="mk-ic mk-ic--qr"></i><span>Scan a QR code from each company WhatsApp number</span></li>
+          <li><i class="mk-ic mk-ic--link"></i><span>Chats and groups are linked from that moment</span></li>
+          <li><i class="mk-ic mk-ic--sparkle"></i><span>Ask and schedule reports in Claude or ChatGPT, connected to GenuDo</span></li>
+          <li><i class="mk-ic mk-ic--grid"></i><span>Build the dashboards your business needs</span></li>
+        </ol>
       </div>
     </div>
   </div>
@@ -420,9 +433,12 @@ const html = `<div class="pg-home">
       <a class="hm-ind" href="/ind-clinics"><span class="hm-ind__ic"><i class="mk-ic mk-ic--calendar"></i></span><h3>Clinics &amp; healthcare</h3><p>Patients get answers and appointments at any hour, and your front desk is spared the same scheduling and price questions.</p><span class="hm-ind__go">For clinics<i class="mk-ic mk-ic--arrow"></i></span></a>
       <a class="hm-ind" href="/ind-elearning"><span class="hm-ind__ic"><i class="mk-ic mk-ic--book"></i></span><h3>E-learning &amp; academies</h3><p>Every question about courses and fees gets answered, and each student is guided to the right program until they enrol.</p><span class="hm-ind__go">For academies<i class="mk-ic mk-ic--arrow"></i></span></a>
       <a class="hm-ind" href="/ind-fitness"><span class="hm-ind__ic"><i class="mk-ic mk-ic--trophy"></i></span><h3>Gyms &amp; fitness centres</h3><p>Trial classes, bookings and membership questions handled on WhatsApp, so your team stays free for members.</p><span class="hm-ind__go">For gyms<i class="mk-ic mk-ic--arrow"></i></span></a>
-      <a class="hm-ind" href="/ind-marketing"><span class="hm-ind__ic"><i class="mk-ic mk-ic--users"></i></span><h3>Marketing agencies</h3><p>Every lead from your clients' campaigns gets an answer right away, so the ad spend turns into conversations and meetings.</p><span class="hm-ind__go">For agencies<i class="mk-ic mk-ic--arrow"></i></span></a>
+      <a class="hm-ind" href="/ind-marketing"><span class="hm-ind__ic"><i class="mk-ic mk-ic--users"></i></span><h3>Marketing agencies</h3><p>Every lead from your clients' campaigns gets an answer right away, so the ad spend turns into qualified customers.</p><span class="hm-ind__go">For agencies<i class="mk-ic mk-ic--arrow"></i></span></a>
       <a class="hm-ind" href="/ind-hospitality"><span class="hm-ind__ic"><i class="mk-ic mk-ic--globe"></i></span><h3>Hospitality &amp; tourism</h3><p>Guests get answers on bookings, prices and details at any hour, in Arabic and English.</p><span class="hm-ind__go">For hotels &amp; travel<i class="mk-ic mk-ic--arrow"></i></span></a>
       <a class="hm-ind" href="/ind-camps-events"><span class="hm-ind__ic"><i class="mk-ic mk-ic--flag"></i></span><h3>Camps &amp; events</h3><p>The registration rush goes smoothly: tickets, schedules and parents' questions, all answered.</p><span class="hm-ind__go">For camps &amp; events<i class="mk-ic mk-ic--arrow"></i></span></a>
+      <a class="hm-ind" href="/ind-real-estate"><span class="hm-ind__ic"><i class="mk-ic mk-ic--grid"></i></span><h3>Real estate</h3><p>Every property inquiry answered and followed up to a site visit, and buyers kept informed after the contract.</p><span class="hm-ind__go">For real estate<i class="mk-ic mk-ic--arrow"></i></span></a>
+      <a class="hm-ind" href="/ind-ecommerce"><span class="hm-ind__ic"><i class="mk-ic mk-ic--wallet"></i></span><h3>E-commerce &amp; retail</h3><p>Orders taken in chat go straight into your store, and every “where is my order?” gets an answer.</p><span class="hm-ind__go">For stores<i class="mk-ic mk-ic--arrow"></i></span></a>
+      <a class="hm-ind" href="/ind-automotive"><span class="hm-ind__ic"><i class="mk-ic mk-ic--route"></i></span><h3>Automotive</h3><p>The first reply wins the test drive, and after-sales questions are answered on time.</p><span class="hm-ind__go">For car dealers<i class="mk-ic mk-ic--arrow"></i></span></a>
     </div>
   </div>
 </section>
@@ -433,7 +449,7 @@ const html = `<div class="pg-home">
     <div class="hm-head hm-head--center">
       <p class="hm-eyebrow">The film</p>
       <h2 class="hm-h2" id="hm-film-title">Meet your new team in 90 seconds</h2>
-      <p class="hm-sub">GENU introduces Aaref, Adnan and ROZ, and how they work with your team from the first message to the sale.</p>
+      <p class="hm-sub">GENU introduces Aaref, Adnan and Roz, and how they work with your team from the first message to the sale.</p>
     </div>
     <div class="hm-film__frame">
       <video src="/media/video/ai-workforce-en.mp4" poster="/media/img/ai-workforce-poster.jpg" controls playsinline preload="none" width="1280" height="720" aria-label="GenuDo film: your AI workforce"></video>
@@ -449,11 +465,12 @@ const html = `<div class="pg-home">
       <h2 class="hm-h2" id="hm-faq-title">Common questions about GenuDo</h2>
     </div>
     <div class="faq">
-      <details class="faq-item"><summary>What is GenuDo?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref for sales, Adnan for customer support and ROZ for WhatsApp quality control) that answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up, book meetings and update your CRM, while your team stays in control.</p></details>
+      <details class="faq-item"><summary>What is GenuDo?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>GenuDo is an AI workforce platform for businesses in Egypt and the Middle East. It gives you AI employees (Aaref, the AI sales employee; Adnan, the AI customer service and success employee; and Roz, the AI quality control employee). Aaref and Adnan answer customers on WhatsApp, Instagram, Messenger and website chat in Arabic dialects and other languages, follow up and keep your records current. Roz is linked to your company WhatsApp with one QR scan and answers your questions about your team’s chats through Claude or ChatGPT. Your team stays in control.</p></details>
+      <details class="faq-item"><summary>How do we get started?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>For Aaref and Adnan, we start with a planning session: we listen to how you sell and serve, agree what each employee does and the numbers we track, then our automation specialist builds them and your account manager reviews the results with you every month. Build time is agreed in that session. Roz needs no build: log in, scan a QR code from each company WhatsApp number, and she is ready the same day.</p></details>
       <details class="faq-item"><summary>Which channels does it work on?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>GenuDo works on WhatsApp, Instagram, Messenger and your website chat. Every conversation from every channel lands in one inbox, and each customer stays one conversation whichever channel they use. The website chat widget takes your brand colours and can collect name, phone and email if you want.</p></details>
       <details class="faq-item"><summary>Does it speak Arabic and local dialects?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Yes. You can choose one of 14 regional Arabic dialects, such as Egyptian, Gulf or Levantine, or turn on automatic multi-dialect so every customer hears their own. It also understands voice notes and images, and replies in English or other languages when the customer writes in them.</p></details>
       <details class="faq-item"><summary>Can I take over a conversation myself?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Yes, at any time and in one tap. Press Take over in the inbox or the mobile app and reply yourself; the AI stops in that chat until you hand it back. You can also leave private notes for your team that the customer never sees.</p></details>
-      <details class="faq-item"><summary>What does GenuDo cost?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Every package and price is on the <a href="/pricing">pricing page</a>. Inside the platform you see what every reply costs, and you can set a spending cap per conversation: when a chat reaches it, the AI pauses and alerts your team. That way there are no surprise bills.</p></details>
+      <details class="faq-item"><summary>What does GenuDo cost?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Every package and price is on the <a href="/pricing">pricing page</a>. Inside the platform you see what every reply costs, and you can set a spending cap per conversation: when a chat reaches it, the AI pauses and hands the chat to your team. That way there are no surprise bills.</p></details>
       <details class="faq-item"><summary>Is my data safe?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Your AI employees answer from the facts you give them, and you decide what goes in and when it changes. Every action they take is logged, API access uses scoped tokens you can revoke at any time, and you can take over any chat. The <a href="/security">security page</a> explains each control.</p></details>
     </div>
   </div>
@@ -465,9 +482,9 @@ const html = `<div class="pg-home">
     <div class="hm-final__card">
       <img class="hm-final__genu" src="/media/img/genu.svg" alt="" width="92" height="100" loading="lazy">
       <h2 class="hm-h2" id="hm-final-title">Ready to put your team to work?</h2>
-      <p class="hm-sub">Book a demo and we'll build your first employee with you, on your channels. Or start free on your own.</p>
+      <p class="hm-sub">Book a planning session: we'll listen, plan your first employee with you and build it on your channels. Or start free on your own.</p>
       <div class="hm-cta hm-cta--center">
-        <a href="/contact" class="btn btn-primary btn-lg">Book a demo</a>
+        <a href="/contact" class="btn btn-primary btn-lg">Book a planning session</a>
         <a href="https://app.genudo.ai/auth/register" class="btn btn-ondark btn-lg">Start free</a>
       </div>
       <p class="hm-final__meta">WhatsApp · Instagram · Messenger · Website chat</p>

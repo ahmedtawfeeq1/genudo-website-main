@@ -6,11 +6,11 @@ const html = `<div class="pg-how-it-works is-ar">
   <div class="container hiw-hero-grid">
     <div class="hiw-hero-copy">
       <span class="hiw-kicker">إزاي جينـو دو بيشتغل</span>
-      <h1 class="display">من أول رسالة لحد البيعة… <span class="grad">وإنت شايف كل خطوة.</span></h1>
+      <h1 class="display">من أول رسالة لحد إتمام البيع… <span class="grad">وإنت شايف كل خطوة.</span></h1>
       <p class="lead">جينـو دو بيديك موظفين بالذكاء الاصطناعي بيردّوا على عملائك على طول، وبيمشّوا كل محادثة لحد قرار، وبيتابعوا اللي سكت. وإنت عارف كل رد كلّفك كام، وتقدر تستلم أي محادثة في أي وقت.</p>
       <div class="hiw-cta">
-        <a href="/contact" class="btn btn-primary btn-lg">احجز ديمو</a>
-        <a href="https://app.genudo.ai/auth/register" class="btn btn-ghost btn-lg">ابدأ دلوقتي</a>
+        <a href="/contact" class="btn btn-primary btn-lg">احجز جلسة تخطيط</a>
+        <a href="https://app.genudo.ai/auth/register" class="btn btn-ghost btn-lg">ابدأ مجانًا</a>
       </div>
       <ul class="hiw-pills">
         <li>بيرد بالليل وبالنهار</li>
@@ -20,7 +20,7 @@ const html = `<div class="pg-how-it-works is-ar">
     </div>
     <figure class="hiw-film">
       <video src="/media/video/ai-workforce-ar.mp4" poster="/media/video/ai-workforce-ar.jpg" controls playsinline preload="none" aria-label="فيلم: إزاي تبني فريق عملك بالذكاء الاصطناعي مع جينـو دو"></video>
-      <figcaption>الجولة كاملة في 3 دقايق: من روز لعارف وعدنان</figcaption>
+      <figcaption>الجولة كاملة في 3 دقايق: اتعرّف على عارف وعدنان وروز</figcaption>
     </figure>
   </div>
 </section>
@@ -35,7 +35,7 @@ const html = `<div class="pg-how-it-works is-ar">
       <li><a href="#models"><b>05</b>التكلفة</a></li>
       <li><a href="#channels"><b>06</b>القنوات</a></li>
       <li><a href="#analytics"><b>07</b>الأرقام</a></li>
-      <li><a href="#setup"><b>08</b>التجهيز</a></li>
+      <li><a href="#setup"><b>08</b>طريقة التعيين</a></li>
     </ul>
   </div>
 </nav>
@@ -47,15 +47,15 @@ const html = `<div class="pg-how-it-works is-ar">
       <div class="hiw-copy">
         <span class="hiw-kicker"><b>01</b> الموظفين</span>
         <h2>عيّن الموظف اللي ناقصك، مش أداة جديدة تتعلمها.</h2>
-        <p class="lead">كل موظف عنده شغلانة واضحة: عارف بيبيع، وعدنان بيخدم عملاءك، وروز بتراجع شغل فريقك. وتقدر تعيّن أكتر من واحد من كل نوع.</p>
-        <p class="hiw-how"><b>إزاي؟</b> كل موظف بيشتغل جوه مسار، بقنواته ومراحله ومعلوماته ومتابعاته. والموظف الواحد ممكن يشغّل مسار أو اتنين.</p>
+        <p class="lead">كل موظف عنده دور واضح: عارف بيبيع، وعدنان بيخدم عملاءك ويحافظ عليهم، وروز بتوضّحلك أداء فريقك على <bdi>WhatsApp</bdi>.</p>
+        <p class="hiw-how"><b>إزاي؟</b> عارف وعدنان كل واحد فيهم بيشتغل جوه مسار، بقنواته ومراحله ومعلوماته ومتابعاته. وروز بتشتغل بطريقة مختلفة: مرتبطة بأرقام <bdi>WhatsApp</bdi> الشركة، وبتجاوبك من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>.</p>
       </div>
       <div class="hiw-copy">
         <ul class="hiw-proof">
-          <li><span><b>عارف للمبيعات:</b> بيرد على الاستفسارات، بيفرز المهتمين، بيتابع اللي سكت، وبيساعد يحجز المواعيد.</span></li>
-          <li><span><b>عدنان لخدمة ونجاح العملاء:</b> بيرد من معلوماتك، وبيحوّل المشاكل للشخص الصح في فريقك، وبيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi>.</span></li>
-          <li><span><b>روز لمراقبة الجودة:</b> بتراجع محادثات فريقك على <bdi>WhatsApp</bdi> الشركة، وبتتوصّل بمسح كود من موبايلك.</span></li>
-          <li><span>عندك أكتر من رقم؟ عيّن روز لكل رقم <bdi>WhatsApp</bdi>، وعارف لكل فرع.</span></li>
+          <li><span><b>عارف للمبيعات:</b> بيرد على كل عميل محتمل في ثواني، وبيأهّله، وبيتابع معاه لحد ما ياخد قراره، وبيتمّم الخطوة الجاية: حجز، أو تسجيل، أو أوردر، أو طلب لفريقك.</span></li>
+          <li><span><b>عدنان لخدمة ونجاح العملاء:</b> بيجاوب من معلومات شركتك، وبينفّذ الطلبات المتكررة حسب سياستك، وبيدّي كل عميل جديد بداية صحيحة، وبيحوّل الحالات الصعبة لفريقك بكل التفاصيل.</span></li>
+          <li><span><b>روز لمراقبة الجودة:</b> بتغطي المحادثات الفردية والجروبات على أرقام <bdi>WhatsApp</bdi> الشركة. اسألها أي سؤال من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>، وتقاريرك بتوصل في مواعيدها.</span></li>
+          <li><span>عندك أكتر من رقم؟ روز واحدة بتغطي كل الأرقام والجروبات اللي بتربطها، بمسح كود <bdi>QR</bdi> واحد لكل رقم. وتقدر تعيّن عارف لكل فرع.</span></li>
         </ul>
         <div class="hiw-links">
           <a href="/sol-sales-agent">قابل عارف ←</a>
@@ -70,30 +70,33 @@ const html = `<div class="pg-how-it-works is-ar">
           <img class="mk-emp__img" src="/media/img/aaref.svg" alt="عارف، موظف المبيعات بالذكاء الاصطناعي" width="80" height="87">
           <div class="mk-emp__name">عارف</div>
           <span class="mk-emp__role">المبيعات</span>
+          <p class="hiw-emp__tag">بيرد على كل عميل محتمل في ثواني، ويتابع معاه لحد ما يتحوّل لعميل فعلي</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i>بيرد على كل استفسار، بالليل وبالنهار</li>
-            <li><i class="mk-ic mk-ic--check"></i>بيفرز العملاء المهتمين وبيتابع اللي سكت</li>
-            <li><i class="mk-ic mk-ic--check"></i>بيساعد يحجز المواعيد على الكالندر بتاعك</li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيرد على كل استفسار، بالليل والنهار، وبلهجة العميل</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيأهّل العميل ويتابع معاه لحد ما ياخد قراره</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيتمّم الخطوة الجاية: حجز، أو تسجيل، أو أوردر، أو طلب لفريقك</span></li>
           </ul>
         </div>
         <div class="mk mk-emp mk-emp--adnan" dir="rtl" lang="ar">
-          <img class="mk-emp__img" src="/media/img/adnan.svg" alt="عدنان، موظف خدمة العملاء بالذكاء الاصطناعي" width="80" height="87">
+          <img class="mk-emp__img" src="/media/img/adnan.svg" alt="عدنان، موظف خدمة ونجاح العملاء بالذكاء الاصطناعي" width="80" height="87">
           <div class="mk-emp__name">عدنان</div>
           <span class="mk-emp__role">خدمة ونجاح العملاء</span>
+          <p class="hiw-emp__tag">إجابات فورية، وطلبات بتتنفّذ، وبداية صحيحة لكل عميل جديد</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i>بيرد من معلوماتك إنت: الأسعار والسياسات والمواعيد</li>
-            <li><i class="mk-ic mk-ic--check"></i>بيحوّل المشاكل الصعبة للشخص المناسب في فريقك</li>
-            <li><i class="mk-ic mk-ic--check"></i>بيشتغل مع <bdi>Zoho Desk</bdi> و <bdi>Zendesk</bdi></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيجاوب من معلومات شركتك: المواعيد والأسعار والسياسات</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بينفّذ الطلبات المتكررة حسب سياستك، في أي وقت</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بيحوّل الحالات الصعبة لفريقك بكل التفاصيل</span></li>
           </ul>
         </div>
         <div class="mk mk-emp mk-emp--roz" dir="rtl" lang="ar">
           <img class="mk-emp__img" src="/media/img/roz-v2.svg" alt="روز، موظفة مراقبة الجودة بالذكاء الاصطناعي" width="80" height="87">
           <div class="mk-emp__name">روز</div>
           <span class="mk-emp__role">مراقبة الجودة</span>
+          <p class="hiw-emp__tag">اسألها أي سؤال من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>، وتقاريرك بتوصل في مواعيدها، وجاهزة في نفس اليوم</p>
           <ul class="mk-emp__list">
-            <li><i class="mk-ic mk-ic--check"></i>بتراجع محادثات فريقك على <bdi>WhatsApp</bdi> الشركة</li>
-            <li><i class="mk-ic mk-ic--check"></i>بتنبّهك للرد المتأخر والصفقة الواقفة والفرصة اللي بتضيع</li>
-            <li><i class="mk-ic mk-ic--check"></i>بتحوّل الفويس نوتس لكلام مكتوب</li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بتغطي المحادثات الفردية والجروبات على أرقام <bdi>WhatsApp</bdi> الشركة</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>بتوضّحلك مين استنى، وايه اللي اتأخر، وإزاي فريقك يخدم بشكل أفضل</span></li>
+            <li><i class="mk-ic mk-ic--check"></i><span>مسح كود <bdi>QR</bdi> واحد لكل رقم: من غير تجهيز ولا بناء</span></li>
           </ul>
         </div>
       </div>
@@ -108,12 +111,12 @@ const html = `<div class="pg-how-it-works is-ar">
       <span class="hiw-kicker"><b>02</b> المراحل</span>
       <h2>كل محادثة بتتحرك لقدّام… لحد ما توصل لقرار.</h2>
       <p class="lead">بدل ما العملاء يتوهوا في الشات، كل عميل محتمل بيتنقل من مرحلة للتانية لحد ما يشتري أو يعتذر، وإنت شايف مكانه على اللوحة في أي لحظة.</p>
-      <p class="hiw-how"><b>إزاي؟</b> بتكتب لكل مرحلة بكلامك العادي: العميل يدخلها إمتى، والموظف يعمل فيها إيه. والموظف بيقرا كل رد، وينقل الفرصة للمرحلة الصح لوحده.</p>
+      <p class="hiw-how"><b>إزاي؟</b> بتكتب لكل مرحلة بكلامك العادي: العميل يدخلها إمتى، والموظف يعمل فيها إيه. وعارف وعدنان بيقروا كل رد، وبينقلوا الفرصة للمرحلة الصح حسب قواعد المراحل اللي إنت حددتها. وروز عمرها ما بتنقل عملاء بين المراحل؛ إنت تقدر تعمل كده من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>.</p>
       <ul class="hiw-proof">
-        <li><span>أول ما العميل يوافق، بيحجزله الميعاد ويوصله التأكيد على <bdi>WhatsApp</bdi>.</span></li>
-        <li><span>بيحدّث الـ <bdi>CRM</bdi> بتاعك ويبلّغ فريقك في نفس اللحظة اللي العميل يبقى جاهز فيها.</span></li>
+        <li><span>أول ما العميل يبقى جاهز، بيتمّم الخطوة الجاية: يحجز الزيارة، أو يسجّله، أو ياخد الأوردر، ويبعتله التأكيد على <bdi>WhatsApp</bdi>.</span></li>
+        <li><span>بيحدّث الـ <bdi>CRM</bdi> ويبلّغ فريقك في نفس اللحظة اللي العميل يبقى جاهز فيها.</span></li>
         <li><span>بيجمع من الشات البيانات اللي تهمّك: الاسم، والخدمة المطلوبة، والميعاد المناسب.</span></li>
-        <li><span>جرّبه قبل ما تشغّله: «اختبار الوكيل» بيوريك كل رد من غير ما يتبعت لأي عميل.</span></li>
+        <li><span>جرّبه قبل ما تشغّله: «اختبار الـ AI» بيوريك كل رد من غير ما يتبعت لأي عميل.</span></li>
       </ul>
     </div>
     <div class="hiw-visual">
@@ -122,7 +125,7 @@ const html = `<div class="pg-how-it-works is-ar">
           <div class="mk-col">
             <div class="mk-col__head"><span class="mk-stage">عميل محتمل جديد</span><span class="mk-col__count">16 فرصة</span></div>
             <div class="mk-opp mk-opp--new">
-              <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--green">م</span><div class="mk-opp__who"><b>منى عادل</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">الآن</span></div>
+              <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--green">م</span><div class="mk-opp__who"><b>منى عادل</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">دلوقتي</span></div>
               <p class="mk-opp__msg">أهلًا، التبييض بكام؟</p>
             </div>
             <div class="mk-opp">
@@ -133,7 +136,7 @@ const html = `<div class="pg-how-it-works is-ar">
           <div class="mk-col">
             <div class="mk-col__head"><span class="mk-stage mk-stage--indigo">مهتم</span><span class="mk-col__count">6 فرص</span></div>
             <div class="mk-opp">
-              <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--amber">ك</span><div class="mk-opp__who"><b>كريم سعيد</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">منذ ساعة</span></div>
+              <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--amber">ك</span><div class="mk-opp__who"><b>كريم سعيد</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">من ساعة</span></div>
               <p class="mk-opp__msg">ممكن تبعتلي قايمة الأسعار؟</p>
               <div class="mk-opp__tags"><span class="mk-chip mk-chip--amber"><i class="mk-ic mk-ic--repeat"></i>المتابعة 1 · مُرسلة</span></div>
             </div>
@@ -141,7 +144,7 @@ const html = `<div class="pg-how-it-works is-ar">
           <div class="mk-col">
             <div class="mk-col__head"><span class="mk-stage mk-stage--violet">حجز موعد</span><span class="mk-col__count">3 فرص</span></div>
             <div class="mk-opp">
-              <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--pink">س</span><div class="mk-opp__who"><b>سارة كمال</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">منذ 5 دقائق</span></div>
+              <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--pink">س</span><div class="mk-opp__who"><b>سارة كمال</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">من 5 دقايق</span></div>
               <p class="mk-opp__msg">الخميس بعد 6 يناسبني.</p>
               <div class="mk-opp__tags"><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--calendar"></i>الخميس <bdi>6:30</bdi> م</span></div>
             </div>
@@ -151,12 +154,12 @@ const html = `<div class="pg-how-it-works is-ar">
             <div class="mk-opp">
               <div class="mk-opp__top"><span class="mk-avatar mk-avatar--sm mk-avatar--violet">ن</span><div class="mk-opp__who"><b>نور إيهاب</b><span class="mk-opp__ch"><i class="mk-ic mk-ic--whatsapp"></i>WhatsApp</span></div><span class="mk-opp__time">الاثنين</span></div>
               <p class="mk-opp__msg">نشوفكم يوم الاتنين!</p>
-              <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>تم حجز الموعد</span></div>
+              <div class="mk-opp__tags"><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--check"></i>الميعاد اتحجز</span></div>
             </div>
           </div>
         </div>
       </div>
-      <p class="hiw-note">بيانات توضيحية · اسحب اللوحة علشان تشوف كل المراحل</p>
+      <p class="hiw-note">مثال افتراضي · اسحب اللوحة علشان تشوف كل المراحل</p>
     </div>
   </div>
 </section>
@@ -176,12 +179,12 @@ const html = `<div class="pg-how-it-works is-ar">
       </ul>
     </div>
     <div class="hiw-visual">
-      <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="تسلسل المتابعات لعميل لم يرد">
+      <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="تسلسل المتابعات لعميل ما ردّش">
         <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--repeat"></i>المتابعات · مهتم</div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>نشطة</span></div>
         <ol class="mk-timeline">
           <li class="mk-step is-sent"><div class="mk-step__head"><b>المتابعة 1</b><span class="mk-step__wait">بعد 3 ساعات</span><span class="mk-status mk-status--sent">مُرسلة</span></div><p class="mk-step__msg">أهلًا يا كريم، دي قايمة الأسعار اللي طلبتها. عندك أي سؤال؟</p></li>
           <li class="mk-step is-scheduled"><div class="mk-step__head"><b>المتابعة 2</b><span class="mk-step__wait">بعد 24 ساعة</span><span class="mk-status mk-status--scheduled">مجدولة</span></div><p class="mk-step__msg">عندنا ميعادين فاضيين يوم الخميس. أحجزلك واحد؟</p></li>
-          <li class="mk-step mk-step--end"><div class="mk-step__head"><i class="mk-ic mk-ic--arrow"></i>لا رد بعد انتهاء التسلسل: النقل إلى <span class="mk-stage mk-stage--red mk-stage--sm">ضائعة</span></div></li>
+          <li class="mk-step mk-step--end"><div class="mk-step__head"><i class="mk-ic mk-ic--arrow"></i>مفيش رد بعد آخر متابعة: تتنقل لـ <span class="mk-stage mk-stage--red mk-stage--sm">ضائعة</span></div></li>
         </ol>
         <div class="mk-health">
           <div class="mk-health__title">حالة المتابعات · 7 أيام</div>
@@ -189,7 +192,7 @@ const html = `<div class="pg-how-it-works is-ar">
           <div class="mk-health__legend"><span>مُرسلة <b>128</b></span><span>مجدولة <b>42</b></span><span>متأخرة <b>7</b></span></div>
         </div>
       </div>
-      <p class="hiw-note">بيانات توضيحية</p>
+      <p class="hiw-note">مثال افتراضي</p>
       <figure class="hiw-film">
         <video src="/media/video/followups-ar.mp4" poster="/media/video/followups-ar.jpg" controls playsinline preload="none" aria-label="فيلم قصير: المتابعة اللي مش بتنسى"></video>
         <figcaption>فيلم قصير: إزاي المتابعة بترجّع العميل اللي سكت</figcaption>
@@ -213,25 +216,25 @@ const html = `<div class="pg-how-it-works is-ar">
       </ul>
     </div>
     <div class="hiw-visual">
-      <div class="mk mk-card mk-kb" dir="rtl" lang="ar" role="img" aria-label="قائمة الأسعار التي يرد منها الوكيل">
-        <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--book"></i>قائمة الأسعار</div><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--table"></i>جدول المعرفة · <bdi>CSV</bdi> · 24 صفًا</span></div>
+      <div class="mk mk-card mk-kb" dir="rtl" lang="ar" role="img" aria-label="جدول الخدمات اللي الموظف بيرد منه">
+        <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--book"></i>الخدمات</div><span class="mk-chip mk-chip--indigo"><i class="mk-ic mk-ic--table"></i>الـ knowledge base · <bdi>CSV</bdi> · 24 صف</span></div>
         <table class="mk-table">
-          <thead><tr><th>الخدمة</th><th>السعر</th><th class="mk-hide-sm">المدة</th><th class="mk-hide-sm">ملاحظات</th></tr></thead>
+          <thead><tr><th>الخدمة</th><th>المدة</th><th class="mk-hide-sm">الأيام</th><th class="mk-hide-sm">ملاحظات</th></tr></thead>
           <tbody>
-            <tr><td>تبييض الأسنان</td><td class="mk-num"><bdi>3,500</bdi> جنيه</td><td class="mk-hide-sm">60 دقيقة</td><td class="mk-hide-sm">تشمل زيارة متابعة</td></tr>
-            <tr><td>كشف وتنظيف</td><td class="mk-num"><bdi>800</bdi> جنيه</td><td class="mk-hide-sm">30 دقيقة</td><td class="mk-hide-sm">كل 6 أشهر</td></tr>
-            <tr><td>استشارة تقويم</td><td class="mk-num">مجانًا</td><td class="mk-hide-sm">20 دقيقة</td><td class="mk-hide-sm">أيام الخميس فقط</td></tr>
+            <tr><td>تبييض الأسنان</td><td>60 دقيقة</td><td class="mk-hide-sm">من السبت للخميس</td><td class="mk-hide-sm">معاها زيارة متابعة</td></tr>
+            <tr><td>كشف وتنظيف</td><td>30 دقيقة</td><td class="mk-hide-sm">كل يوم</td><td class="mk-hide-sm">كل 6 شهور</td></tr>
+            <tr><td>استشارة تقويم</td><td>20 دقيقة</td><td class="mk-hide-sm">الخميس</td><td class="mk-hide-sm">مع دكتور التقويم</td></tr>
           </tbody>
         </table>
-        <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>رد الوكيل من هذا الجدول: «التبييض بـ <bdi>3,500</bdi> جنيه وبياخد حوالي ساعة.»</span></div>
+        <div class="mk-kb__ask"><i class="mk-ic mk-ic--sparkle"></i><span>رد الموظف من الجدول ده: «التبييض بياخد حوالي ساعة، وعندنا مواعيد من السبت للخميس.»</span></div>
       </div>
-      <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="اختيار اللهجة التي يتحدث بها الوكيل">
-        <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>لهجة الوكيل</div></div>
+      <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="اختيار اللهجة اللي الموظف بيتكلم بيها">
+        <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--globe"></i>لهجة الموظف</div></div>
         <div class="mk-chips">
           <span class="mk-chip mk-chip--opt is-on"><i class="mk-ic mk-ic--check"></i>مصرية</span><span class="mk-chip mk-chip--opt">سعودية / خليجية</span><span class="mk-chip mk-chip--opt">أردنية</span><span class="mk-chip mk-chip--opt">فلسطينية</span><span class="mk-chip mk-chip--opt">لبنانية</span><span class="mk-chip mk-chip--opt">سورية</span><span class="mk-chip mk-chip--opt">عراقية</span><span class="mk-chip mk-chip--opt">يمنية</span><span class="mk-chip mk-chip--opt">سودانية</span><span class="mk-chip mk-chip--opt">ليبية</span><span class="mk-chip mk-chip--opt">تونسية</span><span class="mk-chip mk-chip--opt">جزائرية</span><span class="mk-chip mk-chip--opt">مغربية</span><span class="mk-chip mk-chip--opt">موريتانية</span><span class="mk-chip mk-chip--opt mk-chip--auto"><i class="mk-ic mk-ic--sparkle"></i>متعددة اللهجات تلقائيًا</span>
         </div>
       </div>
-      <p class="hiw-note">عيادة وأسعار توضيحية</p>
+      <p class="hiw-note">عيادة افتراضية (مثال)</p>
     </div>
   </div>
 </section>
@@ -243,9 +246,9 @@ const html = `<div class="pg-how-it-works is-ar">
       <span class="hiw-kicker"><b>05</b> التكلفة</span>
       <h2>تكلفة متوقعة، وليها سقف.</h2>
       <p class="lead">مش هتتفاجئ بالفاتورة. الرسالة البسيطة بتروح لموديل أرخص، والصعبة بتروح لموديل أقوى، وإنت بتحط حد أقصى للصرف على كل محادثة.</p>
-      <p class="hiw-how"><b>إزاي؟</b> التوجيه الذكي بيقرا كل رسالة ويبعتها لأرخص موديل يقدر يرد عليها صح. ولو محادثة وصلت للحد اللي إنت حاطه، الوكيل بيقف فيها مؤقتًا ويبلّغ فريقك.</p>
+      <p class="hiw-how"><b>إزاي؟</b> التوجيه الذكي بيقرا كل رسالة ويبعتها لأرخص موديل يقدر يرد عليها صح. ولو محادثة وصلت للحد اللي إنت حاطه، الـ AI بيقف فيها مؤقتًا ويحوّلها لفريقك.</p>
       <ul class="hiw-proof">
-        <li><span>تكلفة كل رد قدامك في صندوق الوارد، جنب زمن الرد ودرجة الثقة.</span></li>
+        <li><span>تكلفة كل رد قدامك في الـ inbox، جنب وقت الرد ودرجة الثقة.</span></li>
         <li><span>حد إنفاق لكل محادثة: لو وصله، بيسيبها لفريقك بدل ما يصرف أكتر.</span></li>
         <li><span>عايز موديل واحد ثابت؟ ينفع. أو سيب التوجيه الذكي يختار لكل رسالة.</span></li>
       </ul>
@@ -264,9 +267,9 @@ const html = `<div class="pg-how-it-works is-ar">
         <div class="mk-card__head"><div class="mk-card__title"><i class="mk-ic mk-ic--wallet"></i>حد الإنفاق لكل محادثة</div><span class="mk-toggle is-on"></span></div>
         <div class="mk-cap__value"><b><bdi>$0.32</bdi></b> من <bdi>$0.50</bdi> مستخدم</div>
         <div class="mk-bar mk-bar--amber"><i style="--w:64%"></i></div>
-        <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>عند الوصول إلى الحد: إيقاف الوكيل مؤقتًا في هذه المحادثة وتنبيه الفريق.</span></p>
+        <p class="mk-cap__rule"><i class="mk-ic mk-ic--alert"></i><span>لما توصل للحد: الـ AI يقف في المحادثة دي ويحوّلها للفريق.</span></p>
       </div>
-      <p class="hiw-note">بيانات توضيحية · الأسعار الحقيقية في صفحة الباقات</p>
+      <p class="hiw-note">مثال افتراضي · الباقات في صفحة الأسعار</p>
     </div>
   </div>
 </section>
@@ -277,46 +280,46 @@ const html = `<div class="pg-how-it-works is-ar">
     <div class="hiw-stack-top">
       <div class="hiw-copy">
         <span class="hiw-kicker"><b>06</b> القنوات</span>
-        <h2>كل القنوات في صندوق وارد واحد، وتستلم أي محادثة بضغطة.</h2>
-        <p class="lead"><bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> ودردشة موقعك في مكان واحد. الموظف بيرد على طول، وإنت بتدخل وقت ما تحب، حتى من موبايلك.</p>
-        <p class="hiw-how"><b>إزاي؟</b> دوس «تدخّل بشري» والوكيل يقف في المحادثة دي بس. خلّص كلامك مع العميل، ورجّعها للوكيل بضغطة.</p>
+        <h2>كل القنوات في inbox واحد، وتستلم أي محادثة بضغطة.</h2>
+        <p class="lead"><bdi>WhatsApp</bdi> و <bdi>Instagram</bdi> و <bdi>Messenger</bdi> وشات موقعك في مكان واحد. الموظف بيرد على طول، وإنت تستلم المحادثة وقت ما تحب، حتى من موبايلك.</p>
+        <p class="hiw-how"><b>إزاي؟</b> دوس «استلم المحادثة» والـ AI يقف في المحادثة دي بس. خلّص كلامك مع العميل، ورجّعها للـ AI بضغطة.</p>
       </div>
       <div class="hiw-copy">
         <ul class="hiw-proof">
           <li><span>كل عميل في محادثة واحدة، أيًا كانت القناة اللي كلّمك منها.</span></li>
           <li><span>ملاحظات خاصة لفريقك جوه المحادثة، والعميل ما بيشوفهاش.</span></li>
-          <li><span>أبلكيشن موبايل: ترد من برّه المكتب، وترجّعها للوكيل.</span></li>
-          <li><span>ويدجت دردشة لموقعك بألوانك، وبيجمع الاسم والرقم والإيميل لو حبيت.</span></li>
+          <li><span>تطبيق موبايل: ترد من برّه المكتب، وترجّعها للـ AI.</span></li>
+          <li><span>ويدجت شات لموقعك بألوانك، وبيجمع الاسم والرقم والإيميل لو حبيت.</span></li>
         </ul>
         <div class="hiw-links"><a href="/integrations">شوف التكاملات ←</a></div>
       </div>
     </div>
     <div class="hiw-visual">
       <div class="hiw-pair">
-        <div class="mk mk-inbox" dir="rtl" lang="ar" role="img" aria-label="صندوق الوارد مع رد الوكيل وتكلفته">
+        <div class="mk mk-inbox" dir="rtl" lang="ar" role="img" aria-label="الـ inbox مع رد الموظف وتكلفته">
           <div class="mk-inbox__grid">
             <div class="mk-inbox__list">
-              <div class="mk-inbox__search"><i class="mk-ic mk-ic--search"></i>بحث في المحادثات</div>
-              <div class="mk-convo is-active"><span class="mk-avatar mk-avatar--sm mk-avatar--green">م</span><div class="mk-convo__body"><div class="mk-convo__row"><b>منى عادل</b><span class="mk-convo__time">الآن</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--whatsapp"></i>الخميس بعد 6 يناسبني.</div></div></div>
-              <div class="mk-convo"><span class="mk-avatar mk-avatar--sm mk-avatar--pink">ل</span><div class="mk-convo__body"><div class="mk-convo__row"><b>ليلى مصطفى</b><span class="mk-convo__time">منذ 4 دقائق</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--insta"></i>في مكان أركن فيه؟</div></div></div>
-              <div class="mk-convo"><span class="mk-avatar mk-avatar--sm mk-avatar--blue">ي</span><div class="mk-convo__body"><div class="mk-convo__row"><b>يوسف علي</b><span class="mk-convo__time">منذ ساعة</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--globe"></i>دردشة الموقع · قائمة الأسعار</div></div></div>
+              <div class="mk-inbox__search"><i class="mk-ic mk-ic--search"></i>دوّر في المحادثات</div>
+              <div class="mk-convo is-active"><span class="mk-avatar mk-avatar--sm mk-avatar--green">م</span><div class="mk-convo__body"><div class="mk-convo__row"><b>منى عادل</b><span class="mk-convo__time">دلوقتي</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--whatsapp"></i>الخميس بعد 6 يناسبني.</div></div></div>
+              <div class="mk-convo"><span class="mk-avatar mk-avatar--sm mk-avatar--pink">ل</span><div class="mk-convo__body"><div class="mk-convo__row"><b>ليلى مصطفى</b><span class="mk-convo__time">من 4 دقايق</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--insta"></i>في مكان أركن فيه؟</div></div></div>
+              <div class="mk-convo"><span class="mk-avatar mk-avatar--sm mk-avatar--blue">ي</span><div class="mk-convo__body"><div class="mk-convo__row"><b>يوسف علي</b><span class="mk-convo__time">من ساعة</span></div><div class="mk-convo__snip"><i class="mk-ic mk-ic--globe"></i>شات الموقع · قايمة الأسعار</div></div></div>
             </div>
             <div class="mk-thread">
-              <div class="mk-thread__head"><span class="mk-avatar mk-avatar--green">م</span><div class="mk-thread__who"><b>منى عادل</b><span class="mk-stage mk-stage--violet mk-stage--sm">حجز موعد</span></div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>الوكيل نشط</span></div>
+              <div class="mk-thread__head"><span class="mk-avatar mk-avatar--green">م</span><div class="mk-thread__who"><b>منى عادل</b><span class="mk-stage mk-stage--violet mk-stage--sm">حجز موعد</span></div><span class="mk-chip mk-chip--green"><i class="mk-dot"></i>الـ AI شغال</span></div>
               <div class="mk-thread__body">
                 <div class="mk-msg mk-msg--in">ينفع الخميس بعد 6؟</div>
-                <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · الوكيل</span>أيوه! الخميس الساعة <bdi>6:30</bdi> فاضي. أحجزهولك؟</div>
-                <div class="mk-reply-meta"><span class="mk-chip"><i class="mk-ic mk-ic--dollar"></i>التكلفة <bdi>$0.01</bdi></span><span class="mk-chip"><i class="mk-ic mk-ic--clock"></i>زمن الرد 26 ثانية</span><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--target"></i>الثقة <bdi>92%</bdi></span></div>
+                <div class="mk-msg mk-msg--out"><span class="mk-msg__by"><i class="mk-ic mk-ic--sparkle"></i>عارف · AI</span>أيوه! الخميس الساعة <bdi>6:30</bdi> فاضي. أحجزهولك؟</div>
+                <div class="mk-reply-meta"><span class="mk-chip"><i class="mk-ic mk-ic--dollar"></i>التكلفة <bdi>$0.01</bdi></span><span class="mk-chip"><i class="mk-ic mk-ic--clock"></i>وقت الرد 26 ثانية</span><span class="mk-chip mk-chip--green"><i class="mk-ic mk-ic--target"></i>الثقة <bdi>92%</bdi></span></div>
                 <div class="mk-note"><b><i class="mk-ic mk-ic--note"></i>ملاحظة خاصة · دينا</b>مريضة سابقة، اعرض عليها باقة العائلة.</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="أحد أعضاء الفريق تولّى المحادثة من الموبايل">
+        <div class="mk mk-phone" dir="rtl" lang="ar" role="img" aria-label="حد من الفريق استلم المحادثة من موبايله">
           <div class="mk-phone__screen">
             <div class="mk-phone__status"><span>9:41</span></div>
             <div class="mk-phone__head"><i class="mk-ic mk-ic--back"></i><span class="mk-avatar mk-avatar--amber">ك</span><div class="mk-phone__who"><b>كريم سعيد</b><span><i class="mk-ic mk-ic--whatsapp"></i><bdi>WhatsApp · +20 100 000 0000</bdi></span></div></div>
-            <div class="mk-takeover mk-takeover--human"><span class="mk-takeover__state"><i class="mk-ic mk-ic--user"></i>أنت تتولّى هذه المحادثة</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--sparkle"></i>إعادة إلى الوكيل</span></div>
+            <div class="mk-takeover mk-takeover--human"><span class="mk-takeover__state"><i class="mk-ic mk-ic--user"></i>إنت ماسك المحادثة دي</span><span class="mk-takeover__btn"><i class="mk-ic mk-ic--sparkle"></i>رجّعها للـ AI</span></div>
             <div class="mk-chat">
               <div class="mk-msg mk-msg--in">ينفع آخد خصم للعيلة كلها؟<span class="mk-msg__meta"><bdi>11:02</bdi> ص</span></div>
               <div class="mk-msg mk-msg--out">أكيد يا كريم! هجهزلك عرض للعيلة النهارده.<span class="mk-msg__meta"><bdi>11:04</bdi> ص <i class="mk-ic mk-ic--checks"></i></span></div>
@@ -325,7 +328,7 @@ const html = `<div class="pg-how-it-works is-ar">
           </div>
         </div>
       </div>
-      <p class="hiw-note">بيانات توضيحية</p>
+      <p class="hiw-note">مثال افتراضي</p>
     </div>
   </div>
 </section>
@@ -336,25 +339,26 @@ const html = `<div class="pg-how-it-works is-ar">
     <div class="hiw-copy">
       <span class="hiw-kicker"><b>07</b> الأرقام</span>
       <h2>اعرف كل نتيجة كلّفتك كام.</h2>
-      <p class="lead">لوحة التحكم بتوريك كل مرحلة: مين اتحوّل، ومين وقف فين، وكلّفتك كام. فتعرف تصرف فين، وتصلّح إيه الأول.</p>
+      <p class="lead">الـ dashboard بيوريك كل مرحلة: مين اتحوّل، ومين وقف فين، وكلّفتك كام. فتعرف تصرف فين، وتصلّح إيه الأول.</p>
       <p class="hiw-how"><b>إزاي؟</b> كل رسالة وكل حجز بيتسجّل لوحده، ويترتب على مراحلك. والتكلفة بتتحسب لكل مرحلة ولكل فرصة مكتسبة، مش فاتورة واحدة كبيرة.</p>
       <ul class="hiw-proof">
         <li><span>مسار التحويل بيوريك العملاء بيقعوا فين بالظبط.</span></li>
         <li><span>تكلفة التحويل، والتكلفة حسب المرحلة، والتكلفة عبر الوقت، لآخر 7 أو 30 أو 90 يوم.</span></li>
         <li><span>اسأل <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>: «فين بنخسر عملاء؟»، ويرد عليك من أرقامك في جينـو دو.</span></li>
+        <li><span>روز بتجاوب على أسئلتك عن محادثات وجروبات فريقك على <bdi>WhatsApp</bdi>، وبتبعتلك التقارير اللي حددت مواعيدها، من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>.</span></li>
       </ul>
-      <div class="hiw-links"><a href="/api-mcp">اربط <bdi>Claude</bdi> و <bdi>ChatGPT</bdi> ←</a></div>
+      <div class="hiw-links"><a href="/api-mcp">اربط <bdi>Claude</bdi> و <bdi>ChatGPT</bdi> ←</a><a href="/sol-operations">قابل روز ←</a></div>
     </div>
     <div class="hiw-visual">
-      <div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="لوحة التحكم: الفرص وتكلفة الذكاء الاصطناعي">
+      <div class="mk mk-kpis" dir="rtl" lang="ar" role="img" aria-label="الـ dashboard: الفرص وتكلفة الذكاء الاصطناعي">
         <div class="mk-kpi mk-kpi--hero"><span class="mk-kpi__label">الفرص النشطة</span><span class="mk-kpi__value">870</span><span class="mk-kpi__sub">إجمالي الفرص <bdi>1,284</bdi></span><span class="mk-kpi__badge"><bdi>67.8%</bdi> من الإجمالي</span></div>
-        <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--green"><i class="mk-ic mk-ic--trophy"></i></span><span class="mk-kpi__label">الفرص المكتسبة</span><span class="mk-kpi__value">96</span><span class="mk-kpi__sub">نسبة الفوز <bdi>7.5%</bdi></span></div>
+        <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--green"><i class="mk-ic mk-ic--trophy"></i></span><span class="mk-kpi__label">الفرص المكتسبة</span><span class="mk-kpi__value">96</span><span class="mk-kpi__sub">الشهر ده</span></div>
         <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--red"><i class="mk-ic mk-ic--xcircle"></i></span><span class="mk-kpi__label">الفرص الضائعة</span><span class="mk-kpi__value">318</span><span class="mk-kpi__sub">من <bdi>1,284</bdi></span></div>
         <div class="mk-kpi"><span class="mk-kpi__ic"><i class="mk-ic mk-ic--dollar"></i></span><span class="mk-kpi__label">تكلفة الذكاء الاصطناعي</span><span class="mk-kpi__value"><bdi>$41.20</bdi></span><span class="mk-kpi__sub"><bdi>$0.004</bdi> لكل رسالة</span></div>
         <div class="mk-kpi"><span class="mk-kpi__ic mk-kpi__ic--amber"><i class="mk-ic mk-ic--target"></i></span><span class="mk-kpi__label">تكلفة التحويل</span><span class="mk-kpi__value"><bdi>$0.43</bdi></span><span class="mk-kpi__sub">96 فرصة مكتسبة</span></div>
       </div>
       <div class="mk mk-card" dir="rtl" lang="ar" role="img" aria-label="مسار التحويل">
-        <div class="mk-card__head"><div class="mk-card__title">مسار التحويل</div><span class="mk-chip">30 يومًا</span></div>
+        <div class="mk-card__head"><div class="mk-card__title">مسار التحويل</div><span class="mk-chip">30 يوم</span></div>
         <div class="mk-funnel__rows">
           <div class="mk-funnel__row"><div class="mk-funnel__top"><span>عميل محتمل جديد</span><b>1,284</b></div><div class="mk-funnel__bar"><i style="--w:100%"></i></div></div>
           <div class="mk-funnel__row"><div class="mk-funnel__top"><span>مهتم</span><b>702</b></div><div class="mk-funnel__bar"><i style="--w:55%"></i></div><div class="mk-funnel__drop"><span><bdi>55%</bdi></span><span>تسرّب <bdi>45%</bdi></span></div></div>
@@ -362,36 +366,38 @@ const html = `<div class="pg-how-it-works is-ar">
           <div class="mk-funnel__row"><div class="mk-funnel__top"><span>مكتسبة</span><b>96</b></div><div class="mk-funnel__bar"><i style="--w:7.5%"></i></div><div class="mk-funnel__drop"><span><bdi>7.5%</bdi></span><span>تسرّب <bdi>58%</bdi></span></div></div>
         </div>
       </div>
-      <p class="hiw-note">بيانات توضيحية</p>
+      <p class="hiw-note">مثال افتراضي</p>
     </div>
   </div>
 </section>
 
-<!-- 08 · Setup -->
+<!-- 08 · How we hire -->
 <section id="setup" class="hiw-sec">
   <div class="container hiw-split">
     <div class="hiw-copy">
-      <span class="hiw-kicker"><b>08</b> التجهيز</span>
-      <h2>تجهّزه في 3 خطوات، من غير كود.</h2>
-      <p class="lead">مش محتاج مبرمج ولا أسابيع تدريب. بتحكي عن شغلك، والموظف يتعلمه.</p>
+      <span class="hiw-kicker"><b>08</b> طريقة التعيين</span>
+      <h2>بنعيّنه معاك، مش برنامج تجهّزه لوحدك.</h2>
+      <p class="lead">جينـو دو مش برنامج بتشغّله وتديره لوحدك. إحنا بنشتغل مع فريقك، وبنفهم طريقة البيع والخدمة عندك، وبنبني عارف وعدنان حسب احتياجات شركتك، وبنكمّل معاك بعد التشغيل.</p>
       <ol class="hiw-steps">
-        <li><div><h3>احكي عن شغلك</h3><p>6 أسئلة سريعة عن نشاطك، تجاوبها كتابة أو بصوتك. ومنها بيتبني أسلوب الموظف وتعليماته.</p></div></li>
-        <li><div><h3>رتّب المراحل</h3><p>بتبدأ بـ «عميل محتمل جديد ← مهتم ← مكتسبة أو ضائعة». غيّر الأسماء، وزوّد مراحل، وقول لكل مرحلة تدخلها إمتى وتعمل فيها إيه.</p></div></li>
-        <li><div><h3>اربط وشغّل</h3><p>اربط <bdi>WhatsApp</bdi> أو أي قناة تانية، وجرّب بـ «اختبار الوكيل»، وبعدين شغّله على عملائك.</p></div></li>
+        <li><div><h3>الاستماع</h3><p>جلسة بنتعرف فيها على عملاءك وقنواتك وعروضك، وفين الفرص والوقت اللي بيضيعوا.</p></div></li>
+        <li><div><h3>التخطيط</h3><p>بنتفق معاك على مهام كل موظف، واللي هيفضل مع فريقك، والمؤشرات اللي هنتابعها.</p></div></li>
+        <li><div><h3>البناء</h3><p>الـ automation specialist بيبنيهم على معلومات شركتك ومراحل البيع وأدواتك.</p></div></li>
+        <li><div><h3>الإطلاق</h3><p>بنختبر سيناريوهات حقيقية مع فريقك قبل التشغيل، وكل خطوة بموافقتك.</p></div></li>
+        <li><div><h3>التطوير</h3><p>الـ account manager بيراجع النتايج معاك كل شهر، وبيطوّر أداءهم مع أي تغيير في شركتك.</p></div></li>
       </ol>
+      <p class="hiw-how"><b>مين معاك؟</b> الـ account manager هو نقطة التواصل معاك: بيخطط معاك، وبيعرض النتايج، وبيضمن إن أداء كل موظف ماشي مع أهدافك. والـ automation specialist بيبني ويضبط أداء عارف وعدنان: المعلومات، والمراحل، والمتابعة، والربط مع أدواتك. ومدة البناء بنتفق عليها في جلسة التخطيط.</p>
     </div>
     <div class="hiw-visual">
-      <div class="mk mk-wizard" dir="rtl" lang="ar" role="img" aria-label="ملخص النشاط التجاري، السؤال 1 من 6">
-        <span class="mk-wizard__eyebrow"><i class="mk-ic mk-ic--sparkle"></i>ملخص النشاط التجاري</span>
-        <div class="mk-wizard__steps"><i class="is-on"></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="mk-q">
-          <div class="mk-q__top"><span class="mk-chip mk-chip--indigo">السؤال 1 من 6</span><span class="mk-q__count">تمت الإجابة عن 0 من 6</span></div>
-          <div class="mk-q__title">ما اسم شركتك أو علامتك التجارية؟</div>
-          <p class="mk-q__hint">اكتب الاسم الذي يعرفك به عملاؤك.</p>
-          <div class="mk-input">عيادة برايت سمايل للأسنان<span class="mk-caret"></span></div>
-          <div class="mk-q__mic"><span class="mk-q__micbtn"><i class="mk-ic mk-ic--mic"></i></span>اكتب إجابتك، أو اضغط على الميكروفون للتحدث.</div>
-          <div class="mk-q__foot"><span class="mk-btn mk-btn--ghost"><i class="mk-ic mk-ic--back"></i>رجوع</span><span class="mk-btn mk-btn--primary">السؤال التالي<i class="mk-ic mk-ic--arrow"></i></span></div>
-        </div>
+      <div class="hiw-roz">
+        <div class="hiw-roz__head"><img src="/media/img/roz-v2.svg" alt="" width="48" height="52" loading="lazy"><div><span class="hiw-roz__eyebrow">روز · مراقبة الجودة</span><h3>جاهزة في نفس اليوم</h3></div></div>
+        <p class="hiw-roz__lead">من غير بناء ولا وقت تجهيز. روز واحدة بتغطي كل أرقام الشركة والجروبات اللي بتربطها.</p>
+        <ol class="hiw-steps hiw-steps--roz">
+          <li><div><h4>سجّل دخولك</h4><p>سجّل دخولك على حسابك في جينـو دو.</p></div></li>
+          <li><div><h4>امسح كود <bdi>QR</bdi></h4><p>امسح كود <bdi>QR</bdi> من كل رقم <bdi>WhatsApp</bdi> للشركة.</p></div></li>
+          <li><div><h4>المحادثات والجروبات اتربطت</h4><p>المحادثات الفردية والجروبات بتتسجل من اللحظة دي.</p></div></li>
+          <li><div><h4>اسأل وحدد المواعيد</h4><p>اسألها أي سؤال، وحدد مواعيد تقاريرك في <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi> المتصلين بجينـو دو، وابني الـ dashboards اللي شركتك محتاجاها.</p></div></li>
+        </ol>
+        <div class="hiw-links"><a href="/sol-operations">قابل روز ←</a></div>
       </div>
     </div>
   </div>
@@ -405,12 +411,13 @@ const html = `<div class="pg-how-it-works is-ar">
       <h2 id="hiw-faq-title">أسئلة عن طريقة الشغل</h2>
     </div>
     <div class="faq">
-      <details class="faq-item"><summary>التجهيز بيمشي إزاي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>بتجاوب على 6 أسئلة سريعة عن شغلك، كتابة أو بصوتك، ومن إجاباتك بيتبني أسلوب الموظف وتعليماته. بعدها بترتّب المراحل، وتربط <bdi>WhatsApp</bdi> أو أي قناة تانية، وتجرّبه بـ «اختبار الوكيل»، وتشغّله. مش محتاج كود، ولو حجزت ديمو فريقنا بيجهّزه معاك.</p></details>
+      <details class="faq-item"><summary>التجهيز بيمشي إزاي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>على حسب الموظف. عارف وعدنان بنبنيهم معاك: بنسمع منك طريقة البيع والخدمة عندك، وبنخطط معاك مهام كل واحد والمؤشرات اللي هنتابعها، والـ automation specialist بيبنيهم على معلوماتك ومراحلك وأدواتك. بنختبر سيناريوهات حقيقية مع فريقك قبل التشغيل، والـ account manager بيراجع النتايج معاك كل شهر. ومدة البناء بنتفق عليها في جلسة التخطيط. أما روز فمن غير بناء: سجّل دخولك، وامسح كود <bdi>QR</bdi> من كل رقم <bdi>WhatsApp</bdi> للشركة، واسألها وحدد مواعيد التقارير من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi> في نفس اليوم.</p></details>
+      <details class="faq-item"><summary>روز بترد على العملاء أو بتنقلهم بين المراحل؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>لأ. روز عمرها ما بترد على العملاء، ولا بتدخل في أي محادثة، ولا بتنقل عملاء بين المراحل. بتجاوب على أسئلتك عن محادثات وجروبات فريقك على <bdi>WhatsApp</bdi>، وبتبعت التقارير اللي حددت مواعيدها، وبتبني الـ dashboards، وكل ده من خلال <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi> المتصلين بجينـو دو. ولو عايز تنقل عميل لمرحلة تانية، تقدر تعمل كده بنفسك من <bdi>Claude</bdi> أو <bdi>ChatGPT</bdi>. روز هدفها تطوير فريقك، مش مراقبته في الخفاء: استخدمها بوضوح، على أرقام الشركة.</p></details>
       <details class="faq-item"><summary>يعني إيه مسار ومرحلة، بكلام بسيط؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>المسار هو الطريق اللي العميل بيمشيه مع موظف واحد، من أول رسالة لحد ما ياخد قرار، وكل موظف في جينـو دو هو مسار واحد. والمراحل هي خطوات الطريق ده، زي «عميل محتمل جديد» و«مهتم» و«مكتسبة» أو «ضائعة». ولكل مرحلة بتقول للموظف العميل يدخلها إمتى ويعمل فيها إيه، علشان كل محادثة تفضل ماشية لقدّام.</p></details>
       <details class="faq-item"><summary>المتابعات بتشتغل إزاي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>كل مرحلة ممكن يبقى ليها سلسلة متابعات: رسايل بمواعيد بتتبعت لما العميل يسكت، زي رسالة بعد 3 ساعات وتانية بعد يوم ومعاها فيديو. كل رسالة مختلفة عن اللي قبلها، وإنت اللي بتحدد التوقيت. ولو آخر متابعة ما اتردّش عليها، الفرصة بتتنقل للمرحلة اللي تختارها، زي «ضائعة».</p></details>
       <details class="faq-item"><summary>الموظف بيجيب إجاباته منين؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>من معلوماتك إنت: الأسعار والأسئلة المتكررة والسياسات والمواعيد اللي بتضيفها، سواء كتبتها في جدول أو رفعتها من شيت <bdi>Excel</bdi>. إنت اللي بتحدد كل موظف يرد من أنهي معلومات، ولما تعدّل معلومة، الرد اللي بعده بيطلع بيها. والسؤال اللي مالوش إجابة عندك ممكن يروح لفريقك بدل ما الموظف يخمّن.</p></details>
-      <details class="faq-item"><summary>إزاي تكلفة الذكاء الاصطناعي بتفضل ليها سقف؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>التوجيه الذكي بيبعت كل رسالة لأرخص موديل يقدر عليها: السؤال البسيط لموديل أوفر، والصعب لموديل أقوى. وكمان بتحط حد أقصى للصرف على كل محادثة، ولو المحادثة وصلت له، الموظف بيقف ويسيبها لفريقك ومعاها تنبيه. وتكلفة كل رد قدامك في صندوق الوارد، فمفيش حاجة مستخبية.</p></details>
-      <details class="faq-item"><summary>يقدر يحدّث الـ <bdi>CRM</bdi> أو الكالندر بتاعي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>أيوه. في المرحلة اللي تختارها، الموظف يقدر يدوّر على المواعيد الفاضية، ويحجز الميعاد على الكالندر بتاعك، ويبعت التأكيد، ويحدّث الـ <bdi>CRM</bdi> زي <bdi>HubSpot</bdi> أو <bdi>Zoho</bdi>. والأدوات اللي مش مربوطة مباشرةً غالبًا تقدر توصلها عن طريق <bdi>Zapier</bdi> أو <bdi>Make</bdi> أو <bdi>n8n</bdi> أو الـ <bdi>API</bdi>. القايمة كاملة في <a href="/integrations">صفحة التكاملات</a>.</p></details>
+      <details class="faq-item"><summary>إزاي تكلفة الذكاء الاصطناعي بتفضل ليها سقف؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>التوجيه الذكي بيبعت كل رسالة لأرخص موديل يقدر عليها: السؤال البسيط لموديل أوفر، والصعب لموديل أقوى. وكمان بتحط حد أقصى للصرف على كل محادثة، ولو المحادثة وصلت له، الموظف بيقف ويسيبها لفريقك. وتكلفة كل رد قدامك في الـ inbox، فمفيش حاجة مستخبية.</p></details>
+      <details class="faq-item"><summary>يقدر يحدّث الـ <bdi>CRM</bdi> أو الـ <bdi>calendar</bdi> عندي؟<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>أيوه. في المرحلة اللي تختارها، الموظف يقدر يدوّر على المواعيد الفاضية، ويحجز الميعاد على الـ <bdi>calendar</bdi>، ويبعت التأكيد، ويحدّث الـ <bdi>CRM</bdi> زي <bdi>HubSpot</bdi> أو <bdi>Zoho</bdi>. والأدوات اللي مش مربوطة مباشرةً غالبًا تقدر توصلها عن طريق <bdi>Zapier</bdi> أو <bdi>Make</bdi> أو <bdi>n8n</bdi> أو الـ <bdi>API</bdi>. القايمة كاملة في <a href="/integrations">صفحة التكاملات</a>.</p></details>
     </div>
   </div>
 </section>
@@ -419,8 +426,8 @@ const html = `<div class="pg-how-it-works is-ar">
   <div class="ctaf-genu genu" data-genu data-expr="happy" data-liven style="--w:86px;--h:98px;--ospeed:7s"></div>
   <span class="hiw-kicker hiw-kicker--dark">ابدأ دلوقتي</span>
   <h2 style="margin-block-start:12px;">جاهز تعيّن أول موظف؟</h2>
-  <p class="lead">احجز ديمو، ونوريك الموظف شغّال على قنواتك وبمعلوماتك إنت.</p>
-  <div class="ctaf-cta"><a href="/contact" class="btn btn-primary btn-lg">احجز ديمو</a><a href="https://app.genudo.ai/auth/register" class="ctaf-sec">أو ابدأ دلوقتي <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <p class="lead">احجز جلسة تخطيط: بنسمع منك، ونتفق معاك على مهام كل موظف، ونبني عارف وعدنان حسب شركتك. وروز جاهزة في نفس اليوم.</p>
+  <div class="ctaf-cta"><a href="/contact" class="btn btn-primary btn-lg">احجز جلسة تخطيط</a><a href="https://app.genudo.ai/auth/register" class="ctaf-sec">أو ابدأ مجانًا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   <div class="ctaf-trust"><span class="live-dot"></span>بيرد بالليل وبالنهار<span class="sep"></span>بيتكلم لهجة عملائك<span class="sep"></span>وإنت المتحكم</div>
 </div></div></section>
 
