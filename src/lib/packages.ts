@@ -45,8 +45,12 @@ export async function getPackages(): Promise<Pkg[]> {
 // Admin text goes into raw HTML, so escape it.
 const esc = (s: unknown) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
-const num = (n: number | string) => Number(n).toLocaleString('en-US');
-const benefit = (p: Pkg, key: string) => p.benefits.find((b) => b.benefit === key)?.value;
+const num = (n: number | string) => (Number.isFinite(Number(n)) ? Number(n).toLocaleString('en-US') : '—');
+// Benefit values reach raw HTML unescaped, so accept finite numbers only.
+const benefit = (p: Pkg, key: string) => {
+  const v = Number(p.benefits.find((b) => b.benefit === key)?.value);
+  return Number.isFinite(v) ? v : undefined;
+};
 const months = (p: Pkg) => benefit(p, 'subscription') ?? 0;
 const cur = (ar: boolean) => (ar ? 'جنيه' : 'EGP');
 const tr = (f: Pkg['features'][number], ar: boolean) =>
